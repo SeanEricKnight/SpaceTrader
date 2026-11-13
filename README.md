@@ -1,6 +1,14 @@
-# Space Trader for iPhone — first playable port
+# Space Trader — browser playtest and iPhone prototype
 
 An unofficial SwiftUI adaptation of Pieter Spronck's Palm OS Space Trader 1.2.2, based on the source archive you supplied. Targets iPhone with iOS 17 or later. There are no external dependencies or network services.
+
+## Try the browser playtest
+
+Open the [playable browser build](https://seanericknight.github.io/SpaceTrader-iPhone/SpaceTrader-browser.html) in Chrome. It is one self-contained HTML file with its code and artwork embedded; no install, account, package setup, or local server is required. You can also download `docs/SpaceTrader-browser.html` and open it directly. Local save data works when browser storage is available; the game also supports save export and import.
+
+This build is a prototype for playtesting and qualitative market research. Ask players what feels engaging, confusing, too easy, or grindy. Feedback can guide whether the game remains browser-based or moves toward an iPhone release; it is not a representative market survey by itself.
+
+The browser game and the SwiftUI app below are separate implementations with different feature sets. The browser build currently has 24 destinations. Do not assume browser features are present in the native app, or vice versa.
 
 ## Run on your iPhone
 
