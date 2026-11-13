@@ -16,6 +16,10 @@ Ask for an exported save at minutes 10 and 20 and at the end. Record credits, de
 
 On Easy, watch whether ship damage feels recoverable and repairs are easy to find. A full-health simulation does not establish how well a player manages repeated encounters with a damaged ship.
 
+## Map and iPhone checks
+
+Ask players to find a named port, zoom into it, visit Market or Bank, and return. Observe whether the camera remains useful and whether they can deliberately fit the system or find their ship. On an iPhone, test both pinch and the visible zoom buttons, orientation changes, and lifting a finger after a drag. Record any accidental selection or travel. Check that no essential information requires hovering.
+
 ## Questions afterward
 
 1. What were you trying to accomplish?

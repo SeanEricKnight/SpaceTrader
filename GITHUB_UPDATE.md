@@ -19,14 +19,15 @@ This package is the browser refinement that follows the initial repository uploa
 | `README.md`, `CHANGELOG.md` | Current feature writeup and release scope |
 | `PLAYTEST_RESULTS.md`, `PLAYTEST_PLAN.md` | Simulation evidence and human test plan |
 | `CHEATS.md` | Developer console instructions |
+| `IPHONE_ROADMAP.md` | iPhone direction, touch requirements, and remaining native/device work |
 | `LICENSE`, `NOTICE.md`, `licenses/` | Attribution and supplied license material |
 | `package.json`, `scripts/`, `browser-preview/` | Optional development checks and save-migration fixture |
 
 ## GitHub Pages
 
-This repository already deploys the `docs/` folder through [`.github/workflows/pages.yml`](.github/workflows/pages.yml) whenever a commit reaches `main`. The update keeps the game's relative link, so it works under the repository’s Pages URL. Check **Actions → Deploy project site** after the commit; GitHub reports the live URL on the deployment.
+This repository already has a GitHub Actions workflow at `.github/workflows/pages.yml` that publishes `docs/` when changes land on `main`. After committing this update, check the Actions run before sharing the site. Keep the existing workflow and use the Pages URL shown in repository Settings.
 
-For a new repository, enable GitHub Pages with **GitHub Actions** as its publishing source. Do not switch this repository to branch-based publishing while its deployment workflow is active.
+The entry page links to `SpaceTrader-browser.html` using a relative URL, so it also works when the repository is hosted under a project subpath. The game remains on the explicit game-file URL rather than creating a second autosave location at `index.html`.
 
 Official reference: [Configuring a publishing source for GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 

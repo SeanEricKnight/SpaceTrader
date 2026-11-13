@@ -2,13 +2,13 @@
 
 Build: post-upload browser refinement, November 13, 2026. This package was checked using Node.js v24.22.1 and `@napi-rs/canvas` 0.1.100 already installed in the authoring environment. A fresh network dependency installation was not tested.
 
-Game SHA-256: `52873102df748c0f1d957883f92c17d26c63cf838924d556ae84a7f8d567c8b0`.
+Game SHA-256: `c8a581c4a78bc019061642e6000e228ce1df1466fcf9b692e4048ec90602b6e0`.
 
 The raw current results are in `browser-preview/review-after.json`. Run `npm run simulate` to regenerate them from the included engine. The test suite rejects results whose digest does not match the game file.
 
 ## What the earlier review did and did not describe
 
-The supplied Claude review named repository commit `20e733b`. Its flat-world findings apply to an earlier browser build, not the authored-world game in this ZIP. The current local build was checked directly; no claim is made that the remote repository has already been updated.
+The supplied Claude review named repository commit `20e733b`. Its flat-world findings apply to an earlier browser build, not the authored-world game in this ZIP. The current local build was checked directly. These package-level checks do not establish that the hosted page or a physical device has been visually verified.
 
 | Current world check | Result |
 | --- | ---: |
@@ -50,9 +50,23 @@ The bot knows all prices, chooses a single best immediate trade among reachable 
 
 Ordinary market prices and authored port identities remain fixed intentionally. This update did not add ambient price shocks or replace the authored economy with a random galaxy.
 
+## Map and touch refinement
+
+The approved map update has 17 automated interaction scenarios using a DOM harness with simulated pointer events. They check desktop/phone fit geometry, pointer-anchored zoom, bounded pan, per-region view retention, wheel and button alternatives, tap/drag/pinch separation, pointer cancellation, keyboard focus, minimum 44 CSS-pixel targets, zoom-dependent labels, and cosmetic/skippable travel. Camera changes leave time, money, fuel, missions, and engine RNG unchanged. Reduced motion skips the travel effect.
+
+The three actual region SVGs were rendered for inspection. The complete Chrome interface, native WebKit embedding, and physical-device gestures remain unverified. See `IPHONE_ROADMAP.md` for the target-platform plan.
+
+## Individual planet rotation and lighting
+
+All 24 fictional worlds have distinct rotation periods, visual speeds, obliquities, and generated surface images. Two rotate retrograde. Mathematical shading checks confirm a brighter star-facing rim on each world, normalized lighting weights, and two light sources in the Sisters. Each map globe and larger preview has isolated SVG definitions. Repeated globe renders reuse cached textures/shading and leave the game state unchanged.
+
+The displayed physical rotation periods are fictional world facts; the animation compresses them into seconds for visibility. The day/night renderer uses point-source diffuse lighting and a visibility-preserving ambient term. It does not model eclipses, seasons, terrain occlusion, or ring self-shadowing. Browser animation and physical-device performance remain unverified.
+
+The design borrows the general diversity of real planets, not their exact parameters. NASA examples: [Venus rotation](https://science.nasa.gov/venus/venus-facts/) and [Uranus tilt and rotation](https://science.nasa.gov/uranus/facts/).
+
 ## Verification and open questions
 
-Core, community, banking/world, solar, and review checks pass. Coverage includes financing limits, repeated borrowing, repayments and interest, legacy saves, mission cargo and one-time rewards, corruption rejection, stranded rescue, real weapon damage, and the original hidden cheats. The root and hosted game copies are byte-identical.
+Core, community, banking/world, solar, review, and camera checks pass. Coverage includes financing limits, repeated borrowing, repayments and interest, legacy saves, mission cargo and one-time rewards, corruption rejection, stranded rescue, real weapon damage, and the original hidden cheats. The root and hosted game copies are byte-identical.
 
 The latest build has not had a complete Chrome or phone-layout run in this environment. Native canvas and SVG/HTML generation were exercised; browser storage dialogs, phone touch behavior, and the native iPhone project still need direct testing. The older external Chrome review is not evidence that the revised CSS has been visually verified.
 

@@ -1,6 +1,28 @@
-# Browser update — November 13, 2026
+# Browser updates — November 13, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Package version: `0.5.0`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.6.1`.
+
+## 0.6.1 — individual planet rotation and lighting
+
+- Gave all 24 worlds distinct generated surface variants, rotation periods, visual spin speeds, and axial tilts. Two worlds rotate retrograde.
+- Added star-relative day/night shading. The Sisters combine two light sources with distance-based weighting. Illumination stays fixed relative to the stars while the surface rotates underneath.
+- Applied the same animated globe, tilt, and lighting to the larger selected-planet preview. Ring planes follow the displayed axial tilt.
+- Added fictional rotation/tilt facts to the selected-port card. Animation time is compressed for readability and does not change travel days or economy rules.
+- Cached surfaces and lighting, retained reduced-motion support, and added planet appearance/lighting checks.
+- This is stylized globe shading, not an eclipse, terrain-shadow, or ring-self-shadow simulation. Real browser animation and device performance remain to be checked.
+
+## 0.6.0 — approved map and touch refinement
+
+- Replaced the fixed chart panel with a full-width pan/zoom map.
+- Added pointer-anchored wheel zoom, two-finger pinch zoom, keyboard controls, and visible zoom/fit/focus/find-ship buttons.
+- Remembered camera state separately from commander progress, per region, across screen changes and reloads.
+- Reduced planet sizes, retained generous tap targets, and varied label detail with zoom.
+- Moved port details below the map and added a compact selected-port travel bar. Selection preserves the camera; an explicit focus command moves it.
+- Added subtle surface/star motion and a brief skippable ship animation; orbit positions and game distances remain fixed.
+- Kept game actions independent of visual timing and added reduced-motion handling.
+- Added 17 camera/gesture checks and an iPhone roadmap. Complete Chrome/iPhone layout and gesture verification remains pending.
+
+## Earlier 0.5.0 refinements
 
 ## World and interface refinement
 

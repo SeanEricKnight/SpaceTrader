@@ -1,8 +1,10 @@
-# Space Trader — browser playtest and iPhone prototype
+# Space Trader — browser refinement
 
-**The browser game is the current playtest build.** This repository also keeps a separate SwiftUI iPhone prototype. The browser refinement gathers feedback on the trading, contracts, world, and combat loop before further iPhone work; it does not change the native app.
+**This is an update after the initial GitHub upload.** It packages the latest Chrome game and the subsequent world-building, banking, usability, and balance work. Keep the existing iPhone project and other unrelated repository files. This package does not contain a new iPhone build.
 
-## Browser playtest
+**iPhone remains the target platform; HTML is the playable prototype and browser edition.** The approved map refinement now has mouse and touch controls. See [IPHONE_ROADMAP.md](IPHONE_ROADMAP.md) for the delivery paths and device checks still needed.
+
+## Play
 
 Open **[SpaceTrader-browser.html](SpaceTrader-browser.html)** in Chrome. No server, installation, account, or network connection is needed to play. The JavaScript, CSS, planet rendering, and compressed ship artwork are included in the HTML.
 
@@ -10,7 +12,16 @@ You start with a Gnat, a simple laser, and cash determined by difficulty. Trade,
 
 For GitHub Pages, [docs/index.html](docs/index.html) is the entry page and [docs/SpaceTrader-browser.html](docs/SpaceTrader-browser.html) is the game. See [GITHUB_UPDATE.md](GITHUB_UPDATE.md) for upload and publishing instructions.
 
-## What this update adds
+## Latest map refinement
+
+- A full-width, draggable map with wheel zoom, two-finger pinch zoom, visible +/− controls, Fit system, Find my ship, and Focus selected.
+- Zoom anchored under the pointer or pinch midpoint, bounded panning, and remembered camera position per region across screens and reloads.
+- Smaller planet drawings with large independent selection areas. Labels reveal more information as you zoom; tap targets remain at least 44 CSS pixels.
+- Port details below the map, with a compact selected-port Travel control immediately beneath the chart. A tap selects; travel always uses its own button.
+- Stable orbital positions, 24 unique surface variants, individual rotation periods/axial tilts, two retrograde worlds, and quiet star glow. Star-relative day/night shading combines both stars in the Sisters; the larger planet preview uses the same animated globe. A brief, skippable ship-travel effect is separate from the completed game action.
+- Reduced-motion support, keyboard camera controls, and gesture checks that distinguish taps from drags/pinches.
+
+## Earlier refinements included
 
 - Three visually distinct stellar neighborhoods: Hearth in the Inner Reach, the binary Sisters in the Outer Reach, and Cinder in the Far Reach. An additional map shows the actual coordinates used for fuel distances.
 - Twenty-four authored ports with histories, resource profiles, shortages, and clear explanations of demand. Nineteen ports are tech 3 or above; nine enforce strict customs. All ten goods and ship types are available through normal play.
@@ -48,7 +59,7 @@ Developer/testing shortcuts are documented separately in [CHEATS.md](CHEATS.md).
 
 ## Development and checks
 
-The root `SpaceTrader-browser.html` is the editable source of truth. Edit its embedded code and styles, then run `npm run sync` to update the Pages copy. Do not independently edit the two game files.
+The root `SpaceTrader-browser.html` is the editable source of truth. This is still a single-file prototype, not a fully separated cross-platform engine. Edit its embedded code and styles, then run `npm run sync` to update the Pages copy. Do not independently edit the two game files.
 
 Playing needs no Node dependencies. Running the automated checks needs **Node.js 20 or later** and the pinned native canvas development dependency:
 
@@ -57,15 +68,15 @@ npm install
 npm test
 ```
 
-`npm test` verifies that the root and Pages games are identical, regenerates the simulation report, and runs the core, community, bank/world, solar, and review checks. The simulation report includes the game’s SHA-256 digest so stale results are rejected. `npm run simulate` runs the simulations alone.
+`npm test` verifies that the root and Pages games are identical, regenerates the simulation report, and runs the core, community, bank/world, solar, review, camera, and planet checks. The simulation report includes the game’s SHA-256 digest so stale results are rejected. `npm run simulate` runs the simulations alone.
 
-The checks cover trading, cargo reservations, contracts, story rewards, market effects, equipment, financing, interest, rescue, cheats, save migration/import/export, and browser-storage failure. The simulated combat matrix has 3,000 fights per difficulty and loadout. Trade bots use perfect market information and disable encounters to isolate the economy; those outcomes are not human playtest results.
+Seventeen additional camera checks exercise anchor math, simulated mouse/touch gestures, selection safety, view retention, and cosmetic animation. The checks also cover trading, cargo reservations, contracts, story rewards, market effects, equipment, financing, interest, rescue, cheats, save migration/import/export, and browser-storage failure. The simulated combat matrix has 3,000 fights per difficulty and loadout. Trade bots use perfect market information and disable encounters to isolate the economy; those outcomes are not human playtest results.
 
 See [PLAYTEST_RESULTS.md](PLAYTEST_RESULTS.md) for measured results and [PLAYTEST_PLAN.md](PLAYTEST_PLAN.md) for the next human test session.
 
 ## Scope and remaining limits
 
-- This browser build is a playable prototype, not a complete recreation of Space Trader or Dark Nova. The separate SwiftUI source in this repository is not an installable iPhone release.
+- This is a playable browser prototype, not a complete recreation of Space Trader or Dark Nova, and not an installable iPhone app.
 - The galaxy is intentionally authored and fixed. Each new voyage receives a separate encounter seed. Prices are generally fixed; the relief story is a specific exception. There is no ambient market simulation.
 - This build has 24 playable ports, ten commodities, ten ship types, three outfit types, contracts, and one short optional story. The larger original name catalog does not make all those original systems playable.
 - Police encounters, a crew-hiring system, fleets, and the original game’s full mission collection are not implemented. Ship quarters remain catalog data; linked weapon mounts do affect combat.
@@ -146,6 +157,7 @@ Before relying on the build, try buying and selling, jumping, both encounter typ
 - `SpaceTrader.xcodeproj`: iPhone app project and shared Run scheme.
 - `Original-Source-1.2.2.zip`: the original archive, unchanged.
 - `Original-ReadMe.txt`, `NOTICE.md`, and `SpaceTrader/LICENSE.txt`: attribution, scope, and original license.
+
 
 ## Attribution
 
