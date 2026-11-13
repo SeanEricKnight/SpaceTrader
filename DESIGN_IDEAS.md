@@ -1,9 +1,9 @@
-# Open design ideas
+# Design notes and implementation status
 
-**Status:** Brainstorming notes, not approved requirements or implemented changes.  
+**Status:** These began as design notes. The browser update implements the Reach map, easier refueling, port and character backgrounds, and The Reach Dispatch. Banking is implemented with rates by difficulty; whether interest should rise by loan amount or repeated borrowing remains unresolved. The update is for human playtesting; it is not a claim that these changes are proven fun.  
 **Source:** Sean's design notes, November 13, 2026.
 
-Use the browser build for playtesting these ideas before committing to larger changes.
+Use the browser build to learn whether these additions make the trade and travel loop clearer and more enjoyable.
 
 ## Reach regions
 
@@ -13,7 +13,7 @@ The map labels three areas: Inner Reach, Outer Reach, and Far Reach.
 - The current presentation may feel like the same map with planet names changed. Check whether the regions have meaningful identities or mechanics, and make that distinction clear to players.
 - Avoid treating different names alone as meaningful worldbuilding. Any added differences should be understandable and useful in play.
 
-**Open question:** Are these three actual sectors of one galaxy, separate charts, or currently just names for groups of destinations?
+**Implemented:** Three regions are presented as parts of one 24-port galaxy, with distinct stars and orbital layouts plus a separate distance map.
 
 ## Easier refueling
 
@@ -39,7 +39,7 @@ Treat news as worldbuilding and useful context. Do not imply that a news item ch
 
 Make borrowing money easy to understand and available when it helps the player make a meaningful decision.
 
-The note proposes higher interest payments at each borrowing level or tier. The exact meaning of “level” is unresolved: it could mean larger loan amounts, repeated borrowing, or progression through the game. Define the rule and show the total repayment cost before implementing it. Balance loans so they create a tradeoff without making early play feel like a trap.
+The browser update sets a different rate for each difficulty, compounds interest on successful travel days, shows the next charge, caps credit at 25,000, and offers partial loans and ship financing. This does not increase the rate by borrowed amount or repeated borrowing. That interpretation of “level” remains open for Sean to decide after playtesting.
 
 ## Playtest questions
 

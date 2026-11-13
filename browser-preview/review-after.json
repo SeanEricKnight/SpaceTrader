@@ -1,0 +1,366 @@
+{
+  "world": {
+    "techs": [
+      0,
+      2,
+      3,
+      3,
+      7,
+      5,
+      2,
+      2
+    ],
+    "tech3plus": 19,
+    "strict": 9,
+    "goods": [
+      {
+        "name": "Water",
+        "buyable": true
+      },
+      {
+        "name": "Furs",
+        "buyable": true
+      },
+      {
+        "name": "Food",
+        "buyable": true
+      },
+      {
+        "name": "Ore",
+        "buyable": true
+      },
+      {
+        "name": "Games",
+        "buyable": true
+      },
+      {
+        "name": "Firearms",
+        "buyable": true
+      },
+      {
+        "name": "Medicine",
+        "buyable": true
+      },
+      {
+        "name": "Machines",
+        "buyable": true
+      },
+      {
+        "name": "Narcotics",
+        "buyable": true
+      },
+      {
+        "name": "Robots",
+        "buyable": true
+      }
+    ],
+    "ships": [
+      {
+        "name": "Flea",
+        "buyable": true
+      },
+      {
+        "name": "Gnat",
+        "buyable": true
+      },
+      {
+        "name": "Firefly",
+        "buyable": true
+      },
+      {
+        "name": "Mosquito",
+        "buyable": true
+      },
+      {
+        "name": "Bumblebee",
+        "buyable": true
+      },
+      {
+        "name": "Beetle",
+        "buyable": true
+      },
+      {
+        "name": "Hornet",
+        "buyable": true
+      },
+      {
+        "name": "Grasshopper",
+        "buyable": true
+      },
+      {
+        "name": "Termite",
+        "buyable": true
+      },
+      {
+        "name": "Wasp",
+        "buyable": true
+      }
+    ]
+  },
+  "combat": [
+    {
+      "difficulty": "Beginner",
+      "loadout": "starter",
+      "winPct": 100,
+      "repairPerWin": 12,
+      "rewardPerWin": 45,
+      "rounds": 2.7
+    },
+    {
+      "difficulty": "Beginner",
+      "loadout": "laser3",
+      "winPct": 100,
+      "repairPerWin": 7,
+      "rewardPerWin": 45,
+      "rounds": 1.9
+    },
+    {
+      "difficulty": "Beginner",
+      "loadout": "shield",
+      "winPct": 100,
+      "repairPerWin": 5,
+      "rewardPerWin": 45,
+      "rounds": 2.7
+    },
+    {
+      "difficulty": "Easy",
+      "loadout": "starter",
+      "winPct": 100,
+      "repairPerWin": 39,
+      "rewardPerWin": 75,
+      "rounds": 4.4
+    },
+    {
+      "difficulty": "Easy",
+      "loadout": "laser3",
+      "winPct": 100,
+      "repairPerWin": 22,
+      "rewardPerWin": 75,
+      "rounds": 2.9
+    },
+    {
+      "difficulty": "Easy",
+      "loadout": "shield",
+      "winPct": 100,
+      "repairPerWin": 22,
+      "rewardPerWin": 75,
+      "rounds": 4.4
+    },
+    {
+      "difficulty": "Normal",
+      "loadout": "starter",
+      "winPct": 88.4,
+      "repairPerWin": 142,
+      "rewardPerWin": 118,
+      "rounds": 5.2
+    },
+    {
+      "difficulty": "Normal",
+      "loadout": "laser3",
+      "winPct": 100,
+      "repairPerWin": 87,
+      "rewardPerWin": 121,
+      "rounds": 3.5
+    },
+    {
+      "difficulty": "Normal",
+      "loadout": "shield",
+      "winPct": 99.9,
+      "repairPerWin": 108,
+      "rewardPerWin": 121,
+      "rounds": 5.3
+    },
+    {
+      "difficulty": "Hard",
+      "loadout": "starter",
+      "winPct": 59.7,
+      "repairPerWin": 233,
+      "rewardPerWin": 142,
+      "rounds": 5
+    },
+    {
+      "difficulty": "Hard",
+      "loadout": "laser3",
+      "winPct": 99.8,
+      "repairPerWin": 161,
+      "rewardPerWin": 157,
+      "rounds": 3.6
+    },
+    {
+      "difficulty": "Hard",
+      "loadout": "shield",
+      "winPct": 92.7,
+      "repairPerWin": 203,
+      "rewardPerWin": 154,
+      "rounds": 5.5
+    },
+    {
+      "difficulty": "Impossible",
+      "loadout": "starter",
+      "winPct": 27.6,
+      "repairPerWin": 339,
+      "rewardPerWin": 169,
+      "rounds": 4.7
+    },
+    {
+      "difficulty": "Impossible",
+      "loadout": "laser3",
+      "winPct": 91.7,
+      "repairPerWin": 264,
+      "rewardPerWin": 202,
+      "rounds": 3.9
+    },
+    {
+      "difficulty": "Impossible",
+      "loadout": "shield",
+      "winPct": 60,
+      "repairPerWin": 311,
+      "rewardPerWin": 187,
+      "rounds": 5.5
+    }
+  ],
+  "trade": [
+    {
+      "ship": "Gnat",
+      "start": 1000,
+      "days": 120,
+      "credits": 468281,
+      "tradeProfit": 469767,
+      "jobPay": 0,
+      "topRoute": [
+        "14→19 / Narcotics",
+        143832
+      ],
+      "topRoutePct": 30.6,
+      "routeCount": 11,
+      "goods": {
+        "Water": 360,
+        "Medicine": 446,
+        "Ore": 14046,
+        "Furs": 133762,
+        "Machines": 149505,
+        "Narcotics": 143832,
+        "Games": 27816
+      },
+      "creditsAt30": 183009,
+      "creditsAt60": 285021,
+      "creditsAt120": 468281
+    },
+    {
+      "ship": "Gnat",
+      "start": 1000,
+      "days": 120,
+      "credits": 46046,
+      "tradeProfit": 0,
+      "jobPay": 47540,
+      "topRoutePct": 0,
+      "routeCount": 0,
+      "goods": {},
+      "creditsAt30": 12489,
+      "creditsAt60": 23440,
+      "creditsAt120": 46046
+    },
+    {
+      "ship": "Gnat",
+      "start": 250000,
+      "days": 120,
+      "credits": 715284,
+      "tradeProfit": 467754,
+      "jobPay": 0,
+      "topRoute": [
+        "14→19 / Narcotics",
+        143832
+      ],
+      "topRoutePct": 30.7,
+      "routeCount": 9,
+      "goods": {
+        "Medicine": 3780,
+        "Ore": 1710,
+        "Furs": 137624,
+        "Narcotics": 143832,
+        "Machines": 152992,
+        "Games": 27816
+      },
+      "creditsAt30": 444653,
+      "creditsAt60": 541084,
+      "creditsAt120": 715284
+    },
+    {
+      "ship": "Firefly",
+      "start": 250000,
+      "days": 120,
+      "credits": 761296,
+      "tradeProfit": 515037,
+      "jobPay": 0,
+      "topRoute": [
+        "14→19 / Narcotics",
+        141066
+      ],
+      "topRoutePct": 27.4,
+      "routeCount": 11,
+      "goods": {
+        "Medicine": 5040,
+        "Ore": 25685,
+        "Furs": 139754,
+        "Narcotics": 141066,
+        "Machines": 153007,
+        "Games": 50485
+      },
+      "creditsAt30": 461459,
+      "creditsAt60": 565070,
+      "creditsAt120": 761296
+    },
+    {
+      "ship": "Bumblebee",
+      "start": 250000,
+      "days": 120,
+      "credits": 796452,
+      "tradeProfit": 555153,
+      "jobPay": 0,
+      "topRoute": [
+        "14→19 / Narcotics",
+        140144
+      ],
+      "topRoutePct": 25.2,
+      "routeCount": 14,
+      "goods": {
+        "Medicine": 8000,
+        "Ore": 37129,
+        "Furs": 165988,
+        "Narcotics": 140144,
+        "Machines": 152010,
+        "Games": 51882
+      },
+      "creditsAt30": 478681,
+      "creditsAt60": 596794,
+      "creditsAt120": 796452
+    },
+    {
+      "ship": "Beetle",
+      "start": 250000,
+      "days": 120,
+      "credits": 934142,
+      "tradeProfit": 696492,
+      "jobPay": 0,
+      "topRoute": [
+        "14→19 / Narcotics",
+        144754
+      ],
+      "topRoutePct": 20.8,
+      "routeCount": 16,
+      "goods": {
+        "Medicine": 14262,
+        "Ore": 48219,
+        "Furs": 270019,
+        "Narcotics": 144754,
+        "Machines": 148503,
+        "Games": 50767,
+        "Firearms": 19968
+      },
+      "creditsAt30": 544321,
+      "creditsAt60": 678672,
+      "creditsAt120": 934142
+    }
+  ],
+  "buildSha256": "52873102df748c0f1d957883f92c17d26c63cf838924d556ae84a7f8d567c8b0"
+}

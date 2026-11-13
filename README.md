@@ -1,16 +1,82 @@
 # Space Trader — browser playtest and iPhone prototype
 
-An unofficial SwiftUI adaptation of Pieter Spronck's Palm OS Space Trader 1.2.2, based on the source archive you supplied. Targets iPhone with iOS 17 or later. There are no external dependencies or network services.
+**The browser game is the current playtest build.** This repository also keeps a separate SwiftUI iPhone prototype. The browser refinement gathers feedback on the trading, contracts, world, and combat loop before further iPhone work; it does not change the native app.
 
-## Try the browser playtest
+## Browser playtest
 
-Open the [playable browser build](https://seanericknight.github.io/SpaceTrader-iPhone/SpaceTrader-browser.html) in Chrome. It is one self-contained HTML file with its code and artwork embedded; no install, account, package setup, or local server is required. You can also download `docs/SpaceTrader-browser.html` and open it directly. Local save data works when browser storage is available; the game also supports save export and import.
+Open **[SpaceTrader-browser.html](SpaceTrader-browser.html)** in Chrome. No server, installation, account, or network connection is needed to play. The JavaScript, CSS, planet rendering, and compressed ship artwork are included in the HTML.
 
-This build is a prototype for playtesting and qualitative market research. Ask players what feels engaging, confusing, too easy, or grindy. Feedback can guide whether the game remains browser-based or moves toward an iPhone release; it is not a representative market survey by itself.
+You start with a Gnat, a simple laser, and cash determined by difficulty. Trade, explore, and take contracts. Your long-term goal is **500,000 credits with no debt**, enough to buy a moon. The goal and progress now stay visible at the top of the game.
 
-The browser game and the SwiftUI app below are separate implementations with different feature sets. The browser build currently has 24 destinations. Do not assume browser features are present in the native app, or vice versa.
+For GitHub Pages, [docs/index.html](docs/index.html) is the entry page and [docs/SpaceTrader-browser.html](docs/SpaceTrader-browser.html) is the game. See [GITHUB_UPDATE.md](GITHUB_UPDATE.md) for upload and publishing instructions.
 
-## Run on your iPhone
+## What this update adds
+
+- Three visually distinct stellar neighborhoods: Hearth in the Inner Reach, the binary Sisters in the Outer Reach, and Cinder in the Far Reach. An additional map shows the actual coordinates used for fuel distances.
+- Twenty-four authored ports with histories, resource profiles, shortages, and clear explanations of demand. Nineteen ports are tech 3 or above; nine enforce strict customs. All ten goods and ship types are available through normal play.
+- Six original characters with histories, personalities, motivations, and relationships. The Reach Dispatch introduces the factions and follows the optional relief story.
+- A visible consequence for the relief mission: delivering supplies ends Baratas’s disease emergency and reduces its medicine prices. The newspaper reports confirmed progress.
+- Bank access from every main screen, partial loans and repayments, and shipyard financing for the exact cash shortfall. The confirmation shows trade-in, cash applied, debt, and the next travel-day interest charge.
+- Refueling and repairs from every main screen. A rescue tow prevents a commander with no money, usable fuel, cargo, or remaining credit from becoming permanently stranded.
+- Three different destinations on each contract board. Contracts remain stable while reading; existing contracts from different boards may still fit the same planned route.
+- Combat warnings that show volley damage, enemy damage, estimated return damage, bounty, and escape odds. Weapon mounts now affect actual damage; laser upgrades cover all mounts and cost accordingly.
+- A persistent moon-fund indicator, explanations for unavailable trades, clearer undo wording, and layout adjustments for phones.
+
+## Difficulty and borrowing
+
+| Difficulty | Starting cash | Loan interest per successful travel day | Starting Gnat fuel price |
+| --- | ---: | ---: | ---: |
+| Beginner | 2,500 cr | 0.5% | 1 cr/pc |
+| Easy | 1,500 cr | 1% | 2 cr/pc |
+| Normal | 1,000 cr | 1.5% | 2 cr/pc |
+| Hard | 750 cr | 2% | 3 cr/pc |
+| Impossible | 500 cr | 3% | 4 cr/pc |
+
+The credit line is **25,000 credits including accrued interest**. Unpaid interest compounds on each successful jump, rounded up to whole credits; the rescue tow also advances one day and accrues interest. Reading, shopping, ordinary refueling, repairs, and repayments do not advance time. Repayments have no extra fee. Other ship types have their own fuel costs.
+
+**Easy is deliberately forgiving.** A healthy ship should absorb meaningful damage and remain repairable. In 3,000 simulated Easy battles, a fully repaired starter Gnat survived all 3,000 and lost about 39 of its 100 hull points per fight on average. A damaged ship entering another fight remains vulnerable. Normal and higher difficulties put more weight on preparation and escape decisions.
+
+## Saves and updating
+
+The game autosaves locally when browser storage is available. Under Commander, **Export save** creates a portable JSON file and **Import save** validates it before replacement. Export before replacing a downloaded game or moving between a local file and a hosted site; those locations may have separate browser storage.
+
+**Undo previous saved action** restores the last distinct saved state. It is not a named checkpoint. Export a save for a lasting checkpoint.
+
+Older saves retain their worlds, prices, cargo, active missions, ship, and debt. Current difficulty-based interest and combat rules apply when playing this version. Start a new game to use the authored regional economies if continuing from a build that predates them.
+
+Developer/testing shortcuts are documented separately in [CHEATS.md](CHEATS.md). Using them marks the commander’s run.
+
+## Development and checks
+
+The root `SpaceTrader-browser.html` is the editable source of truth. Edit its embedded code and styles, then run `npm run sync` to update the Pages copy. Do not independently edit the two game files.
+
+Playing needs no Node dependencies. Running the automated checks needs **Node.js 20 or later** and the pinned native canvas development dependency:
+
+```sh
+npm install
+npm test
+```
+
+`npm test` verifies that the root and Pages games are identical, regenerates the simulation report, and runs the core, community, bank/world, solar, and review checks. The simulation report includes the game’s SHA-256 digest so stale results are rejected. `npm run simulate` runs the simulations alone.
+
+The checks cover trading, cargo reservations, contracts, story rewards, market effects, equipment, financing, interest, rescue, cheats, save migration/import/export, and browser-storage failure. The simulated combat matrix has 3,000 fights per difficulty and loadout. Trade bots use perfect market information and disable encounters to isolate the economy; those outcomes are not human playtest results.
+
+See [PLAYTEST_RESULTS.md](PLAYTEST_RESULTS.md) for measured results and [PLAYTEST_PLAN.md](PLAYTEST_PLAN.md) for the next human test session.
+
+## Scope and remaining limits
+
+- This browser build is a playable prototype, not a complete recreation of Space Trader or Dark Nova. The separate SwiftUI source in this repository is not an installable iPhone release.
+- The galaxy is intentionally authored and fixed. Each new voyage receives a separate encounter seed. Prices are generally fixed; the relief story is a specific exception. There is no ambient market simulation.
+- This build has 24 playable ports, ten commodities, ten ship types, three outfit types, contracts, and one short optional story. The larger original name catalog does not make all those original systems playable.
+- Police encounters, a crew-hiring system, fleets, and the original game’s full mission collection are not implemented. Ship quarters remain catalog data; linked weapon mounts do affect combat.
+- The latest JavaScript and generated planet/chart markup were tested. Full Chrome layout, real-phone touch behavior, file-dialog interaction, and an iPhone build remain unverified in this authoring environment. Mobile CSS changes still need a device check.
+- Bot outcomes are specific to the documented strategies, seeds, and starting conditions. They do not establish that human players will enjoy the balance or that one strategy is globally optimal.
+
+## Native iPhone app
+
+The repository also contains an independent SwiftUI adaptation based on the supplied Palm OS source. It targets iOS 17 or later and remains separate from the browser game.
+
+### Build and run
 
 You need a Mac with Xcode 16 or later for these instructions.
 
@@ -21,20 +87,7 @@ You need a Mac with Xcode 16 or later for these instructions.
 
 This delivery is source code, not a signed installable app. It does not include an IPA, TestFlight build, or App Store release. No Apple account, signing identity, or publishing action has been used.
 
-## Start playing
-
-You begin in Acamar with a Gnat, 1,000 credits, a pulse laser, 15 cargo bays, and a full tank.
-
-- **Market:** buy one unit or the maximum you can afford and carry. Sale prices include a spread, so immediate resale loses credits. Travel to find a profitable route.
-- **Galaxy:** the chart shows your current position and fuel range. Select a destination from the list and confirm your jump. Each jump advances one day.
-- **Ship:** buy fuel, repair damage, upgrade equipment, and trade ships. Services use as much of your available balance as needed, up to a full tank or hull.
-- **Commander:** accept courier work, borrow or repay money, read the log, and start a new commander. Courier payments help fund early travel.
-- **Encounters:** pirates can be fought, fled, or surrendered to. Failed escape attempts cost hull. Police seize contraband and charge a fine.
-- **Win:** earn 500,000 liquid credits, repay your debts, and buy a moon in Commander.
-
-Progress is automatically saved after actions and when the app leaves the foreground. Pending encounters are saved too. Starting a new commander replaces your progress; there is one local save slot. Deleting the app can remove that save.
-
-## Implemented and adapted
+### Native implementation scope
 
 | Area | This version |
 | --- | --- |
@@ -54,7 +107,7 @@ The chart is informational; use the destination list to travel. This is a functi
 
 Not implemented: original story quests, crew and skill allocation, wormholes, original government types, trader encounters, original combat balance and difficulty modes, insurance and escape pods, original equipment inventory, special ships, newspapers, sound, original graphics, cloud saves, or imports of Palm saved games. Ship trade-in is simplified and does not price equipment separately. A lower-priced ship does not pay surplus trade-in credit in this build.
 
-## Verification and limitations
+### Native verification and limitations
 
 This project was generated in a Linux environment without Swift, Xcode, an iOS simulator, or a connected iPhone. **The Swift code has not been compiled, the XCTest suite has not been run, and the interface has not been visually checked on an iPhone.** Treat the first Xcode build and device session as required validation, not a release-ready certification.
 
@@ -81,7 +134,7 @@ xcodebuild -project SpaceTrader.xcodeproj -scheme SpaceTrader \
 
 Before relying on the build, try buying and selling, jumping, both encounter types, ship changes, app termination and relaunch during an encounter, new-game confirmation, small-screen layouts, and large accessibility text.
 
-## Project files
+### Repository project files
 
 - `SpaceTrader/Game.swift`: independent game state, simulation, and catalog models.
 - `SpaceTrader/Catalog.json`: extracted original trade, ship, and system data.
@@ -94,6 +147,6 @@ Before relying on the build, try buying and selling, jumping, both encounter typ
 - `Original-Source-1.2.2.zip`: the original archive, unchanged.
 - `Original-ReadMe.txt`, `NOTICE.md`, and `SpaceTrader/LICENSE.txt`: attribution, scope, and original license.
 
-## Credits
+## Attribution
 
-Original Space Trader copyright © 2000–2005 Pieter Spronck, with contributors credited in the supplied source. This adaptation preserves the GPL version 2-or-later notice. See `NOTICE.md` and the included license. Original game artwork by Alexander Lawrence is not used by the iPhone app.
+Based on Space Trader by Pieter Spronck. The HTML retains its `GPL-2.0-or-later` declaration; the supplied GPL v2 text is in [LICENSE](LICENSE) and [licenses/GPL-2.0.txt](licenses/GPL-2.0.txt). See [NOTICE.md](NOTICE.md) for source attribution and adaptation notes, and [CHANGELOG.md](CHANGELOG.md) for this update’s scope.

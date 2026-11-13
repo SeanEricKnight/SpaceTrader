@@ -1,0 +1,5 @@
+const fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+fs.mkdirSync(path.join(root,'docs'),{recursive:true});
+fs.copyFileSync(path.join(root,'SpaceTrader-browser.html'),path.join(root,'docs','SpaceTrader-browser.html'));
+console.log('Updated docs/SpaceTrader-browser.html from the root game.');

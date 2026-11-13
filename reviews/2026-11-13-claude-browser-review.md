@@ -2,10 +2,10 @@
 
 **Source:** Review text from Claude, provided by Sean on November 13, 2026.  
 **Reviewed revision named in the report:** `20e733b`.  
-**Status:** Recorded for consideration only. No code, balance, content, or design changes were made from this review.  
+**Status:** Historical review of the pre-update build at `20e733b`. Sean later authorized selected recommendations to be implemented; see `CHANGELOG.md` and `PLAYTEST_RESULTS.md` for the browser update. This review’s simulation findings describe the older build.  
 **Evidence labels:** `[V]`, `[S]`, and `[G]` are Claude's labels. They describe Claude's checks and simulations, not independent verification by this repository.
 
-> **Reconciliation note:** The report gives two different tech-level counts: the opening says 22 of 24 worlds are tech 2; section 5 says 21 of 24. Resolve this discrepancy before using that figure. All reported findings and simulation results remain attributed to Claude until independently reproduced.
+> **Historical note:** The report gives two different tech-level counts for the old generated galaxy. The updated authored galaxy has separate counts documented in `PLAYTEST_RESULTS.md`; do not use the old figures to describe the current build. Claude’s original findings remain attributed to Claude.
 
 ## 1. Core loop and where the fun comes from
 
