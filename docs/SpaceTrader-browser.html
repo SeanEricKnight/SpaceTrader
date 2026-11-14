@@ -421,7 +421,7 @@ function autoTravel(to){
 function autoButton(to){
  if(to===game.location||!autoTravelAllowed()||distance(to)<=game.fuel)return '';
  const plan=autoPlan(to);if(!plan)return '';
- return '<button data-action="auto" data-id="'+to+'" '+(!active()||plan.cost>game.credits?'disabled':'')+'>Go there for me · '+plan.jumps+' jump'+(plan.jumps>1?'s':'')+' · about '+money(plan.cost)+' fuel</button>'+(plan.cost>game.credits?'<p class="micro muted">You need about '+money(plan.cost)+' for fuel on this route.</p>':'')
+ return '<button data-action="auto" data-id="'+to+'" '+(!active()||plan.cost>game.credits?'disabled':'')+'>Go there for me · '+plan.jumps+' jump'+(plan.jumps>1?'s':'')+' · buy '+Math.round(plan.cost/fuelRate())+' fuel for '+money(plan.cost)+'</button>'+(plan.cost>game.credits?'<p class="micro muted">You need '+money(plan.cost)+' to buy the fuel for this route.</p>':'')
 }
 function routeHintHtml(to){
  if(game.difficulty==='Hard'||game.difficulty==='Impossible')return '<p class="micro muted">Beyond your range of '+ship().range+' pc in one jump.</p>';
@@ -663,7 +663,7 @@ const level=()=>levels[game.difficulty],fuelRate=()=>Math.max(1,Math.ceil(ship()
 const ship=()=>catalog.ships[game.ship],world=()=>game.worlds[game.location],held=()=>game.cargo.reduce((a,b)=>a+b,0)+reservedFor(game),active=()=>game.hull>0&&!game.retired&&!game.encounter&&!game.custody&&!game.offer;
 const distance=id=>Math.ceil(Math.hypot(world().x-game.worlds[id].x,world().y-game.worlds[id].y));
 const prohibited=(id,w=world())=>w.strict&&(id===5||id===8),sellPrice=(id,w=world())=>Math.max(1,Math.floor(w.prices[id]*saleRate()));
-function say(text){message=text;game.log.unshift('Day '+game.day+': '+text);game.log=game.log.slice(0,30)}
+function say(text){message=text;game.log.unshift('Day '+game.day+': '+text);game.log=game.log.slice(0,200)}
 function save(){try{const next=JSON.stringify(game),old=localStorage.getItem(key);if(old&&old!==next){try{decodeSave(old);localStorage.setItem(key+'-backup',old)}catch{}}if(old!==next)localStorage.setItem(key,next);saveOK=true}catch{saveOK=false}}
 function buy(id,all){if(!active()||prohibited(id)||world().tech<catalog.goods[id].production)return;const p=world().prices[id],qty=tradeLimit(id,all);if(qty<1)return;game.cargo[id]+=qty;game.paid[id]+=qty*p;world().stock[id]-=qty;game.credits-=qty*p;say('Bought '+qty+' '+catalog.goods[id].name+' for '+money(qty*p)+'.')}
 function sell(id,all){if(!active()||prohibited(id)||world().tech<catalog.goods[id].usage)return;const qty=Math.min(all?999:1,game.cargo[id]);if(qty<1)return;const cost=Math.floor(game.paid[id]*qty/game.cargo[id]),total=qty*sellPrice(id);game.cargo[id]-=qty;game.paid[id]-=cost;world().stock[id]+=qty;game.credits+=total;game.metrics.profit+=total-cost;say('Sold '+qty+' '+catalog.goods[id].name+' for '+money(total)+'. Profit: '+money(total-cost)+'.')}
