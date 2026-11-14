@@ -72,6 +72,10 @@ The latest build has not had a complete Chrome or phone-layout run in this envir
 
 Use `PLAYTEST_PLAN.md` to test whether people actually understand the goal, enjoy route discovery, find financing/repairs, and prefer the revised combat and contracts.
 
+## 0.8.0 (November 14, 2026)
+
+Checked here: `check-logic`, `check-solar`, `check-events`, and the new `check-crew` pass in Node; headless Chrome rendered the ship card, planet card, distance list, and market with no console errors, and a scripted run exercised hiring, a story moment, jail, bail, an offer, and a rental. Not tested: Firefox, a real phone, and balance over long runs. The boarding threshold, bail, wages, and rental prices are first guesses and need play. Please run `npm test` on the PC for the five checks that need `@napi-rs/canvas`.
+
 ## 0.7.0 (November 14, 2026)
 
 Checked in this environment: `check-logic`, `check-solar`, and the new `check-events` pass in Node. A headless Chrome run loaded the game at phone size, opened the Market, Newspaper, and Ship screens, bought a newspaper, hired an escort, and simulated 60 days of events with no console errors; about seven ports were in a crisis at once. The community, world-bank, review, camera, and planets checks could not run here because `@napi-rs/canvas` cannot be installed; please run `npm test` on the PC. Not tested: Firefox, Edge, Safari, a real phone, and long play sessions for balance. Balance of wages, event frequency, and the 3x water/food multiplier is a first guess and needs play.

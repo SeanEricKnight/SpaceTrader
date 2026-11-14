@@ -149,9 +149,9 @@
     {
       "difficulty": "Normal",
       "loadout": "starter",
-      "winPct": 88.4,
-      "repairPerWin": 142,
-      "rewardPerWin": 118,
+      "winPct": 100,
+      "repairPerWin": 143,
+      "rewardPerWin": 93,
       "rounds": 5.2
     },
     {
@@ -165,7 +165,7 @@
     {
       "difficulty": "Normal",
       "loadout": "shield",
-      "winPct": 99.9,
+      "winPct": 100,
       "repairPerWin": 108,
       "rewardPerWin": 121,
       "rounds": 5.3
@@ -173,49 +173,49 @@
     {
       "difficulty": "Hard",
       "loadout": "starter",
-      "winPct": 59.7,
-      "repairPerWin": 233,
-      "rewardPerWin": 142,
+      "winPct": 100,
+      "repairPerWin": 230,
+      "rewardPerWin": 45,
       "rounds": 5
     },
     {
       "difficulty": "Hard",
       "loadout": "laser3",
-      "winPct": 99.8,
+      "winPct": 100,
       "repairPerWin": 161,
-      "rewardPerWin": 157,
+      "rewardPerWin": 156,
       "rounds": 3.6
     },
     {
       "difficulty": "Hard",
       "loadout": "shield",
-      "winPct": 92.7,
-      "repairPerWin": 203,
-      "rewardPerWin": 154,
+      "winPct": 100,
+      "repairPerWin": 204,
+      "rewardPerWin": 136,
       "rounds": 5.5
     },
     {
       "difficulty": "Impossible",
       "loadout": "starter",
-      "winPct": 27.6,
-      "repairPerWin": 339,
-      "rewardPerWin": 169,
+      "winPct": 100,
+      "repairPerWin": 311,
+      "rewardPerWin": -26,
       "rounds": 4.7
     },
     {
       "difficulty": "Impossible",
       "loadout": "laser3",
-      "winPct": 91.7,
-      "repairPerWin": 264,
-      "rewardPerWin": 202,
+      "winPct": 100,
+      "repairPerWin": 267,
+      "rewardPerWin": 177,
       "rounds": 3.9
     },
     {
       "difficulty": "Impossible",
       "loadout": "shield",
-      "winPct": 60,
-      "repairPerWin": 311,
-      "rewardPerWin": 187,
+      "winPct": 100,
+      "repairPerWin": 306,
+      "rewardPerWin": 72,
       "rounds": 5.5
     }
   ],
@@ -374,5 +374,5 @@
       "creditsAt120": 1382403
     }
   ],
-  "buildSha256": "5d550c5ae7c9011fd92173ddc365e862cba515e5e1cd4568861b0c1252a93b35"
+  "buildSha256": "13e7d4bf95949421f2f636cf6a8ae2c2abac0977cda7f7fbff8cc0851a5396ea"
 }

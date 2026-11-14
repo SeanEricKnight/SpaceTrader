@@ -1,6 +1,20 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.7.1`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.0`.
+
+## 0.8.0 — crew, capture instead of game over, jail, marauder offers, rental, info cards
+
+- **No more game over.** A ship at zero hull is no longer destroyed. Losing a fight or surrendering now costs your cargo and 10% of your credits, and you keep flying with at least a quarter hull. Old saves with a destroyed ship are revived at a quarter hull.
+- **Boarding scales with wealth.** Below about 3,000 credits of net worth (credits plus cargo cost) you cannot be boarded. Above that the chance rises 1% per 1,500 credits (max 40% before scaling), scaled by difficulty and region danger, up to 60%. Pilot (-8), gunner (-4), and escorts (-1.5 per level) lower it. If boarded you lose cargo and all credits, keep your ship, crew, and debt, and are **held**. Ways out: wait (5 days, 4 with a fixer), try a breakout (35% base, plus pilot, fixer, escorts), or call your crew and escorts for a rescue (30% plus 10% per crew and 8% per escort level). Loan interest runs while held.
+- **Jail and bail.** At strict ports, carrying firearms or narcotics can get them seized and you jailed (30% base, +4% per point of "heat", -15% with a smuggler). Wait 3 days (2 with a fixer) with interest running, or pay bail (about 120 credits per repair-rate point plus 8% of your credits; half with a fixer).
+- **Heat.** Accepting marauder deals adds heat; it fades by 1 per jump and raises customs risk.
+- **Marauder offers.** Once your net worth is 1,500+ and day 5+, some encounters become offers: **protection** (armed ships) or **carry a crate** (2 free bays), paying about 200 credits plus 5% of net worth (carry pays 30% more). Accept: paid immediately, heat up, honest crew lose loyalty, rogue crew gain it, and a carry job can get you jailed. Refuse: the fight starts.
+- **Crew.** Six named characters with backstories, each found at one home port: Wren Calloway (pilot, Aldea), Odo Brandt (mechanic, Campor), Juno Ashby (gunner, Capelle), Mattias Vell (purser, Calondia), Dessa Quill (smuggler, Cestus), Ruvi Okafor (fixer, Courteney). Hire up to three for 500 credits; wage 15 credits per jump. Perks: pilot +10% flee and fewer boardings; mechanic repairs 3 hull per jump; gunner +5 volley damage; purser +3% sale prices; smuggler fewer customs finds; fixer halves bail and shortens jail and captivity. Each has two story moments (at 8 and 22 jumps) with a choice that changes loyalty, credits, or heat. Below 15 loyalty they leave. They never die. Portraits are initials for now.
+- **Ship rental.** Rent any ship you can fly: 1.2% of its price per travel day, 10% of its price as a deposit. Your own ship and fittings wait at the port; return the rental there to get the deposit back minus a damage fee (twice the repair cost). Unpaid rent becomes debt. You cannot buy a ship while renting.
+- **Info cards.** Click a ship in the shipyard for a full ship card (picture, slots, stats, comparison, Buy and Rent). Click a planet on the map for a planet card (picture, region, tech, resources, distance, customs, your log, Travel). Fixes the "Three Reaches explained" map, which was an unlabelled dot grid, by replacing it with a list of every port by distance and whether it is in range.
+- **Market look.** Goods have icons and color edges. On Beginner, Easy, and Normal each row shows a price gauge (where the price sits in the good's usual range); Beginner and Easy also name it Low, Fair, or High. Goods affected by the port's current event are tagged EVENT.
+- Raised the HTML size cap in `check-solar` from 600 KB to 700 KB. Added `browser-preview/check-crew.cjs` to `npm test`.
+- Verified here: logic, solar, events, and crew checks pass in Node; headless Chrome showed no console errors and rendered the ship card, planet card, distance list, and market. The community, world-bank, review, camera, and planets checks need `@napi-rs/canvas`; please run `npm test` on your PC. Firefox, a phone, and long-run balance are untested.
 
 ## 0.7.1 — dismiss-escort popup
 

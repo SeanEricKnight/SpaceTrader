@@ -4,6 +4,15 @@
 
 **iPhone remains the target platform; HTML is the playable prototype and browser edition.** The approved map refinement now has mouse and touch controls. See [IPHONE_ROADMAP.md](IPHONE_ROADMAP.md) for the delivery paths and device checks still needed.
 
+## New in 0.8.0
+
+- **No game over:** losing a fight costs cargo, not the run. Boardings become possible only as you get rich, and take everything you carry.
+- **Crew:** six named characters with stories, found at their home ports. They never die.
+- **Jail, bail, marauder offers, and ship rental.**
+- **Info cards:** click a ship in the shipyard or a planet on the map. The old distance map is now a readable list.
+
+See [CHANGELOG.md](CHANGELOG.md) for numbers and rules.
+
 ## New in 0.7.0
 
 - **Market screen:** one compact row per good with Buy and Sell always visible; tap a row for the trade buttons. Goods you cannot trade at this port collapse into one line. Logged markets now show how old the quote is, and quotes three or more days old show "≈".
