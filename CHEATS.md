@@ -1,6 +1,6 @@
 # Developer cheat console
 
-On desktop, click outside text inputs and type **`cheats`**. Alternatively, click the **Space Trader** title five times rapidly. Close a bank dialog first. The typing shortcut deliberately ignores text fields and open dialogs.
+Click the **Test tools** button in the page footer (works by touch on a phone). On desktop you can also click outside text inputs and type **`cheats`**. Alternatively, click the **Space Trader** title five times rapidly. Close a bank dialog first. The typing shortcut deliberately ignores text fields and open dialogs.
 
 Enter a command in the console and press Run. Successful state-changing commands mark **Cheats used this run** and that flag is saved. Use `help` inside the console for the current command list.
 

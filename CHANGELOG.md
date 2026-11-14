@@ -1,6 +1,12 @@
-# Browser updates — November 13, 2026
+# Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.6.1`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.6.2`.
+
+## 0.6.2 — visible Test tools button
+
+- Added a **Test tools** button in the page footer that opens the existing cheat console. It uses the same commands and the same "Cheats used this run" flag as the hidden shortcuts (typing `cheats` or clicking the title five times), and it works by touch on a phone.
+- No rules, economy, combat, or map behavior changed. Regenerated `browser-preview/review-after.json` (only the build digest changed) and the SHA-256 records.
+- Verified: the logic and solar checks pass. The camera, community, world-bank, planets, and review checks could not run in this authoring environment because `@napi-rs/canvas` could not be installed; they fail identically on the unchanged 0.6.1 build. Run `npm install` and `npm test` where network access is available. The button was exercised in headless Chrome at a 390-pixel phone width: it opens the console, `cash 50000` works, and Close works. Physical-device testing remains pending.
 
 ## 0.6.1 — individual planet rotation and lighting
 

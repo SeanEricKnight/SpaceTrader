@@ -1,8 +1,8 @@
 # Automated playtest results
 
-Build: post-upload browser refinement, November 13, 2026. This package was checked using Node.js v24.22.1 and `@napi-rs/canvas` 0.1.100 already installed in the authoring environment. A fresh network dependency installation was not tested.
+Build: 0.6.2 browser refinement, November 14, 2026 (adds a visible Test tools button; economy, combat, and map results are unchanged and were regenerated). This package was checked using Node.js v24.22.1 and `@napi-rs/canvas` 0.1.100 already installed in the authoring environment. A fresh network dependency installation was not tested.
 
-Game SHA-256: `c8a581c4a78bc019061642e6000e228ce1df1466fcf9b692e4048ec90602b6e0`.
+Game SHA-256: `47658cc50b1e691287318c107a7ef2cf68c4c4279981160f249a7262b24832d1`.
 
 The raw current results are in `browser-preview/review-after.json`. Run `npm run simulate` to regenerate them from the included engine. The test suite rejects results whose digest does not match the game file.
 
