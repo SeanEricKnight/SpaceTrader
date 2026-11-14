@@ -2,12 +2,13 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 14, 2026 (version 0.14.2).
+Last updated: November 14, 2026 (version 0.14.3).
 
 ## Built
 
 | Idea | Version | Notes |
 | --- | --- | --- |
+| Port rumors, local color and headlines (24 ports) | 0.14.3 | From the local-model writing pack, reviewed against lore; arrival banner, planet card, News tab. |
 | Test button for unlimited money | 0.6.2 | Footer "Test tools" opens the cheat console. |
 | Market screen without sideways scrolling | 0.7.0 | Compact rows; tap a row to trade. |
 | Price age on logged markets | 0.7.0 | Shows days old; "≈" at 3+ days. |

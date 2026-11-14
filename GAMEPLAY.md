@@ -23,6 +23,10 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 - **Portraits:** crew, escorts and people of the Reach get drawn placeholder faces (each name always draws the same face). A painted portrait file with the matching name (see PORTRAITS.md) automatically replaces it.
 - **Ships** in your ship card and in pirate encounters bob gently with a pulsing engine glow.
 
+## Port flavor (rumors, local color, headlines)
+
+- Every port has three short lines: local color (what the port looks like), an overheard rumor (gossip, not always true) and a headline. They appear when you dock (arrival banner), in the planet detail card, and the News tab's Port headlines list collects headlines from ports you have visited. They are flavor only and never change prices or crises.
+
 ## Look and feel
 
 - Rounded panels and pill buttons, color-coded tabs and stats, and job cards colored by type (courier green, freight amber, survey violet).
