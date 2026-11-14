@@ -31,7 +31,7 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 
 ## Celebrations
 
-- Finishing a job, a courier delivery, a side quest or the First haul pops a **celebration card** with confetti and the reward. Tap it to dismiss; it fades on its own. Reduced-motion players get the card without confetti.
+- Finishing a job, a courier delivery, a side quest or the First haul pops a **DELIVERED card**: a stamp slams down and the reward counts up. Tap it to dismiss; it fades on its own. Reduced-motion players get the card without the animation.
 
 ## Starting out
 
