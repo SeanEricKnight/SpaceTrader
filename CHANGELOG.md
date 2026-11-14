@@ -4,7 +4,7 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
-- Style pass: rounded panels, pill buttons, color-coded tabs, stats and job types; subtle toasts for sales, purchases and newly logged ports.
+- Style pass: rounded panels, pill buttons, color-coded tabs, stats and job types; subtle toasts for sales, purchases and newly logged ports; +profit/−cost numbers float up from the button you tapped; aligned number digits; warehouse shows its daily cost.
 
 - My ports: pin planets with a tag, live status list under the chart, plus a planet finder box.
 
