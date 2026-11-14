@@ -4,6 +4,8 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
+- Style pass: rounded panels, pill buttons, color-coded tabs, stats and job types; subtle toasts for sales, purchases and newly logged ports.
+
 - My ports: pin planets with a tag, live status list under the chart, plus a planet finder box.
 
 - Home port (default Acamar; about 20% off repairs and fuel; move for 500 cr) and a 20-unit warehouse there (1 cr per unit per day). Restore point: tag/branch `before-best-runs` predates Best runs and Home.

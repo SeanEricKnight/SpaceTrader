@@ -23,6 +23,11 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 - **Portraits:** crew, escorts and people of the Reach get drawn placeholder faces (each name always draws the same face). A painted portrait file with the matching name (see PORTRAITS.md) automatically replaces it.
 - **Ships** in your ship card and in pirate encounters bob gently with a pulsing engine glow.
 
+## Look and feel
+
+- Rounded panels and pill buttons, color-coded tabs and stats, and job cards colored by type (courier green, freight amber, survey violet).
+- Small toasts at the bottom: each sale shows its profit (green, with a star for a big one; coral for a loss), each purchase shows its cost, and a new port gets a gold "New port logged" toast.
+
 ## My ports and the finder
 
 - Every planet card has **Pin to My ports** and a tag button (Favorite, Good buyer, Refuel stop, Shipyard, Jobs, Avoid). **My ports** under the chart lists your home and pinned planets with live status: distance, crisis, job count and best pay (the pay and count need the newspaper), and how old your price log is.
