@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.10.1 — clearer price gauge
+
+- The bar under each good is a read-only gauge, not a slider. It now always carries a word (Cheap, Fair, Pricey; shown on every level except Hard and Impossible) with a plain-language key above the list.
+
 ## 0.10.0 — travel style, incidents, newspaper subscription, job board, hold meter
 
 - **Travel style** on the destination card: **Quiet ride** (+1 day, half the pirate risk, no incidents), **Steady** (the old behavior, default), **Excitement** (about a 55% chance of an incident on the way).
