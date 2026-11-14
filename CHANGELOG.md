@@ -2,6 +2,16 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.15.0 — Feedback, crew abilities, clearer News
+
+- Removed the Save game and How to play buttons from Dock services (autosave stays; slots and export are on Commander).
+- Buying a moon: pulsing "Buy your moon" button, then a full-screen moon-rise with confetti before the career summary (which now shows a moon).
+- Defeating a pirate: green flash, screen shake, spark burst and a "Pirate down" card with the bounty counting up.
+- Firing lasers: beam, hit flash, damage number and spark burst; the pirate's return shot shows its beam, damage and a shake.
+- Crew for hire now have special abilities with jump cooldowns (Slipstream, Broadside, Emergency patch, Haggle, Smooth talk, Pull strings), listed on crew cards, the pirate card, dock services and the jail screen.
+- News: new Top headlines block with colored ALERT, DEADLINE, DANGER, MONEY, GOAL and STORY tags and one-tap buttons.
+- Fix: gunner and escort volley bonus now actually apply in fights, matching the volley range already shown.
+
 ## 0.14.3 — Planet screen cleanup, finder list, harder Best runs
 
 - Removed parenthetical text from planet screens: the crisis cause (such as "labor shortage") is gone from the chart label, route card and arrival banner; "(in range)" and "(N days old)" on the planet card became "· in range" and "· N days old". The Conditions line still names the crisis.

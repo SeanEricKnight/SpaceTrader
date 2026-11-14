@@ -9,7 +9,7 @@ The rules as they work in the current version (**0.12.2**). Update this file wit
 
 ## Dock services
 
-The bar at the top of every screen is your dock services: refuel, repair, bank, read the news, buy a warp charge, and shortcuts to the shipyard & outfitter, job board, crew hiring, and saving. They only work while you are safely docked.
+The bar at the top of every screen is your dock services: refuel, repair, bank, read the news, buy a warp charge, and shortcuts to the shipyard & outfitter, job board and crew hiring. (Save game and How to play buttons were removed in 0.15.0: the game autosaves, and slots and export live on the Commander tab.) Crew abilities that work at the dock, like Haggle, appear here too. They only work while you are safely docked.
 
 ## Feel: sound, number pops, arrival banner
 
@@ -48,6 +48,9 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 
 ## Celebrations
 
+- **Buying your moon** is the big moment: when you have 500,000 cr and no debt, the goal bar's button pulses gold and reads "Buy your moon". Buying it fills the screen with a rising moon, "YOU BOUGHT A MOON", and falling confetti. Tap to continue to the career summary.
+- **Beating a pirate** flashes the screen green, shakes it, bursts sparks and shows a "Pirate down" card with the bounty counting up.
+- **Firing lasers** draws a beam to the pirate, flashes it, and pops the damage number; when the pirate shoots back you see its beam, the damage taken and a screen shake. Reduced-motion players skip these animations.
 - Finishing a job, a courier delivery, a side quest or the First haul pops a **DELIVERED card**: a stamp slams down, small credit chips float up and away, and the reward counts up. Tap it to dismiss; it fades on its own. Reduced-motion players get the card without the animation.
 
 ## Starting out
@@ -56,7 +59,7 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 - **First haul** is the quick-win mission: fly to Adahn and sell the Water there. The first Water you sell at Adahn pays a **cash bonus** on top of the sale: Beginner 2,000, Easy 1,750, Normal 1,500, Hard 1,000, Impossible 500 cr. It is enough to buy something right away, like a crew member, an escort, or a warp charge.
 - Beginner, Easy and Normal show the steps on the Market and System tabs; Hard and Impossible show a single line.
 - If you sell the Water somewhere else first, the mission quietly closes. Saves from older versions do not get it.
-- **How to play** (dock services bar) has a short guide to the loop below.
+- The first-haul steps and the welcome popup explain the loop below. The separate How to play button was removed in 0.15.0.
 
 ## Core loop
 
@@ -82,6 +85,7 @@ Chosen on the destination card before you jump:
 
 ## Events and the News
 
+- The News opens with **Top headlines**, the few things that matter right now, each with a colored tag: ALERT (a port in crisis and which prices rose), DEADLINE (a job due within 3 days), DANGER (high boarding risk), MONEY (debt and next-jump interest), GOAL (close to or able to buy your moon) and STORY. Ports shown follow the free/paid rules: your port, the free sample port, and the ports in a paid edition you bought.
 - Ports can be in a **crisis** (war, plague, drought and so on) that raises some prices. Each crisis lasts roughly 6 to 14 days, then eases and prices settle. A calm port has about a 3% chance per day of a new crisis, so they rotate. Time only passes when you travel.
 - **Free:** the Market tab shows conditions at the port you are docked at. The News tab also shows a free sample for one other port in trouble, a different port each day.
 - **Paid:** **The Reach News** (News tab) lists every port in a crisis. Buy one issue, or **subscribe for 10 days** and a fresh edition is delivered every time you dock. An issue is a snapshot of the day it was printed. Crises start and end, so check its date.
@@ -113,11 +117,14 @@ Chosen on the destination card before you jump:
 
 ## Crew and escorts (Crew tab)
 
+- **Special abilities** (new in 0.15.0), shown on every crew card: Wren **Slipstream** (guaranteed escape from one pirate, cooldown 6 jumps); Juno **Broadside** (one volley at triple damage, 4); Odo **Emergency patch** (+25 hull, does not use your turn, 5); Mattias **Haggle** (your next sale pays 20% more, 6); Dessa **Smooth talk** (automatically talks you past one customs inspection that would have caught you, 8); Ruvi **Pull strings** (out of jail at once, no bail, 10). Cooldowns tick down once per jump. Their old passive perks still apply.
+- Fix in 0.15.0: the gunner's bonus and escort damage were shown in the volley range on the pirate card but not actually applied; they now are.
 - **Crew:** three people look for work for now (a pilot, a mechanic and a gunner; the purser, smuggler and fixer are held back to keep things simple). You can hire up to 3, for 500 cr each, wage 15 cr per jump. Each has a role (pilot, mechanic, gunner, purser, smuggler, fixer) and a loyalty that rises or falls with your choices. They never die; treat them badly and they leave. A crew member can only be hired at their home planet; the card says where. **View profile** shows their portrait, character type, and backstory.
 - **Escorts:** three pilots are for hire at a time; you can hire up to 3. Each lowers pirate encounters and adds damage to your volleys. Wages are paid every jump; they gain levels and cost more as they improve.
 
 ## Trouble
 
+- **Crew abilities:** each crew member has one named ability with a cooldown counted in jumps (see Crew). Combat abilities appear as extra buttons on the pirate card; Haggle sits in the dock services bar; Pull strings shows while you are in jail.
 - **Mid-flight view:** when a pirate, marauders or an incident stop you, the Solar chart shows your ship stopped on the route with the other party beside it (pirate and marauders use the pirate ship picture for now; incidents show a label). The destination reads DESTINATION until you dock.
 - **Pirates:** a pirate ship can block your approach, and you cannot dock until you deal with it. The card shows a threat label (FAVORABLE: you should win; RISKY: a fair fight; OUTGUNNED: you will probably lose; UNARMED: no working laser) and explains each choice. **Fire lasers:** you shoot first, win and you collect the bounty. **Escape:** a percent chance; success lets you dock, failure costs a hit and the fight goes on. **Surrender:** keep your ship, lose all cargo and 10% of your cash. **Warp out:** a guaranteed escape for one warp charge.
 - **Customs and boarding:** contraband can be found; a boarding takes everything but only when you are rich.
