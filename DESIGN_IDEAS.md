@@ -87,6 +87,8 @@ Raised by Sean: escorts need avatars and backstories so they are characters, the
 
 **Proposed mechanics to discuss (not decided):** crew roles (pilot, mechanic, gunner, purser, smuggler) with one clear benefit each; hull at zero becoming capture or a tow instead of game over; jail triggered by contraband at strict ports or by failed shady jobs, with bail scaled to difficulty; kidnapping escapes through ransom, a crew or escort rescue (level matters), a risky breakout, or waiting it out. Portrait art needs images made in the ship-art style; Claude cannot generate those.
 
+**Boarding by marauders (Sean, November 14, 2026):** being boarded costs you everything you carry (cargo and credits), but it should be hard to happen at low levels and become more likely as the player gets richer and goes deeper. Proposed rules to discuss (not decided): no boarding at all while net worth is low (about 3,000 credits); a boarding chance that rises with net worth and region danger and is scaled by difficulty; escorts and crew (pilot, gunner) lower it; a boarded player loses cargo and credits, keeps the ship, and the loan keeps accruing interest while held; ways out that do not need credits (wait, breakout, crew or escort rescue) because the credits are gone. Ordinary lost fights below the boarding threshold keep the milder cargo-and-10% outcome. Hull at zero stops being game over in every case.
+
 ## Playtest questions
 
 Use a few player sessions to learn:
