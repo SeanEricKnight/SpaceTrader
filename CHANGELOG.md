@@ -4,12 +4,12 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.12.2 — Profile popups
 
+- The Captain's log is removed from the Commander page (a flat list of purchases is not useful without a storyline). A story-beat journal idea is in DESIGN_IDEAS.md.
 - Crew and escort cards are compact: avatar, name, role or level, perk, and a **View profile** button. The profile opens as a popup with a large avatar, character type, what they do, and backstory.
 
 ## 0.12.1 — Retirement ending
 
 - "Go there for me" now says how much fuel it buys and what that costs ("buy 13 fuel for 26 cr") instead of "about N cr fuel". Fuel price is the same at every port, so the figure is exact.
-- Captain's log shows the latest 8 entries; older ones fold into a scrollable "Older entries" section. The log now keeps the last 200 entries (was 30).
 - Retiring now shows an ending screen with your moon, days flown, worlds, jobs, profit, pirates, difficulty, and whether cheats were used. The Commander page explains what retiring does. Rank ladder idea added to DESIGN_IDEAS.md.
 
 ## 0.12.0 — Plain-language job board

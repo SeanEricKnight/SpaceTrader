@@ -128,3 +128,7 @@ Idea: your cargo history shapes how factions treat you. Carry medicine and relie
 ## Rank ladder / Admiral sequel (idea)
 
 Commander is the rank you hold in this game. Idea for a future game, or a second act after retiring: promote the same character up a ladder (Commander, then Captain, Commodore, Admiral, and so on) as they build a fleet instead of flying one ship. Ending the first game by buying a moon could carry over as a starting asset, and the retirement summary could grant the first promotion. Not designed yet.
+
+## Story log (idea, for later)
+
+The old Captain's log was a flat list of purchases and arrivals, so it was removed from the Commander page. If a storyline is built, bring it back as a **journal of story beats** only: key choices, crew moments, jobs completed, notable fights. Not a transaction history.
