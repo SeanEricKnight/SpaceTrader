@@ -2,6 +2,12 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.14.2 — Zoom, auto-fuel, simpler crew
+
+- Solar chart zoom is back (pinch, scroll or + / -). Zoomed in, each planet also shows its kind, tech level, resources and any crisis.
+- **Fill the tank automatically when I dock** (on by default, a checkbox on the Market tab) so you do not keep pressing Refuel. It spends the same fuel money.
+- Only three crew look for work (pilot, mechanic, gunner), matching the three escort pilots.
+
 ## 0.14.1 — Ship screen order
 
 - The current ship's shipyard card now says "You fly this one" (it said "In your hangar", which suggested you could keep several ships). You fly one ship at a time; buying swaps it for the old one at the trade-in price.

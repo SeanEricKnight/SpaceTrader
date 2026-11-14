@@ -22,11 +22,12 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 ## Core loop
 
 1. **Market tab:** buy goods where a tag says **Cheap**, sell where it says **Pricey** (tags are hidden on Hard and Impossible). The sticky hold meter shows cargo used and free.
-2. **System tab:** tap a planet on the chart to open its card, then travel. The chart is fixed; there is no panning or zooming. Each jump uses fuel and takes days.
+2. **System tab:** tap a planet on the chart to open its card, then travel. Pinch, scroll or use + / − to zoom in: planets show their kind, tech level, resources and any crisis as you get close. Each jump uses fuel and takes days.
 3. Repeat, take jobs, and avoid or fight trouble.
 
 ## Fuel, range, and warp
 
+- **Fill the tank automatically when I dock** (checkbox on the Market tab, on by default) tops up the tank on arrival so you do not press Refuel each stop. It costs the same fuel money; turn it off to buy fuel yourself.
 - Each ship has a **jump range** in parsecs (pc), also its tank size. Long trips need stops. Fuel costs the same at every port (rate depends on ship and difficulty).
 - **Go there for me** plans the route through stops, buys the fuel needed, and flies it (Beginner to Normal only). It states the fuel and cost before you press it.
 - **Warp charge** (bought at a port; there is a carry limit shown on the button): one charge jumps up to 40 pc with no fuel and no pirate check, or escapes any pirate fight.
@@ -72,8 +73,8 @@ Chosen on the destination card before you jump:
 
 ## Crew and escorts (Crew tab)
 
-- **Crew:** up to 3, hired for 500 cr each, wage 15 cr per jump. Each has a role (pilot, mechanic, gunner, purser, smuggler, fixer) and a loyalty that rises or falls with your choices. They never die; treat them badly and they leave. A crew member can only be hired at their home planet; the card says where. **View profile** shows their portrait, character type, and backstory.
-- **Escorts:** up to 3 hired pilots. Each lowers pirate encounters and adds damage to your volleys. Wages are paid every jump; they gain levels and cost more as they improve.
+- **Crew:** three people look for work for now (a pilot, a mechanic and a gunner; the purser, smuggler and fixer are held back to keep things simple). You can hire up to 3, for 500 cr each, wage 15 cr per jump. Each has a role (pilot, mechanic, gunner, purser, smuggler, fixer) and a loyalty that rises or falls with your choices. They never die; treat them badly and they leave. A crew member can only be hired at their home planet; the card says where. **View profile** shows their portrait, character type, and backstory.
+- **Escorts:** three pilots are for hire at a time; you can hire up to 3. Each lowers pirate encounters and adds damage to your volleys. Wages are paid every jump; they gain levels and cost more as they improve.
 
 ## Trouble
 
