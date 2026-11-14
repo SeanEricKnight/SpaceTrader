@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.8.4 — info card explains a disabled Travel button
+
+- The planet info card now says why Travel is disabled: out of range (with the ship's range and, on lower difficulties, a suggested route), not enough fuel (with a Refuel button), or busy with an event.
+
 ## 0.8.3 — fuel help that scales with difficulty
 
 - The "Refuel or travel closer" badge is now **NEEDS FUEL · REFUEL BELOW** (the refuel button sits in the card). Under it, help scales with difficulty: **Beginner** lists the ports you can reach on current fuel with costs, how many more a full tank opens, and exactly how much more fuel you need and what it costs; **Easy** the same with a shorter list; **Normal** only counts reachable ports; **Hard and Impossible** give no hints (out-of-range ports just say so, with no suggested route).
