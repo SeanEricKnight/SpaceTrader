@@ -2,6 +2,12 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.10.3 — buy-one stays open, big cargo hold, escort avatars
+
+- Opening a market row now stays open while you trade, so Buy 1, Sell 1 and the rest can be clicked repeatedly (the row used to collapse after every click, which made it look like only one unit could be bought).
+- The cargo hold meter is a large full-width bar that stays pinned at the top of the market while you scroll.
+- Escorts (hired and for hire) have avatars (colored initials) and a short backstory.
+
 ## 0.10.2 — price tags instead of bars
 
 - The slider-like price bar is gone. Each good now has a small tag: ▼ Cheap (good to buy), ● Fair, ▲ Pricey (good to sell), with a one-line key. Hidden on Hard and Impossible.
