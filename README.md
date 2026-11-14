@@ -2,7 +2,7 @@
 
 A browser game of interstellar trading, inspired by the classic Palm OS *Space Trader*. Buy low, sell high, dodge pirates and customs, and save **500,000 credits** to buy your own moon. No game over: lose a fight and you lose cargo, not the run.
 
-**Version 0.10.3** · single HTML file · plays in a desktop or phone browser (Chrome tested most; Firefox lightly)
+**Version 0.11.0** · single HTML file · plays in a desktop or phone browser (Chrome tested most; Firefox lightly)
 
 ## Play
 
@@ -14,7 +14,7 @@ A browser game of interstellar trading, inspired by the classic Palm OS *Space T
 - **Trade:** 24 ports, 8 goods, price tags (Cheap / Fair / Pricey) that say where to buy and sell, and a cargo hold meter.
 - **Events:** wars, plagues, droughts and more raise prices for a few days. The paid newspaper (single issue or 10-day subscription) lists every port in a crisis.
 - **Travel:** pick a **Quiet ride**, **Steady** or **Excitement** trip. Excitement can bring a derelict, a distress call or a trader convoy.
-- **Range and fuel:** each ship has a maximum jump, so long trips need stops. A one-use **warp charge** jumps up to 40 pc or escapes a fight.
+- **Range and fuel:** each ship has a maximum jump, so long trips need stops. **Go there for me** plans the route and buys the fuel for you (Beginner to Normal). A one-use **warp charge** jumps up to 40 pc or escapes a fight.
 - **Jobs:** contracts with named clients and relief bonuses for crisis ports.
 - **Crew and escorts:** six crew with stories, plus hired escort pilots who lower pirate risk.
 - **Consequences:** jail with bail, kidnapping with a way out, boarding that takes everything but only when you are rich, marauder offers, and ship rental.

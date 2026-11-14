@@ -19,4 +19,9 @@ r('game.fuel=1;game.offer={kind:"incident",id:1};action("incident-0")');assert.e
 r('game.credits=5000;action("buysub")');assert.equal(r('paperSubbed()'),true);const day=r('game.paper.day');r('game.location=1;game.fuel=14;game.style="steady";jump(2)');assert.equal(r('game.paper.day'),day+1,'subscription refreshes the edition');
 assert.match(r('holdMeter()'),/free/);
 const offs=JSON.parse(r('JSON.stringify(offers())'));assert.equal(offs.length,3);assert.ok(offs.every(j=>j.client));
-console.log('PASS: warp charges, travel styles, incidents, subscription, job board');
+// Auto-route: refuels and hops through stops; blocked on Hard; stops when poor.
+storage.clear();t=context();r('game.location=1;game.fuel=14;game.credits=2000;game.peace=true');const far=r('game.worlds.findIndex((w,i)=>i!==1&&distance(i)>14&&routeHint(i)&&routeHint(i).length===3)');assert.ok(far>=0);
+r('action("auto",'+far+')');assert.equal(r('game.location'),far);assert.ok(r('game.credits')<2000);
+storage.clear();t=context();r('game.location=1;game.fuel=1;game.credits=3;game.peace=true;action("auto",'+far+')');assert.notEqual(r('game.location'),far,'poor: does not complete');
+storage.clear();t=context();r('game.difficulty="Hard";game.location=1;game.fuel=14;game.credits=2000;action("auto",'+far+')');assert.equal(r('game.location'),1,'no auto-route on Hard');
+console.log('PASS: warp charges, travel styles, incidents, subscription, job board, auto-route');
