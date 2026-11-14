@@ -1,6 +1,8 @@
 # Space Trader: how it plays
 
-The rules as they work in the current version (**0.12.2**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
+The rules as they work in the current version (**0.16.1**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
+
+Market tab: tap a goods row to expand it; Buy 1, Max, Sell 1, All and Dump are inside the expanded row.
 
 ## Goal and ending
 
