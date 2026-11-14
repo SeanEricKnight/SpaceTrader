@@ -22,7 +22,7 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 ## Core loop
 
 1. **Market tab:** buy goods where a tag says **Cheap**, sell where it says **Pricey** (tags are hidden on Hard and Impossible). The sticky hold meter shows cargo used and free.
-2. **System tab:** tap a planet on the chart to open its card, then travel. Pinch, scroll or use + / − to zoom in: the planet names and notes grow as you zoom, and up close each planet shows its kind, tech level, resources, and in orange what its colonists need while a crisis lasts (for example "Colonists need Medicine (plague outbreak)"). This applies to every planet in every system. Each jump uses fuel and takes days.
+2. **System tab:** tap a planet on the chart to open its card, then travel. Click or tap the chart first (it gets a green outline), then scroll, pinch or drag it; until then the page scrolls normally. Click anywhere outside to let go. You can also use + / −: the planet names and notes grow as you zoom, and up close each planet shows its kind, tech level, resources, and in orange what its colonists need while a crisis lasts (for example "Colonists need Medicine (plague outbreak)"). This applies to every planet in every system. Each jump uses fuel and takes days.
 3. Repeat, take jobs, and avoid or fight trouble.
 
 ## Fuel, range, and warp

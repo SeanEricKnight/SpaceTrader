@@ -4,6 +4,8 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
+- The solar chart no longer grabs the mouse wheel or drag by accident. Click or tap it to activate (green outline); click outside to release. Until then the page scrolls normally.
+
 - Each Reach (Inner, Outer, Far) has a backstory popup, opened from the Solar chart, with a few things to know before you fly there.
 
 - Solar chart zoom is back (pinch, scroll or + / -). Zoomed in, planet text grows and each planet shows its kind, tech level, resources, and a separate orange line for any crisis, such as "Colonists need Medicine (plague outbreak)".
