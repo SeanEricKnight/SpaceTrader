@@ -340,7 +340,7 @@ function offerAction(kind){
 // rental
 function rentRate(id){return Math.max(10,Math.ceil(catalog.ships[id].price*.012))}
 function rentDeposit(id){return Math.round(catalog.ships[id].price*.1)}
-function rentRestriction(id){const v=catalog.ships[id];return !v?'Unknown ship':!active()?'Dock safely to rent':game.rental?'Already renting a ship':id===game.ship?'Current ship':world().tech<v.tech?'Requires '+tech[v.tech]+' shipyard':held()>v.bays?'Cargo will not fit':game.credits<rentDeposit(id)?'Needs '+money(rentDeposit(id))+' deposit':''}
+function rentRestriction(id){const v=catalog.ships[id];return !v?'Unknown ship':!active()?'Dock safely to rent':game.rental?'Already renting a ship':id===game.ship?'Current ship':world().tech<v.tech?'Requires '+tech[v.tech]+' shipyard'+yardHint(v.tech):held()>v.bays?'Cargo will not fit':game.credits<rentDeposit(id)?'Needs '+money(rentDeposit(id))+' deposit':''}
 function rentShip(id){
  if(rentRestriction(id))return;const v=catalog.ships[id];
  game.stored={ship:game.ship,hull:game.hull,laser:game.laser,modules:game.modules.slice(),port:game.location};
@@ -386,6 +386,7 @@ function warpMax(){return ship().range>=20?3:2}
 function warpReason(){return game.warps>=warpMax()?'Your ship carries at most '+warpMax()+' charges':world().tech<4?'Sold at ports with tech level 4 or higher':game.credits<warpPrice()?'Need '+money(warpPrice())+'':''}
 function buyWarp(){if(!active()||warpReason())return;game.credits-=warpPrice();game.warps++;say('Bought a warp charge for '+money(warpPrice())+'. You carry '+game.warps+'.')}
 function warpButton(id){const d=distance(id);if(id===game.location||d<=game.fuel||(game.warps||0)<1)return '';return '<button data-action="warp" data-id="'+id+'" '+(!active()||d>WARP_RANGE?'disabled':'')+'>'+(d>WARP_RANGE?'Warp: beyond '+WARP_RANGE+' pc':'Warp here · uses 1 charge ('+game.warps+' left)')+'</button>'}
+function yardHint(t){let best=-1,d=1e9;game.worlds.forEach((w,i)=>{if(w.tech>=t&&i!==game.location){const k=hopDist(game.location,i);if(k<d){d=k;best=i}}});return best<0?' — none in this galaxy':' — nearest: '+game.worlds[best].name+', '+d+' pc'}
 function hopDist(a,b){return Math.ceil(Math.hypot(game.worlds[a].x-game.worlds[b].x,game.worlds[a].y-game.worlds[b].y))}
 function routeHint(to){
  const R=ship().range,n=game.worlds.length,dist=Array(n).fill(Infinity),prev=Array(n).fill(-1),done=Array(n).fill(false);dist[game.location]=0;
@@ -495,7 +496,7 @@ function creditLimit(){return 25000}
 function creditAvailable(){return Math.max(0,creditLimit()-game.debt)}
 function bankSummary(){return '<section class="bank-summary"><h3>Reach Mutual · bank & ship financing</h3><p>Debt '+money(game.debt)+' · '+level().interest+'% per travel day on '+game.difficulty+' · '+money(creditAvailable())+' available to borrow.</p><p class="micro muted">Next jump adds '+money(interestDue())+' to your debt. Shipyard financing borrows only the shortfall and shows the cost before you commit.</p><button data-action="bank">Open bank · borrow / repay</button></section>'}
 function shipCost(id){return catalog.ships[id].price-Math.floor(ship().price*.75*game.hull/ship().hull)}
-function shipRestriction(id){const v=catalog.ships[id];return !v?'Unknown ship':game.rental?'Return your rental first':!active()?'Dock safely to trade':id===game.ship?'Current ship':world().tech<v.tech?'Requires '+tech[v.tech]+' shipyard':held()>v.bays+(hasOutfit('cargo')?5:0)?'Cargo will not fit':!kitFits(v)?'Remove incompatible equipment first':''}
+function shipRestriction(id){const v=catalog.ships[id];return !v?'Unknown ship':game.rental?'Return your rental first':!active()?'Dock safely to trade':id===game.ship?'Current ship':world().tech<v.tech?'Requires '+tech[v.tech]+' shipyard'+yardHint(v.tech):held()>v.bays+(hasOutfit('cargo')?5:0)?'Cargo will not fit':!kitFits(v)?'Remove incompatible equipment first':''}
 function financeShortfall(id){return Math.max(0,shipCost(id)-game.credits)}
 function borrowCredits(amount){if(!active()||!Number.isSafeInteger(amount)||amount<1||amount>creditAvailable()||!Number.isSafeInteger(game.credits+amount))return false;game.debt+=amount;game.credits+=amount;say('Borrowed '+money(amount)+' at '+level().interest+'% per travel day. Total debt: '+money(game.debt)+'.');return true}
 function repayCredits(amount){if(!active()||!Number.isSafeInteger(amount)||amount<1||amount>game.debt||amount>game.credits)return false;game.debt-=amount;game.credits-=amount;say('Repaid '+money(amount)+'. Remaining debt: '+money(game.debt)+'.');return true}

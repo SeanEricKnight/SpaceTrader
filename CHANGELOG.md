@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.11.3 — Shipyard hint
+
+- Ships you cannot buy or rent because the local yard is too low-tech now name the nearest planet that has the needed yard and its distance.
+
 ## 0.11.2 — Laser upgrade clarity
 
 - The laser button now says what the next step is ("tier 2 → 3 · cost") and "Lasers maxed" at the top. The upgrade message says whether you can upgrade again, and the ship card shows tier dots (●●○).
