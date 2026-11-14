@@ -4,6 +4,8 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.14.1 — Ship screen order
 
+- The current ship's shipyard card now says "You fly this one" (it said "In your hangar", which suggested you could keep several ships). You fly one ship at a time; buying swaps it for the old one at the trade-in price.
+
 - Ship tab order: your ship, its controls, **Outfit your ship** (right under the ship), then **Get a different ship** with a **Buy a ship / Rent a ship** switch and a one-line explanation of each. Rental cards now show the ship picture. Only the shipyard cards open the full ship card; the top ship card does not.
 
 ## 0.14.0 — Side quests
