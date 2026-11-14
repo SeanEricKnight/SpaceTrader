@@ -4,7 +4,11 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
-- Game feel pass: synthesized sounds (toggle in dock services), credits count up/down with a glow and a floating +/- amount, and an arrival banner at every port with the planet, a story hook, and any colonists' need.
+- Visuals: procedurally painted planets (craters, continents, clouds, ice caps, dunes, gas bands and storm spots, cracked ice, lightning) with atmosphere glow; drawn placeholder portraits for every crew, escort and person (painted files still override them); ships bob with a pulsing engine glow.
+
+- Sounds are switched off (code kept, flag `SOUND_ENABLED`) until they are redone.
+
+- Game feel pass: credits count up/down with a glow and a floating +/- amount, and an arrival banner at every port with the planet, a story hook, and any colonists' need.
 
 - Mid-flight view: when a pirate, marauders or an incident interrupts a trip, the Solar chart shows your ship stopped on the route (or just short of the destination for cross-Reach trips) with the other party beside it.
 

@@ -13,9 +13,15 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 
 ## Feel: sound, number pops, arrival banner
 
-- **Sound** (dock services button, on by default): short synthesized sounds for money in and out, arriving, a pirate alarm, taking a hit, and jumping. Toggle it any time; the choice is remembered.
+- **Sound** is switched off for now (the first synthesized sounds were not good enough). It is on the to-do list.
 - **Credits** count up or down and the Credits tile glows green or red with a floating "+340 cr" or "−28 cr" for every change. Players who prefer reduced motion get no animation.
 - **Arrival banner:** when you dock, the Market and System tabs open with a card showing the planet, its kind, tech level and resources, a one-line story hook, and in orange what its colonists need if there is a crisis. Press ✕ to dismiss it; it returns at the next port.
+
+## Look of the game
+
+- **Planets** are procedurally painted: each kind has its own surface (craters on barren rock, continents, clouds and ice caps on ocean worlds, dune streaks on deserts, banded gas giants with storm spots, cracked ice, lightning storms), an atmosphere glow, and a slow spin. Surfaces are made once and remembered by the browser.
+- **Portraits:** crew, escorts and people of the Reach get drawn placeholder faces (each name always draws the same face). A painted portrait file with the matching name (see PORTRAITS.md) automatically replaces it.
+- **Ships** in your ship card and in pirate encounters bob gently with a pulsing engine glow.
 
 ## Starting out
 
