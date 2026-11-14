@@ -89,6 +89,11 @@ Raised by Sean: escorts need avatars and backstories so they are characters, the
 
 **Boarding by marauders (Sean, November 14, 2026):** being boarded costs you everything you carry (cargo and credits), but it should be hard to happen at low levels and become more likely as the player gets richer and goes deeper. Proposed rules to discuss (not decided): no boarding at all while net worth is low (about 3,000 credits); a boarding chance that rises with net worth and region danger and is scaled by difficulty; escorts and crew (pilot, gunner) lower it; a boarded player loses cargo and credits, keeps the ship, and the loan keeps accruing interest while held; ways out that do not need credits (wait, breakout, crew or escort rescue) because the credits are gone. Ordinary lost fights below the boarding threshold keep the milder cargo-and-10% outcome. Hull at zero stops being game over in every case.
 
+**Two more ideas from Sean (November 14, 2026; proposals, not decided):**
+
+- **Marauders make an offer.** Instead of only boarding you, marauders can offer a deal: be their protection, or carry something for them, depending on the ship you fly (an armed ship suits protection; a big hold suits carrying). Accepting pays, risks jail and faction reputation, and could connect to crew stories. Refusing leaves the normal fight, flee, or boarding outcome. This turns a punishment into a choice.
+- **Short-term ship rental.** Rent a ship by the travel day instead of buying one every time. Open questions: daily rate and deposit; damage fee; whether it must be returned to the port it was rented at; whether your own equipment transfers; pricing so long-term renting costs more than buying; use as a way to try a ship before buying it (this ties to the deferred ship-preview work) and as a replacement after losing your ship.
+
 ## Playtest questions
 
 Use a few player sessions to learn:
