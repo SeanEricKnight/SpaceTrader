@@ -7,6 +7,10 @@ The rules as they work in the current version (**0.12.2**). Update this file wit
 - Save **500,000 cr** and clear your debt, then **Retire** (Commander screen or the goal bar) to buy a moon. That ends the game with a career summary. It cannot be undone, so save to a slot first if you want to keep that commander.
 - There is no game over. If your ship is destroyed or you are jailed or kidnapped, there is a way back, usually at a cost.
 
+## Dock services
+
+The bar at the top of every screen is your dock services: refuel, repair, bank, read the news, buy a warp charge, and shortcuts to the shipyard & outfitter, job board, crew hiring, and saving. They only work while you are safely docked.
+
 ## Core loop
 
 1. **Market tab:** buy goods where a tag says **Cheap**, sell where it says **Pricey** (tags are hidden on Hard and Impossible). The sticky hold meter shows cargo used and free.
