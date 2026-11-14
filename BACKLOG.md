@@ -33,6 +33,7 @@ Last updated: November 14, 2026 (version 0.14.2).
 | Livelier market (icons, price gauge, EVENT tag) | 0.8.0 | Gauge hidden on Hard and Impossible. |
 
 ## Deferred (not built yet)
+- Mid-flight art: a police cutter and a marauder ship picture (both use the pirate ship for now); show customs inspections in flight (they happen after docking today).
 
 | Idea | Why deferred | Next step |
 | --- | --- | --- |
