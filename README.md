@@ -24,6 +24,7 @@ A browser game of interstellar trading, inspired by the classic Palm OS *Space T
 
 | File | What it is |
 | --- | --- |
+| [GAMEPLAY.md](GAMEPLAY.md) | The rules, kept current with every version |
 | [CHANGELOG.md](CHANGELOG.md) | What changed in each version |
 | [BACKLOG.md](BACKLOG.md) | What is built and what is waiting |
 | [DESIGN_IDEAS.md](DESIGN_IDEAS.md) | Ideas not built yet (threat map, reputation) |
@@ -33,6 +34,7 @@ A browser game of interstellar trading, inspired by the classic Palm OS *Space T
 
 ## For developers
 
+- Any change to how the game plays must also update `GAMEPLAY.md` (the rules) and `CHANGELOG.md`.
 - Edit `SpaceTrader-browser.html`, then run `node scripts/sync-pages.cjs` to refresh the `docs/` copy.
 - `npm test` runs the checks; some need `@napi-rs/canvas`.
 - Native Swift project files are kept in the repo and not the current focus.

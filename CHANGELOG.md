@@ -4,6 +4,7 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.12.2 — Profile popups
 
+- New **GAMEPLAY.md** rules reference. The News screen now spells out free (this port) versus paid (every port).
 - Icons on the tabs and the Bank button. The Newspaper tab is now called **News**, and the paper is "The Reach News".
 - The Captain's log is removed from the Commander page (a flat list of purchases is not useful without a storyline). A story-beat journal idea is in DESIGN_IDEAS.md.
 - Crew and escort cards are compact: avatar, name, role or level, perk, and a **View profile** button. The profile opens as a popup with a large avatar, character type, what they do, and backstory.
