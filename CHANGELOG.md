@@ -4,6 +4,8 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
+- Market price tags now say what they compare against: "Cheap vs usual 28-62 cr", the good's normal range across all planets.
+
 - The solar chart no longer grabs the mouse wheel or drag by accident. Click or tap it to activate (green outline); click outside to release. Until then the page scrolls normally.
 
 - Each Reach (Inner, Outer, Far) has a backstory popup, opened from the Solar chart, with a few things to know before you fly there.
