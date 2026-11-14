@@ -19,7 +19,7 @@ r('action("buypaper")');assert.equal(r('game.credits'),500-r('paperPrice()'),'on
 // Escorts: hire, wages, levelling, dismiss.
 t=context();r('game.credits=2000;action("hire",1);action("hire",2)');assert.equal(r('game.escorts.length'),2);assert.equal(r('game.credits'),2000-300-600);
 assert.ok(r('escortRiskFactor()')<1&&r('volleyRange()[0]')>r('(()=>{const e=game.escorts;game.escorts=[];const v=volleyRange()[0];game.escorts=e;return v})()'));
-r('game.fuel=99;game.peace=true;const c=game.credits;globalThis.__c=c;action("jump",1)');assert.equal(r('game.credits'),r('__c')-10-20,'wages paid');
+r('game.fuel=99;game.peace=true;const c=game.credits;globalThis.__c=c;action("jump",1)');assert.equal(r('game.credits'),r('__c')-r('game.escorts.reduce((a,e)=>a+escortWage(e),0)'),'wages paid (traits change wages)');assert.ok(r('game.escorts.every(e=>e.loy>0)'),'escorts have loyalty');
 r('game.escorts[0].jumps=5;payEscorts()');assert.equal(r('game.escorts[0].level'),2,'six jumps reach level 2');
 r('game.credits=0;payEscorts()');assert.equal(r('game.escorts.length'),0,'unpaid escorts leave');
 // Old saves keep fixed events and gain empty escort/paper fields.

@@ -4,6 +4,8 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.15.0 — Feedback, crew abilities, clearer News
 
+- Escorts (pilots for hire) now have Hull, Evasion, Aim and Loyal star ratings, a trait that fits jobs (Principled, Shady, Frugal, Guardian, Scout, Hotshot) and a home Reach, shown before you hire. Loyalty is tracked and low loyalty makes them leave.
+- Pirates and police scale with career tier (net worth): easy for Rookies, harder at each step. The pirate card names your tier.
 - Removed the Save game and How to play buttons from Dock services (autosave stays; slots and export are on Commander).
 - Buying a moon: pulsing "Buy your moon" button, then a full-screen moon-rise with confetti before the career summary (which now shows a moon).
 - Defeating a pirate: green flash, screen shake, spark burst and a "Pirate down" card with the bounty counting up.

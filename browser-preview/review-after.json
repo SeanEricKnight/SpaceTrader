@@ -102,121 +102,121 @@
       "difficulty": "Beginner",
       "loadout": "starter",
       "winPct": 100,
-      "repairPerWin": 12,
-      "rewardPerWin": 45,
-      "rounds": 2.7
+      "repairPerWin": 3,
+      "rewardPerWin": 40,
+      "rounds": 1.8
     },
     {
       "difficulty": "Beginner",
       "loadout": "laser3",
       "winPct": 100,
-      "repairPerWin": 7,
-      "rewardPerWin": 45,
-      "rounds": 1.9
+      "repairPerWin": 0,
+      "rewardPerWin": 40,
+      "rounds": 1
     },
     {
       "difficulty": "Beginner",
+      "loadout": "shield",
+      "winPct": 100,
+      "repairPerWin": 1,
+      "rewardPerWin": 40,
+      "rounds": 1.8
+    },
+    {
+      "difficulty": "Easy",
+      "loadout": "starter",
+      "winPct": 100,
+      "repairPerWin": 11,
+      "rewardPerWin": 44,
+      "rounds": 2.6
+    },
+    {
+      "difficulty": "Easy",
+      "loadout": "laser3",
+      "winPct": 100,
+      "repairPerWin": 6,
+      "rewardPerWin": 44,
+      "rounds": 1.8
+    },
+    {
+      "difficulty": "Easy",
       "loadout": "shield",
       "winPct": 100,
       "repairPerWin": 5,
-      "rewardPerWin": 45,
-      "rounds": 2.7
-    },
-    {
-      "difficulty": "Easy",
-      "loadout": "starter",
-      "winPct": 100,
-      "repairPerWin": 39,
-      "rewardPerWin": 75,
-      "rounds": 4.4
-    },
-    {
-      "difficulty": "Easy",
-      "loadout": "laser3",
-      "winPct": 100,
-      "repairPerWin": 22,
-      "rewardPerWin": 75,
-      "rounds": 2.9
-    },
-    {
-      "difficulty": "Easy",
-      "loadout": "shield",
-      "winPct": 100,
-      "repairPerWin": 22,
-      "rewardPerWin": 75,
-      "rounds": 4.4
+      "rewardPerWin": 44,
+      "rounds": 2.6
     },
     {
       "difficulty": "Normal",
+      "loadout": "starter",
+      "winPct": 100,
+      "repairPerWin": 43,
+      "rewardPerWin": 67,
+      "rounds": 3.2
+    },
+    {
+      "difficulty": "Normal",
+      "loadout": "laser3",
+      "winPct": 100,
+      "repairPerWin": 23,
+      "rewardPerWin": 67,
+      "rounds": 2.1
+    },
+    {
+      "difficulty": "Normal",
+      "loadout": "shield",
+      "winPct": 100,
+      "repairPerWin": 24,
+      "rewardPerWin": 67,
+      "rounds": 3.2
+    },
+    {
+      "difficulty": "Hard",
+      "loadout": "starter",
+      "winPct": 100,
+      "repairPerWin": 87,
+      "rewardPerWin": 86,
+      "rounds": 3.3
+    },
+    {
+      "difficulty": "Hard",
+      "loadout": "laser3",
+      "winPct": 100,
+      "repairPerWin": 46,
+      "rewardPerWin": 86,
+      "rounds": 2.2
+    },
+    {
+      "difficulty": "Hard",
+      "loadout": "shield",
+      "winPct": 100,
+      "repairPerWin": 52,
+      "rewardPerWin": 86,
+      "rounds": 3.3
+    },
+    {
+      "difficulty": "Impossible",
       "loadout": "starter",
       "winPct": 100,
       "repairPerWin": 143,
-      "rewardPerWin": 93,
-      "rounds": 5.2
-    },
-    {
-      "difficulty": "Normal",
-      "loadout": "laser3",
-      "winPct": 100,
-      "repairPerWin": 87,
-      "rewardPerWin": 121,
-      "rounds": 3.5
-    },
-    {
-      "difficulty": "Normal",
-      "loadout": "shield",
-      "winPct": 100,
-      "repairPerWin": 108,
-      "rewardPerWin": 121,
-      "rounds": 5.3
-    },
-    {
-      "difficulty": "Hard",
-      "loadout": "starter",
-      "winPct": 100,
-      "repairPerWin": 230,
-      "rewardPerWin": 45,
-      "rounds": 5
-    },
-    {
-      "difficulty": "Hard",
-      "loadout": "laser3",
-      "winPct": 100,
-      "repairPerWin": 161,
-      "rewardPerWin": 156,
+      "rewardPerWin": 113,
       "rounds": 3.6
     },
     {
-      "difficulty": "Hard",
-      "loadout": "shield",
-      "winPct": 100,
-      "repairPerWin": 204,
-      "rewardPerWin": 136,
-      "rounds": 5.5
-    },
-    {
-      "difficulty": "Impossible",
-      "loadout": "starter",
-      "winPct": 100,
-      "repairPerWin": 311,
-      "rewardPerWin": -26,
-      "rounds": 4.7
-    },
-    {
       "difficulty": "Impossible",
       "loadout": "laser3",
       "winPct": 100,
-      "repairPerWin": 267,
-      "rewardPerWin": 177,
-      "rounds": 3.9
+      "repairPerWin": 79,
+      "rewardPerWin": 113,
+      "rounds": 2.4
     },
     {
       "difficulty": "Impossible",
       "loadout": "shield",
       "winPct": 100,
-      "repairPerWin": 306,
-      "rewardPerWin": 72,
-      "rounds": 5.5
+      "repairPerWin": 92,
+      "rewardPerWin": 113,
+      "rounds": 3.6
     }
   ],
   "trade": [
@@ -374,5 +374,5 @@
       "creditsAt120": 1306311
     }
   ],
-  "buildSha256": "f248dd3f1dcae1c4d4b43903907cad6813b33e57ebd2c5550eae7294167b6cc0"
+  "buildSha256": "d4ae55d80de0f127847aecb8cf284fa9731f93ee3d49c2af374fec1766dcddfa"
 }

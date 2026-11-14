@@ -9,7 +9,7 @@ r('action("crew-hire",1)');assert.equal(r('game.crew.length'),1,'Odo is not at A
 r('game.location=10;action("crew-hire",1);game.location=11;action("crew-hire",2);game.location=9;action("crew-hire",3)');assert.equal(r('game.crew.length'),3,'cap is three');
 // Perks.
 assert.ok(r('crewHas("pilot")')&&r('crewHas("mechanic")')&&r('crewHas("gunner")')&&!r('crewHas("purser")'));
-assert.equal(r('escapeOdds()'),r('Math.min(95,level().escape+10)'));
+assert.equal(r('escapeOdds()'),r('Math.max(5,Math.min(95,level().escape+10+[10,5,0,0,-3][careerTier()]))'));
 // Mechanic patches hull on a jump; wages are paid; beat triggers at 8 jumps.
 storage.clear();t=context();r('game.credits=20000;game.location=10;action("crew-hire",1);game.location=0;game.hull=50;game.fuel=99;game.peace=true;game.crew[0].jumps=7');
 const before=r('game.credits');r('action("jump",1)');assert.equal(r('game.hull'),53);assert.equal(r('game.credits'),before-15);assert.deepEqual(JSON.parse(r('JSON.stringify(game.pendingBeat)')),{c:'odo',i:0});
