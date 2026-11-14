@@ -6,7 +6,7 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 - Added a **Test tools** button in the page footer that opens the existing cheat console. It uses the same commands and the same "Cheats used this run" flag as the hidden shortcuts (typing `cheats` or clicking the title five times), and it works by touch on a phone.
 - No rules, economy, combat, or map behavior changed. Regenerated `browser-preview/review-after.json` (only the build digest changed) and the SHA-256 records.
-- Verified: the logic and solar checks pass. The camera, community, world-bank, planets, and review checks could not run in this authoring environment because `@napi-rs/canvas` could not be installed; they fail identically on the unchanged 0.6.1 build. Run `npm install` and `npm test` where network access is available. The button was exercised in headless Chrome at a 390-pixel phone width: it opens the console, `cash 50000` works, and Close works. Physical-device testing remains pending.
+- Verified: `npm test` passed all package checks (logic, community, world-bank, solar, review, camera, planets, plus the simulation) on Sean's Windows PC, Node v26.13.1, with `@napi-rs/canvas` installed, on branch `claude/test-button-and-ideas` (November 14, 2026). The checks use a DOM harness and do not replace real Chrome or iPhone testing. The Test tools button was also exercised in headless Chrome at a 390-pixel width: it opens the console, `cash 50000` works, and Close works. Physical-device testing remains pending.
 
 ## 0.6.1 — individual planet rotation and lighting
 
