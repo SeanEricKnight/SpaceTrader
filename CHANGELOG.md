@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.9.0 — warp charges
+
+- New consumable **warp charge**, sold at tech level 4+ ports (about 2,000 cr on Normal; 1,500 on Beginner/Easy, 3,000 Hard, 4,000 Impossible). Carry 2, or 3 on ships with range 20+. One charge either jumps up to 40 pc with no fuel and no pirate check (a **Warp here** button appears on the destination card, map bar and info card when a port is beyond your fuel), or escapes any pirate fight (**Warp out**). Customs inspections still apply on arrival. Not usable while held or in custody.
+
 ## 0.8.4 — info card explains a disabled Travel button
 
 - The planet info card now says why Travel is disabled: out of range (with the ship's range and, on lower difficulties, a suggested route), not enough fuel (with a Refuel button), or busy with an event.

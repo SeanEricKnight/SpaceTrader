@@ -105,3 +105,13 @@ Use a few player sessions to learn:
 - Do players understand loan cost and interest before borrowing?
 
 Record what players do and say. This is qualitative feedback, not a representative survey.
+
+
+## Threat map: pirate and police activity (proposed, not built)
+
+Idea: a map layer showing where trouble is likely, with recent sightings ("a patrol was spotted near X two days ago").
+- Data model: each port keeps a short `sightings` list (kind: pirate/police/customs, day). Sightings are created when you or a rival meet one, and seeded by events (a war planet raises pirate odds, a strict port raises customs).
+- Staleness like price age: show "seen 3 days ago", fading as it ages, so old intel is less trustworthy.
+- Sources: free local rumors on arrival, full detail through the paid newspaper, a crew member (Ruvi the fixer / Dessa the smuggler) gives tips, and a scanner outfit shows nearby sightings.
+- Difficulty: Beginner shows exact risk % on every route; Normal shows a three-level heat tint; Hard only shows sightings you personally bought or heard.
+- Gameplay: choose between a short risky route, a long safe one, or a warp charge; lets smugglers dodge customs by timing visits.
