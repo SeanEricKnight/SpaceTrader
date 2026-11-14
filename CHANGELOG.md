@@ -1,6 +1,10 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.0`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.1`.
+
+## 0.8.1 — refuel from the destination card
+
+- When the selected destination needs more fuel than you have, the destination card and the map selection bar now include a **Refuel** button (cost shown). If the jump is out of range even on a full tank, the card says so and suggests a closer stop. Verified in headless Chrome: the button appears in both places and refuels.
 
 ## 0.8.0 — crew, capture instead of game over, jail, marauder offers, rental, info cards
 
