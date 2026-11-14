@@ -23,6 +23,11 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 - **Portraits:** crew, escorts and people of the Reach get drawn placeholder faces (each name always draws the same face). A painted portrait file with the matching name (see PORTRAITS.md) automatically replaces it.
 - **Ships** in your ship card and in pirate encounters bob gently with a pulsing engine glow.
 
+## Home port and warehouse
+
+- Your **home port** starts as Acamar. Repairs and fuel cost about 20% less there (small differences vanish at the lowest prices). You can move home from any port's market screen for 500 cr, once your warehouse is empty.
+- The **warehouse** (market screen at home) holds 20 units of goods for 1 cr per unit per day, collected when you next use it. It only exists at home. Moving goods keeps their average paid price, so profit stays correct.
+
 ## Planning a route
 
 - Pick a destination on the Solar chart and every stop on the way is ringed in green. Below the chart a **Route card** lists each stop with its distance, whether you refuel there, any crisis (what its colonists need), and any of your contracts that deliver there.
