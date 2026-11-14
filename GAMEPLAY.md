@@ -9,6 +9,8 @@ The rules as they work in the current version (**0.12.2**). Update this file wit
 
 ## Dock services
 
+On the Market, the cargo bar has **Done trading · Open map** (0.15.1) and, when a comparison market is chosen, **Go to <planet>**; both go to the System map. Each tab has its own accent color for box borders and highlights (0.15.1).
+
 The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Jobs and Crew duplicated the tabs. Refuel, Repair, Warp charge and the Bank still work from the **Ship** tab (Bank also on Commander and in News). A slim **Needs attention** strip appears under the stats only when your fuel is not full, your hull is damaged, or you are stranded, and vanishes otherwise. Fuel still auto-fills on docking when you can afford it. Haggle (Mattias) sits at the top of the Market tab. Actions only work while you are safely docked.
 
 ## Feel: sound, number pops, arrival banner

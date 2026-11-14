@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.15.1 — Market: quick way back to the map; matching colors
+
+- Market: the sticky Cargo hold bar now has a **Done trading · Open map** button, so after loading up you go straight to the System map to travel. If you picked a "Compare a logged market" planet, a second button, **Go to <planet> · N pc**, jumps to that planet on the map.
+- One color per screen: every box (panels, trade rows, cargo bar, job, ship and crew cards, map side cards, news) now takes its border and highlight from the tab accent: Market green, System blue, Jobs amber, Ship purple, Crew coral, Commander gold, News light blue. Open or owned cards glow in the same accent. Job kinds keep their own top stripe. Commander tab now has its own gold accent.
+
 ## 0.15.0 — Feedback, crew abilities, clearer News
 
 - Planet audit (all 24): "Lifeless" is now **No native life** (Cestus and Draylon are inhabited; the old label read as no one living there) with a clearer price note. Fixed Balosnee, Capelle and Castor showing a blank resource (a short list was missing Artistic culture and Arms industry). Port histories no longer describe temporary events (cold spell, blight, war, outbreak, crop failure, labor shortage) as if permanent; they now describe lasting conditions. The iPhone project's resource label matches.
