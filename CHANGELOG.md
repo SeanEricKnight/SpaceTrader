@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.12.2 — Profile popups
+
+- Crew and escort cards are compact: avatar, name, role or level, perk, and a **View profile** button. The profile opens as a popup with a large avatar, character type, what they do, and backstory.
+
 ## 0.12.1 — Retirement ending
 
 - "Go there for me" now says how much fuel it buys and what that costs ("buy 13 fuel for 26 cr") instead of "about N cr fuel". Fuel price is the same at every port, so the figure is exact.
