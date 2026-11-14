@@ -41,15 +41,15 @@ Make borrowing money easy to understand and available when it helps the player m
 
 The browser update sets a different rate for each difficulty, compounds interest on successful travel days, shows the next charge, caps credit at 25,000, and offers partial loans and ship financing. This does not increase the rate by borrowed amount or repeated borrowing. That interpretation of “level” remains open for Sean to decide after playtesting.
 
-## Ideas added November 14, 2026 (proposals; not implemented)
+## Ideas added November 14, 2026 (status updated in 0.7.0; full list in BACKLOG.md)
 
 These came from Sean after reviewing the game. None changes the game yet. Each needs a design discussion and, where it touches the economy, new simulation checks before implementation.
 
-- **Paid newspaper.** Charge a small price for The Reach Dispatch instead of making it free. Open questions: price per issue or per port, whether the price scales with difficulty, and how to keep the information worth the cost without making early progress harder.
-- **Multiple hired escorts.** Let the player hire more than one escort. Escorts gain skill with use, and their hire price rises with skill. Open questions: how many can be hired, where they are hired, how skill is earned and shown, whether they take a share of earnings, and how they affect combat balance. The current game has no escorts or crew, so this is a new system.
-- **Planet and ship graphics.** Sean reports that the 3-D models (generated globes and rotating planets) look bad. Needs clarification of which visuals and what is wrong with them before any redesign.
-- **Difficulty-based help.** Easier difficulties could get friendlier market presentation, while harder ones keep plain data. Raised in a design discussion on the same day; direction not decided.
-- **Market screen rework.** Observed: on a phone the Market table hides the Buy, Sell, and stock columns off the right edge. Agreed direction in discussion: card layout with Buy and Sell always visible and a clearer way to compare logged markets, without recommending routes. Not built.
+- **Paid newspaper.** *(Built in 0.7.0.)* Charge a small price for The Reach Dispatch instead of making it free. Open questions: price per issue or per port, whether the price scales with difficulty, and how to keep the information worth the cost without making early progress harder.
+- **Multiple hired escorts.** *(Built in 0.7.0.)* Let the player hire more than one escort. Escorts gain skill with use, and their hire price rises with skill. Open questions: how many can be hired, where they are hired, how skill is earned and shown, whether they take a share of earnings, and how they affect combat balance. The current game has no escorts or crew, so this is a new system.
+- **Planet and ship graphics.** *(Deferred; see BACKLOG.md.)* Sean reports that the 3-D models (generated globes and rotating planets) look bad. Needs clarification of which visuals and what is wrong with them before any redesign.
+- **Difficulty-based help.** *(Started in 0.7.0: days-left on events and papers at Beginner and Easy.)* Easier difficulties could get friendlier market presentation, while harder ones keep plain data. Raised in a design discussion on the same day; direction not decided.
+- **Market screen rework.** *(Built in 0.7.0.)* Observed: on a phone the Market table hides the Buy, Sell, and stock columns off the right edge. Agreed direction in discussion: card layout with Buy and Sell always visible and a clearer way to compare logged markets, without recommending routes. Not built.
 
 ## Playtest questions
 

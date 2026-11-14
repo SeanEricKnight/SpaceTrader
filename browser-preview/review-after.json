@@ -224,27 +224,29 @@
       "ship": "Gnat",
       "start": 1000,
       "days": 120,
-      "credits": 468281,
-      "tradeProfit": 469767,
+      "credits": 556038,
+      "tradeProfit": 557396,
       "jobPay": 0,
       "topRoute": [
-        "14→19 / Narcotics",
-        143832
+        "8→2 / Firearms",
+        89325
       ],
-      "topRoutePct": 30.6,
-      "routeCount": 11,
+      "topRoutePct": 16,
+      "routeCount": 40,
       "goods": {
-        "Water": 360,
-        "Medicine": 446,
-        "Ore": 14046,
-        "Furs": 133762,
-        "Machines": 149505,
-        "Narcotics": 143832,
-        "Games": 27816
+        "Water": 645,
+        "Medicine": 87055,
+        "Ore": 48827,
+        "Furs": 69009,
+        "Machines": 34845,
+        "Narcotics": 89458,
+        "Firearms": 186465,
+        "Food": 21817,
+        "Games": 19275
       },
-      "creditsAt30": 183009,
-      "creditsAt60": 285021,
-      "creditsAt120": 468281
+      "creditsAt30": 141138,
+      "creditsAt60": 250103,
+      "creditsAt120": 556038
     },
     {
       "ship": "Gnat",
@@ -264,103 +266,113 @@
       "ship": "Gnat",
       "start": 250000,
       "days": 120,
-      "credits": 715284,
-      "tradeProfit": 467754,
+      "credits": 729995,
+      "tradeProfit": 482465,
       "jobPay": 0,
       "topRoute": [
-        "14→19 / Narcotics",
-        143832
+        "14→15 / Firearms",
+        53055
       ],
-      "topRoutePct": 30.7,
-      "routeCount": 9,
+      "topRoutePct": 11,
+      "routeCount": 51,
       "goods": {
-        "Medicine": 3780,
-        "Ore": 1710,
-        "Furs": 137624,
-        "Narcotics": 143832,
-        "Machines": 152992,
-        "Games": 27816
+        "Medicine": 43289,
+        "Ore": 121206,
+        "Furs": 55110,
+        "Narcotics": 82575,
+        "Machines": 9210,
+        "Water": 495,
+        "Firearms": 136830,
+        "Games": 4755,
+        "Food": 28995
       },
-      "creditsAt30": 444653,
-      "creditsAt60": 541084,
-      "creditsAt120": 715284
+      "creditsAt30": 382042,
+      "creditsAt60": 483112,
+      "creditsAt120": 729995
     },
     {
       "ship": "Firefly",
       "start": 250000,
       "days": 120,
-      "credits": 761296,
-      "tradeProfit": 515037,
+      "credits": 911896,
+      "tradeProfit": 665697,
       "jobPay": 0,
       "topRoute": [
-        "14→19 / Narcotics",
-        141066
+        "23→17 / Firearms",
+        98944
       ],
-      "topRoutePct": 27.4,
-      "routeCount": 11,
+      "topRoutePct": 14.9,
+      "routeCount": 50,
       "goods": {
-        "Medicine": 5040,
-        "Ore": 25685,
-        "Furs": 139754,
-        "Narcotics": 141066,
-        "Machines": 153007,
-        "Games": 50485
+        "Medicine": 104747,
+        "Ore": 150402,
+        "Furs": 89286,
+        "Narcotics": 47920,
+        "Machines": 10558,
+        "Games": 5380,
+        "Food": 33620,
+        "Firearms": 223784
       },
-      "creditsAt30": 461459,
-      "creditsAt60": 565070,
-      "creditsAt120": 761296
+      "creditsAt30": 429002,
+      "creditsAt60": 531854,
+      "creditsAt120": 911896
     },
     {
       "ship": "Bumblebee",
       "start": 250000,
       "days": 120,
-      "credits": 796452,
-      "tradeProfit": 555153,
+      "credits": 1060915,
+      "tradeProfit": 819532,
       "jobPay": 0,
       "topRoute": [
-        "14→19 / Narcotics",
-        140144
+        "23→17 / Firearms",
+        97346
       ],
-      "topRoutePct": 25.2,
-      "routeCount": 14,
+      "topRoutePct": 11.9,
+      "routeCount": 60,
       "goods": {
-        "Medicine": 8000,
-        "Ore": 37129,
-        "Furs": 165988,
-        "Narcotics": 140144,
-        "Machines": 152010,
-        "Games": 51882
+        "Medicine": 129589,
+        "Ore": 169300,
+        "Furs": 91882,
+        "Narcotics": 71918,
+        "Machines": 11250,
+        "Games": 8800,
+        "Food": 44884,
+        "Firearms": 290984,
+        "Water": 925
       },
-      "creditsAt30": 478681,
-      "creditsAt60": 596794,
-      "creditsAt120": 796452
+      "creditsAt30": 463926,
+      "creditsAt60": 598873,
+      "creditsAt120": 1060915
     },
     {
       "ship": "Beetle",
       "start": 250000,
       "days": 120,
-      "credits": 934142,
-      "tradeProfit": 696492,
+      "credits": 1382403,
+      "tradeProfit": 1144633,
       "jobPay": 0,
       "topRoute": [
-        "14→19 / Narcotics",
-        144754
+        "14→15 / Firearms",
+        60634
       ],
-      "topRoutePct": 20.8,
-      "routeCount": 16,
+      "topRoutePct": 5.3,
+      "routeCount": 72,
       "goods": {
-        "Medicine": 14262,
-        "Ore": 48219,
-        "Furs": 270019,
-        "Narcotics": 144754,
-        "Machines": 148503,
-        "Games": 50767,
-        "Firearms": 19968
+        "Medicine": 282307,
+        "Ore": 220457,
+        "Furs": 169196,
+        "Narcotics": 144752,
+        "Machines": 74293,
+        "Firearms": 166240,
+        "Food": 52118,
+        "Games": 22338,
+        "Water": 12932
       },
-      "creditsAt30": 544321,
-      "creditsAt60": 678672,
-      "creditsAt120": 934142
+      "creditsAt30": 621215,
+      "creditsAt60": 899479,
+      "creditsAt120": 1382403
     }
   ],
-  "buildSha256": "47658cc50b1e691287318c107a7ef2cf68c4c4279981160f249a7262b24832d1"
+  "buildSha256": "b102d4bae0d976bd58a858d070583c54b32ba156c7464325496c322e4b9d80cd"
 }

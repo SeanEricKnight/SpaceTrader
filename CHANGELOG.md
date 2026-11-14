@@ -1,6 +1,16 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.6.2`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.7.0`.
+
+## 0.7.0 — market rows, timed events, paid newspaper, escorts
+
+- **Market:** replaced the sideways-scrolling table with compact tap-to-expand rows (Buy and Sell always visible, 44 px touch targets). Unavailable goods collapse into one line. Phone header is tighter (four stat tiles in a row, tabs scroll sideways).
+- **Price age:** logged markets show their age; quotes 3+ days old are marked "≈" and "may have moved". The compare menu lists the log day.
+- **Timed events:** crises now start (about 3% per port per day) and end (6 to 14 days) as you travel. Starting ports' crises end between day 6 and 17; the Baratas fever story is unchanged. Water and food events triple prices (others still double). New games only; saves from earlier versions keep their fixed conditions.
+- **Paid newspaper:** full edition lists every port in a crisis, 20 credits times the difficulty's repair rate (Beginner 20, Easy 20, Normal 40, Hard 60, Impossible 80). Beginner and Easy editions include days left; the market banner shows days left on those levels only. One edition per day.
+- **Escorts:** up to three, hired in the Ship tab for 300 credits per level (levels 1 to 3 offered). Wage is 10 credits per level per jump; escorts level up at 6, 16, 32, 55 jumps. Each level cuts pirate encounters 5% (capped at 60%) and adds 2 damage per volley. Unpaid escorts leave.
+- Added `browser-preview/check-events.cjs` to `npm test`.
+- Verified here: logic, solar, and events checks pass in Node; a headless Chrome run of the market, newspaper, and ship screens showed no console errors. The community, world-bank, review, camera, and planets checks need `@napi-rs/canvas`, which cannot be installed in this environment. Please run `npm test` on your PC. Full phone-device layout and Firefox are untested.
 
 ## 0.6.2 — visible Test tools button
 

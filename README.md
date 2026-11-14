@@ -4,9 +4,19 @@
 
 **iPhone remains the target platform; HTML is the playable prototype and browser edition.** The approved map refinement now has mouse and touch controls. See [IPHONE_ROADMAP.md](IPHONE_ROADMAP.md) for the delivery paths and device checks still needed.
 
+## New in 0.7.0
+
+- **Market screen:** one compact row per good with Buy and Sell always visible; tap a row for the trade buttons. Goods you cannot trade at this port collapse into one line. Logged markets now show how old the quote is, and quotes three or more days old show "≈".
+- **Timed market events:** war, plague, drought, boredom, cold spells, crop failures, and labor shortages start and end over days. Prices for the affected goods move while an event lasts. Water and food events now triple prices so cheap goods can matter.
+- **Paid newspaper:** the Dispatch bulletin covers one port for free; the full edition lists every port in a crisis today. The price scales with difficulty. Beginner and Easy also show days left.
+- **Escort wing:** hire up to three escorts, pay wages each jump, and watch them level up. They lower pirate encounters and add volley damage.
+- **Planet art and ship previews with equipment** are not done yet. See [BACKLOG.md](BACKLOG.md).
+
+Ideas and their status live in [BACKLOG.md](BACKLOG.md) and [DESIGN_IDEAS.md](DESIGN_IDEAS.md).
+
 ## Play
 
-Open **[SpaceTrader-browser.html](SpaceTrader-browser.html)** in Chrome. No server, installation, account, or network connection is needed to play. The JavaScript, CSS, planet rendering, and compressed ship artwork are included in the HTML.
+Open **[SpaceTrader-browser.html](SpaceTrader-browser.html)** in any modern browser (tested in Chrome; Firefox, Edge, and Safari are expected to work but are not yet tested). No server, installation, account, or network connection is needed to play. The JavaScript, CSS, planet rendering, and compressed ship artwork are included in the HTML.
 
 You start with a Gnat, a simple laser, and cash determined by difficulty. Trade, explore, and take contracts. Your long-term goal is **500,000 credits with no debt**, enough to buy a moon. The goal and progress now stay visible at the top of the game.
 
@@ -68,7 +78,7 @@ npm install
 npm test
 ```
 
-`npm test` verifies that the root and Pages games are identical, regenerates the simulation report, and runs the core, community, bank/world, solar, review, camera, and planet checks. The simulation report includes the game’s SHA-256 digest so stale results are rejected. `npm run simulate` runs the simulations alone.
+`npm test` verifies that the root and Pages games are identical, regenerates the simulation report, and runs the core, community, bank/world, solar, review, camera, planet, and events/escorts/newspaper checks. The simulation report includes the game’s SHA-256 digest so stale results are rejected. `npm run simulate` runs the simulations alone.
 
 Seventeen additional camera checks exercise anchor math, simulated mouse/touch gestures, selection safety, view retention, and cosmetic animation. The checks also cover trading, cargo reservations, contracts, story rewards, market effects, equipment, financing, interest, rescue, cheats, save migration/import/export, and browser-storage failure. The simulated combat matrix has 3,000 fights per difficulty and loadout. Trade bots use perfect market information and disable encounters to isolate the economy; those outcomes are not human playtest results.
 
