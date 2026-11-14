@@ -31,6 +31,7 @@ A browser game of interstellar trading, inspired by the classic Palm OS *Space T
 | [DESIGN_IDEAS.md](DESIGN_IDEAS.md) | Ideas not built yet (threat map, reputation) |
 | [FEATURES.md](FEATURES.md) | Longer notes from earlier versions |
 | [CHEATS.md](CHEATS.md) | Hidden console commands |
+| [PROMPTS.md](PROMPTS.md) | Ready-made prompts for AI review, player tests and writing |
 | [IPHONE_ROADMAP.md](IPHONE_ROADMAP.md) | Plan for a native iPhone app |
 
 ## For developers

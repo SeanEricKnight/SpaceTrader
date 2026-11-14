@@ -2,7 +2,7 @@
 
 Copy-paste prompts for using other AI tools with this project. Each is self-contained. Bot or AI-player results are directional, not evidence of what real players think.
 
-Last updated: November 14, 2026 (version 0.15.1).
+Last updated: November 14, 2026 (version 0.16.0).
 
 ## 1. Code and bug review (Claude, ChatGPT or Gemini)
 
@@ -11,7 +11,7 @@ TITLE: Space Trader — independent bug review (no edits)
 
 CONTEXT
 Space Trader is an unofficial adaptation of Pieter Spronck's Palm OS game.
-Repo: https://github.com/SeanEricKnight/SpaceTrader (version 0.15.1).
+Repo: https://github.com/SeanEricKnight/SpaceTrader (version 0.16.0).
 The game is one self-contained file, SpaceTrader-browser.html (about 700 KB).
 Read README.md, GAMEPLAY.md, CHANGELOG.md and BACKLOG.md first.
 GAMEPLAY.md is the rules reference. Where code and GAMEPLAY.md disagree, report it.
@@ -50,7 +50,7 @@ OUTPUT
 TITLE: Space Trader — gameplay and decision-quality review (no edits)
 
 CONTEXT
-Same repo and files as the bug review (version 0.15.1). Goal: reach 500,000 credits
+Same repo and files as the bug review (version 0.16.0). Goal: reach 500,000 credits
 and buy a moon. Sean's design rule: the game must explain itself, and the player
 should never have to ask. Priority is clarity, fun and learnable decisions, not
 feature expansion. The browser build is a prototype for a later iPhone game.
