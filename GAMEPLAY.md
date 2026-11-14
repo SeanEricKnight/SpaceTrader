@@ -11,6 +11,12 @@ The rules as they work in the current version (**0.12.2**). Update this file wit
 
 The bar at the top of every screen is your dock services: refuel, repair, bank, read the news, buy a warp charge, and shortcuts to the shipyard & outfitter, job board, crew hiring, and saving. They only work while you are safely docked.
 
+## Feel: sound, number pops, arrival banner
+
+- **Sound** (dock services button, on by default): short synthesized sounds for money in and out, arriving, a pirate alarm, taking a hit, and jumping. Toggle it any time; the choice is remembered.
+- **Credits** count up or down and the Credits tile glows green or red with a floating "+340 cr" or "−28 cr" for every change. Players who prefer reduced motion get no animation.
+- **Arrival banner:** when you dock, the Market and System tabs open with a card showing the planet, its kind, tech level and resources, a one-line story hook, and in orange what its colonists need if there is a crisis. Press ✕ to dismiss it; it returns at the next port.
+
 ## Starting out
 
 - A new game begins with **5 Water in your hold**, already bought, bound for Adahn. A welcome popup tells the story.
