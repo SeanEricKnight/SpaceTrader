@@ -2,7 +2,7 @@ const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/st
 const {createCanvas}=require('@napi-rs/canvas');
 const html=fs.readFileSync('SpaceTrader-browser.html','utf8'),script=html.match(/<script>([\s\S]*?)<\/script>/)[1],nodes={},store=new Map();
 const document={createElement:()=>createCanvas(160,160),getElementById:id=>nodes[id]||(nodes[id]={innerHTML:'',textContent:'',value:'',focus(){},open:false,showModal(){this.open=true},close(){this.open=false}}),querySelectorAll:()=>[],addEventListener(){}};
-const c=vm.createContext({document,Math,Number,String,Array,JSON,confirm:()=>true,localStorage:{getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v)}});vm.runInContext(script,c);const r=s=>vm.runInContext(s,c);let count=0;
+const c=vm.createContext({document,Math,Number,String,Array,JSON,confirm:()=>true,localStorage:{getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v)}});vm.runInContext(script,c);vm.runInContext('{const _f=fresh;fresh=(...a)=>{const s=_f(...a);s.cargo[0]=0;s.paid[0]=0;s.tutorial=null;return s};game=fresh()}',c);const r=s=>vm.runInContext(s,c);let count=0;
 function test(name,fn){r('game=fresh("Normal",57);sector=0;selectedWorld=1;tab="galaxy";message=""');store.clear();fn();count++;console.log('PASS',name)}
 test('all high tech ports and catalog content are reachable with starter jump range',()=>{
  const reached=r(`(()=>{const seen=new Set([0]),queue=[0];while(queue.length){const i=queue.shift(),a=game.worlds[i];game.worlds.forEach((b,j)=>{if(!seen.has(j)&&Math.ceil(Math.hypot(a.x-b.x,a.y-b.y))<=14){seen.add(j);queue.push(j)}})}return [...seen]})()`);

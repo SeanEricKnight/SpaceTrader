@@ -1,7 +1,7 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),{createCanvas}=require('@napi-rs/canvas');
 const html=fs.readFileSync('SpaceTrader-browser.html','utf8'),script=html.match(/<script>([\s\S]*?)<\/script>/)[1],nodes={};let canvases=0;
 const document={createElement:()=>{canvases++;return createCanvas(160,160)},getElementById:id=>nodes[id]||(nodes[id]={innerHTML:'',textContent:'',hidden:false}),querySelectorAll:()=>[],addEventListener(){}};
-const c=vm.createContext({document,Math,Number,String,Array,JSON,confirm:()=>true,localStorage:{getItem:()=>null,setItem(){}}});vm.runInContext(script,c);const r=s=>vm.runInContext(s,c);
+const c=vm.createContext({document,Math,Number,String,Array,JSON,confirm:()=>true,localStorage:{getItem:()=>null,setItem(){}}});vm.runInContext(script,c);vm.runInContext('{const _f=fresh;fresh=(...a)=>{const s=_f(...a);s.cargo[0]=0;s.paid[0]=0;s.tutorial=null;return s};game=fresh()}',c);const r=s=>vm.runInContext(s,c);
 assert.equal(r('PLANET_SPINS.length'),24);assert.equal(r('new Set(PLANET_SPINS.map(p=>p[0])).size'),24);assert.equal(r('new Set(PLANET_SPINS.map(p=>p[1])).size'),24);assert.equal(r('new Set(PLANET_SPINS.map((_,id)=>planetSpinSeconds(id))).size'),24);
 assert.equal(r('new Set(Array.from({length:24},(_,id)=>planetSurface(planetKind(id),id))).size'),24);
 assert.equal(r('new Set(Array.from({length:24},(_,id)=>planetShade(id))).size'),24);

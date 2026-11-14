@@ -4,7 +4,7 @@ const html=fs.readFileSync('SpaceTrader-browser.html','utf8'),script=html.match(
 const nodes={},events={},storage=new Map();
 const document={createElement:t=>t==='canvas'?createCanvas(160,160):{click(){}},getElementById:id=>nodes[id]||(nodes[id]={innerHTML:'',value:'',textContent:'',open:false,focus(){},showModal(){this.open=true},close(){this.open=false}}),querySelectorAll:()=>[],addEventListener:(t,cb)=>(events[t]??=[]).push(cb)};
 const c=vm.createContext({console,document,Math,Number,String,Array,JSON,Blob,confirm:()=>true,localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)}});
-vm.runInContext(script,c);const r=s=>vm.runInContext(s,c);let checks=0;
+vm.runInContext(script,c);vm.runInContext('{const _f=fresh;fresh=(...a)=>{const s=_f(...a);s.cargo[0]=0;s.paid[0]=0;s.tutorial=null;return s};game=fresh()}',c);const r=s=>vm.runInContext(s,c);let checks=0;
 function test(name,f){storage.clear();r('game=fresh();message="";sector=0;selectedWorld=1;tab="galaxy";bankShip=null');for(const n of Object.values(nodes))n.open=false;f();checks++;console.log('PASS',name)}
 test('five strictly increasing, disclosed rates accrue exactly once on travel',()=>{
  for(const [difficulty,rate]of Object.entries({Beginner:.5,Easy:1,Normal:1.5,Hard:2,Impossible:3})){

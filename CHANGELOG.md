@@ -2,6 +2,13 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.13.0 — First haul
+
+- New games start with **5 Water already in the hold**, a short welcome popup with the backstory, and a **First haul** quick-win mission: sell the Water at Adahn for a cash bonus (Beginner 2,000, Easy 1,750, Normal 1,500, Hard 1,000, Impossible 500 cr). Beginner, Easy and Normal show step-by-step instructions; Hard and Impossible show one line.
+- When the bonus is paid, a popup suggests what to buy or do next.
+- New **How to play** button in the dock services bar, with a short guide.
+- Older saves are not changed.
+
 ## 0.12.2 — Profile popups
 
 - Dock services now has shortcuts: warp charge, shipyard & outfitter, job board, hire crew, and save game, alongside refuel, repair, bank and news.

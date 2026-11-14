@@ -11,6 +11,14 @@ The rules as they work in the current version (**0.12.2**). Update this file wit
 
 The bar at the top of every screen is your dock services: refuel, repair, bank, read the news, buy a warp charge, and shortcuts to the shipyard & outfitter, job board, crew hiring, and saving. They only work while you are safely docked.
 
+## Starting out
+
+- A new game begins with **5 Water in your hold**, already bought, bound for Adahn. A welcome popup tells the story.
+- **First haul** is the quick-win mission: fly to Adahn and sell the Water there. The first Water you sell at Adahn pays a **cash bonus** on top of the sale: Beginner 2,000, Easy 1,750, Normal 1,500, Hard 1,000, Impossible 500 cr. It is enough to buy something right away, like a crew member, an escort, or a warp charge.
+- Beginner, Easy and Normal show the steps on the Market and System tabs; Hard and Impossible show a single line.
+- If you sell the Water somewhere else first, the mission quietly closes. Saves from older versions do not get it.
+- **How to play** (dock services bar) has a short guide to the loop below.
+
 ## Core loop
 
 1. **Market tab:** buy goods where a tag says **Cheap**, sell where it says **Pricey** (tags are hidden on Hard and Impossible). The sticky hold meter shows cargo used and free.
