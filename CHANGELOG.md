@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.14.0 — Side quests
+
+- Nine optional **side quests** in three tiers (Easy, Medium, Hard), on the Jobs screen: port tours, selling Food, Medicine or Machines at a named port, trade profit goals, and pirate fights. No deadlines; up to 3 active; each pays a one-time reward (500 to 4,000 cr).
+- More are offered at higher difficulty, and every difficulty has all three tiers: Beginner 3, Easy 4, Normal 5, Hard 6, Impossible 9. The Mara story is separate.
+
 ## 0.13.1 — Fixed solar chart
 
 - The solar chart no longer pans or zooms. It always shows the whole sector, and tapping a planet opens its card (works by touch on iPhone). The zoom/pan toolbar, drag, pinch, wheel and keyboard map controls, and the Focus selected button are removed. The camera test was retired with them.

@@ -52,7 +52,14 @@ Chosen on the destination card before you jump:
 - Each job: go to one planet by the deadline and get paid. Kinds: deliver a message (no cargo space), haul supplies (uses some of your cargo bays; the supplies are provided and cannot be sold), survey trip (no cargo space).
 - Crisis ports add a relief bonus; urgent jobs pay more but have short deadlines.
 - Abandoning a job loses the pay, no fine.
-- An optional **side quest** ("A light in the Reach") is on the same screen.
+- An optional story ("A light in the Reach") and **side quests** are on the same screen.
+
+## Side quests
+
+- Optional goals with no deadline, in three tiers: **Easy**, **Medium**, **Hard**. You can have 3 active at once. Each pays a one-time cash reward when finished: Easy 500 to 700 cr, Medium 1,100 to 1,800 cr, Hard 3,000 to 4,000 cr.
+- Kinds: visit a number of ports, sell a goods quantity at a named port (progress counts only sales there), earn trade profit since you accepted, defeat pirates since you accepted.
+- How many are offered depends on difficulty, always with all three tiers: Beginner 3, Easy 4, Normal 5, Hard 6, Impossible 9.
+- Dropping a quest loses its progress. Completed quests do not come back.
 
 ## Ships
 
