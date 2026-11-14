@@ -76,6 +76,17 @@ Raised by Sean: escorts need avatars and backstories so they are characters, the
 
 **Dependencies:** the escort system shipped in 0.7.0 (levels, wages, effects) is the mechanical base. Portraits tie into the deferred art work in BACKLOG.md. Any economy-touching change needs new simulation checks.
 
+**Decisions from Sean (November 14, 2026):**
+
+- Keep escorts as fly-alongs for protection, and also add crew who live aboard. Both are wanted.
+- Portraits should look like the existing ship pictures (the fixed illustrated images), not generated 3-D or vector faces.
+- Claude writes the backstories; Sean edits.
+- **No permanent death, ever.** Crew and the commander can be hurt, caught, or taken, never killed.
+- **Jail:** being caught can put the commander in jail. Ways out: wait a turn (or a few days) or pay bail.
+- **Kidnapping:** being taken over by marauders can get the commander kidnapped. There must be a way out (not yet designed).
+
+**Proposed mechanics to discuss (not decided):** crew roles (pilot, mechanic, gunner, purser, smuggler) with one clear benefit each; hull at zero becoming capture or a tow instead of game over; jail triggered by contraband at strict ports or by failed shady jobs, with bail scaled to difficulty; kidnapping escapes through ransom, a crew or escort rescue (level matters), a risky breakout, or waiting it out. Portrait art needs images made in the ship-art style; Claude cannot generate those.
+
 ## Playtest questions
 
 Use a few player sessions to learn:
