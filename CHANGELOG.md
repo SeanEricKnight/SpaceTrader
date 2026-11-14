@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.11.4 — Crew hiring clarity
+
+- Crew cards you cannot hire yet say which planet to fly to and how far it is, with a "Go there for me" button when the trip needs stops.
+
 ## 0.11.3 — Shipyard hint
 
 - Ships you cannot buy or rent because the local yard is too low-tech now name the nearest planet that has the needed yard and its distance.
