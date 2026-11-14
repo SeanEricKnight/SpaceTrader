@@ -20,6 +20,7 @@ Last updated: November 14, 2026 (version 0.7.1).
 
 | Idea | Why deferred | Next step |
 | --- | --- | --- |
+| **Firefly-style crew and story.** Escorts become characters with avatars, backstories, loyalty, and personal arcs; faction jobs with moral choices. | Needs a design discussion first (see DESIGN_IDEAS.md). | Decide crew size and roles, portrait approach, and tone. |
 | **Ship previews that show equipment.** Guns, cargo bays, shields should appear on the ship image before you buy them. | Needs new ship art. The current ship pictures are fixed images. | Decide the art approach, then add equipment overlays or per-loadout images in the Ship tab and shipyard. |
 | **Better planet and ship graphics.** Sean says the planets and ships look poor; static ship images are fine. | Needs a decision on style. Planet checks (`check-planets`, `check-solar`) assert the current textured planets, and need `@napi-rs/canvas` to run. | Try clean, flat planets and larger map planets; fix the ship icon overlapping labels; run checks on the PC. |
 | Easier levels get more help (route hints, friendlier tables) | Route-finding must stay the player's job. | Playtest the 0.7.0 aids first. |

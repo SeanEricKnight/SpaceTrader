@@ -51,6 +51,31 @@ These came from Sean after reviewing the game. None changes the game yet. Each n
 - **Difficulty-based help.** *(Started in 0.7.0: days-left on events and papers at Beginner and Easy.)* Easier difficulties could get friendlier market presentation, while harder ones keep plain data. Raised in a design discussion on the same day; direction not decided.
 - **Market screen rework.** *(Built in 0.7.0.)* Observed: on a phone the Market table hides the Buy, Sell, and stock columns off the right edge. Agreed direction in discussion: card layout with Buy and Sell always visible and a clearer way to compare logged markets, without recommending routes. Not built.
 
+## Idea added November 14, 2026: a Firefly-style crew and story (proposal; not implemented)
+
+Raised by Sean: escorts need avatars and backstories so they are characters, the game needs a story element, and it should feel a little like Firefly.
+
+**What "a little like Firefly" could mean here** (a starting list to go through together, not a decision):
+
+- **Found crew, not hired stats.** Escorts are named people with a portrait, a history, a personality, and something they want. The current escorts are only a name and a level. The game already has "People of the Reach" cards (history, nature, wants, home port); escorts could use the same shape.
+- **The ship is home.** A small, aging ship with quirks, and crew who live aboard. Upgrades and repairs matter to the people, not only the numbers.
+- **Small-time hauling with moral grey.** Jobs from the three powers (Trade Compact, Lantern Cooperative, Ash Freeholds) where the honest choice and the profitable choice differ: a legal run, a quiet run, a favor for someone with no money.
+- **Jobs that go sideways.** A contract can reveal a complication mid-run (a stowaway, the cargo is not what was promised, a patrol), and the player chooses how to respond.
+- **Loyalty and consequences.** Crew remember how you treated them and your passengers. Good treatment unlocks personal missions and better performance; neglect or betrayal makes them leave, or leave badly.
+- **Reputation by faction.** Who you carry for changes what each faction offers or refuses you.
+- **Personal story arcs.** Each crew member has a short arc that surfaces over many jumps. The existing story-stage system (the Baratas fever relief) is the starting pattern.
+
+**Open questions:**
+
+- How many crew, and do they fill roles (pilot, mechanic, gunner, medic) or stay as escorts that fly alongside?
+- Portraits: simple generated vector faces in the game, hand-made images supplied by Sean (for example from his own image generator), or text only at first?
+- Where do crew come from: port hiring, story encounters, or both?
+- How much writing per character, and does Sean want to write or approve backstories?
+- Tone: how dark, how funny, how much choice versus a fixed plot?
+- Should crew be able to die, or only leave?
+
+**Dependencies:** the escort system shipped in 0.7.0 (levels, wages, effects) is the mechanical base. Portraits tie into the deferred art work in BACKLOG.md. Any economy-touching change needs new simulation checks.
+
 ## Playtest questions
 
 Use a few player sessions to learn:
