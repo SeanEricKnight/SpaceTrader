@@ -79,7 +79,7 @@ Chosen on the destination card before you jump:
 
 ## Trouble
 
-- **Pirates:** fight, try to flee, or use a warp charge to escape.
+- **Pirates:** a pirate ship can block your approach, and you cannot dock until you deal with it. The card shows a threat label (FAVORABLE: you should win; RISKY: a fair fight; OUTGUNNED: you will probably lose; UNARMED: no working laser) and explains each choice. **Fire lasers:** you shoot first, win and you collect the bounty. **Escape:** a percent chance; success lets you dock, failure costs a hit and the fight goes on. **Surrender:** keep your ship, lose all cargo and 10% of your cash. **Warp out:** a guaranteed escape for one warp charge.
 - **Customs and boarding:** contraband can be found; a boarding takes everything but only when you are rich.
 - **Jail and kidnapping:** both have a way out (bail, a rescue), and a fixer on your crew halves bail and captivity.
 - **Marauder offers** and other consequences are described as they happen.
