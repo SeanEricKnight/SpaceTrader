@@ -18,3 +18,10 @@ Continue Space Trader (repo SeanEricKnight/SpaceTrader, clone at /home/claude/sp
 5. Backlog: redo sounds (disabled; `SOUND_ENABLED=false`), police cutter and marauder art, customs inspection in flight, reputation, label the orange per-unit profit pill, fuel price tuning if gas still feels costly, optional hangar of multiple ships (design decision for Sean; today you fly one ship at a time).
 
 Sean's diagnosis that drives the above: the game still feels like a 2000-era spreadsheet because it has little feedback, little sense of place, and flat visual hierarchy. Juice only helps on top of real decisions and story, so keep adding writing and consequences too.
+
+## Keep it cheap (Sean's allowance)
+
+- Default model: Sonnet at Medium effort; Haiku or Low effort for tiny edits; Opus/Fable only for big refactors (for example splitting the HTML into source files plus a build script).
+- Screenshots only for big visual changes. Batch small fixes, then run the full release routine (docs, sync, hashes, checks, commit, push) once per batch.
+- Short replies, no recaps, no option lists for small things: decide and build. Take several requests per message.
+- Writing work (lore, rumors, headlines) can come from Sean's local model; just integrate what he pastes.
