@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.14.1 — Ship screen order
+
+- Ship tab order: your ship, its controls, **Outfit your ship** (right under the ship), then **Get a different ship** with a **Buy a ship / Rent a ship** switch and a one-line explanation of each. Rental cards now show the ship picture. Only the shipyard cards open the full ship card; the top ship card does not.
+
 ## 0.14.0 — Side quests
 
 - Nine optional **side quests** in three tiers (Easy, Medium, Hard), on the Jobs screen: port tours, selling Food, Medicine or Machines at a named port, trade profit goals, and pirate fights. No deadlines; up to 3 active; each pays a one-time reward (500 to 4,000 cr).

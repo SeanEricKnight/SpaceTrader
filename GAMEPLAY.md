@@ -63,10 +63,10 @@ Chosen on the destination card before you jump:
 
 ## Ships
 
-- **Ship tab:** your ship, the Shipyard (buy), Ship rental, the Outfitter, and the bank summary.
+- **Ship tab:** your ship and its controls, then **Outfit your ship** (equipment), then **Get a different ship**, where a switch chooses **Buy** (own it, trade in your current ship) or **Rent** (pay per day, deposit returned), then the bank summary.
 - Each ship has cargo bays, jump range, hull, laser mounts, shield and gadget slots. A ship needs a shipyard of a high enough **tech level**; the card names the nearest planet that has one.
 - **Lasers** upgrade in tiers 1 to 3. The button shows the next step and cost; at tier 3 it reads "Lasers maxed".
-- **Rental:** rent a ship for a daily rate with a deposit; return it before buying.
+- **Rental:** rent a ship for a daily rate with a deposit (10% of its price, returned minus any damage fee when you give it back at the port you rented it from); return it before buying.
 - Cargo and compatible lasers transfer when you change ships.
 
 ## Crew and escorts (Crew tab)
