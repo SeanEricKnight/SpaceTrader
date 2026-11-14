@@ -124,3 +124,7 @@ Idea: your cargo history shapes how factions treat you. Carry medicine and relie
 - Builds from what you actually deliver, slowly decays, and the existing `heat` can feed it.
 - Effects: inspection chance, bail, marauder offers and attack chance, and a few crew reactions.
 - Easiest to read when it stays two numbers and a handful of effects.
+
+## Rank ladder / Admiral sequel (idea)
+
+Commander is the rank you hold in this game. Idea for a future game, or a second act after retiring: promote the same character up a ladder (Commander, then Captain, Commodore, Admiral, and so on) as they build a fleet instead of flying one ship. Ending the first game by buying a moon could carry over as a starting asset, and the retirement summary could grant the first promotion. Not designed yet.

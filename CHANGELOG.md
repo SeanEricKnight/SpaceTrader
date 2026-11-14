@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.12.1 — Retirement ending
+
+- Captain's log shows the latest 8 entries; older ones fold into a scrollable "Older entries" section.
+- Retiring now shows an ending screen with your moon, days flown, worlds, jobs, profit, pirates, difficulty, and whether cheats were used. The Commander page explains what retiring does. Rank ladder idea added to DESIGN_IDEAS.md.
+
 ## 0.12.0 — Plain-language job board
 
 - Contracts tab renamed **Jobs** in plain words: "Go to X · N pc away", "Pays N cr", "Deadline: day N (M days left)", what it costs in cargo space, and a reason under a disabled Take this job button. Jobs you hold come first, then offers, then the side story.
