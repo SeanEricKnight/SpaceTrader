@@ -252,15 +252,15 @@
       "ship": "Gnat",
       "start": 1000,
       "days": 120,
-      "credits": 46046,
+      "credits": 87359,
       "tradeProfit": 0,
-      "jobPay": 47540,
+      "jobPay": 88885,
       "topRoutePct": 0,
       "routeCount": 0,
       "goods": {},
-      "creditsAt30": 12489,
-      "creditsAt60": 23440,
-      "creditsAt120": 46046
+      "creditsAt30": 24446,
+      "creditsAt60": 45001,
+      "creditsAt120": 87359
     },
     {
       "ship": "Gnat",
@@ -374,5 +374,5 @@
       "creditsAt120": 1382403
     }
   ],
-  "buildSha256": "29542e9eb91d6dfe2bc53b64f0bd445308122692294e2dbb3f70b80cf744c448"
+  "buildSha256": "baf88ea1cabcb41d7271f04623e3e05084b4c59168094cd5976d97b5a05606a1"
 }

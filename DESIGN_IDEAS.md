@@ -115,3 +115,12 @@ Idea: a map layer showing where trouble is likely, with recent sightings ("a pat
 - Sources: free local rumors on arrival, full detail through the paid newspaper, a crew member (Ruvi the fixer / Dessa the smuggler) gives tips, and a scanner outfit shows nearby sightings.
 - Difficulty: Beginner shows exact risk % on every route; Normal shows a three-level heat tint; Hard only shows sightings you personally bought or heard.
 - Gameplay: choose between a short risky route, a long safe one, or a warp charge; lets smugglers dodge customs by timing visits.
+
+
+## Reputation (proposed, not built)
+
+Idea: your cargo history shapes how factions treat you. Carry medicine and relief goods and the police and Compact ports go easier on you (fewer inspections, cheaper bail). Run guns and narcotics and you gain a bad name with the law but marauders treat you better (more offers, fewer attacks).
+- Keep it light: two tracked numbers, **Law standing** and **Outlaw standing**, each shown as a short label (Respected, Known, Wanted), not a stat sheet.
+- Builds from what you actually deliver, slowly decays, and the existing `heat` can feed it.
+- Effects: inspection chance, bail, marauder offers and attack chance, and a few crew reactions.
+- Easiest to read when it stays two numbers and a handful of effects.

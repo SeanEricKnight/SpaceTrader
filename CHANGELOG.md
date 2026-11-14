@@ -2,6 +2,14 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.10.0 — travel style, incidents, newspaper subscription, job board, hold meter
+
+- **Travel style** on the destination card: **Quiet ride** (+1 day, half the pirate risk, no incidents), **Steady** (the old behavior, default), **Excitement** (about a 55% chance of an incident on the way).
+- Three **incidents**, each with a safe and a risky choice (odds shown on Beginner/Easy): a drifting derelict (salvage or scrap), a distress call (help for pay and crew goodwill, relay it, or ignore it), a trader convoy (free full newspaper edition, or sell them fuel). No death, never a game over.
+- **Newspaper**: buy a single edition or subscribe for 10 days at 6× the single price; a subscription delivers a fresh edition every time you dock. Editions now show which goods spike at each port in a crisis.
+- **Job board**: roughly double the pay, routes out to full ship range, named clients, +40% relief bonus for jobs to crisis ports and +40% for urgent ones, with the reason shown on the card.
+- **Market**: a Cargo hold meter (trade goods, sealed mission bays, free bays) replaces the 7/15 readout, and a short key explains the price bar.
+
 ## 0.9.0 — warp charges
 
 - New consumable **warp charge**, sold at tech level 4+ ports (about 2,000 cr on Normal; 1,500 on Beginner/Easy, 3,000 Hard, 4,000 Impossible). Carry 2, or 3 on ships with range 20+. One charge either jumps up to 40 pc with no fuel and no pirate check (a **Warp here** button appears on the destination card, map bar and info card when a port is beyond your fuel), or escapes any pirate fight (**Warp out**). Customs inspections still apply on arrival. Not usable while held or in custody.

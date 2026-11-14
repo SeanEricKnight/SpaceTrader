@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 14, 2026 (version 0.9.0).
+Last updated: November 14, 2026 (version 0.10.0).
 
 ## Built
 
@@ -24,6 +24,7 @@ Last updated: November 14, 2026 (version 0.9.0).
 | Ship card on click; planet card on click | 0.8.0 | In-game dialogs. |
 | Distance list instead of the dot map | 0.8.0 | Every port by distance and range. |
 | Refuel button on the destination card and map bar | 0.8.1 | Appears when the jump needs more fuel. |
+| Travel style, incidents, paper subscription, job board, hold meter | 0.10.0 | Three incidents; more can follow. |
 | Warp charges | 0.9.0 | Instant jump or battle escape, 2k cr. |
 | Fuel help scaled by difficulty | 0.8.3 | Beginner full list, Hard none. |
 | Route suggestion for out-of-range ports | 0.8.2 | Cheapest hops within range. |
