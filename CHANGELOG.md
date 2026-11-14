@@ -4,6 +4,8 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
+- Best runs list on the chart: jobs ranked by pay per fuel, one-tap route or pickup port. Experimental; restore point is the `before-best-runs` branch (commit c1784c6).
+
 - Route planning: selecting a destination rings every stop on the chart and shows a Route card (distance, refuel, crises, your deliveries). With the newspaper subscription it also shows the job boards at each stop that go your way. Side quests and exact terms stay local.
 - DELIVERED stamp card with a counting-up reward when you finish a job, courier delivery, side quest or the First haul.
 

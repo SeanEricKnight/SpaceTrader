@@ -29,6 +29,8 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 - With a **newspaper subscription** (News tab) the card also shows the **job boards at each stop**: how many jobs are posted there that go your way (to a later stop on the route) and the best pay. Chart captions show the same count.
 - Some things stay **local**: exact contract terms, side quests, and crew and escorts are only visible when you dock at the planet.
 
+- **Best runs** (below the chart) ranks jobs by pay per fuel. Without the paper it lists jobs posted at your current port; with it, every job board in range. "Show route" selects the job's destination; "Go to X" selects the port where a remote job is posted.
+
 ## Celebrations
 
 - Finishing a job, a courier delivery, a side quest or the First haul pops a **DELIVERED card**: a stamp slams down, small credit chips float up and away, and the reward counts up. Tap it to dismiss; it fades on its own. Reduced-motion players get the card without the animation.
