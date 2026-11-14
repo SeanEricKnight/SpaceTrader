@@ -30,7 +30,7 @@ Chosen on the destination card before you jump:
 
 ## Events and the News
 
-- Ports can be in a **crisis** (war, plague, drought and so on) that raises some prices for a few days.
+- Ports can be in a **crisis** (war, plague, drought and so on) that raises some prices. Each crisis lasts roughly 6 to 14 days, then eases and prices settle. A calm port has about a 3% chance per day of a new crisis, so they rotate. Time only passes when you travel.
 - **Free:** the bulletin on the Market tab covers only the port you are docked at.
 - **Paid:** **The Reach News** (News tab) lists every port in a crisis. Buy one issue, or **subscribe for 10 days** and a fresh edition is delivered every time you dock. An issue is a snapshot of the day it was printed. Crises start and end, so check its date.
 
@@ -40,7 +40,7 @@ Chosen on the destination card before you jump:
 - Each job: go to one planet by the deadline and get paid. Kinds: deliver a message (no cargo space), haul supplies (uses some of your cargo bays; the supplies are provided and cannot be sold), survey trip (no cargo space).
 - Crisis ports add a relief bonus; urgent jobs pay more but have short deadlines.
 - Abandoning a job loses the pay, no fine.
-- An optional side story ("A light in the Reach") is on the same screen.
+- An optional **side quest** ("A light in the Reach") is on the same screen.
 
 ## Ships
 
