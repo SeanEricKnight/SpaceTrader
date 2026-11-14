@@ -232,29 +232,29 @@ const REGIONS=[
 // kind, tech, resource, crisis, history. The resource/crisis fields drive new-game prices.
 const PLANET_LORE=[
  [2,5,4,0,'Acamar’s floating drydocks survived the relay collapse by keeping every hull welcome. Its desalination guild exports water; Mara’s relief office occupies an old customs booth.'],
- [3,4,3,3,'Adahn was settled around a deep aquifer that is now failing. The dust refineries still run, but freighter water keeps the reservoir settlements alive.'],
+ [3,4,3,3,'Adahn was settled around a deep aquifer that is slowly failing. The dust refineries still run, but freighter water keeps the reservoir settlements alive.'],
  [2,1,5,0,'Aldea’s seed vault fed the first stranded ships. Its orchard communes still vote on crop shares beneath the glass roof of the original lander.'],
  [0,6,1,0,'Andevian grew from a salvage yard into the Compact’s precision foundry. Ore goes into its pressure domes; machines and finished hulls come out.'],
- [4,7,2,7,'Antedi’s cloud cities began as refinery platforms. Its factories need imported ore, and a shortage of technicians has made automation especially valuable.'],
- [5,4,11,4,'Balosnee’s ring stations sheltered displaced theatre companies. Their recordings travel farther than their ships; months of isolation have left the crews hungry for new diversions.'],
- [6,3,10,2,'Baratas keeps medicinal greenhouses beneath its ice. The clinic served both sides of the relay strikes; a fever outbreak now threatens its scattered outposts.'],
+ [4,7,2,7,'Antedi’s cloud cities began as refinery platforms. Its factories need imported ore, and technicians are always in short supply, which makes automation especially valuable.'],
+ [5,4,11,4,'Balosnee’s ring stations sheltered displaced theatre companies. Their recordings travel farther than their ships, and crews on long isolated runs are always hungry for new diversions.'],
+ [6,3,10,2,'Baratas keeps medicinal greenhouses beneath its ice. The clinic served both sides of the relay strikes, and its scattered outposts depend on it whenever fever spreads.'],
  [0,4,2,0,'Brax is the last relay station still answering distress calls by name. Its volunteer survey crews chart safe routes, using machines repaired well beyond their intended lives.'],
  [1,4,3,0,'Bretel’s amber skies hide salt flats and heat collectors. A water-ration ledger became its first constitution, and the port council has never quite stopped arguing about it.'],
- [2,2,5,6,'Calondia’s cooperative granaries once guaranteed the outer stations a harvest. A fungal blight has broken that promise; imported food bridges the missing crop.'],
+ [2,2,5,6,'Calondia’s cooperative granaries once guaranteed the outer stations a harvest. Blights come and go in the wet fields, and when a crop fails, imported food bridges the gap.'],
  [3,3,1,0,'Campor’s miners bought their own landing field after the old concession company withdrew. Ore is plentiful; replacement machinery arrives aboard independent ships.'],
- [5,5,12,1,'Capelle’s ring foundries supply security outfits across the Reach. Rival claims to the same mining belt have become a shooting war, raising demand for ore and weapons.'],
+ [5,5,12,1,'Capelle’s ring foundries supply security outfits across the Reach. Rival crews contest the same mining belt, so ore and weapons are always in demand.'],
  [2,4,7,0,'Carzon’s wildlife preserves support a tightly licensed fur trade. Ranger families police the seasons, while station merchants insist their own inventories are endangered.'],
  [7,6,11,0,'Castor’s storm observatories share their orbital habitats with musicians. The Cooperative’s public navigation forecasts are assembled here between exceptionally long concerts.'],
- [0,5,8,5,'Cestus is a bare rock wrapped in habitat tunnels. An old heating plant is failing during a cold spell, making warm clothing a practical luxury.'],
+ [0,5,8,5,'Cestus is a bare rock with no native life, wrapped in sealed habitat tunnels. Its old heating plant fails in most cold seasons, which makes warm clothing a practical luxury.'],
  [6,2,2,0,'Cheron’s ice cutters supply the agricultural moons. They lack modern foundries, so ore must be imported even as tankers leave heavy with melted ice.'],
  [3,4,3,0,'Courteney is the frontier’s last dependable repair stop. Settlers rebuilt its cracked cisterns from ship plating; water and dependable components remain welcome cargo.'],
- [6,1,6,6,'Daled’s first colonists planted beneath thin ice and called it a garden. Damaged grow lamps have caused a crop failure, leaving families dependent on food ships.'],
+ [6,1,6,6,'Daled’s first colonists planted beneath thin ice and called it a garden. The soil is poor and the grow lamps are patched, so a failed crop leaves families dependent on food ships.'],
  [0,3,1,0,'Damast’s iron claims are worked by family crews. The Freehold charter forbids selling the landing field, after a company once tried to invoice the town for its own runway.'],
  [5,5,9,4,'Davlos’s ring labs study unusual fungi used in both medicine and prohibited stimulants. Customs law changes at the border; traders must read the local manifest rules.'],
- [7,7,2,7,'Deneb’s remote robot foundry was meant to build the next generation of relays. The collapse stranded its specialists; labor shortages now complicate every production run.'],
+ [7,7,2,7,'Deneb’s remote robot foundry was meant to build the next generation of relays. The collapse stranded its specialists, and labor is always scarce, so every production run is a negotiation.'],
  [2,2,5,0,'Deneva’s terraced farms share their surplus through a rotating council. The old beacon never went dark, and its light is still a promise of food to arriving crews.'],
- [1,4,10,2,'Devidia’s herb gardens grow inside cooled canyons. A clinic shortage has worsened a local outbreak; harvests alone cannot replace finished medicines.'],
- [4,5,8,0,'Draylon’s gas-skimming stations mark the surveyed frontier. Every habitat carries a memorial to a missing ship, and pilots trade stories of relays still waiting beyond the dark.']
+ [1,4,10,2,'Devidia’s herb gardens grow inside cooled canyons. Its clinics are thinly staffed, so when an outbreak comes, harvests alone cannot replace finished medicines.'],
+ [4,5,8,0,'Draylon’s gas-skimming stations mark the surveyed frontier. Nothing lives on the giant itself, so every habitat is sealed, and each carries a memorial to a missing ship, and pilots trade stories of relays still waiting beyond the dark.']
 ];
 const PEOPLE=[
  {name:'Mara Venn',role:'Relief dispatcher · Acamar',home:0,mark:'MV',history:'A former Compact traffic controller who kept civilian corridors open during the relay strikes. She now runs a relief desk without asking which flag a patient flies.',nature:'Exact, dryly funny, and stubborn about names on a manifest.',want:'Reconnect Baratas with the survey crews at Brax.',ties:'Trusts Ivo’s medicine and Sera’s charts; distrusts promises from the Compact treasury.'},
@@ -273,7 +273,7 @@ const RESOURCE_NOTES=[
  'Rich growing areas lower food prices; the surplus supplies less fertile ports.',
  'Poor growing conditions make imported food expensive and necessary.',
  'Licensed wildlife harvests lower local fur prices.',
- 'A lifeless environment makes furs expensive; clothing and insulation are imported.',
+ 'With no native life, furs are scarce and expensive. Colonists live in sealed habitats and import clothing and insulation.',
  'Unusual fungi support a cheap narcotics supply where local law allows production.',
  'Medicinal herbs lower medicine costs where this port has the technology to produce it.',
  'A strong creative industry lowers the price of games and recordings.',
@@ -474,7 +474,7 @@ function shipInfo(id){
 }
 function planetInfo(id){
  const w=game.worlds[id],r=REGIONS[regionOf(id)],d=distance(id),here=id===game.location,mem=game.memory[id];
- const resources=['Ordinary resources','Mineral rich','Mineral poor','Desert','Freshwater oceans','Rich soil','Poor soil','Rich fauna','Lifeless','Unusual fungi','Medical herbs','Artistic culture','Arms industry'];
+ const resources=['Ordinary resources','Mineral rich','Mineral poor','Desert','Freshwater oceans','Rich soil','Poor soil','Rich fauna','No native life','Unusual fungi','Medical herbs','Artistic culture','Arms industry'];
  openInfo('<div class="info-planet">'+planetPreview(id)+'<div><h2>'+esc(w.name)+(here?' <small class="muted">you are here</small>':'')+'</h2><p class="muted">'+esc(r.name)+' · '+esc(r.faction)+'</p></div></div><dl class="info-dl"><div><dt>Technology</dt><dd>'+tech[w.tech]+'</dd></div><div><dt>Resources</dt><dd>'+resources[w.resource||0]+'</dd></div><div><dt>Distance</dt><dd>'+(here?'—':d+' pc · '+(d<=game.fuel?'in range':'needs '+(d-game.fuel)+' more fuel'))+'</dd></div><div><dt>Conditions</dt><dd>'+(here?CRISES[w.crisis||0]:'Land or read the newspaper')+'</dd></div><div><dt>Customs</dt><dd>'+(w.strict?'Strict: banned goods are seized':'Relaxed')+'</dd></div><div><dt>Your market log</dt><dd>'+(mem?'Day '+mem.day+' · '+(game.day-mem.day)+' days old':'Never visited')+'</dd></div></dl>'+worldHistory(id)+(here?'':!active()?'<p class="micro muted">You can’t travel while something else needs your attention.</p>':d>ship().range?'<p class="micro muted"><strong>Travel is unavailable: out of range.</strong> This is '+d+' pc and your '+esc(ship().name)+' can only jump '+ship().range+' pc, even on a full tank.</p>'+routeHintHtml(id):d>game.fuel?'<p class="micro muted"><strong>Travel is unavailable: not enough fuel.</strong> You have '+game.fuel+' and need '+d+'.</p>':'')+'<div class="toolbar"><button data-action="jump" data-id="'+id+'" '+(!active()||here||d>game.fuel?'disabled':'')+'>Travel here</button>'+(!here&&d>game.fuel&&d<=ship().range?fuelService():'')+autoButton(id)+warpButton(id)+pinButton(id)+'</div>');
 }
 const WARP_RANGE=40;
@@ -929,7 +929,7 @@ function resolve(action){if(!game.encounter)return;if(action==='warp'){if((game.
 function acceptJob(){if(!active()||game.job)return;const choices=game.worlds.map((w,id)=>id).filter(id=>id!==game.location&&distance(id)<=ship().range);const target=choices[rng(choices.length)];game.job={to:target,reward:200+distance(target)*25,due:game.day+5};say('Courier job accepted: '+game.worlds[target].name+' by day '+game.job.due+'.')}
 function tradeShip(id){if(shipRestriction(id))return;const next=catalog.ships[id],cost=shipCost(id);if(game.credits<cost)return;game.credits-=cost;game.ship=id;game.fuel=next.range;game.hull=next.hull;if(!next.weapons)game.laser=0;say('Traded ships. You now fly a '+next.name+'.')}
 let sector=Math.floor(game.location/8),selectedWorld=game.location===0?1:game.location;
-const resources=['Ordinary resources','Mineral rich','Mineral poor','Desert','Freshwater oceans','Rich soil','Poor soil','Rich fauna','Lifeless','Unusual fungi','Medical herbs'];
+const resources=['Ordinary resources','Mineral rich','Mineral poor','Desert','Freshwater oceans','Rich soil','Poor soil','Rich fauna','No native life','Unusual fungi','Medical herbs','Artistic culture','Arms industry'];
 const planetKinds=['Barren rock','Amber atmosphere','Ocean world','Iron-rich desert','Banded gas giant','Ringed giant','Ice world','Storm planet'];
 const planetRadii=[13,19,23,17,34,29,25,25];
 const orbitRadii=[78,118,159,201,245,288,332,375];
@@ -1053,7 +1053,7 @@ document.addEventListener('toggle',e=>{const d=e.target;if(d&&d.dataset&&d.datas
 function market(){
  const targets=Object.keys(game.memory).map(Number).filter(id=>id!==game.location).sort((a,b)=>game.worlds[a].name.localeCompare(game.worlds[b].name));if(!targets.includes(compareTarget))compareTarget=null;
  const memo=compareTarget===null?null:game.memory[compareTarget],reserve=game.reserveFuel?(ship().range-game.fuel)*fuelRate()+interestDue():0;
- const resources=['Ordinary resources','Mineral rich','Mineral poor','Desert','Freshwater oceans','Rich soil','Poor soil','Rich fauna','Lifeless','Unusual fungi','Medical herbs','Artistic culture','Arms industry'];
+ const resources=['Ordinary resources','Mineral rich','Mineral poor','Desert','Freshwater oceans','Rich soil','Poor soil','Rich fauna','No native life','Unusual fungi','Medical herbs','Artistic culture','Arms industry'];
  const age=memo?Math.max(0,game.day-memo.day):0,stale=!!memo&&age>=3,approx=stale?'≈ ':'',w=world();
  const eventLine=w.crisis?'<p class="event-banner"><strong>'+CRISES[w.crisis]+'</strong>'+(aidMode()&&w.crisisEnds!=null?' · about '+Math.max(1,w.crisisEnds-game.day)+' day'+(w.crisisEnds-game.day>1?'s':'')+' left':'')+'<small>'+CRISIS_NOTES[w.crisis]+'</small></p>':'';
  const rows=[],blocked=[];

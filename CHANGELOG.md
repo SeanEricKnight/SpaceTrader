@@ -4,6 +4,7 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.15.0 — Feedback, crew abilities, clearer News
 
+- Planet audit (all 24): "Lifeless" is now **No native life** (Cestus and Draylon are inhabited; the old label read as no one living there) with a clearer price note. Fixed Balosnee, Capelle and Castor showing a blank resource (a short list was missing Artistic culture and Arms industry). Port histories no longer describe temporary events (cold spell, blight, war, outbreak, crop failure, labor shortage) as if permanent; they now describe lasting conditions. The iPhone project's resource label matches.
 - Escorts (pilots for hire) now have Hull, Evasion, Aim and Loyal star ratings, a trait that fits jobs (Principled, Shady, Frugal, Guardian, Scout, Hotshot) and a home Reach, shown before you hire. Loyalty is tracked and low loyalty makes them leave.
 - Pirates and police scale with career tier (net worth): easy for Rookies, harder at each step. The pirate card names your tier.
 - Removed the Dock services bar. Its News, Shipyard, Jobs and Crew shortcuts duplicated the tabs; Refuel, Repair, Warp charge and Bank remain on the Ship tab (Bank also on Commander). A slim "Needs attention" strip shows Refuel/Repair/rescue only when needed. Haggle moved to the Market tab. Save game and How to play buttons are gone with it (autosave stays; slots and export are on Commander).

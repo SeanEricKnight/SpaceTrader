@@ -43,7 +43,7 @@ Last updated: November 14, 2026 (version 0.15.0).
 | **Equipment drawn on the ship image.** The ship card now lists slots, but guns, bays, and shields do not yet appear on the picture. | Needs new ship art. The current ship pictures are fixed images. | Decide the art approach, then add overlays or per-loadout images. |
 | **Better planet and ship graphics.** Sean says the planets and ships look poor; static ship images are fine. | Needs a decision on style. Planet checks (`check-planets`, `check-solar`) assert the current textured planets, and need `@napi-rs/canvas` to run. | Try clean, flat planets and larger map planets; fix the ship icon overlapping labels; run checks on the PC. |
 | Easier levels get more help (route hints, friendlier tables) | Route-finding must stay the player's job. | Playtest the 0.7.0 aids first. |
-| Events at game start: lore text describes early events as ongoing | Lore says "cold spell" and "shooting war" as permanent. | Reword port history so it reads as a past or recurring condition. |
+| DONE 0.15.0. Events at game start: lore text describes early events as ongoing | Lore says "cold spell" and "shooting war" as permanent. | Reword port history so it reads as a past or recurring condition. |
 | Firefox, Edge, and Safari testing | No Firefox available in the build environment. | Sean to try Firefox and report; add notes to PLAYTEST_RESULTS.md. |
 | iPhone/Xcode build | Needs a Mac. Left alone on purpose. | See IPHONE_ROADMAP.md. |
 

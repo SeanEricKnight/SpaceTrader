@@ -4,7 +4,7 @@ import SwiftUI
 private let space = Color(red: 0.025, green: 0.045, blue: 0.09)
 private let mint = Color(red: 0.37, green: 0.94, blue: 0.77)
 private let techNames = ["Pre-agricultural", "Agricultural", "Medieval", "Renaissance", "Early industrial", "Industrial", "Post-industrial", "Hi-tech"]
-private let resources = ["Nothing special", "Mineral rich", "Mineral poor", "Desert", "Sweetwater oceans", "Rich soil", "Poor soil", "Rich fauna", "Lifeless", "Weird mushrooms", "Special herbs", "Artistic populace", "Warlike populace"]
+private let resources = ["Nothing special", "Mineral rich", "Mineral poor", "Desert", "Sweetwater oceans", "Rich soil", "Poor soil", "Rich fauna", "No native life", "Weird mushrooms", "Special herbs", "Artistic populace", "Warlike populace"]
 private func cr(_ value: Int) -> String { value.formatted() + " cr" }
 
 struct RootView: View {
