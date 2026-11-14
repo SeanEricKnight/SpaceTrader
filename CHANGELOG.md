@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.8.3 — fuel help that scales with difficulty
+
+- The "Refuel or travel closer" badge is now **NEEDS FUEL · REFUEL BELOW** (the refuel button sits in the card). Under it, help scales with difficulty: **Beginner** lists the ports you can reach on current fuel with costs, how many more a full tank opens, and exactly how much more fuel you need and what it costs; **Easy** the same with a shorter list; **Normal** only counts reachable ports; **Hard and Impossible** give no hints (out-of-range ports just say so, with no suggested route).
+
 ## 0.8.2 — route suggestion when a port is out of range
 
 - When the selected port is farther than your ship's full-tank range, the destination card now says **OUT OF RANGE · USE A STOP**, suggests the cheapest route that works (for example Adahn → Aldea → Andevian, with each leg's distance), and offers a button to inspect the first stop. The map bar notes it is beyond your range and no longer shows a useless Refuel button. If no route exists with the ship's range, it says so. Previously the card said "Refuel or travel closer" while the tank was already full.
