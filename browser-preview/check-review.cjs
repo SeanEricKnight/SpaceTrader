@@ -20,7 +20,7 @@ test('random ranges use more than the low LCG bits and stay within bounds',()=>{
 });
 test('contract boards offer three destinations throughout the galaxy and never reroll on reading',()=>{
  for(let i=0;i<24;i++){r('game.location='+i+';game.day=9;game.takenOffers=[]');const jobs=r('JSON.stringify(offers())');assert.equal(r('offers().length'),3);assert.equal(r('new Set(offers().map(j=>j.to)).size'),3);assert.equal(r('JSON.stringify(offers())'),jobs)}
- r('game.location=0;game.day=1;tab="jobs";render()');assert.match(nodes.screen.innerHTML,/No cargo space needed/);assert.doesNotMatch(nodes.screen.innerHTML,/0 sealed bays/);
+ r('game.location=0;game.day=1;tab="jobs";render()');assert.match(nodes.screen.innerHTML,/Uses no cargo space/);assert.doesNotMatch(nodes.screen.innerHTML,/Uses 0 of your cargo bays/);
 });
 test('goal remains visible, borrowing does not inflate progress, and retirement needs no debt',()=>{
  r('game.credits=1000;borrowCredits(5000);render()');assert.match(nodes['goal-progress'].innerHTML,/value="1000"/);assert.match(nodes['goal-progress'].innerHTML,/500,000/);

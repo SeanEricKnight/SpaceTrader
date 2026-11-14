@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.12.0 — Plain-language job board
+
+- Contracts tab renamed **Jobs** in plain words: "Go to X · N pc away", "Pays N cr", "Deadline: day N (M days left)", what it costs in cargo space, and a reason under a disabled Take this job button. Jobs you hold come first, then offers, then the side story.
+
 ## 0.11.4 — Crew hiring clarity
 
 - Crew cards you cannot hire yet say which planet to fly to and how far it is, with a "Go there for me" button when the trip needs stops.
