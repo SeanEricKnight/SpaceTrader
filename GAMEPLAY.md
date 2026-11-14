@@ -4,7 +4,7 @@ The rules as they work in the current version (**0.12.2**). Update this file wit
 
 ## Goal and ending
 
-- Save **500,000 cr** and clear your debt, then **Retire** (Commander screen or the goal bar) to buy a moon. That ends the game with a career summary. It cannot be undone, so export a save first if you want to keep that commander.
+- Save **500,000 cr** and clear your debt, then **Retire** (Commander screen or the goal bar) to buy a moon. That ends the game with a career summary. It cannot be undone, so save to a slot first if you want to keep that commander.
 - There is no game over. If your ship is destroyed or you are jailed or kidnapped, there is a way back, usually at a cost.
 
 ## Core loop
@@ -31,7 +31,7 @@ Chosen on the destination card before you jump:
 ## Events and the News
 
 - Ports can be in a **crisis** (war, plague, drought and so on) that raises some prices. Each crisis lasts roughly 6 to 14 days, then eases and prices settle. A calm port has about a 3% chance per day of a new crisis, so they rotate. Time only passes when you travel.
-- **Free:** the bulletin on the Market tab covers only the port you are docked at.
+- **Free:** the Market tab shows conditions at the port you are docked at. The News tab also shows a free sample for one other port in trouble, a different port each day.
 - **Paid:** **The Reach News** (News tab) lists every port in a crisis. Buy one issue, or **subscribe for 10 days** and a fresh edition is delivered every time you dock. An issue is a snapshot of the day it was printed. Crises start and end, so check its date.
 
 ## Jobs
@@ -73,7 +73,9 @@ Beginner, Easy, Normal, Hard, Impossible. Easier levels give more hints; Hard an
 ## Saving
 
 - The game autosaves in your browser. Clearing browser data or switching browser or device loses that save.
-- **Commander, then Export save** downloads a `.json` file. **Import save** loads one. **Undo previous saved action** steps back one saved state.
+- **Save slots:** three named-by-number checkpoints in the browser (Commander screen), each showing day, credits and ship.
+- **Copy save code / Paste save code:** moves your game to another device as plain text, no file needed.
+- **Undo last action** steps back one saved state. A save file export and import is under "Advanced".
 
 ## Hidden test tools
 

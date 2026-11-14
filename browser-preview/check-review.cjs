@@ -57,7 +57,7 @@ test('repair can be reached from any screen and Easy repair costs remain forgivi
  r('action("repair")');assert.equal(r('game.hull'),100);assert.equal(r('game.credits'),1450);
 });
 test('authored galaxy, undo, chart scale and provenance labels are honest',()=>{
- assert.match(html,/curated galaxy/);assert.match(html,/Undo previous saved action/);assert.match(html,/Export a save to make a lasting checkpoint/);assert.match(html,/Orbital spacing is illustrative/);assert.doesNotMatch(html,/the supplied Dark Nova|reddit\.com|steamcommunity\.com|fonts\.googleapis/);
+ assert.match(html,/curated galaxy/);assert.match(html,/Undo last action/);assert.match(html,/Copy save code/);assert.match(html,/Orbital spacing is illustrative/);assert.doesNotMatch(html,/the supplied Dark Nova|reddit\.com|steamcommunity\.com|fonts\.googleapis/);
 });
 const simulations=JSON.parse(fs.readFileSync('browser-preview/review-after.json','utf8'));assert.equal(simulations.buildSha256,crypto.createHash('sha256').update(html).digest('hex'),'Re-run the simulator after changing the game');
 const find=(difficulty,loadout)=>simulations.combat.find(x=>x.difficulty===difficulty&&x.loadout===loadout);
