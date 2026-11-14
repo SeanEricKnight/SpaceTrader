@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.10.2 — price tags instead of bars
+
+- The slider-like price bar is gone. Each good now has a small tag: ▼ Cheap (good to buy), ● Fair, ▲ Pricey (good to sell), with a one-line key. Hidden on Hard and Impossible.
+
 ## 0.10.1 — clearer price gauge
 
 - The bar under each good is a read-only gauge, not a slider. It now always carries a word (Cheap, Fair, Pricey; shown on every level except Hard and Impossible) with a plain-language key above the list.
