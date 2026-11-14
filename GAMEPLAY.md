@@ -7,6 +7,12 @@ The rules as they work in the current version (**0.12.2**). Update this file wit
 - Save **500,000 cr** and clear your debt, then **Retire** (Commander screen or the goal bar) to buy a moon. That ends the game with a career summary. It cannot be undone, so save to a slot first if you want to keep that commander.
 - There is no game over. If your ship is destroyed or you are jailed or kidnapped, there is a way back, usually at a cost.
 
+## Leaderboard and rival race
+- **Leaderboard:** every honest retirement posts a score to a top-10 list in this browser (Commander tab and retire screen). Score = max(100, 1500 − 6 × days) + difficulty bonus (Beginner 0, Easy 100, Normal 250, Hard 450, Impossible 700) + 300 for beating a rival. Runs that used cheats are not ranked. It is local only; there is no online board.
+- **Race a rival AI (optional):** tick the box beside Start new game. A rival (Marta Voss, Kade Orrin or Ilse Tarn) races you to 500,000 cr. The strip under your goal bar shows their cash and last-seen port.
+- **How the rival works:** it is a scripted pace, not a live trader. It never touches your markets, jobs or pirates. It retires on a fixed day: Beginner about 130, Easy 115, Normal 100, Hard 90, Impossible 80, times 0.92 (Kade), 1.0 (Ilse) or 1.08 (Marta). Harder difficulties have faster rivals.
+- **Prize:** retire on or before their day (a tie goes to you) to win the Gold Seal Deed and +300 score. If they retire first you get a notice, no prize, and your finish still ranks.
+
 ## Dock services
 
 On the Market, the cargo bar has **Done trading · Open map** (0.15.1) and, when a comparison market is chosen, **Go to <planet>**; both go to the System map. Each tab has its own accent color for box borders and highlights (0.15.1).

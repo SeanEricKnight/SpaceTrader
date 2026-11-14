@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 14, 2026 (version 0.15.1).
+Last updated: November 14, 2026 (version 0.16.0).
 
 ## Built
 
@@ -32,7 +32,10 @@ Last updated: November 14, 2026 (version 0.15.1).
 | Route suggestion for out-of-range ports | 0.8.2 | Cheapest hops within range. |
 | Livelier market (icons, price gauge, EVENT tag) | 0.8.0 | Gauge hidden on Hard and Impossible. |
 
+| Leaderboard + race a rival AI to retire | 0.16.0 | Opt-in rival at new game; local leaderboard; Gold Seal Deed prize. Rival is a pacing model, not a live trader. |
+
 ## Deferred (not built yet)
+- Rival tuning: retire-day table (`RIVAL_DAYS`) is a first guess. Needs real playtest pace per difficulty. Online/shared leaderboard needs a server, so it is not built.
 - Sound: redo the sound effects (the first synthesized set was rejected). Code is in place behind `SOUND_ENABLED=false`; needs better sounds or real audio files, then a Sound toggle in dock services.
 - Mid-flight art: a police cutter and a marauder ship picture (both use the pirate ship for now); show customs inspections in flight (they happen after docking today).
 

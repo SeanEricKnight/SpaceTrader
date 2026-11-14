@@ -2,6 +2,14 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.16.0 — Leaderboard and race a rival AI
+
+- New game: tick **Race a rival AI** next to Start new game (off by default; New game keeps it on if the last run had a rival). One of three rivals (Marta Voss, Kade Orrin, Ilse Tarn) races you to 500,000 cr. A race strip under your goal bar shows their cash, ship and last-seen port.
+- The rival is a **pacing model, not a live trader**: its cash follows a fixed curve and it retires on a fixed day by difficulty (about 80 to 140 days; Hard and Impossible rivals are faster). It does not touch your markets, jobs or pirates.
+- Retire on or before the rival's day to **win the Gold Seal Deed** (title card on the retire screen) and +300 score. A tie goes to you. If they retire first, you are told, and you can still finish and rank.
+- **Leaderboard**: top 10 retired careers, stored in this browser, on the Commander tab and the retire screen. Score = max(100, 1500 − 6 × days) + difficulty bonus (0/100/250/450/700) + 300 for a rival win. Cheated runs are not ranked.
+- New check: `check-rival.cjs`.
+
 ## 0.15.1 — Market: quick way back to the map; matching colors
 
 - Market: the sticky Cargo hold bar now has a **Done trading · Open map** button, so after loading up you go straight to the System map to travel. If you picked a "Compare a logged market" planet, a second button, **Go to <planet> · N pc**, jumps to that planet on the map.
