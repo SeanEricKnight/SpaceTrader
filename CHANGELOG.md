@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.13.1 — Fixed solar chart
+
+- The solar chart no longer pans or zooms. It always shows the whole sector, and tapping a planet opens its card (works by touch on iPhone). The zoom/pan toolbar, drag, pinch, wheel and keyboard map controls, and the Focus selected button are removed. The camera test was retired with them.
+
 ## 0.13.0 — First haul
 
 - New games start with **5 Water already in the hold**, a short welcome popup with the backstory, and a **First haul** quick-win mission: sell the Water at Adahn for a cash bonus (Beginner 2,000, Easy 1,750, Normal 1,500, Hard 1,000, Impossible 500 cr). Beginner, Easy and Normal show step-by-step instructions; Hard and Impossible show one line.

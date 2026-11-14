@@ -22,7 +22,7 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 ## Core loop
 
 1. **Market tab:** buy goods where a tag says **Cheap**, sell where it says **Pricey** (tags are hidden on Hard and Impossible). The sticky hold meter shows cargo used and free.
-2. **System tab:** pick a destination and travel. Each jump uses fuel and takes days.
+2. **System tab:** tap a planet on the chart to open its card, then travel. The chart is fixed; there is no panning or zooming. Each jump uses fuel and takes days.
 3. Repeat, take jobs, and avoid or fight trouble.
 
 ## Fuel, range, and warp
