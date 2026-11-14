@@ -78,7 +78,7 @@ test('relief changes the outbreak, prices, recorded market and news exactly once
  r('dock();dock()');assert.equal(r('game.worlds[6].prices[6]'),Math.floor(medicine/2));r('game=decodeSave(JSON.stringify(game))');assert.equal(r('game.story.clinicRelief'),true);
 });
 test('news follows story progress and contains six connected original characters',()=>{
- r('tab="news";render()');assert.match(nodes.screen.innerHTML,/The Reach Dispatch/);assert.equal((nodes.screen.innerHTML.match(/class="person-card"/g)||[]).length,6);assert.match(nodes.screen.innerHTML,/relay lattice failed/);
+ r('tab="news";render()');assert.match(nodes.screen.innerHTML,/The Reach News/);assert.equal((nodes.screen.innerHTML.match(/class="person-card"/g)||[]).length,6);assert.match(nodes.screen.innerHTML,/relay lattice failed/);
  r('beginStory()');assert.match(r('communityNews()[0]'),/leaves Acamar/);r('game.location=6;dock();game.location=7;dock()');assert.match(r('communityNews()[0]'),/data recovered/);r('completeStory(1200)');assert.match(r('communityNews()[0]'),/crew home/);
 });
 test('old saves retain location, inventory, debt, prices and active missions',()=>{
