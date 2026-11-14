@@ -1,4 +1,4 @@
-# Next session prompt (Space Trader, as of 0.14.2)
+# Next session prompt (Space Trader, as of 0.14.3)
 
 Paste this to start the next session:
 
@@ -39,5 +39,5 @@ Open / next, in rough priority:
 2. Split the HTML into source files plus a build script that emits the same single HTML (do with a strong model, as one careful refactor).
 3. iPhone layout pass (bottom tab bar, larger tap targets) and optional installable-app support (manifest + offline cache with an update prompt).
 4. Gemini review ideas not yet done: moon-purchase "deed certificate" ending, travel moment (warp-line flash), warehouse cost scaling or spoilage if hoarding becomes dominant, tap/long-press explanations for stats.
-5. Writing pack from Sean's local model (port rumors, local color, headlines for 24 planets); integrate when pasted.
+5. DONE in 0.14.3: port rumors/local color/headlines integrated (PLANET_FLAVOR). Ask Sean how they read; more writing packs (events, crew banter) could follow.
 6. Older backlog: Commander page career record, first-visit Reach story popup, police/marauder art, customs in flight, sound redo (disabled behind SOUND_ENABLED=false), 24 painted portraits (PORTRAITS.md), real iPhone test, `npm test` on Sean's PC.

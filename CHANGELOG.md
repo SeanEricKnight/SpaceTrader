@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.14.3 — Port flavor text
+
+- Every one of the 24 ports now has an overheard rumor, a line of local color and a headline (from Sean's local-model writing pack, reviewed and rewritten to match each port's lore, tech, resource and region; names checked against the game, Antedi is one word).
+- Shown in the arrival banner, in each planet's detail card, and as a new Port headlines list on the News tab for ports you have visited. Flavor only; it never changes prices.
+
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
 - Raised the HTML size cap in `check-solar` from 700 KB to 2 MB (it was a self-imposed test limit, not a platform limit).
