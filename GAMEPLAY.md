@@ -23,6 +23,11 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 - **Portraits:** crew, escorts and people of the Reach get drawn placeholder faces (each name always draws the same face). A painted portrait file with the matching name (see PORTRAITS.md) automatically replaces it.
 - **Ships** in your ship card and in pirate encounters bob gently with a pulsing engine glow.
 
+## My ports and the finder
+
+- Every planet card has **Pin to My ports** and a tag button (Favorite, Good buyer, Refuel stop, Shipyard, Jobs, Avoid). **My ports** under the chart lists your home and pinned planets with live status: distance, crisis, job count and best pay (the pay and count need the newspaper), and how old your price log is.
+- The **finder** box above it filters all planets by name as you type.
+
 ## Home port and warehouse
 
 - Your **home port** starts as Acamar. Repairs and fuel cost about 20% less there (small differences vanish at the lowest prices). You can move home from any port's market screen for 500 cr, once your warehouse is empty.
