@@ -4,6 +4,8 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
+- Each Reach (Inner, Outer, Far) has a backstory popup, opened from the Solar chart, with a few things to know before you fly there.
+
 - Solar chart zoom is back (pinch, scroll or + / -). Zoomed in, planet text grows and each planet shows its kind, tech level, resources, and a separate orange line for any crisis, such as "Colonists need Medicine (plague outbreak)".
 - **Fill the tank automatically when I dock** (on by default, a checkbox on the Market tab) so you do not keep pressing Refuel. It spends the same fuel money.
 - Only three crew look for work (pilot, mechanic, gunner), matching the three escort pilots.

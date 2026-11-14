@@ -53,6 +53,7 @@ Chosen on the destination card before you jump:
 - Each job: go to one planet by the deadline and get paid. Kinds: deliver a message (no cargo space), haul supplies (uses some of your cargo bays; the supplies are provided and cannot be sold), survey trip (no cargo space).
 - Crisis ports add a relief bonus; urgent jobs pay more but have short deadlines.
 - Abandoning a job loses the pay, no fine.
+- **The story of each Reach:** the Solar chart has a "The story of the ... Reach" button that opens a short backstory (who runs it, how it got here) and a few things to know before you fly.
 - An optional story ("A light in the Reach") and **side quests** are on the same screen.
 
 ## Side quests
