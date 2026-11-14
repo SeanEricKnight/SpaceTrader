@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.11.1 — Ship screen split
+
+- **Crew & escorts** have their own **Crew** tab. The **Ship** tab now shows the Shipyard first, then Ship rental, then the Outfitter and bank summary.
+
 ## 0.11.0 — "Go there for me" auto-route
 
 - When a port needs fuel or stops, the destination card, map bar and info card offer **Go there for me**: it plans the cheapest route within your ship's range, buys the fuel at each stop, and flies the legs. It shows the number of jumps and the fuel cost first, stops if an event or encounter interrupts, and stops if you run out of credits. Available on Beginner, Easy and Normal; not on Hard or Impossible.
