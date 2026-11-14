@@ -1,6 +1,10 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.7.0`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.7.1`.
+
+## 0.7.1 — dismiss-escort popup
+
+- Dismissing an escort now opens an in-game popup (name, level, jumps, a note that the hiring fee is not refunded) with **Dismiss** and **Keep** buttons, instead of the browser's plain confirm box. Verified in headless Chrome: Keep leaves the escort, Dismiss removes them, no console errors.
 
 ## 0.7.0 — market rows, timed events, paid newspaper, escorts
 
