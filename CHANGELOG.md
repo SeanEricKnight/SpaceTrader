@@ -1,6 +1,10 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.1`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
+
+## 0.8.2 — route suggestion when a port is out of range
+
+- When the selected port is farther than your ship's full-tank range, the destination card now says **OUT OF RANGE · USE A STOP**, suggests the cheapest route that works (for example Adahn → Aldea → Andevian, with each leg's distance), and offers a button to inspect the first stop. The map bar notes it is beyond your range and no longer shows a useless Refuel button. If no route exists with the ship's range, it says so. Previously the card said "Refuel or travel closer" while the tank was already full.
 
 ## 0.8.1 — refuel from the destination card
 
