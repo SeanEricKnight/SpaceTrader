@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## Docs — README rewritten
+
+- `README.md` is now a short, phone-friendly overview of the current game. The old long notes moved to `FEATURES.md`.
+
 ## 0.10.3 — buy-one stays open, big cargo hold, escort avatars
 
 - Opening a market row now stays open while you trade, so Buy 1, Sell 1 and the rest can be clicked repeatedly (the row used to collapse after every click, which made it look like only one unit could be bought).
