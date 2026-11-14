@@ -31,7 +31,7 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 ## My ports and the finder
 
 - Every planet card has **Pin to My ports** and a tag button (Favorite, Good buyer, Refuel stop, Shipyard, Jobs, Avoid). **My ports** under the chart lists your home and pinned planets with live status: distance, crisis, job count and best pay (the pay and count need the newspaper), and how old your price log is.
-- The **finder** box above it filters all planets by name as you type.
+- The **finder** is a drop-down list of every planet (alphabetical, with distance and any pin). Pick one to select it.
 
 ## Home port and warehouse
 
@@ -44,7 +44,7 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 - With a **newspaper subscription** (News tab) the card also shows the **job boards at each stop**: how many jobs are posted there that go your way (to a later stop on the route) and the best pay. Chart captions show the same count.
 - Some things stay **local**: exact contract terms, side quests, and crew and escorts are only visible when you dock at the planet.
 
-- **Best runs** (below the chart) ranks jobs by pay per fuel. Without the paper it lists jobs posted at your current port; with it, every job board in range. "Show route" selects the job's destination; "Go to X" selects the port where a remote job is posted.
+- **Best runs** (below the chart) gets harder to read as difficulty rises. Beginner and Easy: ranked by pay per fuel, with the fuel and rate shown. Normal: ranked by pay only, with the fuel needed shown; you weigh the cost. Hard: only jobs posted at your current port, unranked, no fuel math. Impossible: the panel is hidden. The newspaper subscription adds other ports' boards on Beginner, Easy and Normal only. Details below describe the Beginner/Easy version. Without the paper it lists jobs posted at your current port; with it, every job board in range. "Show route" selects the job's destination; "Go to X" selects the port where a remote job is posted.
 
 ## Celebrations
 
@@ -61,7 +61,7 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 ## Core loop
 
 1. **Market tab:** buy goods where a tag says **Cheap**, sell where it says **Pricey** (tags are hidden on Hard and Impossible). A tag compares the price here with that good's usual range across all planets, shown as "vs usual 28–62 cr": the bottom third of the range is Cheap, the top third Pricey. The sticky hold meter shows cargo used and free.
-2. **System tab:** tap a planet on the chart to open its card, then travel. Click or tap the chart first (it gets a green outline), then scroll, pinch or drag it; until then the page scrolls normally. Click anywhere outside to let go. You can also use + / −: the planet names and notes grow as you zoom, and up close each planet shows its kind, tech level, resources, and in orange what its colonists need while a crisis lasts (for example "Colonists need Medicine (plague outbreak)"). This applies to every planet in every system. Each jump uses fuel and takes days.
+2. **System tab:** tap a planet on the chart to open its card, then travel. Click or tap the chart first (it gets a green outline), then scroll, pinch or drag it; until then the page scrolls normally. Click anywhere outside to let go. You can also use + / −: the planet names and notes grow as you zoom, and up close each planet shows its kind, tech level, resources, and in orange what its colonists need while a crisis lasts (for example "Colonists need Medicine"; the cause is not shown on planet screens). This applies to every planet in every system. Each jump uses fuel and takes days.
 3. Repeat, take jobs, and avoid or fight trouble.
 
 ## Fuel, range, and warp

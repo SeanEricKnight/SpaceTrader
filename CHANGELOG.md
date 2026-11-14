@@ -2,6 +2,12 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.14.3 — Planet screen cleanup, finder list, harder Best runs
+
+- Removed parenthetical text from planet screens: the crisis cause (such as "labor shortage") is gone from the chart label, route card and arrival banner; "(in range)" and "(N days old)" on the planet card became "· in range" and "· N days old". The Conditions line still names the crisis.
+- Planet finder is now a drop-down list of all 24 planets instead of a type-to-search box.
+- Best runs scales with difficulty: Beginner/Easy unchanged; Normal ranks by pay and shows fuel but not cr per fuel; Hard shows only this port's board, unranked, no fuel math; Impossible hides it.
+
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
 - Raised the HTML size cap in `check-solar` from 700 KB to 2 MB (it was a self-imposed test limit, not a platform limit).

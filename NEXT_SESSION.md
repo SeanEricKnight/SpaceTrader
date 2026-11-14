@@ -1,4 +1,4 @@
-# Next session prompt (Space Trader, as of 0.14.2)
+# Next session prompt (Space Trader, as of 0.14.3)
 
 Paste this to start the next session:
 
@@ -26,7 +26,10 @@ Sean's diagnosis that drives the above: the game still feels like a 2000-era spr
 - Short replies, no recaps, no option lists for small things: decide and build. Take several requests per message.
 - Writing work (lore, rumors, headlines) can come from Sean's local model; just integrate what he pastes.
 
-## State as of 2026-11-14 (latest commit after f4e3ec7)
+## State as of 2026-11-14 (0.14.3)
+
+0.14.3: planet screens no longer show parenthetical crisis causes; the planet finder is a drop-down of all planets; Best runs is easiest on Beginner/Easy and progressively harder (Normal: pay only, no cr per fuel; Hard: this port only, unranked; Impossible: hidden). Ask Sean if the tiers feel right.
+
 
 Shipped in 0.14.2 this session, all on main:
 - Route planning (ringed stops, Route card; job boards at stops need the newspaper subscription), Best runs (jobs by pay per fuel), DELIVERED stamp card with floating "cr" chips, toasts for sales/buys/new ports, floating +profit numbers from the tapped button.
