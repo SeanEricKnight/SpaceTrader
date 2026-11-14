@@ -4,6 +4,7 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.12.2 — Profile popups
 
+- Icons on the tabs and the Bank button. The Newspaper tab is now called **Dispatch**, matching "The Reach Dispatch" and the Read the Dispatch button.
 - The Captain's log is removed from the Commander page (a flat list of purchases is not useful without a storyline). A story-beat journal idea is in DESIGN_IDEAS.md.
 - Crew and escort cards are compact: avatar, name, role or level, perk, and a **View profile** button. The profile opens as a popup with a large avatar, character type, what they do, and backstory.
 
