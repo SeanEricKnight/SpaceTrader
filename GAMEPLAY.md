@@ -52,7 +52,7 @@ Chosen on the destination card before you jump:
 
 ## Crew and escorts (Crew tab)
 
-- **Crew:** up to 3, hired for 500 cr each, wage 15 cr per jump. Each has a role (pilot, mechanic, gunner, purser, smuggler, fixer) and a loyalty that rises or falls with your choices. They never die; treat them badly and they leave. A crew member can only be hired at their home planet; the card says where. **View profile** shows their backstory.
+- **Crew:** up to 3, hired for 500 cr each, wage 15 cr per jump. Each has a role (pilot, mechanic, gunner, purser, smuggler, fixer) and a loyalty that rises or falls with your choices. They never die; treat them badly and they leave. A crew member can only be hired at their home planet; the card says where. **View profile** shows their portrait, character type, and backstory.
 - **Escorts:** up to 3 hired pilots. Each lowers pirate encounters and adds damage to your volleys. Wages are paid every jump; they gain levels and cost more as they improve.
 
 ## Trouble

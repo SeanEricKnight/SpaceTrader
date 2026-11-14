@@ -4,6 +4,7 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.12.2 — Profile popups
 
+- Portrait support: crew, escorts, and named people show a face from `portraits/<name>.webp` when it exists, and initials otherwise. See PORTRAITS.md for file names and a matching style prompt. Portraits are bigger on cards.
 - "Accept this job" (was Take), "Side quest" (was Side story). The Ship tab hero card is compact and opens the full ship card on tap; shipyard cards use smaller pictures.
 - New **GAMEPLAY.md** rules reference. The News screen now spells out free (this port) versus paid (every port).
 - Icons on the tabs and the Bank button. The Newspaper tab is now called **News**, and the paper is "The Reach News".

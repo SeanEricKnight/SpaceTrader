@@ -49,3 +49,4 @@ Last updated: November 14, 2026 (version 0.12.2).
 
 - Save slot name `space-trader-chrome-preview-v1` is just a storage key. It is not browser-specific.
 - Draw equipment (lasers etc.) on the ship image itself.
+- Create the 24 character portraits (see PORTRAITS.md); optionally bake into the HTML.

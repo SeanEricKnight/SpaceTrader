@@ -24,6 +24,7 @@ A browser game of interstellar trading, inspired by the classic Palm OS *Space T
 
 | File | What it is |
 | --- | --- |
+| [PORTRAITS.md](PORTRAITS.md) | How to add character faces |
 | [GAMEPLAY.md](GAMEPLAY.md) | The rules, kept current with every version |
 | [CHANGELOG.md](CHANGELOG.md) | What changed in each version |
 | [BACKLOG.md](BACKLOG.md) | What is built and what is waiting |
