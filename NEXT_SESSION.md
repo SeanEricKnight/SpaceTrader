@@ -25,3 +25,19 @@ Sean's diagnosis that drives the above: the game still feels like a 2000-era spr
 - Screenshots only for big visual changes. Batch small fixes, then run the full release routine (docs, sync, hashes, checks, commit, push) once per batch.
 - Short replies, no recaps, no option lists for small things: decide and build. Take several requests per message.
 - Writing work (lore, rumors, headlines) can come from Sean's local model; just integrate what he pastes.
+
+## State as of 2026-11-14 (latest commit after f4e3ec7)
+
+Shipped in 0.14.2 this session, all on main:
+- Route planning (ringed stops, Route card; job boards at stops need the newspaper subscription), Best runs (jobs by pay per fuel), DELIVERED stamp card with floating "cr" chips, toasts for sales/buys/new ports, floating +profit numbers from the tapped button.
+- Home port (Acamar default, about 20% off repairs/fuel, move for 500 cr) and a 20-unit warehouse (1 cr/unit/day).
+- My ports (pins with tags, live status) and planet finder; rounded/pill style pass with color-coded tabs, stats and job types; tabular digits.
+- Size test cap raised to 2 MB (file about 684 KB). Restore point before Best runs/Home/My ports/style: branch `before-best-runs` (c1784c6).
+
+Open / next, in rough priority:
+1. Sean to play-test the new features and report what feels wrong (celebration card, Best runs, warehouse fee, home discount).
+2. Split the HTML into source files plus a build script that emits the same single HTML (do with a strong model, as one careful refactor).
+3. iPhone layout pass (bottom tab bar, larger tap targets) and optional installable-app support (manifest + offline cache with an update prompt).
+4. Gemini review ideas not yet done: moon-purchase "deed certificate" ending, travel moment (warp-line flash), warehouse cost scaling or spoilage if hoarding becomes dominant, tap/long-press explanations for stats.
+5. Writing pack from Sean's local model (port rumors, local color, headlines for 24 planets); integrate when pasted.
+6. Older backlog: Commander page career record, first-visit Reach story popup, police/marauder art, customs in flight, sound redo (disabled behind SOUND_ENABLED=false), 24 painted portraits (PORTRAITS.md), real iPhone test, `npm test` on Sean's PC.
