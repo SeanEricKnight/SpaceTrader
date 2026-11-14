@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.11.2 — Laser upgrade clarity
+
+- The laser button now says what the next step is ("tier 2 → 3 · cost") and "Lasers maxed" at the top. The upgrade message says whether you can upgrade again, and the ship card shows tier dots (●●○).
+
 ## 0.11.1 — Ship screen split
 
 - **Crew & escorts** have their own **Crew** tab. The **Ship** tab now shows the Shipyard first, then Ship rental, then the Outfitter and bank summary.

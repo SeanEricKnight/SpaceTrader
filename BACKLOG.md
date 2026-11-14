@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 14, 2026 (version 0.11.1).
+Last updated: November 14, 2026 (version 0.11.2).
 
 ## Built
 
@@ -48,3 +48,4 @@ Last updated: November 14, 2026 (version 0.11.1).
 ## Notes
 
 - Save slot name `space-trader-chrome-preview-v1` is just a storage key. It is not browser-specific.
+- Draw equipment (lasers etc.) on the ship image itself.
