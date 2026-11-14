@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.16.1 — Market buttons fixed
+
+- Fixed: since 0.15.1 the tab accent colour was stored as `data-tab` on the screen container, so every tap inside any tab was read as a tab switch and re-drew the screen. Market rows could not expand, so Buy/Sell/Max/Dump never appeared; other tabs' buttons were affected the same way. The accent now uses `data-screen`.
+
 ## 0.16.0 — Leaderboard and race a rival AI
 
 - New game: tick **Race a rival AI** next to Start new game (off by default; New game keeps it on if the last run had a rival). One of three rivals (Marta Voss, Kade Orrin, Ilse Tarn) races you to 500,000 cr. A race strip under your goal bar shows their cash, ship and last-seen port.
