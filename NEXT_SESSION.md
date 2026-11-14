@@ -14,7 +14,7 @@ Continue Space Trader (repo SeanEricKnight/SpaceTrader, clone at /home/claude/sp
 1. DONE in 0.14.2: procedural planets, vector placeholder portraits, ship bob/glow. Review with Sean and refine (planet brightness, portrait style) before moving on.
 2. Commander page rebuilt as a career record: visited-planets map (lit vs dim, last ~10 jumps), rank title with ship picture (see DESIGN_IDEAS.md rank ladder), records (deliveries, pirates beaten, best sale, biggest haul, days, net worth vs the 500,000 goal), milestone badges. Open question for Sean: unvisited planets as dim dots or hidden.
 3. Painted portraits are Sean's job (PORTRAITS.md, 24 files; the game loads them by file name over the drawn placeholders).
-4. Travel as a moment (ship trail, jump flash), first-visit Reach story popup, then one cohesive visual style (cockpit console proposed).
+4. Route planning and the quest celebration shipped in 0.14.2; ask Sean how they feel. Travel as a moment (ship trail, jump flash), first-visit Reach story popup, then one cohesive visual style (cockpit console proposed).
 5. Backlog: redo sounds (disabled; `SOUND_ENABLED=false`), police cutter and marauder art, customs inspection in flight, reputation, label the orange per-unit profit pill, fuel price tuning if gas still feels costly, optional hangar of multiple ships (design decision for Sean; today you fly one ship at a time).
 
 Sean's diagnosis that drives the above: the game still feels like a 2000-era spreadsheet because it has little feedback, little sense of place, and flat visual hierarchy. Juice only helps on top of real decisions and story, so keep adding writing and consequences too.

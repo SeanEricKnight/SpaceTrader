@@ -23,6 +23,16 @@ The bar at the top of every screen is your dock services: refuel, repair, bank, 
 - **Portraits:** crew, escorts and people of the Reach get drawn placeholder faces (each name always draws the same face). A painted portrait file with the matching name (see PORTRAITS.md) automatically replaces it.
 - **Ships** in your ship card and in pirate encounters bob gently with a pulsing engine glow.
 
+## Planning a route
+
+- Pick a destination on the Solar chart and every stop on the way is ringed in green. Below the chart a **Route card** lists each stop with its distance, whether you refuel there, any crisis (what its colonists need), and any of your contracts that deliver there.
+- With a **newspaper subscription** (News tab) the card also shows the **job boards at each stop**: how many jobs are posted there that go your way (to a later stop on the route) and the best pay. Chart captions show the same count.
+- Some things stay **local**: exact contract terms, side quests, and crew and escorts are only visible when you dock at the planet.
+
+## Celebrations
+
+- Finishing a job, a courier delivery, a side quest or the First haul pops a **celebration card** with confetti and the reward. Tap it to dismiss; it fades on its own. Reduced-motion players get the card without confetti.
+
 ## Starting out
 
 - A new game begins with **5 Water in your hold**, already bought, bound for Adahn. A welcome popup tells the story.

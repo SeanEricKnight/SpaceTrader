@@ -4,6 +4,9 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
+- Route planning: selecting a destination rings every stop on the chart and shows a Route card (distance, refuel, crises, your deliveries). With the newspaper subscription it also shows the job boards at each stop that go your way. Side quests and exact terms stay local.
+- Celebration card with confetti and the reward when you finish a job, courier delivery, side quest or the First haul.
+
 - Visuals: procedurally painted planets (craters, continents, clouds, ice caps, dunes, gas bands and storm spots, cracked ice, lightning) with atmosphere glow; drawn placeholder portraits for every crew, escort and person (painted files still override them); ships bob with a pulsing engine glow.
 
 - Sounds are switched off (code kept, flag `SOUND_ENABLED`) until they are redone.
