@@ -126,7 +126,7 @@ Chosen on the destination card before you jump:
 
 ## Ships
 
-- **Ship tab:** your ship and its controls, then **Outfit your ship** (equipment), then **Get a different ship**, where a switch chooses **Buy** (own it, trade in your current ship) or **Rent** (pay per day, deposit returned), then the bank summary.
+- **Ship tab:** your ship and its controls, then **Outfit your ship** (equipment), then **Shipyard**, where a switch chooses **Buy** (own it, trade in your current ship) or **Rent** (pay per day, deposit returned), then the bank summary.
 - Each ship has cargo bays, jump range, hull, laser mounts, shield and gadget slots. A ship needs a shipyard of a high enough **tech level**; the card names the nearest planet that has one.
 - **Lasers** upgrade in tiers 1 to 3. The button shows the next step and cost; at tier 3 it reads "Lasers maxed".
 - **One ship at a time:** there is no hangar of spare ships. Buying a ship trades in the one you fly (cargo and compatible lasers move over). To go back to a ship you traded in, buy it again. A rented ship is the only time your own ship is parked: it waits for you until you return the rental.
@@ -168,3 +168,10 @@ Beginner, Easy, Normal, Hard, Impossible. Easier levels give more hints; Hard an
 ## Hidden test tools
 
 See [CHEATS.md](CHEATS.md). Using them marks the run as "Cheats used".
+
+## Layout, cards and pop-ups (0.16.4)
+
+- **Arrange panels** (System tab): move each card up/down and place it beside or under the chart; saved per browser; Reset layout restores the default.
+- **Pirate risk on the destination card** = base Reach rate x escorts x career level x (half on a Quiet ride). None before day 3 and none on a warp.
+- **Needs attention** shows only when fuel is low, hull is damaged or you are stranded. Ship tab always has Refuel and Repair.
+- Pop-ups close with the ✕ or Esc. Help has a **Tell me more** section.

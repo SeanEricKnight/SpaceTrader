@@ -2,6 +2,16 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.16.4 — Panels, honest cards, tidier screens (2026-11-15)
+
+- **Arrange panels.** On the System tab, **⇅ Arrange panels** lets you move every card (selected-port bar, Best runs, destination card, route card, vessel, My ports, Distances) up or down and place it beside or under the chart. Saved in this browser; **Reset layout** restores the default.
+- **Pirate risk is now honest.** The destination card quoted the base regional rate; the real roll also uses your escorts, career level and Quiet ride, and nothing happens before day 3 or on a warp. Card and jump now share one formula (`arrivalRisk`).
+- **Card matches the chart label.** The destination card now shows Resources and "Colonists need…"; "Water sells for" says which day the price was seen, or "Not seen yet".
+- **Needs-attention bar** appears only when fuel, hull or a stranding needs it. The paper chip moved beside the day counter, **Log** moved to the footer next to Test tools.
+- **Pop-ups** have one ✕ close in the corner (Esc still works) instead of a Close button under a Got it button; How to play has a **Tell me more** section.
+- **Jobs screen:** compact job cards (pay beside the destination), colored section headers.
+- Wording: "Get a different ship" is now **Shipyard**; "Gadget slots" is now **Equipment slots**.
+
 ## 0.16.3 — Player feedback pass (2026-11-15)
 
 From the first outside players (raw notes and status in `reviews/2026-11-15-player-feedback.md`).
