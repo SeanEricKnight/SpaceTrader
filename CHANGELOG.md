@@ -18,6 +18,8 @@ Player feedback pass (Nov 15, 2026).
 - **Delivery cheer** now appears in the middle of the screen: bigger card, sunburst rays, gold screen glow, large count-up reward, phone buzz. Tap to dismiss.
 - **Guide for far trips.** When the Water's buyer is farther than one tank (for example after you wandered off), Show me now walks you through it: Show it on the map, then Go there for me, which plans the fuel stops and flies the whole way. Before, it kept saying Refuel then Travel, which cannot work.
 - **Jump scene ships fly level.** Your ship is turned to fly left to right with side-scrolling stars (the shipyard picture is an angled view). Pirates and marauders fly in from the right; customs scans show a police cutter with flashing blue and red lights.
+- **Random events explain themselves and follow up.** Every choice in a trader convoy, derelict, distress call or marauder offer has a plain line saying what it does (the convoy wording is rewritten). After you choose, a result card shows what happened and what you gained or lost (credits count up, cargo, fuel, hull).
+- **Jump scene no longer rushes.** Arrival results appear one line at a time on a plain report card (not pill buttons), and stay until you press Continue on a first, milestone or event jump. Ordinary repeat jumps hold about two seconds and still show Continue.
 
 ## 0.23.0
 
