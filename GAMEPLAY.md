@@ -39,7 +39,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 ## My ports and the finder
 
 - Every planet card has **Pin to My ports** and a tag button (Favorite, Good buyer, Refuel stop, Shipyard, Jobs, Avoid). **My ports** under the chart lists your home and pinned planets with live status: distance, crisis, job count and best pay (the pay and count need the newspaper), and how old your price log is.
-- The **finder** is a drop-down list of every planet (alphabetical, with distance and any pin). Pick one to select it.
+- The **finder** is a drop-down list of every planet (alphabetical). Each row shows the planet's picture, kind, tech level, resources, distance and range status, any pin, and what its colonists need during a crisis. Pick one to select it.
 
 ## Home port and warehouse
 

@@ -31,7 +31,7 @@ This is an additive refinement after the initial GitHub upload. It documents the
 ## 0.14.3 — Planet screen cleanup, finder list, harder Best runs
 
 - Removed parenthetical text from planet screens: the crisis cause (such as "labor shortage") is gone from the chart label, route card and arrival banner; "(in range)" and "(N days old)" on the planet card became "· in range" and "· N days old". The Conditions line still names the crisis.
-- Planet finder is now a drop-down list of all 24 planets instead of a type-to-search box.
+- Planet finder is now a drop-down list of all 24 planets instead of a type-to-search box, with each planet's painted picture plus kind, tech, resources, distance and crisis need.
 - Best runs scales with difficulty: Beginner/Easy unchanged; Normal ranks by pay and shows fuel but not cr per fuel; Hard shows only this port's board, unranked, no fuel math; Impossible hides it.
 
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
