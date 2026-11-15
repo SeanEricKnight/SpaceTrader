@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.21.2
+
+- Job board cards are now compact rows (about a third of the height): kind icon, title, reward, and chips for distance, deadline, cargo, crisis bonus and standing, with the client on one line and a short Accept button. Same layout for Your jobs and Government requests. Modeled on notice-board lists in Monster Hunter and The Witcher 3 (icon, name, reward, one-line detail) and the dense contract rows in Elite Dangerous and Starsector.
+
 ## 0.21.1
 
 - The welcome card and first message point to ? Help at the top right, not the old dock bar.
