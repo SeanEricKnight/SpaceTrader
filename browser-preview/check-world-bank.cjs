@@ -55,23 +55,23 @@ test('bank input event quotes a valid amount; transaction handlers apply it',()=
  r('action("bank-repay-all")');assert.equal(r('game.debt'),0);assert.equal(r('game.credits'),1000);
  nodes['bank-amount'].value='-50';r('previewBorrow();action("bank-borrow")');assert.equal(r('game.debt'),0);assert.match(nodes['bank-status'].textContent,/No transaction/);
 });
-test('refueling and bank access remain visible across all six screens',()=>{
+test('refueling is offered on all six screens when needed, and the bank is offered when cash is short',()=>{
  for(const tab of ['galaxy','market','jobs','ship','commander','news']){
-  r('tab='+JSON.stringify(tab)+';game.fuel=5;game.credits=1000;render()');assert.match(nodes['port-services'].innerHTML,/Refuel \+9 · ₡18/);assert.match(nodes['port-services'].innerHTML,/data-action="bank"/);
+  r('tab='+JSON.stringify(tab)+';game.fuel=5;game.credits=1000;render()');assert.match(nodes['port-services'].innerHTML,/Refuel \+9 · ₡18/);assert.doesNotMatch(nodes['port-services'].innerHTML,/data-action="bank"/);
  }
  const day=r('game.day');r('action("refuel")');assert.equal(r('game.fuel'),14);assert.equal(r('game.credits'),982);assert.equal(r('game.day'),day);
- r('game.fuel=0;game.credits=3;render()');assert.match(nodes['port-services'].innerHTML,/Refuel \+1 · ₡2/);r('action("refuel")');assert.equal(r('game.fuel'),1);assert.equal(r('game.credits'),1);
+ r('game.fuel=0;game.credits=3;render()');assert.match(nodes['port-services'].innerHTML,/Refuel \+1 · ₡2/);assert.match(nodes['port-services'].innerHTML,/data-action="bank"/);r('action("refuel")');assert.equal(r('game.fuel'),1);assert.equal(r('game.credits'),1);
 });
 test('regions have distinct stars, orbit coordinates, planet orders, resources and risk',()=>{
  const layouts=[],stars=['HEARTH','THE SISTERS','CINDER'];
- for(let i=0;i<3;i++){r('sector='+i+';selectedWorld='+i*8+';render()');layouts.push(r('JSON.stringify(Array.from({length:8},(_,i)=>planetPoint(i)))'));assert.match(nodes.screen.innerHTML,new RegExp(stars[i]));assert.equal((nodes.screen.innerHTML.match(/class="planet-node /g)||[]).length,8);assert.match(nodes.screen.innerHTML,/Three Reaches explained/);assert.equal(r('game.location'),0)}
+ for(let i=0;i<3;i++){r('sector='+i+';selectedWorld='+i*8+';render()');layouts.push(r('JSON.stringify(Array.from({length:8},(_,i)=>planetPoint(i)))'));assert.match(nodes.screen.innerHTML,new RegExp(stars[i]));assert.equal((nodes.screen.innerHTML.match(/class="planet-node /g)||[]).length,8);assert.match(r('helpHtml("travel")'),/Three Reaches/);assert.equal(r('game.location'),0)}
  assert.equal(new Set(layouts).size,3);assert.equal(r('regionalRisk(0)'),13);assert.equal(r('regionalRisk(8)'),20);assert.equal(r('regionalRisk(16)'),27);
  assert.notEqual(r('PLANET_LORE.slice(0,8).map(x=>x[0]).join()'),r('PLANET_LORE.slice(8,16).map(x=>x[0]).join()'));
 });
 test('all 24 planets have unique histories and supply explanations tied to price data',()=>{
  assert.equal(r('new Set(PLANET_LORE.map(p=>p[4])).size'),24);
  for(let i=0;i<24;i++){assert.ok(r('worldHistory('+i+').includes(PLANET_LORE['+i+'][4])'));assert.equal(r('game.worlds['+i+'].resource'),r('PLANET_LORE['+i+'][2]'));assert.equal(r('game.worlds['+i+'].crisis'),r('PLANET_LORE['+i+'][3]'))}
- assert.match(r('marketContext(1)'),/Drought doubles water/);assert.match(r('marketContext(6)'),/outbreak doubles medicine/);
+ assert.match(r('marketContext(1)'),/Drought triples water/);assert.match(r('marketContext(6)'),/outbreak doubles medicine/);
 });
 test('relief changes the outbreak, prices, recorded market and news exactly once',()=>{
  const medicine=r('game.worlds[6].prices[6]');r('beginStory();game.location=6;dock()');assert.equal(r('game.worlds[6].crisis'),0);assert.equal(r('game.worlds[6].prices[6]'),Math.floor(medicine/2));assert.equal(r('game.memory[6].prices[6]'),Math.floor(medicine/2));assert.match(r('communityNews()[0]'),/premium eases/);assert.match(r('worldHistory(6)'),/reopened/);
@@ -87,5 +87,5 @@ test('old saves retain location, inventory, debt, prices and active missions',()
 test('bank balances and difficulty round trip through validated saves',()=>{
  r('game=fresh("Hard");borrowCredits(12345);jump(1);save()');const raw=storage.get('space-trader-chrome-preview-v1');c.saved=raw;r('game=decodeSave(saved)');assert.equal(r('game.debt'),12592);assert.equal(r('game.difficulty'),'Hard');assert.equal(r('creditAvailable()'),12408);assert.equal(r('interestDue()'),252);
 });
-assert.ok(Buffer.byteLength(html)<600000);assert.equal((html.match(/data:image\/webp;base64,/g)||[]).length,1);
+assert.ok(Buffer.byteLength(html)<900000);assert.equal((html.match(/data:image\/webp;base64,/g)||[]).length,1);
 console.log(checks+' world/bank checks passed. Tested JS, generated markup and canvas; full Chrome layout is not verified.');

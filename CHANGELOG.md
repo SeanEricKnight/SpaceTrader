@@ -2,6 +2,13 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.18.1 — Crew cards, bank prompt, checks repaired (2026-11-15)
+
+- **Crew cards open their profile when tapped** (bigger portrait, "What they do well", "About them"). Cards say "Good at:". One portrait image serves both sizes.
+- **Bank offer.** When you need fuel and cannot afford a fill, the Needs attention bar adds "Short of cash? Open bank".
+- **Help:** the travel topic explains the three Reaches.
+- **All package checks pass.** The old checks were out of date with earlier changes (wording, home-rate repair price, career-scaled pirates, escape odds 85 for a navigation-equipped Rookie on Normal, drought triples water, file size budget 900 KB). Finding: in the simulation a Rookie now wins every pirate fight on every difficulty, so Normal and Hard may be too easy early on.
+
 ## 0.18.0 — Help Center, tappable terms, paper chip (2026-11-15)
 
 - **Help Center.** The round ? is now a **? Help** button fixed at the top right. It opens a home page (goal, quick start, quick answers, nine topics). Each "More" opens a topic page in the same pop-up with a **← Help** button and Related links. No inline accordions, no stacked pop-ups.
