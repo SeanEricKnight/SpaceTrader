@@ -73,8 +73,8 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 
 ## Starting out
 
-- **Save:** the game autosaves after every action. The 💾 Save button in the top bar opens the three manual slots and Export.
-- **Reset:** the ↺ Reset button in the top bar starts a fresh run on your current difficulty (rival race kept if you had one). It asks first, offers to export your save, and Commander's Restore can undo it. Vow and difficulty changes still go through "New game / difficulty".
+- **Save:** the game autosaves after every action. The 💾 Save button in the footer (and the "Your game" section of Help) opens the three manual slots and Export.
+- **Reset:** the ↺ Reset button in the footer (and in Help, set apart at the bottom) starts a fresh run on your current difficulty (rival race kept if you had one). It asks first, offers to export your save, and Commander's Restore can undo it. Vow and difficulty changes still go through "New game / difficulty".
 - A new game begins with **5 Water in your hold**, already bought, bound for Adahn. A welcome popup tells the story.
 - **First haul** is the quick-win mission: fly to Adahn and sell the Water there. The first Water you sell at Adahn pays a **cash bonus** on top of the sale: Beginner 2,000, Easy 1,750, Normal 1,500, Hard 1,000, Impossible 500 cr. It is enough to buy something right away, like a crew member, an escort, or a warp charge.
 - Beginner, Easy and Normal show the steps on the Market and System tabs; Hard and Impossible show a single line.

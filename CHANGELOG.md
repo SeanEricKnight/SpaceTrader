@@ -3,8 +3,8 @@
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
 ## 0.23.3
-- New top-bar **💾 Save** button: says the game autosaves after every action, offers the three save slots and Export without opening Commander.
-- New always-visible **↺ Reset** button in the top bar (next to the day tag). It opens a card that says what will be replaced, offers "Export my save first", and keeps the same difficulty. After a reset, Commander's Restore button brings back the previous run. Before, starting over was buried in the collapsed "New game / difficulty" strip and Commander.
+- New **💾 Save** button in the page footer and at the bottom of the Help pop-out: says the game autosaves after every action, offers the three save slots and Export without opening Commander.
+- New **↺ Reset** button beside it, in the footer and in Help (set apart from the other buttons so it is hard to hit by accident). It opens a card that says what will be replaced, offers "Export my save first", and keeps the same difficulty. After a reset, Commander's Restore button brings back the previous run. Before, starting over was buried in the collapsed "New game / difficulty" strip and Commander. Footer buttons (Log, Save, Reset, Test tools) now sit in one aligned row of equal-size touch targets.
 
 ## 0.23.2
 - Market now shows what you carry: a "What you are carrying" card at the top lists each good with quantity, what you paid, what this port would pay in total (including the price drop from selling), profit or loss, and a one-tap Sell all. Goods you carry are also highlighted in green and moved to the top of the price list, and goods this port will not buy say so. An empty hold shows a one-line next step.
