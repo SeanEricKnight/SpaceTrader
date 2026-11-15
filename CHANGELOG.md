@@ -16,6 +16,7 @@ Player feedback pass (Nov 15, 2026).
 - **Jump scene:** travel now plays a full-screen jump (charge-up, star streaks, distance countdown, arrival flash and planet, reward chips, New port and jump-milestone callouts). Pirates and incidents cut it short with an alarm. Tap or press Esc to skip; later jumps are shorter; reduced-motion players skip it.
 - **Show-on-chart buttons explain themselves.** Pressing one (for example Mara's story) now scrolls to the selected-port bar and says what to do next; the story button reads "Show Acamar on the chart". Goals pop-out reworded.
 - **Delivery cheer** now appears in the middle of the screen: bigger card, sunburst rays, gold screen glow, large count-up reward, phone buzz. Tap to dismiss.
+- **Guide for far trips.** When the Water's buyer is farther than one tank (for example after you wandered off), Show me now walks you through it: Show it on the map, then Go there for me, which plans the fuel stops and flies the whole way. Before, it kept saying Refuel then Travel, which cannot work.
 
 ## 0.23.0
 
