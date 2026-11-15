@@ -20,6 +20,8 @@ Player feedback pass (Nov 15, 2026).
 - **Jump scene ships fly level.** Your ship is turned to fly left to right with side-scrolling stars (the shipyard picture is an angled view). Pirates and marauders fly in from the right; customs scans show a police cutter with flashing blue and red lights.
 - **Random events explain themselves and follow up.** Every choice in a trader convoy, derelict, distress call or marauder offer has a plain line saying what it does (the convoy wording is rewritten). After you choose, a result card shows what happened and what you gained or lost (credits count up, cargo, fuel, hull).
 - **Jump scene no longer rushes.** Arrival results appear one line at a time on a plain report card (not pill buttons), and stay until you press Continue on a first, milestone or event jump. Ordinary repeat jumps hold about two seconds and still show Continue.
+- **Fixed the pop-up jump.** Screen shake moved the whole page, which dragged fixed pop-ups (pirate fights, the jump scene) down and back up. It now shakes only the content behind and the card itself, and the card stays put.
+- **Laser fire redone.** Ships face each other level; each linked weapon mount fires its own bolt with a muzzle flash, an impact flash and sparks; the pirate's return fire flies back at you, then the hit lands with a shake.
 
 ## 0.23.0
 
