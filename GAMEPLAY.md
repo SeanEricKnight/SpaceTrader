@@ -210,3 +210,7 @@ Early pirates: the Rookie discount on pirate hull and damage depends on difficul
 Fly back: after the guide ends, a button returns you to the port you last left if you have the fuel.
 Welcome back: loading a save shows a one-time recap card.
 Records: Commander shows best sale and best streak; Atlas shows ports logged out of 24.
+
+## Vows (0.23.0)
+
+Start a new game and pick a Vow beside Difficulty. Peaceful: lasers cannot be upgraded. Debt-free: the bank lends nothing. Lean hold: your hold is capped at 15 bays even on a bigger ship or with cargo pods. The vow is kept if you buy your first moon with it intact. The rules never relax during the run.

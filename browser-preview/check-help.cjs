@@ -30,7 +30,7 @@ assert.ok(r('$("info-body").innerHTML').includes('Keep trading')&&!/confetti/.te
 r('action("moon-buy")');assert.equal(r('moonList().length'),1);ok('cannot buy a second moon at the same port');
 r('game.location=2;action("moon-buy")');assert.equal(r('moonList().length'),2);assert.equal(r('game.credits'),750000);ok('a second moon costs 250,000 more');
 const before=r('game.credits');r('jump(1)');assert.ok(r('game.credits')>before-60000);ok('moons pay rent on jumps');
-r('game.encounter=null;game.custody=null;game.hull=game.hull||1;action("moon-sell",0)');assert.equal(r('moonList().length'),1);ok('a moon can be sold back');
+r('game.encounter=null;game.custody=null;game.offer=null;game.hull=game.hull||1;action("moon-sell",0)');assert.equal(r('moonList().length'),1);ok('a moon can be sold back');
 const posted=JSON.parse(storage.get('space-trader-leaderboard-v1')||'[]').length;assert.ok(posted<=1);ok('score is posted at most once');
 // equipment and milestones
 r('game=fresh("Normal");game.tutorial=null;game.modules=["tank"]');assert.equal(r('ship().range'),r('catalog.ships[game.ship].range')+4);ok('fuel tank adds range');
@@ -74,4 +74,12 @@ r('game=fresh("Normal");game.tutorial=null;game.guide=null;game.day=40;recap=tru
 r('action("recap-ok")');assert.ok(!nodes["guide-bar"].innerHTML.includes('Welcome back'));ok('the recap goes away on Continue');
 assert.ok(nodes["guide-bar"].innerHTML.includes('Atlas 1/24')||nodes["guide-bar"].innerHTML.includes('Atlas '));ok('Atlas progress shows under the stats');
 r('game.cargo[1]=3;game.paid[1]=0;action("sellall",1);tab="commander";render()');assert.ok(nodes.screen.innerHTML.includes('BEST SALE')&&nodes.screen.innerHTML.includes('BEST STREAK'));ok('Commander shows best sale and best streak');
+// vows (0.23.0)
+r('game=fresh("Normal");game.vow="lean";game.modules=["cargo"]');assert.equal(r('capacity()'),15);ok('Lean hold caps the hold at 15 bays');
+r('game=fresh("Normal");game.vow="debtfree"');assert.equal(r('creditAvailable()'),0);assert.equal(r('borrowCredits(1000)'),false);ok('Debt-free blocks bank loans');
+r('game=fresh("Normal");game.vow="peaceful";game.credits=99999;game.day=3;tab="store";render()');const lb=r('game.laser');r('action("laser")');assert.equal(r('game.laser'),lb);assert.ok(nodes.screen.innerHTML.includes('locked by your Peaceful vow'));ok('Peaceful blocks laser upgrades');
+r('game=fresh("Normal");game.vow="peaceful";tab="commander";render()');assert.ok(nodes.screen.innerHTML.includes('Vow: Peaceful'));ok('Commander shows the vow');
+r('game=fresh("Normal");game.vow="debtfree";game.credits=600000;game.tutorial=null;game.location=3;action("moon-buy")');assert.equal(r('game.vowKept'),true);ok('buying the first moon under a vow keeps it');
+r('game=fresh("Normal")');assert.equal(r('vowOf(game)'),'none');ok('new games default to no vow');
+assert.ok(html.includes('id="vow"'));ok('new-game controls have a Vow picker');
 console.log('All help checks passed.');

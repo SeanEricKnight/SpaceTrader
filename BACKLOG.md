@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 15, 2026 (version 0.22.1).
+Last updated: November 15, 2026 (version 0.23.0).
 
 ## Built
 
@@ -41,6 +41,7 @@ Last updated: November 15, 2026 (version 0.22.1).
 Built: battle pop-outs, help button, newspaper chip, route banner and cross-Reach route drawing, Trip report, cargo-reserve wording, Activity log, 900 px side-by-side layout. See `reviews/2026-11-15-player-feedback.md`. Open: accept remote jobs from afar (owner decision), to-scale chart option, travel animation.
 
 ## Deferred (not built yet)
+- Seasonal calendar (idea, not built): a year of named seasons (for example 24 days each) that give a gentle, readable rhythm: a seasonal price tilt on a few goods, a port festival day with a small bonus, and a Year N, Season label next to the day. Why: long-term engagement research (Stardew-style seasonal pacing, natural session chunks, anticipation). Risks: it shifts price balance, so the trade simulation, the review checks and the Hard and Impossible tuning would need re-running first. Keep it optional or very mild.
 - Rival tuning: retire-day table (`RIVAL_DAYS`) is a first guess. Needs real playtest pace per difficulty. Online/shared leaderboard needs a server, so it is not built.
 - Sound: redo the sound effects (the first synthesized set was rejected). Code is in place behind `SOUND_ENABLED=false`; needs better sounds or real audio files, then a Sound toggle in dock services.
 - Mid-flight art: a police cutter and a marauder ship picture (both use the pirate ship for now); show customs inspections in flight (they happen after docking today).

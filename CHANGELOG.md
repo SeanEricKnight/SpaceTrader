@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.23.0
+
+- Vows: pick an optional promise when you start a new game. Peaceful (no laser upgrades), Debt-free (no bank loans) or Lean hold (15 bays max). Your vow shows in the header and on Commander. Buying your first moon with the vow intact marks it kept and records it with your score. Settings and difficulty are unchanged; vows only add limits.
+- Fixed a flaky test in the moon sell-back check.
+
 ## 0.22.1
 
 - Early pirates now scale with difficulty. The Rookie-tier discount to pirate hull and damage is full on Beginner and Easy, 75% on Normal, 40% on Hard and 20% on Impossible, so a fight early on costs real repairs (Hard about ₡185, Impossible about ₡308 on a starter ship) instead of being free.
