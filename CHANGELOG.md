@@ -2,6 +2,15 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.23.4
+- **First run on a phone:** "Start flying" now takes you to the next step. It runs the 💡 Show me hint for you, so the first button you need glows and scrolls into view instead of dropping you at the top of a long page with no clue what to do.
+- **Bottom dock on phones (600 px wide or less):** the tab bar is now fixed to the bottom of the screen above the iPhone home indicator, with an icon over each label and a small gold count badge on Jobs. While the guide is on, a gold **💡 Step N · Show me** button floats above it, always in thumb reach. Corner toasts sit above both.
+- **Shorter top of the page on phones:** tagline hidden, smaller title, the moon goal is one thin line (the explanation and the greyed-out Buy button show only on desktop, the Buy button returns when you can afford it), tighter stat boxes.
+- The New game / difficulty / vow / rival strip moved from the top of the page into the footer, next to Save and Reset (it was one more line to scroll past on every visit).
+- The "Your goal: save 500,000 credits..." line under the tabs no longer repeats what the guide bar already says while the guide is on.
+- Scroll-to-hint now treats the area under the dock as hidden, so a glowing button is never left behind the tab bar.
+- New check `check-firstrun.cjs`. Layout itself (sticky dock, sizes) could not be tested here because the sandbox has no browser; it needs a look on your iPhone.
+
 ## 0.23.3
 - **Bulk freight (new job type):** ships with 20+ bays are offered one long-haul run per port, 16 or more bays to a port 16 to 45 pc away (a different Reach). Pay is 400 cr plus 4 cr per bay per pc (40% more for a crisis port), shown as "cr per bay". Small ships see a locked card that explains what unlocks it and offers "Pick a ship goal".
 - **Ship goal:** every ship in the Store has "Set as my ship goal". A progress bar under the moon goal shows savings toward it (trade-in counted), its bays and range, and what a 30 pc bulk run would pay. Clears itself when you buy the ship.

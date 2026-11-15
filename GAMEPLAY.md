@@ -217,7 +217,7 @@ Records: Commander shows best sale and best streak; Atlas shows ports logged out
 
 ## Feedback pass (0.23.1)
 
-The guide hint keeps pointing at the next step after you press Show me. Market buttons: Buy 1, Buy max, Sell 1, Sell all, Dump (throws goods away for no credits). Each jump plays a short full-screen scene that shows days, fuel, new ports and jump milestones (5, 10, 25, 50, 100, 200); tap to skip. System tab: Move cards (drag) rearranges the panels.
+Tapping Start flying on the welcome card runs Show me for you. On a phone the tab bar sits fixed at the bottom of the screen, and while the guide is on a gold Show me button floats above it. The guide hint keeps pointing at the next step after you press Show me. Market buttons: Buy 1, Buy max, Sell 1, Sell all, Dump (throws goods away for no credits). Each jump plays a short full-screen scene that shows days, fuel, new ports and jump milestones (5, 10, 25, 50, 100, 200); tap to skip. System tab: Move cards (drag) rearranges the panels.
 
 ## Vows (0.23.0)
 
