@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.23.2
+- Fixed pop-up cards (planet info, Show route, help, job details) opening at the top of the page instead of over the screen. On a phone, if you had scrolled down, you saw only the dark backdrop until you scrolled back up. The pop-up is now fixed to the screen. Cause: `#info-dialog{position:relative}` overrode the browser's fixed positioning for modal dialogs. Verified at 375x812.
+- Fixed the Open Market / Open Jobs buttons in the Cargo, Credits, Fuel and Location pop-outs doing nothing. They changed the tab behind the pop-up but never closed it, so nothing seemed to happen. They now close the pop-up and open the tab.
+- Switching tabs on a phone now scrolls the new tab's content into view when it would otherwise sit below the screen, so tapping Market, Jobs, Crew and the rest visibly does something.
+
 ## 0.23.1
 - Guide fix: after Buy max, "Show me" now picks the buyer port for you, lights the exact Travel button, and refuels first if needed (it used to say "pick a port and Travel" with nothing glowing). The guide's first trade is chosen to be genuinely profitable, including the new sell-price impact. Tested end to end at phone size.
 - Markets now react to you: each unit you sell lowers that port's price about 1.2% (down to -30%), and it recovers about 12% of the gap per travel day. A "▼ flooded N%" chip and note explain it. Selling in several ports now beats dumping everything in one. (Buying does not move prices yet; stock already limits that.)
