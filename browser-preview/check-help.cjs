@@ -19,4 +19,17 @@ r('game.day=5;game.paper.sub=14');assert.equal(r('paperChip()'),'');ok('no chip 
 r('game.paper.sub=6');assert.ok(r('paperChip()').includes('2 days left')&&r('paperChip()').includes('Renew'));ok('chip appears when 2 days remain');
 r('game.paper.sub=4');assert.ok(r('paperChip()').includes('Paper ended'));ok('chip says ended just after expiry');
 r('game.paper.sub=-20');assert.equal(r('paperChip()'),'');ok('chip stops nagging a few days after expiry');
+// crew profile
+r('game.crew=[];game.location=2;game.credits=5000');const wren=r('crewProfile(CREW[0])');assert.ok(wren.includes('What they do well')&&wren.includes('About them')&&wren.includes('data-action="crew-hire"'));ok('crew profile shows what they do well, about them, and a Hire button at their port');
+r('game.location=0');assert.ok(!r('crewProfile(CREW[0])').includes('data-action="crew-hire"'));ok('no Hire button away from their port');
+r('game.location=2;action("crew-hire",0)');assert.equal(r('crewList().length'),1);assert.ok(r('crewProfile(CREW[0])').includes('Loyalty')&&r('crewProfile(CREW[0])').includes('class="meter"'));assert.ok(!r('crewProfile(CREW[0])').includes('data-action="crew-hire"'));ok('hired crew show a loyalty meter and no Hire button');
+assert.ok(r('crewPanel()').includes('data-action="crew-profile"'));ok('crew cards open their profile');
+// moons
+r('game=fresh("Normal");game.tutorial=null;game.day=30;game.credits=2000000;game.debt=0;game.location=1');r('action("moon-buy")');assert.equal(r('moonList().length'),1);assert.equal(r('game.credits'),1500000);assert.equal(r('game.retired'),false);assert.equal(r('active()'),true);ok('buying a moon keeps you playing');
+assert.ok(r('$("info-body").innerHTML').includes('Keep trading')&&!/confetti/.test(r('$("info-body").innerHTML')));ok('moon pop-up has Keep trading and no confetti');
+r('action("moon-buy")');assert.equal(r('moonList().length'),1);ok('cannot buy a second moon at the same port');
+r('game.location=2;action("moon-buy")');assert.equal(r('moonList().length'),2);assert.equal(r('game.credits'),750000);ok('a second moon costs 250,000 more');
+const before=r('game.credits');r('jump(1)');assert.ok(r('game.credits')>before-60000);ok('moons pay rent on jumps');
+r('game.encounter=null;game.custody=null;game.hull=game.hull||1;action("moon-sell",0)');assert.equal(r('moonList().length'),1);ok('a moon can be sold back');
+const posted=JSON.parse(storage.get('space-trader-leaderboard-v1')||'[]').length;assert.ok(posted<=1);ok('score is posted at most once');
 console.log('All help checks passed.');

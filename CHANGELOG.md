@@ -2,6 +2,12 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.19.0 — Moons you can keep playing (2026-11-15)
+
+- **No more ending.** Buying a moon posts your score once and returns you to the game. No confetti. A small card offers Keep trading and Career summary. Old retired saves get a Keep flying button.
+- **More moons.** Each costs 250,000 more than the last, pays 0.2% of its price per travel day as rent, and can be sold back for 75%. One moon per port.
+- **Crew profiles** show a loyalty meter, ability, wage and a Hire button when you are at their port. Portrait crops focus on the face; one image serves both sizes.
+
 ## 0.18.1 — Crew cards, bank prompt, checks repaired (2026-11-15)
 
 - **Crew cards open their profile when tapped** (bigger portrait, "What they do well", "About them"). Cards say "Good at:". One portrait image serves both sizes.

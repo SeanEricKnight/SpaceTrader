@@ -24,7 +24,7 @@ test('contract boards offer three destinations throughout the galaxy and never r
 });
 test('goal remains visible, borrowing does not inflate progress, and retirement needs no debt',()=>{
  r('game.credits=1000;borrowCredits(5000);render()');assert.match(nodes['goal-progress'].innerHTML,/value="1000"/);assert.match(nodes['goal-progress'].innerHTML,/500,000/);
- r('game.credits=500000;game.debt=1;action("retire")');assert.equal(r('game.retired'),false);r('game.debt=0;action("retire");render()');assert.equal(r('game.retired'),true);assert.match(nodes['goal-progress'].innerHTML,/value="500000"/);
+ r('game.credits=500000;game.debt=1;action("moon-buy")');assert.equal(r('moonList().length'),0);r('game.debt=0;action("moon-buy");render()');assert.equal(r('moonList().length'),1);assert.equal(r('game.retired'),false);assert.match(nodes['goal-progress'].innerHTML,/Moons: 1/);
 });
 test('market explains technology and customs',()=>{
  r('game.location=2;tab="market";render()');assert.match(nodes.screen.innerHTML,/Needs tech \d to (buy|sell)/);

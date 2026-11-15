@@ -4,7 +4,7 @@ The rules as they work in the current version (**0.12.2**). Update this file wit
 
 ## Goal and ending
 
-- Save **500,000 cr** and clear your debt, then **Retire** (Commander screen or the goal bar) to buy a moon. That ends the game with a career summary. It cannot be undone, so save to a slot first if you want to keep that commander.
+- Save **500,000 cr** and clear your debt, then **Buy a moon** (Commander screen or the goal bar). Your score posts once and you keep playing. Buy more moons (each costs 250,000 cr more than the last) for rent, or sell one back for 75%.
 - There is no game over. If your ship is destroyed or you are jailed or kidnapped, there is a way back, usually at a cost.
 
 ## Leaderboard and rival race
@@ -66,7 +66,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 
 ## Celebrations
 
-- **Buying your moon** is the big moment: when you have 500,000 cr and no debt, the goal bar's button pulses gold and reads "Buy your moon". Buying it fills the screen with a rising moon, "YOU BOUGHT A MOON", and falling confetti. Tap to continue to the career summary.
+- **Moons (0.19.0):** buying one opens a small card with Keep trading and Career summary, no confetti and no ending. Each moon pays 0.2% of its price per day of travel as rent. You cannot buy two moons at the same port. The goal bar lists your moons with a Sell back button. Old saves that were already retired show Keep flying.
 - **Beating a pirate** flashes the screen green, shakes it, bursts sparks and shows a "Pirate down" card with the bounty counting up.
 - **Firing lasers** draws a beam to the pirate, flashes it, and pops the damage number; when the pirate shoots back you see its beam, the damage taken and a screen shake. Reduced-motion players skip these animations.
 - Finishing a job, a courier delivery, a side quest or the First haul pops a **DELIVERED card**: a stamp slams down, small credit chips float up and away, and the reward counts up. Tap it to dismiss; it fades on its own. Reduced-motion players get the card without the animation.

@@ -11,16 +11,16 @@ let prev=0;for(let d=0;d<=r('game.rival.retireDay');d+=10){const w=r('rivalWorth
 assert.equal(r('rivalWorth(game.rival,40)'),r('rivalWorth(game.rival,40)'),'deterministic');
 assert.match(r('rivalStrip()'),/Race vs/);assert.match(r('goalPanel()'),/Race vs/);
 // Win: retire on time.
-r('game.day=50;game.credits=500000;game.debt=0;game.location=1;action("retire")');assert.equal(r('game.retired'),true);assert.equal(r('game.raceResult'),'won');
+r('game.day=50;game.credits=500000;game.debt=0;game.location=1;action("moon-buy")');assert.equal(r('game.moons.length'),1);assert.equal(r('game.retired'),false);assert.equal(r('game.raceResult'),'won');
 assert.match(r('retireScreen()'),/You beat/);assert.match(r('retireScreen()'),/Gold Seal Deed/);
 let b=JSON.parse(storage.get('space-trader-leaderboard-v1'));assert.equal(b.length,1);assert.equal(b[0].race,'won');assert.ok(b[0].score>0);
 // Loss: retire after the rival.
-r('game=fresh("Normal");game.rival=makeRival("Normal",12345)');r('game.day=game.rival.retireDay+5;game.credits=500000;game.debt=0;game.location=1;rivalWatch();action("retire")');
+r('game=fresh("Normal");game.rival=makeRival("Normal",12345)');r('game.day=game.rival.retireDay+5;game.credits=500000;game.debt=0;game.location=1;rivalWatch();action("moon-buy")');
 assert.equal(r('game.raceResult'),'lost');assert.match(r('retireScreen()'),/retired first/);
 b=JSON.parse(storage.get('space-trader-leaderboard-v1'));assert.equal(b.length,2);assert.ok(b[0].score>=b[1].score,'sorted by score');
 // No rival: still ranks. Cheats: not ranked.
-r('game=fresh("Hard");game.day=70;game.credits=500000;game.debt=0;game.location=1;action("retire")');assert.equal(r('game.raceResult'),'none');assert.equal(JSON.parse(storage.get('space-trader-leaderboard-v1')).length,3);
-r('game=fresh("Normal");game.cheatsUsed=true;game.day=10;game.credits=500000;game.debt=0;game.location=1;action("retire")');assert.equal(JSON.parse(storage.get('space-trader-leaderboard-v1')).length,3,'cheated run not ranked');
+r('game=fresh("Hard");game.day=70;game.credits=500000;game.debt=0;game.location=1;action("moon-buy")');assert.equal(r('game.raceResult'),'none');assert.equal(JSON.parse(storage.get('space-trader-leaderboard-v1')).length,3);
+r('game=fresh("Normal");game.cheatsUsed=true;game.day=10;game.credits=500000;game.debt=0;game.location=1;action("moon-buy")');assert.equal(JSON.parse(storage.get('space-trader-leaderboard-v1')).length,3,'cheated run not ranked');
 // New-game option + save round trip.
 r('game=fresh("Normal");game.rival=makeRival("Normal",game.seed)');const saved=r('JSON.stringify(game)');assert.equal(JSON.parse(saved).rival.name,r('game.rival.name'));
 // Old saves without a rival render fine.
