@@ -2,6 +2,22 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.16.3 — Player feedback pass (2026-11-15)
+
+From the first outside players (raw notes and status in `reviews/2026-11-15-player-feedback.md`).
+
+- **Battles pop out.** Pirate fights, marauder offers and custody now open as a centered pop-out over a dimmed screen, so you can see every option without scrolling.
+- **Help is always there.** A round **?** button stays in the corner of every screen and opens a shorter How to play with quick answers (full hold, where credits came from, newspaper, distances, pirates).
+- **Newspaper status** is a chip in the dock bar: "Paper on · through day N" or "No paper".
+- **Show route actually shows the route.** Best runs buttons are now **Show route** (local jobs) and **Plan route to <port>** (jobs posted elsewhere). They close pop-ups, switch the chart to the right Reach, draw every leg that falls in that Reach, ring the stops, and scroll to a new **route banner** that lists every stop with its Reach. Tap a stop to switch the chart to its Reach. Routes that cross Reaches were previously invisible.
+- **Side-by-side layout** (chart left, travel column right) now starts at 900 px wide instead of 1180 px.
+- **Arrival feedback.** Every arrival shows a toast ("Arrived at X · Day N · −9 fuel"), scrolls to the arrival card, and adds a **Trip report**: fuel used, days, each delivery and its pay, and other costs (fuel stops, wages, interest). It answers "where did my credits come from".
+- **Cargo clarity.** The CARGO stat shows "(N on jobs)", the hold meter says "FULL · N reserved for jobs", and selling into a still-full hold explains the reserved bays.
+- **Best runs wording.** "No cargo bays / reserved" is now "no cargo space needed / uses N of your bays until delivered"; due day reads "deliver by day X (N days left)".
+- **Distance honesty.** The chart says orbit rings are scenery, and the planet card and selection bar show "N pc · N fuel · 1 day". Multi-stop routes show "N jumps · N days".
+- **Market coach line.** The Market tab says what to do with what you carry and that you never have to travel just to sell.
+- **Activity log.** New **📜 Log** button (dock bar and Help) lists the last 400 events and downloads a `.txt` with version, difficulty, day, credits, cargo, reserved bays, active jobs and the full log, for troubleshooting a playtest.
+
 ## 0.16.2 — Planet screen cleanup, finder card grid, harder Best runs
 
 - Removed parenthetical text from planet screens: the crisis cause (such as "labor shortage") is gone from the chart label, route card and arrival banner; "(in range)" and "(N days old)" on the planet card became "· in range" and "· N days old". The Conditions line still names the crisis.

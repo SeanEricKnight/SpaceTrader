@@ -44,3 +44,10 @@ Open / next, in rough priority:
 4. Gemini review ideas not yet done: moon-purchase "deed certificate" ending, travel moment (warp-line flash), warehouse cost scaling or spoilage if hoarding becomes dominant, tap/long-press explanations for stats.
 5. Writing pack from Sean's local model (port rumors, local color, headlines for 24 planets); integrate when pasted.
 6. Older backlog: Commander page career record, first-visit Reach story popup, police/marauder art, customs in flight, sound redo (disabled behind SOUND_ENABLED=false), 24 painted portraits (PORTRAITS.md), real iPhone test, `npm test` on Sean's PC.
+
+
+## State as of 2026-11-15 (0.16.3)
+
+0.16.3 answers the first outside-player feedback (`reviews/2026-11-15-player-feedback.md`): battle pop-outs, always-on help button, newspaper chip, working Show route / Plan route (cross-Reach), arrival toast and Trip report, cargo-reserve wording, Best runs wording, market coach line, downloadable Activity log, side-by-side chart from 900 px.
+
+Open: ask the player what the cut-off "After where it says goal…" note said; decide whether remote jobs may be accepted from afar (today only at the posting port); chart positions still do not reflect real distance (consider a to-scale mode); travel animation / jump flash; real iPhone test. Sean should Pull origin and reload, then try: Best runs "Plan route to…", a pirate fight, the ? button, Log download.

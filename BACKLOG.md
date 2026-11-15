@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 14, 2026 (version 0.16.2).
+Last updated: November 15, 2026 (version 0.16.3).
 
 ## Built
 
@@ -35,6 +35,10 @@ Last updated: November 14, 2026 (version 0.16.2).
 | Livelier market (icons, price gauge, EVENT tag) | 0.8.0 | Gauge hidden on Hard and Impossible. |
 
 | Leaderboard + race a rival AI to retire | 0.16.0 | Opt-in rival at new game; local leaderboard; Gold Seal Deed prize. Rival is a pacing model, not a live trader. |
+
+## Player feedback 2026-11-15 (0.16.3)
+
+Built: battle pop-outs, help button, newspaper chip, route banner and cross-Reach route drawing, Trip report, cargo-reserve wording, Activity log, 900 px side-by-side layout. See `reviews/2026-11-15-player-feedback.md`. Open: accept remote jobs from afar (owner decision), to-scale chart option, travel animation.
 
 ## Deferred (not built yet)
 - Rival tuning: retire-day table (`RIVAL_DAYS`) is a first guess. Needs real playtest pace per difficulty. Online/shared leaderboard needs a server, so it is not built.

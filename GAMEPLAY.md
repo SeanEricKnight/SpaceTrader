@@ -46,6 +46,15 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 - Your **home port** starts as Acamar. Repairs and fuel cost about 20% less there (small differences vanish at the lowest prices). You can move home from any port's market screen for 500 cr, once your warehouse is empty.
 - The **warehouse** (market screen at home) holds 20 units of goods for 1 cr per unit per day, collected when you next use it. It only exists at home. Moving goods keeps their average paid price, so profit stays correct.
 
+## Help, log and arrival report (0.16.3)
+
+- A round **?** button on every screen opens How to play. The dock bar also shows a newspaper chip and a **Log** button.
+- Battles, marauder offers and custody open as a centered pop-out over a dimmed screen.
+- Each arrival shows a **Trip report** (fuel, days, deliveries and pay, other costs). The Log lists the last 400 events and can be downloaded as a text file.
+- Bays reserved for jobs count as used. The cargo stat and hold meter show how many are reserved; they free on delivery. You can sell a good at any port that buys it, including where you bought it.
+- Every jump takes 1 day (2 on the quiet route) and uses fuel equal to its distance in pc. Orbit rings on the chart are scenery.
+- **Show route** and **Plan route to <port>** (Best runs) draw the route, switch to the right Reach, and show a route banner listing every stop. Jobs are still accepted only at the port that posts them.
+
 ## Planning a route
 
 - Pick a destination on the Solar chart and every stop on the way is ringed in green. Below the chart a **Route card** lists each stop with its distance, whether you refuel there, any crisis (what its colonists need), and any of your contracts that deliver there.
