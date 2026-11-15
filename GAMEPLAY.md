@@ -203,3 +203,10 @@ See [CHEATS.md](CHEATS.md). Using them marks the run as "Cheats used".
 New games get a guide bar under the stats with 5 steps: deliver the Water, buy a good tagged Cheap, sell it for a profit at another port, take a job, finish a job. Steps complete on their own. **Show me** (or 30 seconds idle) makes the next button glow, opening the right tab first. **Skip guide** hides it. No rules change.
 
 After the guide, the Next goal bar shows the next cash target (₡2k, 5k, 10k, 25k, 50k, 100k, 250k, 500k) counted after debt, with a toast when you reach it. Each sale shows your streak of profitable sales in a row.
+
+## Returning, challenge and records (0.22.1)
+
+Early pirates: the Rookie discount on pirate hull and damage depends on difficulty (full on Beginner and Easy, 75% Normal, 40% Hard, 20% Impossible). After you reach ₡5,000 net worth it no longer applies.
+Fly back: after the guide ends, a button returns you to the port you last left if you have the fuel.
+Welcome back: loading a save shows a one-time recap card.
+Records: Commander shows best sale and best streak; Atlas shows ports logged out of 24.

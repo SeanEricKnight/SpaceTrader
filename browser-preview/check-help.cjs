@@ -65,4 +65,13 @@ r('game=fresh("Normal");render();action("guide-skip")');assert.equal(r('game.gui
 r('game=fresh("Normal");game.tutorial.state="done";game.guide=null;game.credits=2100;render();game.credits=5200;render()');assert.ok(true);ok('goal ladder runs without error');
 r('game=fresh("Normal");game.tutorial=null;game.guide=null;render()');assert.ok(!nodes["guide-bar"].innerHTML.includes('Step '));ok('saves with no first-haul tutorial get no guide');
 const sold=r('(()=>{for(let i=1;i<catalog.goods.length;i++){game.cargo[i]=2;game.paid[i]=0;const b=game.credits;action("sellall",i);if(game.credits>b)return game.streak}return -1})()');assert.ok(sold>=1);ok('a profitable sale raises the streak ('+sold+')');
+// fly back + early-game challenge (0.22.1)
+r('game=fresh("Normal");game.tutorial=null;game.guide=null;game.fuel=20;game.day=5;game.peace=true;game.lastFrom=null;tab="market";render()');assert.ok(!nodes["guide-bar"].innerHTML.includes('Fly back'));const near=r('(()=>{let b=1;for(let i=1;i<24;i++)if(distance(i)<distance(b))b=i;return b})()');r('action("jump",'+near+')');r('game.encounter=null;game.offer=null;game.custody=null;render()');assert.ok(nodes["guide-bar"].innerHTML.includes('Fly back to'));ok('after a jump a Fly back button appears');
+r('action("jump",game.lastFrom)');assert.equal(r('game.location'),0);ok('Fly back returns to the previous port');
+const avgHull=d=>r('game=fresh("'+d+'");(()=>{let a=0;for(let i=0;i<300;i++)a+=makeEncounter().hull;return a/300})()');const e1=avgHull('Easy'),e0=avgHull('Hard');assert.ok(e0>e1);ok('early pirates scale with difficulty ('+Math.round(e1)+' Easy, '+Math.round(e0)+' Hard)');
+// returning players and career record (0.22.1)
+r('game=fresh("Normal");game.tutorial=null;game.guide=null;game.day=40;recap=true;render()');assert.ok(nodes["guide-bar"].innerHTML.includes('Welcome back, Captain')&&nodes["guide-bar"].innerHTML.includes('recap-ok'));ok('a returning player gets a welcome-back recap');
+r('action("recap-ok")');assert.ok(!nodes["guide-bar"].innerHTML.includes('Welcome back'));ok('the recap goes away on Continue');
+assert.ok(nodes["guide-bar"].innerHTML.includes('Atlas 1/24')||nodes["guide-bar"].innerHTML.includes('Atlas '));ok('Atlas progress shows under the stats');
+r('game.cargo[1]=3;game.paid[1]=0;action("sellall",1);tab="commander";render()');assert.ok(nodes.screen.innerHTML.includes('BEST SALE')&&nodes.screen.innerHTML.includes('BEST STREAK'));ok('Commander shows best sale and best streak');
 console.log('All help checks passed.');

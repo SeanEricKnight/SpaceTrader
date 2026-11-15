@@ -2,6 +2,14 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.22.1
+
+- Early pirates now scale with difficulty. The Rookie-tier discount to pirate hull and damage is full on Beginner and Easy, 75% on Normal, 40% on Hard and 20% on Impossible, so a fight early on costs real repairs (Hard about ₡185, Impossible about ₡308 on a starter ship) instead of being free.
+- Fly back button under the stats once the guide is done: one tap to return to the port you just left, with distance and fuel.
+- Welcome back card when you load a saved game: day, port, ship, credits, jobs due and next goal. It goes away on Continue.
+- Atlas progress (ports logged out of 24) sits beside the Next goal bar.
+- Commander shows your best sale and best streak.
+
 ## 0.22.0
 
 - Captain's guide: after the welcome card a slim guide bar stays on every tab and walks a new player through the whole loop in 5 steps: deliver the Water, buy a Cheap good, sell it for a profit at another port, take a job, finish a job. It advances by itself as you play. 💡 Show me makes the next button glow (it opens the right tab first) and explains why. If you do nothing for 30 seconds it glows on its own. Skip guide hides it. Existing saves past the first haul do not get it.
