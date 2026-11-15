@@ -11,7 +11,7 @@ for(const bad of ['"crew":{}','"crew":[{"id":"nobody","loyalty":50,"jumps":0,"be
 assert.throws(()=>r('decodeSave('+JSON.stringify(good.replace('"custody":null','"custody":{"kind":"x"}'))+')'),/custody/);
 ok('corrupt crew and custody are rejected, valid saves load');
 // #3 stranding
-fresh();r('game.fuel=0;game.credits=2;game.debt=25000;game.cargo.fill(0);game.paid.fill(0);game.tutorial=null');assert.equal(r('stranded()'),true,'0 fuel, ₡2, no cargo');
+fresh();r('game.fuel=0;game.credits=2;game.debt=25000;game.cargo.fill(0);game.paid.fill(0);game.tutorial=null');assert.equal(r('stranded()'),true,'0 fuel, 2, cr no cargo');
 r('game.credits=1000');assert.equal(r('stranded()'),false,'can afford fuel');
 r('game.credits=0;game.cargo[5]=1;game.paid[5]=10;game.worlds[0].strict=true');assert.equal(r('stranded()'),true,'contraband only');
 assert.match(r('market()'),/data-action="dump" data-id="5"/,'dump offered for prohibited cargo');

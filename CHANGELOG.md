@@ -3,6 +3,7 @@
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
 ## 0.23.1
+- Currency is now written "1,000 cr" (the old ₡ glyph looked like the euro sign).
 - Chance meetings are real conversations now: readable speech bubbles in the card, back-and-forth replies, and choices that can hand you a side job (replaces your lowest-paying job if you hold 3, no fine), a price board for a nearby port, or fuel trades. New encounter: a patrol officer.
 - Jobs: at 3 jobs the Accept button becomes "Swap for one of mine…" (drop one, no fine, take the new one).
 - Always-visible "Your jobs" tracker on every tab; tap a job for details, show destination, or drop it.

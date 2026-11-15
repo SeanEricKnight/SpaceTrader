@@ -36,7 +36,7 @@ test('bank transactions are unavailable during encounters, destruction or retire
 });
 test('ship finance is a reviewed exact shortfall, with no loan until confirmed',()=>{
  r('action("finance",2)');assert.equal(nodes['bank-dialog'].open,true);assert.equal(r('game.debt'),0);assert.equal(r('game.ship'),1);
- assert.match(nodes['bank-body'].innerHTML,/Finance a Firefly/);assert.match(nodes['bank-body'].innerHTML,/₡16,500/);assert.match(nodes['bank-body'].innerHTML,/₡248/);
+ assert.match(nodes['bank-body'].innerHTML,/Finance a Firefly/);assert.match(nodes['bank-body'].innerHTML,/16,500 cr/);assert.match(nodes['bank-body'].innerHTML,/248 cr/);
  r('action("finance-confirm")');assert.equal(r('game.ship'),2);assert.equal(r('game.debt'),16500);assert.equal(r('game.credits'),0);assert.equal(r('game.fuel'),17);assert.equal(r('game.hull'),100);assert.equal(nodes['bank-dialog'].open,false);assert.equal(r('tab'),'ship');
  r('action("finance-confirm")');assert.equal(r('game.debt'),16500);assert.equal(r('game.day'),1);
 });
@@ -50,17 +50,17 @@ test('ship finance respects technology, cargo, equipment and docking restriction
  }
 });
 test('bank input event quotes a valid amount; transaction handlers apply it',()=>{
- r('action("bank")');nodes['bank-amount'].value='5000';events.input[0]({target:{id:'bank-amount'}});assert.equal(nodes['bank-borrow-button'].disabled,false);assert.match(nodes['borrow-preview'].innerHTML,/₡75/);
+ r('action("bank")');nodes['bank-amount'].value='5000';events.input[0]({target:{id:'bank-amount'}});assert.equal(nodes['bank-borrow-button'].disabled,false);assert.match(nodes['borrow-preview'].innerHTML,/75 cr/);
  r('action("bank-borrow")');assert.equal(r('game.debt'),5000);document.getElementById('repay-amount').value='1234';r('action("bank-repay")');assert.equal(r('game.debt'),3766);assert.equal(r('game.credits'),4766);
  r('action("bank-repay-all")');assert.equal(r('game.debt'),0);assert.equal(r('game.credits'),1000);
  nodes['bank-amount'].value='-50';r('previewBorrow();action("bank-borrow")');assert.equal(r('game.debt'),0);assert.match(nodes['bank-status'].textContent,/No transaction/);
 });
 test('refueling is offered on all six screens when needed, and the bank is offered when cash is short',()=>{
  for(const tab of ['galaxy','market','jobs','ship','commander','news']){
-  r('tab='+JSON.stringify(tab)+';game.fuel=5;game.credits=1000;render()');assert.match(nodes['port-services'].innerHTML,/Refuel \+9 · ₡18/);assert.doesNotMatch(nodes['port-services'].innerHTML,/data-action="bank"/);
+  r('tab='+JSON.stringify(tab)+';game.fuel=5;game.credits=1000;render()');assert.match(nodes['port-services'].innerHTML,/Refuel \+9 · 18 cr/);assert.doesNotMatch(nodes['port-services'].innerHTML,/data-action="bank"/);
  }
  const day=r('game.day');r('action("refuel")');assert.equal(r('game.fuel'),14);assert.equal(r('game.credits'),982);assert.equal(r('game.day'),day);
- r('game.fuel=0;game.credits=3;render()');assert.match(nodes['port-services'].innerHTML,/Refuel \+1 · ₡2/);assert.match(nodes['port-services'].innerHTML,/data-action="bank"/);r('action("refuel")');assert.equal(r('game.fuel'),1);assert.equal(r('game.credits'),1);
+ r('game.fuel=0;game.credits=3;render()');assert.match(nodes['port-services'].innerHTML,/Refuel \+1 · 2 cr/);assert.match(nodes['port-services'].innerHTML,/data-action="bank"/);r('action("refuel")');assert.equal(r('game.fuel'),1);assert.equal(r('game.credits'),1);
 });
 test('regions have distinct stars, orbit coordinates, planet orders, resources and risk',()=>{
  const layouts=[],stars=['HEARTH','THE SISTERS','CINDER'];
