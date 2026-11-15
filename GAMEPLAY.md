@@ -175,3 +175,9 @@ See [CHEATS.md](CHEATS.md). Using them marks the run as "Cheats used".
 - **Pirate risk on the destination card** = base Reach rate x escorts x career level x (half on a Quiet ride). None before day 3 and none on a warp.
 - **Needs attention** shows only when fuel is low, hull is damaged or you are stranded. Ship tab always has Refuel and Repair.
 - Pop-ups close with the ✕ or Esc. Help has a **Tell me more** section.
+
+## Government requests and standing (0.17.0)
+
+- **Requests:** a port has one on about 1 day in 4 (fixed for that day and port). A dispatch, or a relief run if the destination has a crisis. Reward about 1.35x a normal job, due in 4-5 days, within 14 pc. Appears on the Jobs board; the message line mentions it on arrival. Never interrupts.
+- **Standing** per Reach (Inner/Outer/Far): +1 per dispatch, +2 per relief run. Known at 2, Trusted at 5 (10% off fuel and repairs in that Reach), Honored at 9 (20% off).
+- **Penalty-free:** declining, abandoning, expiring or failing a job, request or side quest costs only the pay. The first story chapter can be set aside before the supplies are delivered.

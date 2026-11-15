@@ -2,6 +2,13 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.17.0 — Government requests and standing (2026-11-15)
+
+- **Government requests.** On about one day in four, a port official (Compact harbormaster, Lantern steward or Freehold clerk) posts a request on the Jobs board: a dispatch or, when the destination is in a crisis, a relief run. Pays about 35% more than a normal job. Nothing interrupts you; a message line tells you it is waiting. Only pirates interrupt.
+- **Standing with each Reach.** Finishing requests raises standing with that Reach's faction: Unknown, Known (2), Trusted (5), Honored (9). Trusted gives 10% off fuel and repairs in that Reach, Honored 20%. Shown on the Commander page.
+- **No penalties.** Declining, failing, expiring or abandoning a request or job costs nothing. The first story chapter can be set aside too.
+- **How to play** has a Tell me more under each answer. The Activity log button is only in the footer next to Test tools. The Jobs page no longer links to the People list.
+
 ## 0.16.4 — Panels, honest cards, tidier screens (2026-11-15)
 
 - **Arrange panels.** On the System tab, **⇅ Arrange panels** lets you move every card (selected-port bar, Best runs, destination card, route card, vessel, My ports, Distances) up or down and place it beside or under the chart. Saved in this browser; **Reset layout** restores the default.
