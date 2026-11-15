@@ -211,6 +211,10 @@ Fly back: after the guide ends, a button returns you to the port you last left i
 Welcome back: loading a save shows a one-time recap card.
 Records: Commander shows best sale and best streak; Atlas shows ports logged out of 24.
 
+## Feedback pass (0.23.1)
+
+The guide hint keeps pointing at the next step after you press Show me. Market buttons: Buy 1, Buy max, Sell 1, Sell all, Dump (throws goods away for no credits). Each jump plays a short full-screen scene that shows days, fuel, new ports and jump milestones (5, 10, 25, 50, 100, 200); tap to skip. System tab: Move cards (drag) rearranges the panels.
+
 ## Vows (0.23.0)
 
 Start a new game and pick a Vow beside Difficulty. Peaceful: lasers cannot be upgraded. Debt-free: the bank lends nothing. Lean hold: your hold is capped at 15 bays even on a bigger ship or with cargo pods. The vow is kept if you buy your first moon with it intact. The rules never relax during the run.

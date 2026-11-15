@@ -2,6 +2,19 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.23.1
+
+Player feedback pass (Nov 15, 2026).
+
+- **Guide hint follows you.** After Show me, the glow moves to the next step by itself (Refuel, then Travel) and the page scrolls only if the target is off screen. The page no longer jumps back to the glowing button on every redraw or on the 30 second nudge; it scrolls only when you press Show me or the target changes.
+- **Market buttons say what they do.** Buy 1, Buy max (n), Sell 1, Sell all, Dump (discard), with a plain line under each open row. Dump asks first and names what you lose. New help topic: Market buttons and terms.
+- **Home port** card rewritten: where your ship is based, why it matters, and what Move home costs, with Tell me more.
+- **Trading options** (compare, auto-fill, reserve) are now one collapsible card with a plain sentence for each, and the Cheap/Pricey key sits right above the price list.
+- **Jobs:** the Market shows how many jobs are offered here and the best pay, with See jobs; the Jobs tab shows how many are new. Intro and empty-board wording rewritten.
+- **Small print:** all small text is at least 14 px, and long static explainers (goals, prices, warp, loan interest, warehouse, saving, pirate strength) moved into ⓘ pop-outs.
+- **Move cards:** the System tab button is now Move cards (drag). Drag the ⠿ handle to reorder cards or drop them under the map; the arrows still work.
+- **Jump scene:** travel now plays a full-screen jump (charge-up, star streaks, distance countdown, arrival flash and planet, reward chips, New port and jump-milestone callouts). Pirates and incidents cut it short with an alarm. Tap or press Esc to skip; later jumps are shorter; reduced-motion players skip it.
+
 ## 0.23.0
 
 - Vows: pick an optional promise when you start a new game. Peaceful (no laser upgrades), Debt-free (no bank loans) or Lean hold (15 bays max). Your vow shows in the header and on Commander. Buying your first moon with the vow intact marks it kept and records it with your score. Settings and difficulty are unchanged; vows only add limits.
