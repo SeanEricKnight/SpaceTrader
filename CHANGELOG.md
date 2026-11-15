@@ -10,6 +10,7 @@ This is an additive refinement after the initial GitHub upload. It documents the
 - **Needs-attention bar** appears only when fuel, hull or a stranding needs it. The paper chip moved beside the day counter, **Log** moved to the footer next to Test tools.
 - **Pop-ups** have one ✕ close in the corner (Esc still works) instead of a Close button under a Got it button; How to play has a **Tell me more** section.
 - **Jobs screen:** compact job cards (pay beside the destination), colored section headers.
+- **How to play** now says what the newspaper is for, how to tell whether you have one (the chip at the top right) and how to open it (News tab).
 - Wording: "Get a different ship" is now **Shipyard**; "Gadget slots" is now **Equipment slots**.
 
 ## 0.16.3 — Player feedback pass (2026-11-15)
