@@ -48,10 +48,21 @@ r('game=fresh("Normal");game.tutorial=null;tab="galaxy";action("chart-mode",1)')
 const xy=[...sc.matchAll(/<circle cx="([\d.]+)" cy="([\d.]+)" r="1[15]" fill/g)].map(m=>[+m[1],+m[2]]);assert.equal(xy.length,24);let worst=0;for(let i=0;i<24;i++)for(let j=i+1;j<24;j++){const real=r('Math.hypot(game.worlds['+i+'].x-game.worlds['+j+'].x,game.worlds['+i+'].y-game.worlds['+j+'].y)'),drawn=Math.hypot(xy[i][0]-xy[j][0],xy[i][1]-xy[j][1])/24;worst=Math.max(worst,Math.abs(real-drawn))}assert.ok(worst<0.01,'drawn distance matches real distance, worst error '+worst);ok('star chart distances are drawn to scale');
 r('action("select",5)');assert.equal(r('chartMode'),'star');assert.equal(r('selectedWorld'),5);ok('tapping a planet on the star chart selects it');
 r('action("chart-mode",0)');assert.ok(!nodes.screen.innerHTML.includes('Star chart · to scale'));ok('back to the solar chart');
-// first-haul hint (0.22.0)
-r('game=fresh("Normal");tab="galaxy";render()');assert.ok(nodes.screen.innerHTML.includes('data-action="hint"'));ok('first haul card has a Hint button');
-r('action("hint")');assert.ok(r('hintSel').includes('jump')&&r('hintText').includes('Travel')&&nodes.screen.innerHTML.includes('class="coach"'));ok('hint away from the buyer points at Travel');
-r('action("select",0)');assert.equal(r('hintSel'),'');ok('hint clears on the next action');
-r('game.location=game.tutorial.to;tab="galaxy";action("hint")');assert.ok(r('hintSel').includes('data-tab="market"'));ok('hint at the buyer points at the Market');
-r('tab="market";action("hint")');assert.ok(r('hintSel').includes('sellall'));ok('on the Market the hint points at the Water sell button');
+// guided walkthrough, hints and flow (0.22.0)
+r('game=fresh("Normal");tab="galaxy";render()');let gb=nodes["guide-bar"].innerHTML;assert.ok(gb.includes('Step 1 of 5')&&gb.includes('data-action="hint"')&&gb.includes('Travel'));ok('guide bar shows step 1 with a Show me button');
+r('action("hint")');assert.ok(r('hintSel').includes('jump'));ok('Show me away from the buyer points at Travel');
+r('action("select",0)');assert.equal(r('hintSel'),'');ok('glow clears on the next action');
+r('game.location=game.tutorial.to;tab="galaxy";action("hint")');assert.ok(r('hintSel').includes('data-tab="market"'));ok('at the buyer it points at the Market tab');
+r('tab="market";action("hint")');assert.ok(r('hintSel').includes('sellall'));ok('on the Market it points at the Water sell button');
+r('game.tutorial.state="done";render()');assert.equal(r('game.guide.step'),1);assert.ok(nodes["guide-bar"].innerHTML.includes('Step 2 of 5'));ok('guide moves to step 2 after the Water is delivered');
+r('tab="market";action("hint")');assert.ok(/buymax/.test(r('hintSel')));ok('step 2 points at the cheapest good to buy');
+r('game.cargo[2]=3;game.paid[2]=30;render()');assert.equal(r('game.guide.step'),2);ok('buying goods moves the guide to step 3');
+r('game.guide.profit=true;render()');assert.equal(r('game.guide.step'),3);ok('a profitable sale moves the guide to step 4');
+r('tab="jobs";action("hint")');assert.ok(r('hintSel').includes('job-row'));ok('step 4 points at Accept on the Jobs tab');
+r('game.contracts.push({kind:"courier",to:5,due:99,reward:100,cargo:0,title:"t"});render()');assert.equal(r('game.guide.step'),4);ok('taking a job moves the guide to step 5');
+r('game.completed.push("x");render()');assert.equal(r('game.guide.off'),true);assert.ok(nodes["guide-bar"].innerHTML.includes('Next goal'));ok('finishing a job ends the guide and shows the next cash goal');
+r('game=fresh("Normal");render();action("guide-skip")');assert.equal(r('game.guide.off'),true);assert.ok(!nodes["guide-bar"].innerHTML.includes('Step '));ok('Skip guide hides it');
+r('game=fresh("Normal");game.tutorial.state="done";game.guide=null;game.credits=2100;render();game.credits=5200;render()');assert.ok(true);ok('goal ladder runs without error');
+r('game=fresh("Normal");game.tutorial=null;game.guide=null;render()');assert.ok(!nodes["guide-bar"].innerHTML.includes('Step '));ok('saves with no first-haul tutorial get no guide');
+const sold=r('(()=>{for(let i=1;i<catalog.goods.length;i++){game.cargo[i]=2;game.paid[i]=0;const b=game.credits;action("sellall",i);if(game.credits>b)return game.streak}return -1})()');assert.ok(sold>=1);ok('a profitable sale raises the streak ('+sold+')');
 console.log('All help checks passed.');

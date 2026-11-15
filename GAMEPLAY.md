@@ -198,6 +198,8 @@ See [CHEATS.md](CHEATS.md). Using them marks the run as "Cheats used".
 - **Star chart:** System tab, "Star chart (to scale)". Planets sit at their true coordinates (1 grid square = 9 pc). Distances you read off it match the pc cost of a jump. Dashed ring = current fuel range; dim = out of range; selecting a planet draws the route and distance. "Solar chart" returns to the orbit view, which is scenery and not to scale.
 
 
-## First-haul hint
+## Captain's guide and next goal
 
-The First haul card has a 💡 Hint button. It shows one sentence for the next step and makes that button glow until your next action: Refuel (if short on fuel) or Travel, then the Market tab, then All on the Water row. Hints cost nothing and change no rules.
+New games get a guide bar under the stats with 5 steps: deliver the Water, buy a good tagged Cheap, sell it for a profit at another port, take a job, finish a job. Steps complete on their own. **Show me** (or 30 seconds idle) makes the next button glow, opening the right tab first. **Skip guide** hides it. No rules change.
+
+After the guide, the Next goal bar shows the next cash target (₡2k, 5k, 10k, 25k, 50k, 100k, 250k, 500k) counted after debt, with a toast when you reach it. Each sale shows your streak of profitable sales in a row.

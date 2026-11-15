@@ -4,7 +4,9 @@ This is an additive refinement after the initial GitHub upload. It documents the
 
 ## 0.22.0
 
-- First haul card has a glowing 💡 Hint: show me button. It names the next step and makes the matching button glow (Refuel or Travel, then Market, then All on the Water row). Hints are optional and clear on your next action. The welcome card mentions it. The card's old How to play button is gone (? Help is at the top right).
+- Captain's guide: after the welcome card a slim guide bar stays on every tab and walks a new player through the whole loop in 5 steps: deliver the Water, buy a Cheap good, sell it for a profit at another port, take a job, finish a job. It advances by itself as you play. 💡 Show me makes the next button glow (it opens the right tab first) and explains why. If you do nothing for 30 seconds it glows on its own. Skip guide hides it. Existing saves past the first haul do not get it.
+- Flow: after the guide, a Next goal bar (₡2k, 5k, 10k, 25k, 50k, 100k, 250k, 500k) always shows one near target with progress and a gold toast when you reach it. Sales show a 🔥 streak of profitable sales in a row.
+- The first haul card no longer carries its own hint button; the guide bar replaces it.
 
 ## 0.21.2
 
