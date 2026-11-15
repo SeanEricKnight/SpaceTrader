@@ -40,4 +40,12 @@ r('game.modules=["nanites"];game.hull=50;game.credits=100;game.day=5');r('jump(1
 r('game=fresh("Normal");game.tutorial=null;game.credits=1500;game.metrics.profit=10;checkBadges()');assert.ok(r('badgesDone().includes("k1")')&&r('badgesDone().includes("first")')&&r('game.credits')===1500);ok('milestones unlock without changing your credits');
 r('checkBadges()');assert.equal(r('badgesDone().length'),2);ok('milestones unlock only once');
 assert.ok(r('commander()').includes('Milestones'));assert.ok(!/GADGET SLOT/.test(r('outfitsPanel()')));ok('milestones listed on Commander, equipment slot wording');
+// store tab
+r('game=fresh("Normal");game.tutorial=null;tab="store";render()');const st=nodes.screen.innerHTML;assert.ok(st.includes('Outfit your ship')&&st.includes('data-action="buywarp"')&&st.includes('Shipyard'));ok('Store tab holds equipment, warp charges and the shipyard');
+r('tab="ship";render()');const sh=nodes.screen.innerHTML;assert.ok(sh.includes('data-action="refuel"')&&sh.includes('Fitted equipment')&&!sh.includes('Outfit your ship')&&!sh.includes('data-action="buywarp"'));ok('Ship tab shows the ship, fitted gear, refuel and repair only');
+// star chart
+r('game=fresh("Normal");game.tutorial=null;tab="galaxy";action("chart-mode",1)');assert.equal(r('chartMode'),'star');const sc=nodes.screen.innerHTML;assert.ok(sc.includes('Star chart · to scale'));assert.equal((sc.match(/class="sc-world/g)||[]).length,24);ok('star chart shows all 24 planets');
+const xy=[...sc.matchAll(/<circle cx="([\d.]+)" cy="([\d.]+)" r="1[15]" fill/g)].map(m=>[+m[1],+m[2]]);assert.equal(xy.length,24);let worst=0;for(let i=0;i<24;i++)for(let j=i+1;j<24;j++){const real=r('Math.hypot(game.worlds['+i+'].x-game.worlds['+j+'].x,game.worlds['+i+'].y-game.worlds['+j+'].y)'),drawn=Math.hypot(xy[i][0]-xy[j][0],xy[i][1]-xy[j][1])/24;worst=Math.max(worst,Math.abs(real-drawn))}assert.ok(worst<0.01,'drawn distance matches real distance, worst error '+worst);ok('star chart distances are drawn to scale');
+r('action("select",5)');assert.equal(r('chartMode'),'star');assert.equal(r('selectedWorld'),5);ok('tapping a planet on the star chart selects it');
+r('action("chart-mode",0)');assert.ok(!nodes.screen.innerHTML.includes('Star chart · to scale'));ok('back to the solar chart');
 console.log('All help checks passed.');

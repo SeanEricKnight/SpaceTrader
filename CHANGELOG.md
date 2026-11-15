@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.21.0 — Store tab and to-scale Star chart (2026-11-15)
+
+- **Store tab.** Warp charges, laser upgrades, equipment and the Shipyard (buy, trade, rent) moved to a new 🛒 Store tab. The Ship tab now shows your ship, fitted equipment, Refuel and Repair.
+- **Star chart (to scale).** On the System tab, "🔭 Star chart (to scale)" draws all 24 planets at their real positions, so the gap between dots is the distance in pc and equals the fuel used. A dashed ring shows your fuel range, dim planets are out of range, and selecting a planet draws the route with its distance. Tapping a planet still opens its card. The orbit chart stays as scenery.
+
 ## 0.20.0 — More equipment and milestones (2026-11-15)
 
 - **Five new equipment items** (all use Equipment slots, so you choose): Auxiliary fuel tank (+4 pc range, ₡3,500), Reinforced plating (+20 hull, ₡6,000), Market analyzer (+0.02 sale rate, ₡8,000), Long-range sensors (-15% pirate risk, ₡9,000), Repair nanites (+2 hull per jump, ₡12,000).

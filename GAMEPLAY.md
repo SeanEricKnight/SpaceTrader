@@ -191,3 +191,8 @@ See [CHEATS.md](CHEATS.md). Using them marks the run as "Cheats used".
 
 - **Equipment** (Ship tab outfitter; needs the listed tech level; Equipment slots depend on the hull): Cargo expansion +5 bays; Energy shield -5 per enemy hit (shield slot); Navigation computer +10 escape points; Auxiliary fuel tank +4 pc range; Reinforced plating +20 hull; Market analyzer +0.02 sale rate; Long-range sensors -15% pirate risk; Repair nanites +2 hull per jump. Removing gear refunds a quarter of its price.
 - **Milestones** unlock once each (toast and message) and show on the Commander screen: First profit, Pocket change (hold 1,000), Five figures, Six figures, Reliable hands (5 jobs), Known courier (25), First blood, Scourge of the lanes (10 pirates), Well travelled (12 ports), Whole galaxy (24), Not alone (hire crew), Fitted out (equipment), Landowner (moon). No cash reward.
+
+## Store tab and Star chart (0.21.0)
+
+- **Store** (nav, after Ship): warp charges, laser upgrades, Outfit your ship, and the Shipyard with Buy / Rent. **Ship** shows your hull, fuel, lasers, fitted equipment, Refuel and Repair.
+- **Star chart:** System tab, "Star chart (to scale)". Planets sit at their true coordinates (1 grid square = 9 pc). Distances you read off it match the pc cost of a jump. Dashed ring = current fuel range; dim = out of range; selecting a planet draws the route and distance. "Solar chart" returns to the orbit view, which is scenery and not to scale.
