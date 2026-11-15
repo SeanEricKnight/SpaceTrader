@@ -3,6 +3,10 @@
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
 ## 0.23.3
+- **Bulk freight (new job type):** ships with 20+ bays are offered one long-haul run per port, 16 or more bays to a port 16 to 45 pc away (a different Reach). Pay is 400 cr plus 4 cr per bay per pc (40% more for a crisis port), shown as "cr per bay". Small ships see a locked card that explains what unlocks it and offers "Pick a ship goal".
+- **Ship goal:** every ship in the Store has "Set as my ship goal". A progress bar under the moon goal shows savings toward it (trade-in counted), its bays and range, and what a 30 pc bulk run would pay. Clears itself when you buy the ship.
+- System tab now says how to reach another Reach (tap its tab, pick a planet, Travel; Plan route lists refuel stops).
+- Arrival scene: the stars now slow to a full stop, the ship stops jiggling and shrinks back from the planet, so it no longer looks like it is pushing it. Toasts wait until the scene closes so they no longer cover the Continue button.
 - Fights now end with a "Fight report" card that stays until you tap Continue: outcome (won, escaped, got away, surrendered, disabled), bounty or loss, your hull, where you are docked, and a round-by-round list. Before, a won fight dropped you on the chart with only a 4-second banner. Every volley and hit is also written to the Activity log (footer Log or Help > Your game).
 - Corner toasts (Arrived at..., -9 fuel) stay about 5 to 10 seconds depending on length (was 2.6), pause while you touch or hover them, tap to dismiss, and clear the iPhone bottom bar.
 - Marauder offers now read as a conversation: a named captain speaks in character, buttons name the action and the payoff ("Take the crate · +603 cr", "Turn them down"), and the line under each button spells out the cost (police heat, crew loyalty, the jail risk) and what happens if you refuse. Replaces the generic "Accept / Refuse" card.
