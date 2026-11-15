@@ -2,6 +2,13 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.16.2 — Planet screen cleanup, finder card grid, harder Best runs
+
+- Removed parenthetical text from planet screens: the crisis cause (such as "labor shortage") is gone from the chart label, route card and arrival banner; "(in range)" and "(N days old)" on the planet card became "· in range" and "· N days old". The Conditions line still names the crisis.
+- Planet finder is now a card grid of all 24 planets with painted pictures, filter chips (In range, Pinned, Visited, Has crisis, Has job), sort (Distance, Name, Tech), a By Reach grouping, and a side detail panel (kind, tech, resources, distance, conditions, customs, market log, jobs) with a Select · show route button.
+- Best runs scales with difficulty: Beginner/Easy unchanged; Normal ranks by pay and shows fuel but not cr per fuel; Hard shows only this port's board, unranked, no fuel math; Impossible hides it.
+
+
 ## 0.16.1 — Review fixes, desktop chart layout, Best runs Accept
 
 Fixes from ChatGPT's 2026-11-14 review (`reviews/2026-11-14-chatgpt-browser-review.md`); details and test mapping in `reviews/2026-11-14-claude-response.md`.
@@ -46,12 +53,6 @@ Fixes from ChatGPT's 2026-11-14 review (`reviews/2026-11-14-chatgpt-browser-revi
 - Crew for hire now have special abilities with jump cooldowns (Slipstream, Broadside, Emergency patch, Haggle, Smooth talk, Pull strings), listed on crew cards, the pirate card, dock services and the jail screen.
 - News: new Top headlines block with colored ALERT, DEADLINE, DANGER, MONEY, GOAL and STORY tags and one-tap buttons.
 - Fix: gunner and escort volley bonus now actually apply in fights, matching the volley range already shown.
-
-## 0.14.3 — Planet screen cleanup, finder list, harder Best runs
-
-- Removed parenthetical text from planet screens: the crisis cause (such as "labor shortage") is gone from the chart label, route card and arrival banner; "(in range)" and "(N days old)" on the planet card became "· in range" and "· N days old". The Conditions line still names the crisis.
-- Planet finder is now a card grid of all 24 planets with painted pictures, filter chips (In range, Pinned, Visited, Has crisis, Has job), sort (Distance, Name, Tech), a By Reach grouping, and a side detail panel (kind, tech, resources, distance, conditions, customs, market log, jobs) with a Select · show route button.
-- Best runs scales with difficulty: Beginner/Easy unchanged; Normal ranks by pay and shows fuel but not cr per fuel; Hard shows only this port's board, unranked, no fuel math; Impossible hides it.
 
 ## 0.14.2 — Zoom, auto-fuel, simpler crew
 
