@@ -87,7 +87,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 
 Chosen on the destination card before you jump:
 
-- **Quiet ride:** +1 day, half the pirate risk, nothing unusual happens.
+- **Quiet ride:** +1 day, half the pirate risk, nothing unusual happens. Loan interest and ship rental are charged for both days.
 - **Steady:** normal pirate risk.
 - **Excitement:** normal pirate risk plus about a 55% chance of an incident on the way (a derelict, a distress call, or a trader convoy). You choose how to respond.
 

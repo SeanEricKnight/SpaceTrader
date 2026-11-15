@@ -2,6 +2,25 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.16.1 — Review fixes, desktop chart layout, Best runs Accept
+
+Fixes from ChatGPT's 2026-11-14 review (`reviews/2026-11-14-chatgpt-browser-review.md`); details and test mapping in `reviews/2026-11-14-claude-response.md`.
+
+- **Fix #1 (launch blocker):** nothing inside the main panel responded to clicks, including Travel. The panel carried `data-tab`, so the tab handler grabbed every click. It now uses `data-screen`. New real-Chrome check `check-clicks.cjs` clicks Travel, a Water sale, the chart Travel button and a crew ability.
+- Crew ability buttons (Slipstream and the rest) now pass their string id. Kidnapping "Call your crew" now rescues instead of being read as the dock tow.
+- Malformed saves are rejected at load: crew, escorts, custody, rental, crew events and offers are validated, so a bad file can no longer crash the Crew tab.
+- Rescue tow now appears whenever you cannot reach any port with your fuel, affordable fuel, sellable cargo or a warp charge. Banned goods you cannot sell can always be dumped.
+- Auto-fuel stays off until you turn it on, and the setting is saved. Saves from before this setting existed load with it off.
+- "Go there for me" quotes each fuel stop at that port's rate, so the quote matches the cost.
+- Returning a rental gives back your own ship's fuel, not a free full tank.
+- **Balance:** Quiet ride now charges loan interest and rental for both days, as advertised.
+- Winning, escaping or warping out of a pirate fight at a strict port still faces customs.
+- The Surrender card now states the chance of being boarded.
+- A How to play button is always in the dock services bar. The first-haul card has a Travel button (Open Market once you arrive).
+- **Layout (desktop, 1180 px and wider):** the chart sits beside a travel column (Travel bar, Best runs, destination, route). The chart stays in view while the column scrolls. Phones keep the stacked layout.
+- **Best runs:** local jobs have an **Accept** button beside Show route, and every row shows its deadline and reserved bays.
+- New checks: `check-review-fixes.cjs`, `check-clicks.cjs` (needs `playwright-core` and Chrome; skips if absent).
+
 ## 0.16.0 — Leaderboard and race a rival AI
 
 - New game: tick **Race a rival AI** next to Start new game (off by default; New game keeps it on if the last run had a rival). One of three rivals (Marta Voss, Kade Orrin, Ilse Tarn) races you to 500,000 cr. A race strip under your goal bar shows their cash, ship and last-seen port.

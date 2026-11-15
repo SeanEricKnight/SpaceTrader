@@ -7,3 +7,15 @@ The Chrome/browser game is the fast-to-test prototype. Use it to evaluate whethe
 The long-term platform choice remains open. The browser game may remain a browser game for fun even if an iPhone version is pursued. Treat the browser build as a useful product in its own right, not merely a throwaway prototype.
 
 This records project direction, not a commitment to build or publish a native iPhone app.
+
+## Platform decision: watch list (2026-11-14, Sean)
+
+The desktop chart layout in 0.16.1 is deliberately not phone-ready: phones keep the stacked layout. Gameplay is getting more complicated, so a decision may be needed soon. This is a note, not a decision. Options: wrap the HTML in a `WKWebView` (see IPHONE_ROADMAP.md), or build a native SwiftUI port (the SwiftUI prototype is about 600 lines against 1,100+ dense lines in the browser build and is not at feature parity).
+
+Signs the decision is close:
+- The phone layout needs a separate design, not a narrower one.
+- Playtesters cannot explain their choices without several panels visible at once.
+- Remaining bugs come from the JS UI layer rather than the rules engine.
+- Sean wants App Store distribution, haptics or offline play without Safari.
+
+Keep the rules engine in plain functions, separate from rendering, so either route can reuse it.

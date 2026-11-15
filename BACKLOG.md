@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 14, 2026 (version 0.16.0).
+Last updated: November 14, 2026 (version 0.16.1).
 
 ## Built
 
@@ -10,6 +10,8 @@ Last updated: November 14, 2026 (version 0.16.0).
 | --- | --- | --- |
 | Test button for unlimited money | 0.6.2 | Footer "Test tools" opens the cheat console. |
 | Market screen without sideways scrolling | 0.7.0 | Compact rows; tap a row to trade. |
+| Smaller chart with a travel column beside it (desktop) | 0.16.1 | 1180 px and wider; phones stay stacked. |
+| Pick a job from Best runs | 0.16.1 | Accept button on local rows; deadline and bays shown. |
 | Price age on logged markets | 0.7.0 | Shows days old; "≈" at 3+ days. |
 | Every good can have a big payoff (events start and end) | 0.7.0 | Timed events; water and food triple. |
 | Paid newspaper | 0.7.0 | Full edition lists all crises; price scales with difficulty. |
