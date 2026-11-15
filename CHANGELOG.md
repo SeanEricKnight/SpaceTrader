@@ -3,6 +3,8 @@
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
 ## 0.23.3
+- Fights now end with a "Fight report" card that stays until you tap Continue: outcome (won, escaped, got away, surrendered, disabled), bounty or loss, your hull, where you are docked, and a round-by-round list. Before, a won fight dropped you on the chart with only a 4-second banner. Every volley and hit is also written to the Activity log (footer Log or Help > Your game).
+- Corner toasts (Arrived at..., -9 fuel) stay about 5 to 10 seconds depending on length (was 2.6), pause while you touch or hover them, tap to dismiss, and clear the iPhone bottom bar.
 - Marauder offers now read as a conversation: a named captain speaks in character, buttons name the action and the payoff ("Take the crate · +603 cr", "Turn them down"), and the line under each button spells out the cost (police heat, crew loyalty, the jail risk) and what happens if you refuse. Replaces the generic "Accept / Refuse" card.
 - Fixed the pirate/encounter card and the bank pop-up being cut off at the bottom on iPhone Safari. They were sized to the tallest possible screen (92vh), which is taller than what you can see once the browser bars are showing. They now fit the visible screen (dvh), scroll inside if needed, and keep clear of the bottom bar.
 - New **💾 Save** button in the page footer and at the bottom of the Help pop-out: says the game autosaves after every action, offers the three save slots and Export without opening Commander.
