@@ -13,6 +13,7 @@ From the first outside players (raw notes and status in `reviews/2026-11-15-play
 - **Side-by-side layout** (chart left, travel column right) now starts at 900 px wide instead of 1180 px.
 - **Arrival feedback.** Every arrival shows a toast ("Arrived at X · Day N · −9 fuel"), scrolls to the arrival card, and adds a **Trip report**: fuel used, days, each delivery and its pay, and other costs (fuel stops, wages, interest). It answers "where did my credits come from".
 - **Cargo clarity.** The CARGO stat shows "(N on jobs)", the hold meter says "FULL · N reserved for jobs", and selling into a still-full hold explains the reserved bays.
+- **Best runs cards (later 0.16.3).** Each run is now a card: kind and big pay, "Here → Destination", chips for fuel, "Deliver by day X · N days left" and bays ("uses N bays" or "no cargo"), the relief bonus line, and a red reason if you cannot accept ("Needs 3 free bays; you have 2"). The unclear "Posted here" text is gone; jobs at other ports say "Pick up at <port>: fly there and dock to accept" with a **Fly to <port>** button.
 - **Best runs wording.** "No cargo bays / reserved" is now "no cargo space needed / uses N of your bays until delivered"; due day reads "deliver by day X (N days left)".
 - **Distance honesty.** The chart says orbit rings are scenery, and the planet card and selection bar show "N pc · N fuel · 1 day". Multi-stop routes show "N jumps · N days".
 - **Market coach line.** The Market tab says what to do with what you carry and that you never have to travel just to sell.
