@@ -49,6 +49,6 @@ fresh();r('game.credits=100000;game.encounter=makeEncounter()');assert.match(r('
 fresh();r('game.encounter=makeEncounter()');assert.doesNotMatch(r('combatPanel()'),/board you instead/);
 ok('surrender card states the boarding risk only when it exists');
 // #12 help always reachable; first-haul Travel button
-fresh();r('game.tutorial={state:"active",to:1,seen:true}');assert.equal(r("portServices()"),"");assert.match(r("paperChip()"),/paper-chip/);assert.match(r('tutorialCard()'),/data-action="jump" data-id="1"/);
-ok('help is in the dock bar and the first-haul card has Travel');
+fresh();r('game.tutorial={state:"active",to:1,seen:true}');assert.equal(r("portServices()"),"");assert.equal(r("paperChip()"),"");assert.match(r('tutorialCard()'),/data-action="jump" data-id="1"/);
+ok('help is a top-right button, the paper chip is contextual and the first-haul card has Travel');
 console.log('All review-fix checks passed.');

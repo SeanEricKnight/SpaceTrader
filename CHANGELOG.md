@@ -2,6 +2,13 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.18.0 — Help Center, tappable terms, paper chip (2026-11-15)
+
+- **Help Center.** The round ? is now a **? Help** button fixed at the top right. It opens a home page (goal, quick start, quick answers, nine topics). Each "More" opens a topic page in the same pop-up with a **← Help** button and Related links. No inline accordions, no stacked pop-ups.
+- **Tappable terms.** Underlined terms elsewhere (Standing, Career goals, Newspaper subscription needed, Pirate safety, the newspaper note under Best runs) open the matching topic.
+- **Newspaper chip.** It no longer sits in the header all the time. It appears only when a subscription has 2 days or less left ("Paper: 2 days left · Renew") or ended in the last 3 days ("Paper ended · Renew"). The newspaper topic and Help home say whether you are subscribed and how many days are left.
+- Also in this build: stat boxes show short extra lines instead of empty space, job cards read as labelled rows, and Career goals replaces the old Optional goals box.
+
 ## 0.17.0 — Government requests and standing (2026-11-15)
 
 - **Government requests.** On about one day in four, a port official (Compact harbormaster, Lantern steward or Freehold clerk) posts a request on the Jobs board: a dispatch or, when the destination is in a crisis, a relief run. Pays about 35% more than a normal job. Nothing interrupts you; a message line tells you it is waiting. Only pirates interrupt.

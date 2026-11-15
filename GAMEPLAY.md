@@ -49,7 +49,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 ## Help, log and arrival report (0.16.3)
 
 - Money is written with the credit sign ₡ (for example ₡1,000), not "cr".
-- A round **?** button on every screen opens How to play. The dock bar also shows a newspaper chip and a **Log** button.
+- A round **?** button on every screen opens How to play. The newspaper chip appears in the header only when a subscription is about to end (see Help and newspaper chip).
 - Battles, marauder offers and custody open as a centered pop-out over a dimmed screen.
 - Each arrival shows a **Trip report** (fuel, days, deliveries and pay, other costs). The Log lists the last 400 events and can be downloaded as a text file.
 - Bays reserved for jobs count as used. The cargo stat and hold meter show how many are reserved; they free on delivery. You can sell a good at any port that buys it, including where you bought it.
@@ -175,6 +175,11 @@ See [CHEATS.md](CHEATS.md). Using them marks the run as "Cheats used".
 - **Pirate risk on the destination card** = base Reach rate x escorts x career level x (half on a Quiet ride). None before day 3 and none on a warp.
 - **Needs attention** shows only when fuel is low, hull is damaged or you are stranded. Ship tab always has Refuel and Repair.
 - Pop-ups close with the ✕ or Esc. Help has a **Tell me more** section.
+
+## Help and newspaper chip (0.18.0)
+
+- **? Help** (fixed, top right) opens the Help Center: home page plus nine topic pages (Trading, Travel and fuel, Jobs and requests, Pirates and safety, Newspaper and crises, Ships and gear, Crew and escorts, Standing and goals, Home port and warehouse). Topic pages have a ← Help button and Related links. Underlined terms in the game open the matching topic.
+- **Newspaper chip** shows in the header only when the subscription has 2 days or less left, or ended within the last 3 days. Otherwise subscription status is in the Help topic and the News tab.
 
 ## Government requests and standing (0.17.0)
 
