@@ -3,6 +3,7 @@
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
 ## 0.23.2
+- Market now shows what you carry: a "What you are carrying" card at the top lists each good with quantity, what you paid, what this port would pay in total (including the price drop from selling), profit or loss, and a one-tap Sell all. Goods you carry are also highlighted in green and moved to the top of the price list, and goods this port will not buy say so. An empty hold shows a one-line next step.
 - Fixed pop-up cards (planet info, Show route, help, job details) opening at the top of the page instead of over the screen. On a phone, if you had scrolled down, you saw only the dark backdrop until you scrolled back up. The pop-up is now fixed to the screen. Cause: `#info-dialog{position:relative}` overrode the browser's fixed positioning for modal dialogs. Verified at 375x812.
 - Fixed the Open Market / Open Jobs buttons in the Cargo, Credits, Fuel and Location pop-outs doing nothing. They changed the tab behind the pop-up but never closed it, so nothing seemed to happen. They now close the pop-up and open the tab.
 - Switching tabs on a phone now scrolls the new tab's content into view when it would otherwise sit below the screen, so tapping Market, Jobs, Crew and the rest visibly does something.
