@@ -3,6 +3,11 @@
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
 ## 0.23.1
+- Jobs: at 3 jobs the Accept button becomes "Swap for one of mine…" (drop one, no fine, take the new one).
+- Always-visible "Your jobs" tracker on every tab; tap a job for details, show destination, or drop it.
+- Credits, Cargo, Fuel and Location boxes open pop-outs; Cargo lists goods, average paid, sell price here, and job-reserved bays.
+- Story card uses the full width (button beside text).
+- Fixed ⓘ pop-outs not opening (string ids were turned into NaN).
 
 Player feedback pass (Nov 15, 2026).
 
