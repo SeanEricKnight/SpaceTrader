@@ -17,6 +17,7 @@ Player feedback pass (Nov 15, 2026).
 - **Show-on-chart buttons explain themselves.** Pressing one (for example Mara's story) now scrolls to the selected-port bar and says what to do next; the story button reads "Show Acamar on the chart". Goals pop-out reworded.
 - **Delivery cheer** now appears in the middle of the screen: bigger card, sunburst rays, gold screen glow, large count-up reward, phone buzz. Tap to dismiss.
 - **Guide for far trips.** When the Water's buyer is farther than one tank (for example after you wandered off), Show me now walks you through it: Show it on the map, then Go there for me, which plans the fuel stops and flies the whole way. Before, it kept saying Refuel then Travel, which cannot work.
+- **Jump scene ships fly level.** Your ship is turned to fly left to right with side-scrolling stars (the shipyard picture is an angled view). Pirates and marauders fly in from the right; customs scans show a police cutter with flashing blue and red lights.
 
 ## 0.23.0
 

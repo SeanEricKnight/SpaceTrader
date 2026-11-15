@@ -45,6 +45,7 @@ Built: battle pop-outs, help button, newspaper chip, route banner and cross-Reac
 - Rival tuning: retire-day table (`RIVAL_DAYS`) is a first guess. Needs real playtest pace per difficulty. Online/shared leaderboard needs a server, so it is not built.
 - Sound: redo the sound effects (the first synthesized set was rejected). Code is in place behind `SOUND_ENABLED=false`; needs better sounds or real audio files, then a Sound toggle in dock services.
 - Mid-flight art: a police cutter and a marauder ship picture (both use the pirate ship for now); show customs inspections in flight (they happen after docking today).
+- Cutaway scene cards (owner idea, Nov 15, 2026): short scene cards for key moments (pirate intercept, customs scan, arrival, big delivery), later as small AI-generated clips. The CSS jump scene (`jumpScene`) is the placeholder: it already switches for pirates, marauders, customs (police) and incidents. Needs: side-view ship art (the shipyard art is an angled 3/4 view, rotated in the scene for now), real pirate/police/marauder ships, and a clip format that stays small in a single HTML file (short looping WebM/WebP, loaded on demand).
 
 | Idea | Why deferred | Next step |
 | --- | --- | --- |
