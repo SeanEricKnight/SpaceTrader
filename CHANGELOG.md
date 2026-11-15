@@ -15,6 +15,7 @@ Player feedback pass (Nov 15, 2026).
 - **Move cards:** the System tab button is now Move cards (drag). Drag the ⠿ handle to reorder cards or drop them under the map; the arrows still work.
 - **Jump scene:** travel now plays a full-screen jump (charge-up, star streaks, distance countdown, arrival flash and planet, reward chips, New port and jump-milestone callouts). Pirates and incidents cut it short with an alarm. Tap or press Esc to skip; later jumps are shorter; reduced-motion players skip it.
 - **Show-on-chart buttons explain themselves.** Pressing one (for example Mara's story) now scrolls to the selected-port bar and says what to do next; the story button reads "Show Acamar on the chart". Goals pop-out reworded.
+- **Delivery cheer** now appears in the middle of the screen: bigger card, sunburst rays, gold screen glow, large count-up reward, phone buzz. Tap to dismiss.
 
 ## 0.23.0
 
