@@ -3,6 +3,7 @@
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
 ## 0.23.1
+- Guide fix: after Buy max, "Show me" now picks the buyer port for you, lights the exact Travel button, and refuels first if needed (it used to say "pick a port and Travel" with nothing glowing). The guide's first trade is chosen to be genuinely profitable, including the new sell-price impact. Tested end to end at phone size.
 - Markets now react to you: each unit you sell lowers that port's price about 1.2% (down to -30%), and it recovers about 12% of the gap per travel day. A "▼ flooded N%" chip and note explain it. Selling in several ports now beats dumping everything in one. (Buying does not move prices yet; stock already limits that.)
 - New encounter: a crippled trader begs you to carry an urgent shipment (vaccine stock, a court ledger, a coolant core, a colony charter, prosthetics). Short deadline, about double pay, optional fuel gift for a tip.
 - Currency is now written "1,000 cr" (the old ₡ glyph looked like the euro sign).

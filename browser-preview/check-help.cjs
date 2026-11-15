@@ -82,4 +82,7 @@ r('game=fresh("Normal");game.vow="peaceful";tab="commander";render()');assert.ok
 r('game=fresh("Normal");game.vow="debtfree";game.credits=600000;game.tutorial=null;game.location=3;action("moon-buy")');assert.equal(r('game.vowKept'),true);ok('buying the first moon under a vow keeps it');
 r('game=fresh("Normal")');assert.equal(r('vowOf(game)'),'none');ok('new games default to no vow');
 assert.ok(html.includes('id="vow"'));ok('new-game controls have a Vow picker');
+r('game=fresh("Normal");game.tutorial=null;game.guide={step:1,off:false,profit:false};game.credits=3000;tab="market";selectedWorld=game.location;render();hintNow()');assert.ok(r('hintSel').includes('buymax'));assert.ok(/pays about/.test(r('hintText')));ok('guide picks a buy with a known buyer and a stated profit');
+r('{const g=guideTrade();game.cargo.fill(0);game.paid.fill(0);game.cargo[g.i]=g.qty;game.paid[g.i]=g.qty*world().prices[g.i];game.credits=500;game.fuel=ship().range;game.guide={step:2,off:false,profit:false};tab="galaxy";selectedWorld=game.location;render();hintNow()}');assert.ok(/data-action="jump"\]\[data-id="\d+"\]/.test(r('hintSel')),'guide targets a specific Travel button');assert.notEqual(r('selectedWorld'),r('game.location'));ok('guide picks the port and lights its Travel button (no more dead end)');
+assert.equal(r('(()=>{const g=game.cargo.findIndex(q=>q>0);return unitSum(game.worlds[selectedWorld],g,game.cargo[g])>game.paid[g]})()'),true);ok('the guided trade stays profitable after sell-price impact');
 console.log('All help checks passed.');
