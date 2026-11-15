@@ -218,3 +218,6 @@ The guide hint keeps pointing at the next step after you press Show me. Market b
 ## Vows (0.23.0)
 
 Start a new game and pick a Vow beside Difficulty. Peaceful: lasers cannot be upgraded. Debt-free: the bank lends nothing. Lean hold: your hold is capped at 15 bays even on a bigger ship or with cargo pods. The vow is kept if you buy your first moon with it intact. The rules never relax during the run.
+
+## Market saturation (0.23.1)
+Selling lowers that port's price by about 1.2% per unit (floor -30%), recovering about 12% of the gap each travel day. Crises still apply on top. Buying is limited by port stock instead of price. Reason: before this, selling 15 units paid the same per unit as selling 1, so one good route could be looped forever. Idea from Sid Meier's Colonization, where selling floods the market and prices slowly recover.

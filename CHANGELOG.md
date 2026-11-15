@@ -3,6 +3,7 @@
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
 ## 0.23.1
+- Markets now react to you: each unit you sell lowers that port's price about 1.2% (down to -30%), and it recovers about 12% of the gap per travel day. A "▼ flooded N%" chip and note explain it. Selling in several ports now beats dumping everything in one. (Buying does not move prices yet; stock already limits that.)
 - New encounter: a crippled trader begs you to carry an urgent shipment (vaccine stock, a court ledger, a coolant core, a colony charter, prosthetics). Short deadline, about double pay, optional fuel gift for a tip.
 - Currency is now written "1,000 cr" (the old ₡ glyph looked like the euro sign).
 - Chance meetings are real conversations now: readable speech bubbles in the card, back-and-forth replies, and choices that can hand you a side job (replaces your lowest-paying job if you hold 3, no fine), a price board for a nearby port, or fuel trades. New encounter: a patrol officer.
