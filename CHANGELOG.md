@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.21.1
+
+- The welcome card and first message point to ? Help at the top right, not the old dock bar.
+
 ## 0.21.0 — Store tab and to-scale Star chart (2026-11-15)
 
 - **Store tab.** Warp charges, laser upgrades, equipment and the Shipyard (buy, trade, rent) moved to a new 🛒 Store tab. The Ship tab now shows your ship, fitted equipment, Refuel and Repair.
