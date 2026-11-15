@@ -196,3 +196,8 @@ See [CHEATS.md](CHEATS.md). Using them marks the run as "Cheats used".
 
 - **Store** (nav, after Ship): warp charges, laser upgrades, Outfit your ship, and the Shipyard with Buy / Rent. **Ship** shows your hull, fuel, lasers, fitted equipment, Refuel and Repair.
 - **Star chart:** System tab, "Star chart (to scale)". Planets sit at their true coordinates (1 grid square = 9 pc). Distances you read off it match the pc cost of a jump. Dashed ring = current fuel range; dim = out of range; selecting a planet draws the route and distance. "Solar chart" returns to the orbit view, which is scenery and not to scale.
+
+
+## First-haul hint
+
+The First haul card has a 💡 Hint button. It shows one sentence for the next step and makes that button glow until your next action: Refuel (if short on fuel) or Travel, then the Market tab, then All on the Water row. Hints cost nothing and change no rules.

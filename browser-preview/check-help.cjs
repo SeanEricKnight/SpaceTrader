@@ -48,4 +48,10 @@ r('game=fresh("Normal");game.tutorial=null;tab="galaxy";action("chart-mode",1)')
 const xy=[...sc.matchAll(/<circle cx="([\d.]+)" cy="([\d.]+)" r="1[15]" fill/g)].map(m=>[+m[1],+m[2]]);assert.equal(xy.length,24);let worst=0;for(let i=0;i<24;i++)for(let j=i+1;j<24;j++){const real=r('Math.hypot(game.worlds['+i+'].x-game.worlds['+j+'].x,game.worlds['+i+'].y-game.worlds['+j+'].y)'),drawn=Math.hypot(xy[i][0]-xy[j][0],xy[i][1]-xy[j][1])/24;worst=Math.max(worst,Math.abs(real-drawn))}assert.ok(worst<0.01,'drawn distance matches real distance, worst error '+worst);ok('star chart distances are drawn to scale');
 r('action("select",5)');assert.equal(r('chartMode'),'star');assert.equal(r('selectedWorld'),5);ok('tapping a planet on the star chart selects it');
 r('action("chart-mode",0)');assert.ok(!nodes.screen.innerHTML.includes('Star chart · to scale'));ok('back to the solar chart');
+// first-haul hint (0.22.0)
+r('game=fresh("Normal");tab="galaxy";render()');assert.ok(nodes.screen.innerHTML.includes('data-action="hint"'));ok('first haul card has a Hint button');
+r('action("hint")');assert.ok(r('hintSel').includes('jump')&&r('hintText').includes('Travel')&&nodes.screen.innerHTML.includes('class="coach"'));ok('hint away from the buyer points at Travel');
+r('action("select",0)');assert.equal(r('hintSel'),'');ok('hint clears on the next action');
+r('game.location=game.tutorial.to;tab="galaxy";action("hint")');assert.ok(r('hintSel').includes('data-tab="market"'));ok('hint at the buyer points at the Market');
+r('tab="market";action("hint")');assert.ok(r('hintSel').includes('sellall'));ok('on the Market the hint points at the Water sell button');
 console.log('All help checks passed.');

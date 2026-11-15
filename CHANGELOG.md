@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.22.0
+
+- First haul card has a glowing 💡 Hint: show me button. It names the next step and makes the matching button glow (Refuel or Travel, then Market, then All on the Water row). Hints are optional and clear on your next action. The welcome card mentions it. The card's old How to play button is gone (? Help is at the top right).
+
 ## 0.21.2
 
 - Job board cards are now compact rows (about a third of the height): kind icon, title, reward, and chips for distance, deadline, cargo, crisis bonus and standing, with the client on one line and a short Accept button. Same layout for Your jobs and Government requests. Modeled on notice-board lists in Monster Hunter and The Witcher 3 (icon, name, reward, one-line detail) and the dense contract rows in Elite Dangerous and Starsector.
