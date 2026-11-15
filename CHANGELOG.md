@@ -3,6 +3,7 @@
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
 ## 0.23.3
+- Marauder offers now read as a conversation: a named captain speaks in character, buttons name the action and the payoff ("Take the crate · +603 cr", "Turn them down"), and the line under each button spells out the cost (police heat, crew loyalty, the jail risk) and what happens if you refuse. Replaces the generic "Accept / Refuse" card.
 - Fixed the pirate/encounter card and the bank pop-up being cut off at the bottom on iPhone Safari. They were sized to the tallest possible screen (92vh), which is taller than what you can see once the browser bars are showing. They now fit the visible screen (dvh), scroll inside if needed, and keep clear of the bottom bar.
 - New **💾 Save** button in the page footer and at the bottom of the Help pop-out: says the game autosaves after every action, offers the three save slots and Export without opening Commander.
 - New **↺ Reset** button beside it, in the footer and in Help (set apart from the other buttons so it is hard to hit by accident). It opens a card that says what will be replaced, offers "Export my save first", and keeps the same difficulty. After a reset, Commander's Restore button brings back the previous run. Before, starting over was buried in the collapsed "New game / difficulty" strip and Commander. Footer buttons (Log, Save, Reset, Test tools) now sit in one aligned row of equal-size touch targets.

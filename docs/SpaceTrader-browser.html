@@ -635,10 +635,14 @@ function incidentPanel(){const o=game.offer,d=INCIDENTS[o.id],nd=curNode(o)||d,t
 const outSnap=()=>({c:game.credits,f:game.fuel,h:game.hull,g:held()});
 function outcomeCard(before){try{const dc=game.credits-before.c,df=game.fuel-before.f,dh=game.hull-before.h,dg=held()-before.g,bits=[];if(dc)bits.push((dc>0?'+':'−')+money(Math.abs(dc)));if(dg)bits.push((dg>0?'+':'−')+Math.abs(dg)+' cargo');if(df)bits.push((df>0?'+':'−')+Math.abs(df)+' fuel');if(dh)bits.push((dh>0?'+':'−')+Math.abs(dh)+' hull');const txt=typeof message==='string'?message:'';if(!bits.length){toast(txt||'Done.','info');return}cheer(dc>0||dg>0?'Success':dh<0?'Ouch':'Done',txt+'  ('+bits.join(' · ')+')',dc>0?dc:0)}catch{}}
 function incidentAction(i){const o=game.offer;if(!o||o.kind!=='incident')return;const nd=curNode(o),c=nd&&nd.choices[i];if(!c||(c.ok&&!c.ok(o)))return;if(c.go){o.trail=(o.trail||[]).concat(o.node?[{w:nd.who||'',t:nodeText(nd,o)}]:[],[{w:'You',t:c.say||String(c.label())}]).slice(-8);o.node=c.go;const nx=CONVOS[c.go];if(nx&&nx.quest)questFor(o,nx.quest);save();render();return}game.offer=null;const before=outSnap();c.run(o);outcomeCard(before);if(!inspectGoods())dock()}
+const MARAUDERS=['Captain Vesk','Captain Orrel','Captain Brisk','Captain Tamsa'];
 function offerPanel(){
  if(game.offer.kind==='incident')return incidentPanel();
- const o=game.offer,protect=o.kind==='protect';
- return '<h2>Marauders hail you</h2><p>'+(protect?'A marauder captain offers '+money(o.reward)+' to fly escort for their convoy through this lane. It would mark you as a friend of theirs.':'A marauder captain offers '+money(o.reward)+' to carry a sealed crate and ask no questions. Customs would not be pleased.')+'</p><div class="combat-choices"><div><button data-action="offer-accept">Accept · '+money(o.reward)+'</button><small>You are paid '+money(o.reward)+' now. Police attention rises'+(protect?'':', and a patrol may catch you with the crate and hold you')+'. Honest crew like you less.</small></div><div><button data-action="offer-refuse">Refuse</button><small>The marauders open fire and you fight them.</small></div></div>';
+ const o=game.offer,protect=o.kind==='protect',who=MARAUDERS[(o.reward||0)%MARAUDERS.length],pay=money(o.reward);
+ const line=protect?'“Convoy of ours runs this lane and the patrols have been sniffing. Ride escort and I pay '+pay+', cash. Word will get round that you fly with us.”':'“Sealed crate, no manifest. Carry it through the next port and I pay '+pay+' now, cash. You never saw me.”';
+ const gain=protect?'Fly escort':'Take the crate';
+ const cost=protect?'You are paid '+pay+' now. Patrols watch you more (heat +2). Honest crew lose loyalty; shady crew approve. Principled escorts may walk.':'You are paid '+pay+' now. Patrols watch you more (heat +3), and one may catch you with the crate and hold you. Honest crew lose loyalty; shady crew approve.';
+ return '<h2>Marauders hail you</h2><div class="talk">'+bubble(who,line)+'</div><div class="combat-choices"><div><button data-action="offer-accept">'+gain+' · +'+pay+'</button><small>'+cost+'</small></div><div><button data-action="offer-refuse">Turn them down</button><small>No deal. They take it badly and open fire. You can fight, flee or surrender as usual.</small></div></div>';
 }
 function offerAction(kind){
  const o=game.offer;if(!o)return;game.offer=null;const before=outSnap();
