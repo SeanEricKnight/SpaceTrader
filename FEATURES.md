@@ -151,7 +151,7 @@ Completed here: archive integrity, original catalog extraction and comparison, p
 Run the included core tests on a machine with Swift 5.9 or later:
 
 ```sh
-cd SpaceTrader-iPhone
+cd SpaceTrader
 swift test
 ```
 

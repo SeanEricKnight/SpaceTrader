@@ -1,6 +1,6 @@
 # Claude review prompt — Space Trader
 
-Review the current project in https://github.com/SeanEricKnight/SpaceTrader-iPhone. The browser build is the fast, playable prototype for testing the game and should remain fun on its own. The longer-term goal is an iPhone game. Keep that direction in mind throughout your review.
+Review the current project in https://github.com/SeanEricKnight/SpaceTrader. The browser build is the fast, playable prototype for testing the game and should remain fun on its own. The longer-term goal is an iPhone game. Keep that direction in mind throughout your review.
 
 Read the README, CHANGELOG, IPHONE_ROADMAP, PLAYTEST_RESULTS, the current browser HTML, the earlier review in `reviews/`, and the native SwiftUI project for context. The browser and SwiftUI projects are separate; do not assume they are in feature parity.
 

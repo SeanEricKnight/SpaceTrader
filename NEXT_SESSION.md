@@ -4,7 +4,7 @@ Paste this to start the next session:
 
 ---
 
-Continue Space Trader (repo SeanEricKnight/SpaceTrader, clone at /home/claude/spacetrader-iphone, main deploys docs/ to https://seanericknight.github.io/SpaceTrader/). Read README.md, GAMEPLAY.md, BACKLOG.md and CHANGELOG.md first. Current version is 0.14.2. Rotary Dogfight (/home/claude/canvas-aces) is separate and unchanged.
+Continue Space Trader (repo SeanEricKnight/SpaceTrader, clone at /home/claude/SpaceTrader, main deploys docs/ to https://seanericknight.github.io/SpaceTrader/). Read README.md, GAMEPLAY.md, BACKLOG.md and CHANGELOG.md first. Current version is 0.14.2. Rotary Dogfight (/home/claude/canvas-aces) is separate and unchanged.
 
 **How we work:** be concise, decide rather than ask, and keep every gameplay change reflected in GAMEPLAY.md, CHANGELOG.md, and the README and BACKLOG version lines. After each change: `node scripts/sync-pages.cjs`, regenerate `browser-preview/review-after.json` (`node browser-preview/sim-review.cjs SpaceTrader-browser.html browser-preview/review-after.json`) and SHA256SUMS.txt, run check-warp/events/crew/logic/solar, screenshot with Playwright (`python3 -I`, /usr/bin/google-chrome --no-sandbox), commit with the attribution lines, push to main, then tell Sean to Pull origin and reload. Sean's core rule: **the game must explain itself; he should never have to ask.** No package installs and no image generation are available here.
 
