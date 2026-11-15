@@ -2,6 +2,12 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.20.0 — More equipment and milestones (2026-11-15)
+
+- **Five new equipment items** (all use Equipment slots, so you choose): Auxiliary fuel tank (+4 pc range, ₡3,500), Reinforced plating (+20 hull, ₡6,000), Market analyzer (+0.02 sale rate, ₡8,000), Long-range sensors (-15% pirate risk, ₡9,000), Repair nanites (+2 hull per jump, ₡12,000).
+- **Milestones.** 13 named milestones (First profit, Five figures, First blood, Whole galaxy, Landowner and more) unlock with a gold toast and are listed on the Commander screen. They give recognition only, never credits, so your totals stay explainable.
+- Outfit cards say EQUIPMENT SLOT.
+
 ## 0.19.0 — Moons you can keep playing (2026-11-15)
 
 - **No more ending.** Buying a moon posts your score once and returns you to the game. No confetti. A small card offers Keep trading and Career summary. Old retired saves get a Keep flying button.

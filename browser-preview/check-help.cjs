@@ -32,4 +32,12 @@ r('game.location=2;action("moon-buy")');assert.equal(r('moonList().length'),2);a
 const before=r('game.credits');r('jump(1)');assert.ok(r('game.credits')>before-60000);ok('moons pay rent on jumps');
 r('game.encounter=null;game.custody=null;game.hull=game.hull||1;action("moon-sell",0)');assert.equal(r('moonList().length'),1);ok('a moon can be sold back');
 const posted=JSON.parse(storage.get('space-trader-leaderboard-v1')||'[]').length;assert.ok(posted<=1);ok('score is posted at most once');
+// equipment and milestones
+r('game=fresh("Normal");game.tutorial=null;game.modules=["tank"]');assert.equal(r('ship().range'),r('catalog.ships[game.ship].range')+4);ok('fuel tank adds range');
+r('game.modules=["plating"]');assert.equal(r('ship().hull'),r('catalog.ships[game.ship].hull')+20);ok('plating adds hull');
+r('game.modules=[]');const base=r('saleRate()'),risk=r('arrivalRisk(8)');r('game.modules=["analyzer"]');assert.ok(Math.abs(r('saleRate()')-base-.02)<1e-9);r('game.modules=["sensors"]');assert.ok(r('arrivalRisk(8)')<=risk);ok('analyzer raises sale rate and sensors lower risk');
+r('game.modules=["nanites"];game.hull=50;game.credits=100;game.day=5');r('jump(1)');assert.ok(r('game.hull')>=52||r('game.encounter')!==null);ok('nanites mend hull on jumps');
+r('game=fresh("Normal");game.tutorial=null;game.credits=1500;game.metrics.profit=10;checkBadges()');assert.ok(r('badgesDone().includes("k1")')&&r('badgesDone().includes("first")')&&r('game.credits')===1500);ok('milestones unlock without changing your credits');
+r('checkBadges()');assert.equal(r('badgesDone().length'),2);ok('milestones unlock only once');
+assert.ok(r('commander()').includes('Milestones'));assert.ok(!/GADGET SLOT/.test(r('outfitsPanel()')));ok('milestones listed on Commander, equipment slot wording');
 console.log('All help checks passed.');

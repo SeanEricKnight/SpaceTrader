@@ -186,3 +186,8 @@ See [CHEATS.md](CHEATS.md). Using them marks the run as "Cheats used".
 - **Requests:** a port has one on about 1 day in 4 (fixed for that day and port). A dispatch, or a relief run if the destination has a crisis. Reward about 1.35x a normal job, due in 4-5 days, within 14 pc. Appears on the Jobs board; the message line mentions it on arrival. Never interrupts.
 - **Standing** per Reach (Inner/Outer/Far): +1 per dispatch, +2 per relief run. Known at 2, Trusted at 5 (10% off fuel and repairs in that Reach), Honored at 9 (20% off).
 - **Penalty-free:** declining, abandoning, expiring or failing a job, request or side quest costs only the pay. The first story chapter can be set aside before the supplies are delivered.
+
+## Equipment and milestones (0.20.0)
+
+- **Equipment** (Ship tab outfitter; needs the listed tech level; Equipment slots depend on the hull): Cargo expansion +5 bays; Energy shield -5 per enemy hit (shield slot); Navigation computer +10 escape points; Auxiliary fuel tank +4 pc range; Reinforced plating +20 hull; Market analyzer +0.02 sale rate; Long-range sensors -15% pirate risk; Repair nanites +2 hull per jump. Removing gear refunds a quarter of its price.
+- **Milestones** unlock once each (toast and message) and show on the Commander screen: First profit, Pocket change (hold 1,000), Five figures, Six figures, Reliable hands (5 jobs), Known courier (25), First blood, Scourge of the lanes (10 pirates), Well travelled (12 ports), Whole galaxy (24), Not alone (hire crew), Fitted out (equipment), Landowner (moon). No cash reward.
