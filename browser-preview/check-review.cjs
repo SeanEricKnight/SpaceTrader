@@ -53,7 +53,7 @@ test('emergency tow rescues the no-money no-fuel debt trap without erasing debt'
  r('game=fresh();const before=JSON.stringify(game);emergencyTow();if(JSON.stringify(game)!==before)throw Error("Unneeded rescue was allowed")');
 });
 test('repair can be reached from any screen and Easy repair costs remain forgiving',()=>{
- for(const tab of ['market','galaxy','ship','commander','jobs','news']){r('game=fresh("Easy",57);game.hull=50;tab='+JSON.stringify(tab)+';render()');assert.match(nodes['port-services'].innerHTML,/Repair \+50 · 50 cr/)}
+ for(const tab of ['market','galaxy','ship','commander','jobs','news']){r('game=fresh("Easy",57);game.hull=50;tab='+JSON.stringify(tab)+';render()');assert.match(nodes['port-services'].innerHTML,/Repair \+50 · ₡50/)}
  r('action("repair")');assert.equal(r('game.hull'),100);assert.equal(r('game.credits'),1450);
 });
 test('authored galaxy, undo, chart scale and provenance labels are honest',()=>{

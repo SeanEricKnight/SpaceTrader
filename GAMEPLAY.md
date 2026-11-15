@@ -48,6 +48,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 
 ## Help, log and arrival report (0.16.3)
 
+- Money is written with the credit sign ₡ (for example ₡1,000), not "cr".
 - A round **?** button on every screen opens How to play. The dock bar also shows a newspaper chip and a **Log** button.
 - Battles, marauder offers and custody open as a centered pop-out over a dimmed screen.
 - Each arrival shows a **Trip report** (fuel, days, deliveries and pay, other costs). The Log lists the last 400 events and can be downloaded as a text file.
