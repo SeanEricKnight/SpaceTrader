@@ -2,6 +2,14 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.24.0
+- **Navigation tab is about half as long.** Desktop 3,354 px to 1,911 px; Travel now sits in the first screen. Phone 3,169 px. No rules, economy or combat changed.
+- **Duplicates removed.** The separate route card shows only when a route has 2+ jumps with stops that matter ("Stops on this route"); the route banner no longer repeats text; the intro line and notes are gone; map help is a "Chart help" fold.
+- **Best runs: up to 5 one-row jobs.** Only the best is highlighted (★ Best, primary button); others are secondary.
+- **One compact destination panel** with a "Details" fold and the world history fold.
+- **Vessel card removed from Navigation.** HULL is now a stats-bar tile with a ship thumbnail; tap it for repair and the Ship tab.
+- New check `check-layout.cjs` (desktop and phone height caps 2.2 and 4 screens, Travel in the first screen on desktop, no vessel or duplicate route card). Basis: reviews/2026-11-16-ui-length-audit.md.
+
 ## 0.23.6
 - **Ten new travel events** (15 in all): a stowaway (with a talk-first step), a fuel line leak, a toll buoy, a prospector selling 3 units at half price, a lost pilot who sends you a price board, a debris field, a crew argument, a pirate radio broadcast that gives you the full newspaper, a customs drone, and a nebula. Each choice states its cost, payoff and any odds up front.
 - **Events come from a shuffled bag.** All eligible events show once before any repeats, and never twice in a row. Events that do not fit are skipped and kept for later (crew events need crew, the customs drone needs patrol heat, the fuel leak needs fuel). The bag is saved as `incBag`; old saves start with a fresh one.
