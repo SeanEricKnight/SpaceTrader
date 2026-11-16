@@ -49,3 +49,18 @@ Estimated result (not built): side column about 900 px, page about 1,900 px at 1
 - Remove the vessel card from Navigation (recommended)?
 - Keep "Move cards (drag)"? It matters less once the default order is right; keep, low priority.
 - Approve the height budgets in item 8?
+
+## Sources
+
+- https://www.wyliecomm.com/2023/05/above-the-fold-statistics (secondary report of NN/g first-screen viewing time)
+- https://uxmatters.com/mt/archives/2020/11/debunking-the-myth-of-the-fold.php
+- https://memory.psych.missouri.edu/assets/doc/articles/2001/cowan-bbs-2001.pdf (Cowan 2001, about 4 chunks)
+- https://stephaniewalter.design/blog/your-menu-doesnt-need-millers-7±2-rule/
+- https://www.nngroup.com/articles/accordions-on-desktop/ (hidden content is found less)
+- https://forums.frontier.co.uk/threads/odyssey-optimisation-performance-and-ui-galaxy-system-map-feedback.578093/page-5 (anecdotal)
+- https://pcgamer.com/slay-the-spire-review
+- https://www.greenmangaming.com/blog/how-slay-the-spire-became-the-gold-standard-for-all-card-battler-games/
+- https://www.gamedeveloper.com/design/understanding-smart-ui-design
+- https://spronck.net/spacetrader/STTips.html (original Space Trader screen shortcuts)
+
+Caveat: mostly secondary summaries and forum posts; judgment, not proof.
