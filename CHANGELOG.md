@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.24.2
+- **Travel: toasts no longer cover Continue.** "Arrived at" and "New port logged" toasts created just before the travel scene opened stayed on top of it (seen in Firefox). They are now dropped when the scene opens (the scene shows the same facts); other toasts wait until it closes.
+- **First haul card is clearer.** One reward line, one primary next step ("Open the Market"), two secondary buttons (Take a job, Hire an escort), and one quiet line for warp charges and lasers. No more bullet list with buttons wrapping inside it.
+- `check-layout.cjs` now checks both. No rules or economy changed. Research: shared-mind game-design-references.md, 2026-11-16.
+
 ## 0.24.1
 - **Phone: Travel is always in reach.** With a planet selected and reachable, the bottom pill reads "Travel to <port> · N fuel" and starts the trip. While the guide is on, the guide pill keeps the slot. Hidden on desktop (Travel is in the map bar).
 - **Map signals.** A 🔥 marks ports in crisis and a numbered dot marks jobs you carry that deliver there. Chart help explains both.

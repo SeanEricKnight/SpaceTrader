@@ -4,6 +4,9 @@ One entry per decision, newest first. Research method: shared-mind `memory/game-
 
 Entry format: **Date · Decision.** Decided by. Why (research link). Rejected. Status. How it is checked.
 
+## 2026-11-16 · Reward cards give one next step; overlays never cover a main button
+Decided by Sean's report ("this is messy"; toasts covering Continue). Why: shared-mind research log 2026-11-16 (first major win, progressive disclosure, Hick-Hyman). Rejected: keeping the 4-bullet feature list; a delay-only toast fix (toasts made before the scene still sat on top). Status: built in 0.24.2. Checked by: `check-layout.cjs` (First haul card shape; no toast over the travel Continue button).
+
 ## 2026-11-16 · Show crisis flames and job counts on map planets
 Decided by Sean ("make all the changes"). Why: audit item 5; Stellaris-style on-map status lets players scan without opening panels. Rejected: separate list panel. Status: built in 0.24.1. Open risk: crises are common (about 4 of 9 ports on day 1), so flames may stop standing out (Von Restorff effect). Next option if so: flame only when the crisis good is in range or in the hold. Checked by: `check-layout.cjs` (flame and count appear exactly where a crisis or delivery job exists).
 
