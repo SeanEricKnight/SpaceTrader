@@ -2,6 +2,12 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.24.7
+- **Every dimmed button now answers a tap.** Market Buy/Sell, Travel, Refuel, Repair, lasers, warp charge, ships and finance, crew and escort hire, the newspaper and subscription, warehouse, bank, moon, outfits, jobs and more: tap or click a dimmed button and a small amber card says why ("Needs 30 cr; you have 0 cr.") and what to do next. Nothing is spent or changed. It closes on the next tap, or after 7 seconds.
+- Dimmed buttons are easier to read (55% instead of 35% opacity, dashed border, help cursor).
+- Swept all tabs in 3 money/fuel states: 92 distinct disabled situations, all with a specific reason (none fall back to the generic text).
+- Limits: dimmed buttons are still not keyboard-focusable (they use the real `disabled` attribute so the guide and layout code keep working); the event cards from 0.24.5 are the focusable version. Research: shared-mind game-design-references.md, 2026-11-16 (53 sources).
+
 ## 0.24.6
 - **Bigger, tappable messages.** Every message card is now at least 44 px tall with 16 px text (it was about 36 px with 14 px). Some messages carry one action: "New port logged" has "View port", which opens the port, then shows a short confirmation. Plain confirmations (bought, sold) have no action.
 - **Accepted jobs say where to deliver.** Accepting any job (contract, rush side job, courier) now shows a message with the destination, deadline, reward, bays held and "Delivers when you dock at X", plus a "Show me where" button that opens the destination on the chart. It stays until tapped. Milestone messages now say "Milestone:" with what you did and an "All milestones" button. The log header showed 0.17.0 because a version constant was stale; it now matches the build.

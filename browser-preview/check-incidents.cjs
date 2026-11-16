@@ -29,6 +29,13 @@ r('game.fuel=0');{const h=r('incidentPanel()');assert.ok(/<b class="lock-why">Ne
 prep();r('game.fuel=0;game.offer={kind:"incident",id:INCIDENTS.findIndex(x=>x.title==="A distress call")}');{const h=r('incidentPanel()');assert.ok(h.includes('Needs 2 fuel; you have 0.')&&(h.match(/class="locked/g)||[]).length===1,'only the fuel option is locked');}
 // Gated cr/bay options get the right next step.
 assert.ok(/earn credits/.test(r('lockNext("Needs 40 cr; you have 5 cr.")'))&&/refuel/.test(r('lockNext("Needs 2 fuel; you have 0.")'))&&/free up cargo/.test(r('lockNext("Needs 3 free bays")')),'next step matches the missing resource');
+// Central lock reasons: every disabled button explains itself when tapped (0.24.7).
+prep();r('game.fuel=0');assert.ok(/^Needs \d+ fuel; you have 0\.$/.test(r('lockWhy("jump",1)')),'jump needs fuel');
+r('game.credits=0');assert.ok(/^Needs [\d,]+ cr; you have 0 cr\.$/.test(r('lockWhy("crew-hire",0)')),'crew hire needs credits');
+r('game.fuel=ship().range');assert.ok(/tank is full/i.test(r('lockWhy("refuel",0)')),'full tank');
+assert.ok(/zoomed out/.test(r('lockWhy("map-out",0)'))&&/empty/.test(r('lockWhy("slot-load",0)')),'map and slot reasons');
+r('game.offer={kind:"incident",id:0}');assert.ok(/open offer or event/.test(r('lockWhy("buy",0)')),'busy state says to finish the event first');r('game.offer=null');
+assert.ok(/^Not available right now/.test(r('lockWhy("no-such-action",0)')),'unknown action gets the plain fallback');
 // Shuffle bag: all 15 appear before any repeat; never back to back; garbage bag is repaired.
 prep();const seen=[];for(let k=0;k<15;k++)seen.push(r('pickIncident()'));assert.equal(new Set(seen).size,15,'first 15 picks are all different');
 let prev=seen[14];for(let k=0;k<200;k++){const id=r('pickIncident()');assert.notEqual(id,prev,'no back-to-back repeat');prev=id}

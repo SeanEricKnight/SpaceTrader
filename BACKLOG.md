@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 16, 2026 (version 0.24.6).
+Last updated: November 16, 2026 (version 0.24.7).
 
 ## Built
 
@@ -70,4 +70,4 @@ Sean: too much scrolling on Navigation. Audit in [reviews/2026-11-16-ui-length-a
 - Save slot name `space-trader-chrome-preview-v1` is just a storage key. It is not browser-specific.
 - Draw equipment (lasers etc.) on the ship image itself.
 - Create the 24 character portraits (see PORTRAITS.md); optionally bake into the HTML.
-- Audit remaining disabled controls (market, jobs, crew hire, ship store) for the 0.24.5 locked pattern: tag, amber reason first, focusable, tap shows next step.
+- Make dimmed (non-event) buttons keyboard-focusable: needs the guide and CSS selectors moved off `[disabled]` first.
