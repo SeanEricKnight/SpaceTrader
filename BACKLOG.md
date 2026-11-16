@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 16, 2026 (version 0.24.0).
+Last updated: November 16, 2026 (version 0.24.1).
 
 ## Built
 
@@ -40,9 +40,9 @@ Last updated: November 16, 2026 (version 0.24.0).
 
 Built: battle pop-outs, help button, newspaper chip, route banner and cross-Reach route drawing, Trip report, cargo-reserve wording, Activity log, 900 px side-by-side layout. See `reviews/2026-11-15-player-feedback.md`. Open: accept remote jobs from afar (owner decision), to-scale chart option, travel animation.
 
-## Navigation tab length (2026-11-16, built in 0.24.0)
+## Navigation tab length (2026-11-16, built in 0.24.0 and 0.24.1)
 
-Sean: too much scrolling on Navigation. Audit in [reviews/2026-11-16-ui-length-audit.md](reviews/2026-11-16-ui-length-audit.md). Built in 0.24.0 (items 1 to 4): duplicate panels removed, one-row jobs (best highlighted), compact destination panel, vessel card replaced by a hull tile with ship thumbnail. Measured: desktop 3,354 px to 1,911 px (2.12 screens), Travel inside the first screen; phone 3,169 px (3.75 screens), Travel still at 1,373 px. `check-layout.cjs` guards this. **Not built (need Sean's go):** item 5 (map status signals) and item 6 (phone Travel via the `#dock-hint` bar). Known: `check-review.cjs` Beetle vs Gnat profit assertion fails at the committed baseline too (353,367 vs 1.3 x 298,346); unrelated to this change, needs a balance decision.
+Sean: too much scrolling on Navigation. Audit in [reviews/2026-11-16-ui-length-audit.md](reviews/2026-11-16-ui-length-audit.md). Built in 0.24.0 (items 1 to 4): duplicate panels removed, one-row jobs (best highlighted), compact destination panel, vessel card replaced by a hull tile with ship thumbnail. Measured: desktop 3,354 px to 1,911 px (2.12 screens), Travel inside the first screen; phone 3,169 px (3.75 screens), Travel still at 1,373 px. `check-layout.cjs` guards this. Items 5 (crisis flame and job-count markers on map planets) and 6 (phone Travel in the bottom pill) built in 0.24.1; phone Travel is now reachable without scrolling. Watch item: flames may be too common to stand out; see DECISIONS.md. Known: `check-review.cjs` Beetle vs Gnat profit assertion fails at the committed baseline too (353,367 vs 1.3 x 298,346); unrelated to this change, needs a balance decision.
 
 ## Deferred (not built yet)
 - Seasonal calendar (idea, not built): a year of named seasons (for example 24 days each) that give a gentle, readable rhythm: a seasonal price tilt on a few goods, a port festival day with a small bonus, and a Year N, Season label next to the day. Why: long-term engagement research (Stardew-style seasonal pacing, natural session chunks, anticipation). Risks: it shifts price balance, so the trade simulation, the review checks and the Hard and Impossible tuning would need re-running first. Keep it optional or very mild.

@@ -1,6 +1,6 @@
 # Navigation tab length audit (0.23.6)
 
-Author: Claude, 2026-11-16. Trigger: Sean could see no reason to scroll this much on the Navigation tab. Status: items 1 to 4 and the layout check built in 0.24.0 (measured: desktop 3,354 to 1,911 px, 2.12 screens, Travel in first screen; phone 3,169 px, Travel at 1,373 px, still below the first screen). Items 5 (map signals) and 6 (phone dock-hint Travel) not built, awaiting Sean. Research and sources: `memory/game-design-references.md` in shared-mind (entry "Navigation tab scrolls too much").
+Author: Claude, 2026-11-16. Trigger: Sean could see no reason to scroll this much on the Navigation tab. Status: items 1 to 4 and the layout check built in 0.24.0 (measured: desktop 3,354 to 1,911 px, 2.12 screens, Travel in first screen; phone 3,169 px, Travel at 1,373 px, still below the first screen). Items 5 (map signals) and 6 (phone Travel in the bottom pill) built in 0.24.1; see DECISIONS.md. Research and sources: `memory/game-design-references.md` in shared-mind (entry "Navigation tab scrolls too much").
 
 ## Measured (Playwright, `docs/SpaceTrader-browser.html`, default new game)
 

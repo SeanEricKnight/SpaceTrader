@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.24.1
+- **Phone: Travel is always in reach.** With a planet selected and reachable, the bottom pill reads "Travel to <port> · N fuel" and starts the trip. While the guide is on, the guide pill keeps the slot. Hidden on desktop (Travel is in the map bar).
+- **Map signals.** A 🔥 marks ports in crisis and a numbered dot marks jobs you carry that deliver there. Chart help explains both.
+- New `DECISIONS.md` records each design decision with its research link. `check-layout.cjs` now also checks the phone pill and the map signals. No rules or economy changed.
+
 ## 0.24.0
 - **Navigation tab is about half as long.** Desktop 3,354 px to 1,911 px; Travel now sits in the first screen. Phone 3,169 px. No rules, economy or combat changed.
 - **Duplicates removed.** The separate route card shows only when a route has 2+ jumps with stops that matter ("Stops on this route"); the route banner no longer repeats text; the intro line and notes are gone; map help is a "Chart help" fold.

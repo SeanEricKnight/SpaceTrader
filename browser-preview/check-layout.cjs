@@ -1,6 +1,6 @@
 // Navigation tab length check (audit 2026-11-16, reviews/2026-11-16-ui-length-audit.md). Real browser via playwright-core + Chrome.
 // Hard rule: on desktop the Travel button is inside the first screen. Soft caps: total page height in screens.
-// Phone: height cap only; Travel position is reported (the phone dock slot for Travel is not built yet).
+// Phone: height cap, and Travel is reachable without scrolling through the bottom pill (#dock-hint). Map signals (crisis flame, job count) are drawn on planets.
 const path=require('node:path'),fs=require('node:fs'),assert=require('node:assert/strict');
 let chromium;try{({chromium}=require('playwright-core'))}catch{console.log('SKIP: playwright-core not installed');process.exit(0)}
 const exe=process.env.CHROME_PATH||['/usr/bin/google-chrome','/usr/bin/chromium','/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'].find(p=>fs.existsSync(p));
@@ -24,7 +24,17 @@ const CAPS={desktop:2.2,phone:4};
   assert.equal(m.dupRoute,false,'a one-jump route does not repeat itself in a Route card');
   assert.ok(m.docH/m.vh<=CAPS[name],name+' Navigation tab is '+(m.docH/m.vh).toFixed(2)+' screens, cap '+CAPS[name]);
   if(name==='desktop')assert.ok(m.travelBottom!==null&&m.travelBottom<=m.vh,'Travel is inside the first screen on desktop (bottom '+m.travelBottom+' of '+m.vh+')');
+  const sig=await page.evaluate(()=>{const dh=document.getElementById('dock-hint'),r=dh.getBoundingClientRect(),vis=!dh.hidden&&getComputedStyle(dh).display!=='none';return{vis,text:dh.textContent,inView:vis&&r.top>=0&&r.bottom<=innerHeight,action:dh.dataset.action}});
+  if(name==='phone'){assert.ok(sig.inView&&/^🚀 Travel to .+ · \d+ fuel$/.test(sig.text)&&sig.action==='jump','phone: Travel is in the bottom pill without scrolling: '+JSON.stringify(sig));
+   const loc=await page.evaluate(()=>{const f=game.location;await0=0;return game.location});await page.click('#dock-hint');const moved=await page.evaluate(()=>game.location!==0||inFlight());assert.ok(moved,'phone: tapping the pill starts the trip')}
+  else assert.equal(sig.vis,false,'desktop: the bottom Travel pill stays hidden (Travel is in the map bar)');
   await page.close();
+ }
+ {const page=await browser.newPage({viewport:{width:1440,height:900}});await page.goto('file://'+path.resolve('SpaceTrader-browser.html'));await page.evaluate(()=>localStorage.clear());await page.reload();await page.click('[data-action="info-close"]');
+  await page.evaluate(()=>{if(game.tutorial)game.tutorial.state='skipped';game.worlds[3].crisis=1;game.contracts.push({to:3,from:game.location,good:0,qty:1,pay:100,due:game.day+9});render()});await page.click('nav [data-tab="galaxy"]');
+  const n=await page.evaluate(()=>{const bad=[];game.worlds.forEach((w,id)=>{const el=document.querySelector('[data-map-planet="'+id+'"]');if(!el)return;const fl=!!el.querySelector('.map-signal.crisis'),jt=el.querySelector('.map-signal.jobs text'),jn=game.contracts.filter(j=>j.to===id).length;if(fl!==!!w.crisis||(jt?+jt.textContent:0)!==jn)bad.push(id)});const e3=document.querySelector('[data-map-planet="3"]');return{bad,crisis:!!e3.querySelector('.map-signal.crisis'),jobs:e3.querySelector('.map-signal.jobs text').textContent}});
+  assert.deepEqual(n,{bad:[],crisis:true,jobs:'1'},'map flame and job count appear exactly where a crisis or delivery job exists');await page.close()}
+ {
  }
  await browser.close();console.log('check-layout passed');
 })().catch(e=>{console.error(e);process.exit(1)});

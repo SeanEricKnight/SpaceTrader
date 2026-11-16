@@ -63,6 +63,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 - Some things stay **local**: exact contract terms, side quests, and crew and escorts are only visible when you dock at the planet.
 
 - **Best runs** (up to five one-row jobs under the chart; only the best is highlighted) gets harder to read as difficulty rises. Beginner and Easy: ranked by pay per fuel, with the fuel and rate shown. Normal: ranked by pay only, with the fuel needed shown; you weigh the cost. Hard: only jobs posted at your current port, unranked, no fuel math. Impossible: the panel is hidden. The newspaper subscription adds other ports' boards on Beginner, Easy and Normal only. Details below describe the Beginner/Easy version. Without the paper it lists jobs posted at your current port; with it, every job board in range. "Show route" selects the job's destination; "Go to X" selects the port where a remote job is posted.
+- **Map signals and phone Travel.** On the chart a 🔥 marks a port in crisis and a numbered dot marks jobs you carry that deliver there. On a phone, with a reachable planet selected, the bottom pill reads "Travel to <port> · N fuel" and starts the trip.
 
 ## Celebrations
 
