@@ -3,6 +3,7 @@
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.4`.
 
 ## 0.25.4
+- **My ports shows 3 ports, the rest under "N more ports"** (stays open across redraws); a one-line pin hint appears only when nothing is pinned (tooltips don't work on touch). Footer text shortened and no longer mentions the removed "iPhone project" name. Measured at 1200 and 400 px wide: 6 ports collapsed 333/390 px vs 548/662 open.
 - **My ports card is shorter** (about 305 px to 164): the help paragraph is now a tooltip on the heading and padding is tighter. **Footer fix:** "Difficulty / new game (now: )" showed no level; it now shows the current difficulty.
 - **Shorter chart headers:** Solar chart and Star chart headers are one row (about 32 px on desktop, down from about 160): the eyebrow line and the repeated region blurb are gone (the blurb is the story button's tooltip), and the buttons sit beside the title.
 - **Arrival card is shorter:** the full card (planet art, blurb, "Colonists need…") shows only the first time you dock at a port. Later visits get a one-line trip report (about 100 px instead of 250), or nothing if there is no trip to report. The Market already shows the port's event, and the log keeps every trip.
