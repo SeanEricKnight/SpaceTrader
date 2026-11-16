@@ -1,6 +1,12 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.1`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.2`.
+
+## 0.25.2
+- Difficulty: intro buttons and Help "Change difficulty" now work (were dead); header chip (Day · ship · level ▾) opens a picker. Free switch before first jump, confirm after.
+- Travel scene: condition/flavor line stays up for at least ~0.7 s + 0.3 s per word; orphaned "Dismiss all" no longer shows over the warp scene.
+- Roadside fuel: when short of fuel and cash, one tap buys fuel at 2x price plus a call-out fee (0/25/50/100/150 by level), shortfall goes on the loan. Free tow stays as last resort.
+- Upgrade nudge: one-time dismissible toast (Beginner/Easy/Normal only): after 2 roadside calls (tank) or 8 jumps with 4,000+ credits and no gear.
 
 ## 0.25.1
 - **Atlas:** the first-visit toast now reads "New port logged: X · Atlas n/24 · Homecoming pays 75 cr · nearest unseen: Y, N pc" (nearest unvisited port within tank range). Homecoming is the existing payout for new ports; nothing new is paid at the dock.

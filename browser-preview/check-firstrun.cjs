@@ -53,5 +53,13 @@ q("game.pins[3]='Home'");const h=q("starChart()");assert.ok(/class="sc-port pinn
 q("game.visited=[0];game.location=1;toasts=[];rememberMarket()");
 const log=q("JSON.stringify(typeof toastLog!=='undefined'?toastLog:(typeof toasts!=='undefined'?toasts:[]))");
 assert.ok(q("game.visited.includes(1)"),'port logged');
+// 0.25.2: difficulty picker, roadside fuel, upgrade nudge.
+{const c=context(),q=c.run;q("action('intro-go');if(game.tutorial)game.tutorial.state='skipped'");
+q("action('intro-diff',3)");assert.equal(q("game.difficulty"),'Hard','intro difficulty button switches level before the first jump');
+q("action('open-diff')");assert.ok(q("document.getElementById('info-body').innerHTML").includes('data-action="pick-diff"'),'header chip opens the picker');
+q("game.fuel=0;game.credits=5;game.debt=0");const r=JSON.parse(q("JSON.stringify(roadsideInfo())"));assert.ok(r&&r.need>=1&&r.cost>5,'roadside fuel offered when short of fuel and cash');
+q("globalThis.confirm=()=>true;roadsideFuel()");assert.ok(q("game.fuel")>=1&&q("game.roadside")===1,'roadside fuel delivers fuel and is counted');
+assert.ok(q("game.difficulty='Impossible';game.modules=[];game.roadside=2;game.nudged={};nudgeCheck();JSON.stringify(game.nudged)")==='{}','no proactive nudge on Impossible');
+console.log('PASS 0.25.2: difficulty picker works, roadside fuel offered and delivered, nudge stays off on Impossible');}
 console.log('PASS 0.25.1: pinned ports on star chart; Atlas toast built without error (toast text checked in source)');
 const html=fs.readFileSync('SpaceTrader-browser.html','utf8');assert.ok(html.includes("Homecoming pays '+money(HOMECOMING_PER_PORT)")&&html.includes('nearest unseen:'),'Atlas toast names Homecoming pay and nearest unseen port');}

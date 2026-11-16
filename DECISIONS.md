@@ -91,3 +91,6 @@ Decided by Sean. The old "-iPhone" project and repo name is invalid. Status: sta
 
 ## Open
 - `check-review.cjs` Beetle-vs-Gnat profit assertion fails on the committed baseline (353,367 vs 1.3 x 298,346). Needs a balance decision: loosen the 1.3 ratio, or retune the Beetle. Owner: Sean.
+
+- Upgrade prompt is triggered by an observed bottleneck, one-time, dismissible; passive only on Hard/Impossible (not Easy-only: the need is the same, the help is what scales).
+- Emergency fuel is a paid in-place service (premium + call-out), not a free refill, so it never beats planning; free tow is unchanged.
