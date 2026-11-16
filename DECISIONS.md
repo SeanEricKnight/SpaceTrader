@@ -4,6 +4,9 @@ One entry per decision, newest first. Research method: shared-mind `memory/game-
 
 Entry format: **Date · Decision.** Decided by. Why (research link). Rejected. Status. How it is checked.
 
+## 2026-11-16 · Artwork direction (OPEN, awaiting Sean)
+Proposal in [ART_DIRECTION.md](ART_DIRECTION.md): crew portraits first with per-person accent colors, then ships with a design language per shipyard and silhouette tests. Why: Endless Sky and Starsector art guides, TF2/Overwatch readability, Nittono 2012 (see shared-mind research log). Rejected so far: cute baby-schema faces (tone mismatch). Status: open; no art built. Check: grayscale ship silhouette sheet, 48 px crew row.
+
 ## 2026-11-16 · Reserved cargo bays are announced at accept and droppable in the hold card
 Decided by Sean ("10 bays reserved was a surprise"). Why: Elite Dangerous mission cargo (can't be sold, abandon has a penalty; players ask for free-bay counts), Nielsen heuristic 3 (visible emergency exit), Tim Cain on telegraphing consequences. Rejected: auto-unloading, hidden reservation. Status: shipped 0.24.3. Checked: check-layout (hold card rows, Drop job frees bays, Accept text).
 
