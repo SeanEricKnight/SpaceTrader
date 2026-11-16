@@ -1,6 +1,6 @@
 # Space Trader: how it plays
 
-The rules as they work in the current version (**0.24.8**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
+The rules as they work in the current version (**0.24.9**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
 
 ## Goal and ending
 
@@ -166,6 +166,7 @@ Beginner, Easy, Normal, Hard, Impossible. Easier levels give more hints; Hard an
 
 ## Saving
 
+- Saves (0.24.9): an import with an unknown difficulty, home port, guide state or moons list is refused up front, and a save that loads but cannot be shown leaves your current game in place. Quotes (0.24.9): the "worth X here" cargo quote and the Sell all payout use the same calculation, so they match even after earlier sales pushed the price down; trip and route day counts show 2 days on a Quiet ride.
 - Saves (0.24.8): every state the game itself produces loads again, including bulk freight, zero-bay rush documents, upgraded fuel tanks and hull plating. A save with fuel or hull above the ship's real limits (an old removal bug) is trimmed to the limit on load. Removing equipment now removes it first, then trims fuel and hull to the new limits. Clinic relief now removes the fever premium from the stored price baseline too, so prices do not bounce back up afterwards.
 - The game autosaves in your browser. Clearing browser data or switching browser or device loses that save.
 - **Save slots:** three named-by-number checkpoints in the browser (Commander screen), each showing day, credits and ship.
@@ -227,4 +228,4 @@ Tapping Start flying on the welcome card runs Show me for you. On a phone the ta
 Start a new game and pick a Vow beside Difficulty. Peaceful: lasers cannot be upgraded. Debt-free: the bank lends nothing. Lean hold: your hold is capped at 15 bays even on a bigger ship or with cargo pods. The vow is kept if you buy your first moon with it intact. The rules never relax during the run.
 
 ## Market saturation (0.23.1)
-Selling lowers that port's price by about 1.2% per unit (floor -30%), recovering about 12% of the gap each jump (a Quiet ride takes two days but recovers once; see BACKLOG). Crises still apply on top. Buying is limited by port stock instead of price. Reason: before this, selling 15 units paid the same per unit as selling 1, so one good route could be looped forever. Idea from Sid Meier's Colonization, where selling floods the market and prices slowly recover.
+Selling lowers that port's price by about 1.2% per unit (floor -30%), recovering about 12% of the gap each travel day. A Quiet ride takes two days, so it recovers twice and restocks ports by two. Crises still apply on top. Buying is limited by port stock instead of price. Reason: before this, selling 15 units paid the same per unit as selling 1, so one good route could be looped forever. Idea from Sid Meier's Colonization, where selling floods the market and prices slowly recover.

@@ -2,6 +2,14 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.8`.
 
+## 0.24.9
+Follow-up to the 0.24.8 code review: the items that had been deferred, now decided and built (research: shared-mind game-design-references.md, 2026-11-16, quotes and clocks).
+- **Quotes match results.** The "worth X here" cargo quote ignored the saturation your earlier sales had already caused (it showed 511 cr and paid 555). It now runs the same maths as selling, one unit at a time. Route banners, Fly back, port cards and guide text show 2 days on a Quiet ride instead of 1.
+- **One clock.** The world now moves once per elapsed day: a Quiet ride (2 days) recovers sale-saturated prices twice, restocks ports by 2 and checks crises for both days. Before, it recovered once, which contradicted GAMEPLAY.md. Side effect: Quiet rides are slightly better for dumping goods; they still cost two days of interest, rent and wages.
+- **Safer imports.** Save codes, slots and files with an unknown difficulty, an out-of-range home port, a broken guide state or a malformed moons list are now refused instead of crashing the screen. If a save loads but cannot be displayed, your current game stays in place and the log says so.
+- **Guide:** the "Buy a Cheap good" step now reads "(not Water)". The tutorial already uses Water, and the next step needs a good you can sell for a profit.
+- `check-saves.cjs` now covers all of this and fails if any fix is reverted (checked by reverting each one).
+
 ## 0.24.8
 Reliability release from an independent code review (ChatGPT, 24 targeted probes, 2026-11-16; every finding below was re-checked against the source before fixing).
 - **Saves now load every state the game can produce.** Bulk freight jobs (up to 45 bays; the crisis bonus can pay over 5,000 cr), zero-bay rush documents, upgraded fuel tanks (18/18 on a Gnat) and reinforced plating (120/120) were rejected by the loader, so a save made with them fell back to the previous backup and lost progress. Validation now uses one shared effective-ship-stats function, the same one the game uses while playing.

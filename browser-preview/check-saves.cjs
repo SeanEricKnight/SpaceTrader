@@ -1,5 +1,5 @@
 // Save integrity: every state the game can legally produce must survive export/import, slots and reload.
-// Added 0.24.8 after the external code review (R1-R8). Also pins equipment limits, the clinic price fix,
+// Added 0.24.8 after the external code review (R1-R8); extended 0.24.9 (R6, R9, R10). Also pins equipment limits, the clinic price fix,
 // the simulator's win predicate, the guide's delivery step and the reserve-shortfall reason.
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const html=fs.readFileSync('SpaceTrader-browser.html','utf8');const script=html.match(/<script>([\s\S]*?)<\/script>/)[1];new vm.Script(script);
@@ -51,4 +51,15 @@ r('game.metrics.deliveries=1;guideAdvance()');assert.equal(r('game.guide.off'),t
 // R8: a purchase blocked by the fuel/interest reserve says so.
 fresh(1);r('game.location=0;game.credits=40;game.fuel=0;game.reserveFuel=true;window_id=catalog.goods.findIndex((g,i)=>!prohibited(i)&&world().tech>=g.production&&world().stock[i]>0&&world().prices[i]<=40)');
 {const why=r('lockWhy("buy",window_id)');assert.ok(/kept back for fuel/.test(why),'reserve shortfall named: '+why);assert.ok(!/Needs tech/.test(why))}
-console.log('PASS: save round trips (every ship and job kind, equipment, history), equipment removal, old-save repair, clinic price rebound, simulator win predicate, guide delivery step and reserve reason.');
+// R9: the cargo quote is the payout, including on a market already pushed down by earlier sales.
+for(const pre of [0,25]){fresh(1);r('game.location=0;game.peace=true;{const w=world();window_k=catalog.goods.findIndex((g,i)=>!prohibited(i)&&w.tech>=g.usage);if('+pre+')sellImpact(w,window_k,'+pre+');game.cargo[window_k]=15;game.paid[window_k]=0;window_q=unitSum(world(),window_k,15);window_c=game.credits;sell(window_k,true)}');assert.equal(r('game.credits-window_c'),r('window_q'),'quote equals payout after '+pre+' earlier sales')}
+// R9/R10: a Quiet ride is announced as 2 days, takes 2 days, and the world moves once per elapsed day.
+fresh(1);r('game.style="quiet";game.peace=true;game.location=0;game.fuel=ship().range;game.reserveFuel=false;window_to=game.worlds.findIndex((w,i)=>i&&distance(i)<=game.fuel);window_k=catalog.goods.findIndex((g,i)=>!prohibited(i,game.worlds[window_to])&&game.worlds[window_to].tech>=g.usage);sellImpact(game.worlds[window_to],window_k,25);window_d0=game.day;window_i0=game.worlds[window_to].imp[window_k]');
+assert.equal(r('travelDays(false)'),2);assert.equal(r('travelDays(true)'),1);assert.match(r('backBtn.toString()'),/travelDays/);
+r('jump(window_to)');assert.equal(r('game.day-window_d0'),2,'Quiet ride takes two days');{const imp=r('game.worlds[window_to].imp[window_k]'),want=r('window_i0')*0.88*0.88;assert.ok(Math.abs(imp-want)<1e-9,'recovered twice: '+imp+' vs '+want)}
+fresh(1);r('game.style="steady";game.peace=true;game.location=0;game.fuel=ship().range;window_to=game.worlds.findIndex((w,i)=>i&&distance(i)<=game.fuel);window_d0=game.day;jump(window_to)');assert.equal(r('game.day-window_d0'),1,'Steady takes one day');
+// R6: whole-schema validation, and a save that cannot be displayed leaves the current game in place.
+for(const [what,mut] of [['difficulty','s.difficulty="Bogus"'],['home','s.home=999'],['guide step','s.guide={step:99,off:false}'],['moons','s.moons={}']]){fresh(1);assert.throws(()=>r('{const s=JSON.parse(JSON.stringify(game));'+mut+';decodeSave(JSON.stringify(s))}'),/./,'bad '+what+' rejected on import')}
+fresh(1);r('window_day=game.day;window_g=JSON.parse(JSON.stringify(game));window_g.home=999');assert.equal(r('applySave(window_g,"x")'),false,'undisplayable save refused');assert.equal(r('game.day'),r('window_day'),'current game kept');
+assert.match(r('GUIDE[1].t'),/not Water/,'guide says Water does not count here');
+console.log('PASS: quote equals payout, Quiet ride days and recovery, import validation and safe apply, save round trips (every ship and job kind, equipment, history), equipment removal, old-save repair, clinic price rebound, simulator win predicate, guide delivery step and reserve reason.');

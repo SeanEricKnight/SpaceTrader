@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 16, 2026 (version 0.24.8).
+Last updated: November 16, 2026 (version 0.24.9).
 
 ## Built
 
@@ -45,7 +45,6 @@ Built: battle pop-outs, help button, newspaper chip, route banner and cross-Reac
 Sean: too much scrolling on Navigation. Audit in [reviews/2026-11-16-ui-length-audit.md](reviews/2026-11-16-ui-length-audit.md). Built in 0.24.0 (items 1 to 4): duplicate panels removed, one-row jobs (best highlighted), compact destination panel, vessel card replaced by a hull tile with ship thumbnail. Measured: desktop 3,354 px to 1,911 px (2.12 screens), Travel inside the first screen; phone 3,169 px (3.75 screens), Travel still at 1,373 px. `check-layout.cjs` guards this. Items 5 (crisis flame and job-count markers on map planets) and 6 (phone Travel in the bottom pill) built in 0.24.1; phone Travel is now reachable without scrolling. Watch item: flames may be too common to stand out; see DECISIONS.md. Known: `check-review.cjs` Beetle vs Gnat profit assertion fails at the committed baseline too (353,367 vs 1.3 x 298,346); unrelated to this change, needs a balance decision.
 
 ## Deferred (not built yet)
-- Code review follow-ups (2026-11-16, ChatGPT review, confirmed in source, not yet fixed): (1) displayed quotes can differ from execution: the cargo sale quote ignores existing market saturation (showed 511 cr, paid 555) and the route banner for a Quiet ride says 1 day while it takes 2; share one side-effect-free calculation between preview and action. (2) Quiet ride recovers market saturation once for two elapsed days (and checks new crises once): decide whether recovery is per day or per jump, then make code and GAMEPLAY.md agree. (3) Import is not transactional and does not validate every field (moons, difficulty, home, guide.step): a hand-edited save can pass the loader and crash rendering; validate the full schema and keep the current commander if import fails. (4) Guide step "Buy a Cheap good" ignores Cheap Water by design (the tutorial already uses Water); confirm with playtesting whether new players expect it to count.
 - Seasonal calendar (idea, not built): a year of named seasons (for example 24 days each) that give a gentle, readable rhythm: a seasonal price tilt on a few goods, a port festival day with a small bonus, and a Year N, Season label next to the day. Why: long-term engagement research (Stardew-style seasonal pacing, natural session chunks, anticipation). Risks: it shifts price balance, so the trade simulation, the review checks and the Hard and Impossible tuning would need re-running first. Keep it optional or very mild.
 - Rival tuning: retire-day table (`RIVAL_DAYS`) is a first guess. Needs real playtest pace per difficulty. Online/shared leaderboard needs a server, so it is not built.
 - Sound: redo the sound effects (the first synthesized set was rejected). Code is in place behind `SOUND_ENABLED=false`; needs better sounds or real audio files, then a Sound toggle in dock services.
