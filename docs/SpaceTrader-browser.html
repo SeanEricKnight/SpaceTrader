@@ -608,13 +608,49 @@ const INCIDENTS=[
   {d:()=>'Nothing gained. Honest crew members like you a little less.',label:()=>'Fly on',run(){crewList().forEach(m=>{if(crewDef(m.id).trait==='honest')adjustLoyalty(m,-4)});say('You flew on. The channel went quiet behind you.')}}]},
  {title:'A patrol flags you down',who:'Officer Dray',text:'A Compact patrol cutter matches your speed and an officer hails you for a routine check.',choices:[
   {d:()=>'Free. Cooperating usually goes well, and patrols know who needs a courier.',label:()=>'Answer politely',say:'Happy to help, officer.',go:'patrol_talk'},
-  {d:()=>'Nothing happens.',label:()=>'Say you are in a hurry',run(){say('She waved you on with a look that said she would remember you.')}}]}
+  {d:()=>'Nothing happens.',label:()=>'Say you are in a hurry',run(){say('She waved you on with a look that said she would remember you.')}}]},
+ {title:'A stowaway',who:'Your scanner',text:'A heat signature moves in your cargo bay. Someone climbed aboard at the last port.',choices:[
+  {d:()=>'Free. Hear them out before you decide.',label:()=>'Open the hatch and talk',say:'Come out slowly. Who are you?',go:'stowaway_talk'},
+  {d:()=>'Safe. +40 cr reward from port security. Honest crew approve.',label:()=>'Hand them to port security',run(){game.credits+=40;crewList().slice().forEach(m=>{if(crewDef(m.id).trait==='honest')adjustLoyalty(m,2)});say('Port security took the stowaway and paid a 40 cr reward.')}},
+  {d:()=>'No pay. You leave the hatch shut and fly on.',label:()=>'Pretend you saw nothing',run(){say('You left the hatch shut. Nobody mentioned it.')}}]},
+ {title:'A fuel line leaks',who:'Your scanner',when:()=>game.fuel>=3,text:'Alarms flash. A coupling on the fuel line is venting into the dark.',choices:[
+  {d:()=>'Safe. −2 fuel while you seal it. No damage.',label:()=>'Seal it from the cockpit · 2 fuel',ok:()=>game.fuel>=3,why:()=>needFuel(3)+' (keep 1 to fly).',run(){game.fuel-=2;say('You sealed the line from the cockpit and lost 2 fuel.')}},
+  {d:()=>'Saves fuel. −1 fuel and about −4 hull.',label:()=>'Patch it by hand · 1 fuel',ok:()=>game.fuel>=2,why:()=>needFuel(2),run(){game.fuel-=1;game.hull=Math.max(1,game.hull-4);say('You patched it by hand. It cost 1 fuel and 4 hull.')}}]},
+ {title:'A toll buoy',who:'Automated buoy',text:'A lane buoy pings you. A local syndicate charges a toll for this stretch. No patrol is watching it yet.',choices:[
+  {d:()=>'Safe. −40 cr. The lane stays clear.',label:()=>'Pay the toll · 40 cr',ok:()=>game.credits>=40,why:()=>'Needs 40 cr; you have '+money(game.credits)+'.',run(){game.credits-=40;say('You paid the 40 cr toll and the buoy let you through.')}},
+  {d:()=>'A gamble. Free most of the time. Sometimes a syndicate drone clips you (−5 hull).',label:()=>'Run past the buoy'+incidentPct(65),run(){if(rng(100)<65)say('You slipped past the buoy and nobody chased you.');else{game.hull=Math.max(1,game.hull-5);say('A syndicate drone clipped you on the way out. Hull −5.')}}}]},
+ {title:'A prospector with a hold to clear',who:'Prospector',get text(){const g=prospGood();return 'A prospector hails you. “Hold full of '+catalog.goods[g].name.toLowerCase()+', and I need to be rid of it. Three units at half the price at '+world().name+'.”'},choices:[
+  {d:()=>'Cheap stock. −'+money(prospCost())+' for 3 units. You can sell them for more elsewhere.',label:()=>'Buy 3 · '+money(prospCost()),ok:()=>game.credits>=prospCost()&&capacity()-held()>=3,why:()=>game.credits<prospCost()?'Needs '+money(prospCost())+'; you have '+money(game.credits)+'.':'Needs 3 free cargo bays.',run(){const g=prospGood(),c=prospCost();game.credits-=c;game.cargo[g]+=3;game.paid[g]+=c;say('You bought 3 '+catalog.goods[g].name+' from the prospector for '+money(c)+'.')}},
+  {d:()=>'Free. Nothing changes.',label:()=>'Wish them luck',run(){say('You wished the prospector luck and flew on.')}}]},
+ {title:'A lost pilot',who:'Pilot Kesh',text:'A pilot with a dead nav computer asks you for a course on an open channel.',choices:[
+  {d:()=>'Free. They send back a posted price board for a nearby port.',label:()=>'Send them a course',run(){shareBoard('Pilot Kesh')}},
+  {d:()=>'Nothing gained, nothing lost.',label:()=>'Fly on',run(){say('You flew on. The channel went quiet.')}}]},
+ {title:'A debris field',who:'Your scanner',text:'A wrecked hauler has scattered a cloud of twisted plating across your lane.',choices:[
+  {d:()=>'A gamble. Free most of the time. Sometimes plating scrapes your hull (−5 hull).',label:()=>'Fly straight through'+incidentPct(75),run(){if(rng(100)<75)say('You threaded the debris without a scratch.');else{game.hull=Math.max(1,game.hull-5);say('Plating scraped your hull. Hull −5.')}}},
+  {d:()=>'Safe. −1 fuel for the detour. No damage.',label:()=>'Go around · 1 fuel',ok:()=>game.fuel>=1,why:()=>needFuel(1),run(){game.fuel-=1;say('You flew around the debris and burned 1 fuel.')}}]},
+ {title:'A crew argument',who:'Your crew',when:()=>crewList().length>0,get text(){const m=crewList()[0];return (m?crewDef(m.id).name:'Your crew')+' and the others are arguing over the last ration packs. They turn to you.'},choices:[
+  {d:()=>'−30 cr. Everyone gets a bonus and your crew gain 3 loyalty.',label:()=>'Give everyone a bonus · 30 cr',ok:()=>game.credits>=30,why:()=>'Needs 30 cr; you have '+money(game.credits)+'.',run(){game.credits-=30;crewList().slice().forEach(m=>adjustLoyalty(m,3));say('You paid a 30 cr bonus. The argument ended and your crew liked that.')}},
+  {d:()=>'Free. Honest crew gain 2 loyalty. Rogue crew lose 2.',label:()=>'Settle it by the book',run(){crewList().slice().forEach(m=>{const t=crewDef(m.id).trait;if(t==='honest')adjustLoyalty(m,2);else if(t==='rogue')adjustLoyalty(m,-2)});say('You settled it by the book. The honest crew approved.')}},
+  {d:()=>'Free. Nothing changes.',label:()=>'Stay out of it',run(){say('You left the crew to sort it out.')}}]},
+ {title:'A pirate radio broadcast',who:'Unknown DJ',text:'An unlicensed broadcast cuts across your channel. A bored voice is reading out news from every port.',choices:[
+  {d:()=>'Free. Today’s full newspaper goes to your Newspaper tab.',label:()=>'Tune in',run(){makeEdition();say('You tuned in. Today’s full edition is in the Newspaper tab.')}},
+  {d:()=>'Nothing gained, nothing lost.',label:()=>'Switch it off',run(){say('You switched the broadcast off.')}}]},
+ {title:'A customs drone',who:'Customs drone',when:()=>(game.heat||0)>=1,text:'A Compact customs drone locks on. Patrols have noticed you lately.',choices:[
+  {d:()=>'Safe. −20 cr. Patrol heat −2.',label:()=>'Submit to the scan · 20 cr',ok:()=>game.credits>=20,why:()=>'Needs 20 cr; you have '+money(game.credits)+'.',run(){game.credits-=20;game.heat=Math.max(0,(game.heat||0)-2);say('You paid the 20 cr scan fee. Patrols will watch you less.')}},
+  {d:()=>'Free. Patrol heat +1.',label:()=>'Jam the drone',run(){game.heat=(game.heat||0)+1;say('You jammed the drone. Patrols will remember that.')}}]},
+ {title:'A glowing nebula',who:'Your crew',when:()=>crewList().length>0&&game.fuel>=2,text:'A nebula lights up the whole viewport. Your crew crowd at the glass.',choices:[
+  {d:()=>'−1 fuel. Your crew gain 3 loyalty.',label:()=>'Cut the engines and look · 1 fuel',ok:()=>game.fuel>=2,why:()=>needFuel(2),run(){game.fuel-=1;crewList().slice().forEach(m=>adjustLoyalty(m,3));say('You cut the engines and watched. Your crew liked that.')}},
+  {d:()=>'Free. Nothing changes.',label:()=>'Keep flying',run(){say('You kept flying.')}}]}
 ];
 
 const incByTitle=t=>INCIDENTS.find(x=>x.title===t);
 const needFuel=n=>'Needs '+n+' fuel; you have '+game.fuel+'.';
 const heldJob=o=>o.q&&game.contracts.some(j=>j.title===o.q.title&&j.client===o.q.client);
-function pickIncident(){let id=rng(INCIDENTS.length);if(INCIDENTS.length>1&&id===game.lastInc)id=(id+1+rng(INCIDENTS.length-1))%INCIDENTS.length;game.lastInc=id;return id}
+function incEligible(i){const w=INCIDENTS[i].when;try{return !w||!!w()}catch{return true}}
+function pickIncident(){let bag=Array.isArray(game.incBag)?game.incBag.filter(i=>Number.isInteger(i)&&i>=0&&i<INCIDENTS.length):[],pos=bag.findIndex(incEligible);if(pos<0){bag=INCIDENTS.map((x,i)=>i);for(let k=bag.length-1;k>0;k--){const j=rng(k+1);[bag[k],bag[j]]=[bag[j],bag[k]]}if(bag.length>1&&bag[0]===game.lastInc)bag.push(bag.shift());pos=bag.findIndex(incEligible);if(pos<0)pos=0}const id=bag.splice(pos,1)[0];game.incBag=bag;game.lastInc=id;return id}
+function prospGood(){let g=(game.day*7+game.location)%catalog.goods.length;for(let k=0;k<catalog.goods.length&&prohibited(g);k++)g=(g+1)%catalog.goods.length;return g}
+const prospCost=()=>Math.max(1,Math.round(world().prices[prospGood()]*3*.5));
+function shareBoard(name){const ids=game.worlds.map((w,i)=>i).filter(i=>i!==game.location&&distance(i)<=14),id=ids[rng(ids.length)],w=game.worlds[id];game.memory[id]={day:game.day,prices:[...w.prices],tech:w.tech,strict:w.strict};say(name+' sent the price board for '+w.name+'. It is in your Market compare list.')}
 function questDest(o,skip){const ids=game.worlds.map((w,i)=>i).filter(i=>i!==game.location&&i!==skip&&distance(i)<=14),un=ids.filter(i=>!game.visited.includes(i)),reach=ids.filter(i=>distance(i)<=game.fuel),base=reach.length?reach:ids,un2=base.filter(i=>un.includes(i)),pool=un2.length&&rng(2)?un2:base;return pool[rng(pool.length)]}
 function questFor(o,spec){if(o.q&&o.q.title===spec.title)return o.q;const st=spec.stories?spec.stories[rng(spec.stories.length)]:null,to=questDest(o),d=distance(to),base=spec.kind==='freight'?200+d*30+(spec.cargo||0)*40:spec.kind==='survey'?150+d*22:120+d*25;o.q={id:'talk-'+game.day+'-'+rng(1000000),kind:spec.kind,title:st?st.title:spec.title,to,reward:Math.round(base*(spec.mult||1)),due:game.day+(spec.days||5),cargo:st&&st.cargo!=null?st.cargo:(spec.cargo||0),client:st?st.client:(spec.client||''),note:'Side job from a chance meeting'+(spec.days?' · rush':'')};if(st)o.s=st;return o.q}
 function questLine(o){const q=o.q;return q?'<b>'+esc(q.title)+'</b> to '+esc(game.worlds[q.to].name)+', '+distance(q.to)+' pc away, by day '+q.due+' for <b>'+money(q.reward)+'</b>'+(q.cargo?' ('+q.cargo+' bays)':''):''}
@@ -658,7 +694,10 @@ const CONVOS={
   {d:()=>'Free. She may share something useful.',label:()=>'Ask about the lanes ahead',say:'Anything I should know about the lanes?',go:'patrol_tip'},
   {d:()=>'Nothing happens.',label:()=>'Decline politely',run(){say('Officer Dray nodded and let you go.')}}]},
  patrol_tip:{who:'Officer Dray',text:()=>'“I cannot share patrol routes. I can send you a posted price board from a nearby port, though.”',choices:[
-  {d:()=>'Free. A fresh price board for a nearby port goes into your Market compare list.',label:()=>'Yes, send it',run(){const ids=game.worlds.map((w,i)=>i).filter(i=>i!==game.location&&distance(i)<=14),id=ids[rng(ids.length)],w=game.worlds[id];game.memory[id]={day:game.day,prices:[...w.prices],tech:w.tech,strict:w.strict};say('Officer Dray sent the price board for '+w.name+'. It is in your Market compare list.')}}]}
+  {d:()=>'Free. A fresh price board for a nearby port goes into your Market compare list.',label:()=>'Yes, send it',run(){const ids=game.worlds.map((w,i)=>i).filter(i=>i!==game.location&&distance(i)<=14),id=ids[rng(ids.length)],w=game.worlds[id];game.memory[id]={day:game.day,prices:[...w.prices],tech:w.tech,strict:w.strict};say('Officer Dray sent the price board for '+w.name+'. It is in your Market compare list.')}}]},
+ stowaway_talk:{who:'Mina',text:()=>'“Coil tech. My contract ended and I could not pay the fare. Let me work it off. I can patch your hull on the way.”',choices:[
+  {d:()=>'Repairs up to 6 hull. Your crew approves.',label:()=>'Let her work for passage',run(){const h=Math.max(0,Math.min(6,ship().hull-game.hull));game.hull+=h;crewList().slice().forEach(m=>adjustLoyalty(m,2));say('Mina patched '+h+' hull on the way. Your crew liked that.')}},
+  {d:()=>'Safe. +40 cr reward from port security. Honest crew approve.',label:()=>'Hand her to port security',run(o){incByTitle('A stowaway').choices[1].run(o)}}]}
 };
 const curNode=o=>o.node?CONVOS[o.node]:INCIDENTS[o.id];
 const nodeText=(nd,o)=>typeof nd.text==='function'?nd.text(o):nd.text;

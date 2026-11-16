@@ -51,3 +51,7 @@ Open / next, in rough priority:
 0.16.3 answers the first outside-player feedback (`reviews/2026-11-15-player-feedback.md`): battle pop-outs, always-on help button, newspaper chip, working Show route / Plan route (cross-Reach), arrival toast and Trip report, cargo-reserve wording, Best runs wording, market coach line, downloadable Activity log, side-by-side chart from 900 px.
 
 Open: ask the player what the cut-off "After where it says goal…" note said; decide whether remote jobs may be accepted from afar (today only at the posting port); chart positions still do not reflect real distance (consider a to-scale mode); travel animation / jump flash; real iPhone test. Sean should Pull origin and reload, then try: Best runs "Plan route to…", a pirate fight, the ? button, Log download.
+
+## State as of 2026-11-16 (0.23.6)
+
+0.23.5: shorter event cards (payoff first, cost in the button), no back-to-back repeat events, greyed-out choices say why, duplicate side jobs blocked. 0.23.6: ten new travel events (15 total) drawn from a shuffled bag (`pickIncident`, saved as `incBag`), new `check-incidents.cjs`. New events are appended to `INCIDENTS` so old saved offer ids stay valid; add more the same way. Ideas not built: landing-port news events, recurring characters (Tavi returns), events that react to your cargo or reputation, delayed consequences on a later trip, a rare tier. Sean should Pull origin and reload, then play a few Excitement trips and say which events feel good or bad.

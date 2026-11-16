@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.23.6
+- **Ten new travel events** (15 in all): a stowaway (with a talk-first step), a fuel line leak, a toll buoy, a prospector selling 3 units at half price, a lost pilot who sends you a price board, a debris field, a crew argument, a pirate radio broadcast that gives you the full newspaper, a customs drone, and a nebula. Each choice states its cost, payoff and any odds up front.
+- **Events come from a shuffled bag.** All eligible events show once before any repeats, and never twice in a row. Events that do not fit are skipped and kept for later (crew events need crew, the customs drone needs patrol heat, the fuel leak needs fuel). The bag is saved as `incBag`; old saves start with a fresh one.
+- New check `check-incidents.cjs` runs every choice of every event, the greyed-out reasons, the bag and the duplicate side-job guard. Basis: shared-mind research log, 2026-11-16.
+
 ## 0.23.5
 - **Event cards are shorter.** The distress call now leads with the payoff and states the cost in the button ("Help them · 2 fuel", "Pays about 250 cr to 500 cr. Your crew approves."). The story and the exact payout still come after you choose. Basis: shared-mind research log, 2026-11-16.
 - **A random event can no longer repeat back to back.** The same incident (for example the distress call twice in a row) is skipped; the last one is remembered in the save as `lastInc`.

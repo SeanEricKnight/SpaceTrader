@@ -103,7 +103,7 @@ Chosen on the destination card before you jump:
 
 - **Quiet ride:** +1 day, half the pirate risk, nothing unusual happens. Loan interest and ship rental are charged for both days.
 - **Steady:** normal pirate risk.
-- **Excitement:** normal pirate risk plus about a 55% chance of an incident on the way (a derelict, a distress call, or a trader convoy). You choose how to respond.
+- **Excitement:** normal pirate risk plus about a 55% chance of an incident on the way. There are 15 kinds: a derelict, a distress call, a trader convoy, a crippled trader, a patrol check, a stowaway, a fuel leak, a toll buoy, a prospector selling cheap cargo, a lost pilot, a debris field, a crew argument, a pirate radio broadcast, a customs drone and a nebula. Events come from a shuffled bag: each one shows once before any repeats, and none comes twice in a row. Some only appear when they fit (crew events need crew, the customs drone needs patrol heat, the fuel leak needs fuel). Every choice says its cost and payoff; the story and exact payout come after you choose. You choose how to respond.
 
 ## Events and the News
 
