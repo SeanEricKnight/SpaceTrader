@@ -5,10 +5,10 @@ const nodes={},document={createElement:()=>({getContext:()=>({createImageData:(w
 const c=vm.createContext({Math,Number,String,Array,JSON,document,confirm:()=>true,localStorage:{getItem:()=>null,setItem(){}}});
 vm.runInContext(src,c);vm.runInContext(`render=()=>{};
 function auditWorld(){game=fresh();const techs=Array(8).fill(0);game.worlds.forEach(w=>techs[w.tech]++);return {techs,tech3plus:game.worlds.filter(w=>w.tech>=3).length,strict:game.worlds.filter(w=>w.strict).length,goods:catalog.goods.map((g,i)=>({name:g.name,buyable:game.worlds.some(w=>w.tech>=g.production&&!(w.strict&&(i===5||i===8)))})),ships:catalog.ships.map(s=>({name:s.name,buyable:game.worlds.some(w=>w.tech>=s.tech)}))}}
-function fightMatrix(){const rows=[];for(const difficulty of Object.keys(levels))for(const loadout of ['starter','laser3','shield']){let wins=0,repair=0,rewards=0,rounds=0;game=fresh(difficulty);if(loadout==='laser3')game.laser=3;if(loadout==='shield'){game.ship=2;game.modules=['shield']}for(let i=0;i<3000;i++){game.seed=Math.imul(i+1,2654435761)>>>0;game.credits=1000;game.hull=100;
+function fightMatrix(){const rows=[];for(const difficulty of Object.keys(levels))for(const loadout of ['starter','laser3','shield']){let wins=0,repair=0,rewards=0,rounds=0;game=fresh(difficulty);if(loadout==='laser3')game.laser=3;if(loadout==='shield'){game.ship=2;game.modules=['shield']}for(let i=0;i<3000;i++){game.seed=Math.imul(i+1,2654435761)>>>0;game.credits=1000;game.hull=100;const beaten=game.metrics.pirates;
  game.encounter=typeof makeEncounter==='function'?makeEncounter():{hull:level().enemy+rng(level().enemyRange)};
  for(let t=0;t<50&&game.encounter&&game.hull>0;t++){resolve('fight');rounds++}
- if(game.hull){wins++;repair+=(100-game.hull)*level().repair;rewards+=game.credits-1000}}
+ if(game.metrics.pirates>beaten){wins++;repair+=(100-game.hull)*level().repair;rewards+=game.credits-1000}}
  rows.push({difficulty,loadout,winPct:+(wins/30).toFixed(1),repairPerWin:Math.round(repair/Math.max(1,wins)),rewardPerWin:Math.round(rewards/Math.max(1,wins)),rounds:+(rounds/3000).toFixed(1)})}return rows}
 function tradeBot({shipId=1,credits=1000,days=120,contracts=false,seed=57}={}){game=fresh();game.seed=seed;game.ship=shipId;game.hull=ship().hull;game.fuel=ship().range;game.credits=credits;game.peace=true;const routes={},goods={},daily=[];let peak=0,jobPay=0;
  for(let turn=0;turn<days;turn++){

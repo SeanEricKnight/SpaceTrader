@@ -173,9 +173,9 @@
     {
       "difficulty": "Hard",
       "loadout": "starter",
-      "winPct": 100,
-      "repairPerWin": 185,
-      "rewardPerWin": 125,
+      "winPct": 98.5,
+      "repairPerWin": 184,
+      "rewardPerWin": 128,
       "rounds": 4.6
     },
     {
@@ -197,25 +197,25 @@
     {
       "difficulty": "Impossible",
       "loadout": "starter",
-      "winPct": 100,
-      "repairPerWin": 308,
-      "rewardPerWin": 40,
+      "winPct": 52.7,
+      "repairPerWin": 316,
+      "rewardPerWin": 166,
       "rounds": 4.9
     },
     {
       "difficulty": "Impossible",
       "loadout": "laser3",
-      "winPct": 100,
-      "repairPerWin": 226,
-      "rewardPerWin": 185,
+      "winPct": 99.3,
+      "repairPerWin": 225,
+      "rewardPerWin": 187,
       "rounds": 3.6
     },
     {
       "difficulty": "Impossible",
       "loadout": "shield",
-      "winPct": 100,
-      "repairPerWin": 284,
-      "rewardPerWin": 147,
+      "winPct": 87.6,
+      "repairPerWin": 281,
+      "rewardPerWin": 182,
       "rounds": 5.4
     }
   ],
@@ -795,5 +795,5 @@
       "seedRun": true
     }
   ],
-  "buildSha256": "2945cb156449b18887cbe47a4784072dc79e34e356d01f54f0d6cd6ad2a17d67"
+  "buildSha256": "1a48ce0f8ab576fc46de6037e88dbfd11076019bfe7909bb11d419c2f913d22b"
 }

@@ -1,6 +1,21 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.8`.
+
+## 0.24.8
+Reliability release from an independent code review (ChatGPT, 24 targeted probes, 2026-11-16; every finding below was re-checked against the source before fixing).
+- **Saves now load every state the game can produce.** Bulk freight jobs (up to 45 bays; the crisis bonus can pay over 5,000 cr), zero-bay rush documents, upgraded fuel tanks (18/18 on a Gnat) and reinforced plating (120/120) were rejected by the loader, so a save made with them fell back to the previous backup and lost progress. Validation now uses one shared effective-ship-stats function, the same one the game uses while playing.
+- **Old over-limit saves repair themselves.** Fuel or hull above the ship's real limit (left by the removal bug below) is trimmed on load instead of rejected. Impossible values are still rejected.
+- **Removing equipment** now removes the module first, then trims fuel and hull. It used to leave 18/14 fuel or 120/100 hull.
+- **Side jobs** keep the job history at 300 entries like every other accept path (301 made the save unloadable).
+- **Clinic relief** (Mara's medicine delivery) now clears the crisis through the shared routine, so later market recovery cannot bounce the medicine price back up.
+- **Guide:** "Finish a job" now needs a real delivery; abandoning a job no longer completes it.
+- **Disabled Buy button** that is blocked by "Keep money back for fuel and loan interest" now says so, with the amounts, instead of blaming technology level.
+- **Combat simulator** counted every fight as a win because the player's hull stayed positive. It now counts defeated pirates, so the combat percentages in `review-after.json` mean something. Do not trust older win rates.
+- **Docs:** GAMEPLAY.md version, log length (150), auto-refuel default (off), fuel pricing and Quiet-ride recovery now match the game; README says 10 goods and that three of six crew are open to hire.
+- New `browser-preview/check-saves.cjs` (wired into `npm test`): round-trips every ship's generated jobs, equipment, history and old broken saves, and fails if any fix is reverted (checked by reverting each one).
+- Not changed (logged in BACKLOG): displayed sale and trip quotes can differ from execution, Quiet ride market recovery runs once for two days, malformed hand-edited imports can still pass validation and crash rendering.
+- Research: shared-mind game-design-references.md, 2026-11-16 (save integrity and quote accuracy).
 
 ## 0.24.7
 - **Every dimmed button now answers a tap.** Market Buy/Sell, Travel, Refuel, Repair, lasers, warp charge, ships and finance, crew and escort hire, the newspaper and subscription, warehouse, bank, moon, outfits, jobs and more: tap or click a dimmed button and a small amber card says why ("Needs 30 cr; you have 0 cr.") and what to do next. Nothing is spent or changed. It closes on the next tap, or after 7 seconds.

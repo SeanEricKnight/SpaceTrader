@@ -1,6 +1,6 @@
 # Space Trader: how it plays
 
-The rules as they work in the current version (**0.12.2**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
+The rules as they work in the current version (**0.24.8**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
 
 ## Goal and ending
 
@@ -51,7 +51,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 - Money is written with the credit sign ₡ (for example 1,000 cr), not "cr".
 - A round **?** button on every screen opens How to play. The newspaper chip appears in the header only when a subscription is about to end (see Help and newspaper chip).
 - Battles, marauder offers and custody open as a centered pop-out over a dimmed screen.
-- Each arrival shows a **Trip report** (fuel, days, deliveries and pay, other costs). The Log lists the last 400 events and can be downloaded as a text file.
+- Each arrival shows a **Trip report** (fuel, days, deliveries and pay, other costs). The Log lists the last 150 events and can be downloaded as a text file.
 - Bays reserved for jobs count as used. The cargo stat and hold meter show how many are reserved; they free on delivery. Each job is listed in the Cargo hold card with a **Drop job** button: its bays free at once and you only lose that job's pay. Job cards and Accept buttons say how many bays the job holds. You can sell a good at any port that buys it, including where you bought it.
 - Every jump takes 1 day (2 on the quiet route) and uses fuel equal to its distance in pc. Orbit rings on the chart are scenery.
 - **Show route** and **Plan route to <port>** (Best runs) draw the route, switch to the right Reach, and show a route banner listing every stop. Jobs are still accepted only at the port that posts them.
@@ -93,8 +93,8 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 
 ## Fuel, range, and warp
 
-- **Fill the tank automatically when I dock** (checkbox on the Market tab, on by default) tops up the tank on arrival so you do not press Refuel each stop. It costs the same fuel money; turn it off to buy fuel yourself.
-- Each ship has a **jump range** in parsecs (pc), also its tank size. Long trips need stops. Fuel costs the same at every port (rate depends on ship and difficulty).
+- **Fill the tank automatically when I dock** (checkbox on the Market tab, off by default) tops up the tank on arrival so you do not press Refuel each stop. It costs the same fuel money; turn it off to buy fuel yourself.
+- Each ship has a **jump range** in parsecs (pc), also its tank size. Long trips need stops. Fuel price depends on your ship and difficulty, with discounts at your home port and from Reach standing.
 - **Go there for me** plans the route through stops, buys the fuel needed, and flies it (Beginner to Normal only). It states the fuel and cost before you press it.
 - **Warp charge** (bought at a port; there is a carry limit shown on the button): one charge jumps up to 40 pc with no fuel and no pirate check, or escapes any pirate fight.
 - Help scales with difficulty: Beginner explains the most (what you can reach and what it costs), Hard and Impossible give none.
@@ -166,6 +166,7 @@ Beginner, Easy, Normal, Hard, Impossible. Easier levels give more hints; Hard an
 
 ## Saving
 
+- Saves (0.24.8): every state the game itself produces loads again, including bulk freight, zero-bay rush documents, upgraded fuel tanks and hull plating. A save with fuel or hull above the ship's real limits (an old removal bug) is trimmed to the limit on load. Removing equipment now removes it first, then trims fuel and hull to the new limits. Clinic relief now removes the fever premium from the stored price baseline too, so prices do not bounce back up afterwards.
 - The game autosaves in your browser. Clearing browser data or switching browser or device loses that save.
 - **Save slots:** three named-by-number checkpoints in the browser (Commander screen), each showing day, credits and ship.
 - **Copy save code / Paste save code:** moves your game to another device as plain text, no file needed.
@@ -226,4 +227,4 @@ Tapping Start flying on the welcome card runs Show me for you. On a phone the ta
 Start a new game and pick a Vow beside Difficulty. Peaceful: lasers cannot be upgraded. Debt-free: the bank lends nothing. Lean hold: your hold is capped at 15 bays even on a bigger ship or with cargo pods. The vow is kept if you buy your first moon with it intact. The rules never relax during the run.
 
 ## Market saturation (0.23.1)
-Selling lowers that port's price by about 1.2% per unit (floor -30%), recovering about 12% of the gap each travel day. Crises still apply on top. Buying is limited by port stock instead of price. Reason: before this, selling 15 units paid the same per unit as selling 1, so one good route could be looped forever. Idea from Sid Meier's Colonization, where selling floods the market and prices slowly recover.
+Selling lowers that port's price by about 1.2% per unit (floor -30%), recovering about 12% of the gap each jump (a Quiet ride takes two days but recovers once; see BACKLOG). Crises still apply on top. Buying is limited by port stock instead of price. Reason: before this, selling 15 units paid the same per unit as selling 1, so one good route could be looped forever. Idea from Sid Meier's Colonization, where selling floods the market and prices slowly recover.
