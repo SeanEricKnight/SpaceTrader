@@ -61,5 +61,4 @@ fresh(1);r('game.style="steady";game.peace=true;game.location=0;game.fuel=ship()
 // R6: whole-schema validation, and a save that cannot be displayed leaves the current game in place.
 for(const [what,mut] of [['difficulty','s.difficulty="Bogus"'],['home','s.home=999'],['guide step','s.guide={step:99,off:false}'],['moons','s.moons={}']]){fresh(1);assert.throws(()=>r('{const s=JSON.parse(JSON.stringify(game));'+mut+';decodeSave(JSON.stringify(s))}'),/./,'bad '+what+' rejected on import')}
 fresh(1);r('window_day=game.day;window_g=JSON.parse(JSON.stringify(game));window_g.home=999');assert.equal(r('applySave(window_g,"x")'),false,'undisplayable save refused');assert.equal(r('game.day'),r('window_day'),'current game kept');
-assert.match(r('GUIDE[1].t'),/not Water/,'guide says Water does not count here');
 console.log('PASS: quote equals payout, Quiet ride days and recovery, import validation and safe apply, save round trips (every ship and job kind, equipment, history), equipment removal, old-save repair, clinic price rebound, simulator win predicate, guide delivery step and reserve reason.');

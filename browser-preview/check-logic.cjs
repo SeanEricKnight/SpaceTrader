@@ -48,7 +48,7 @@ t=context();assert.equal(r('game.godmode'),true);assert.equal(r('game.cheatsUsed
 r('game=fresh();save();render()');
 storage.clear();t=context();assert.equal(r('game.cargo[0]'),5);assert.equal(r('game.tutorial.state'),'active');assert.match(t.nodes.screen.innerHTML,/First haul/);
 r('action("jump",1)');const before=r('game.credits');r('action("sellall",0)');assert.equal(r('game.tutorial.state'),'done');assert.equal(r('game.credits')-before>=1500,true);assert.doesNotMatch(r('tutorialCard()'),/First haul/);
-storage.clear();t=context();r('game.difficulty="Hard"');assert.equal(r('tutorialBonus()'),1000);r('game.cargo[0]=0;game.location=0');r('tutorialCard()');assert.equal(r('game.tutorial.state'),'skipped');
+storage.clear();t=context();r('game.difficulty="Hard"');assert.equal(r('tutorialBonus()'),1000);r('action("sellall",0)');assert.equal(r('game.tutorial.state'),'skipped');t=context();assert.equal(r('game.tutorial.state'),'skipped','missed haul survives a reload');
 storage.clear();t=context();r('game.tutorial=null');
 for(const [d,n] of Object.entries({Beginner:3,Easy:4,Normal:5,Hard:6,Impossible:9})){r('game.difficulty="'+d+'"');assert.equal(r('sqOffered().length'),n);assert.deepEqual([0,1,2].map(k=>r('sqOffered().filter(q=>q.tier==='+k+').length')>0),[true,true,true]);}
 r('game.difficulty="Easy"');r('action("sq-accept",0)');assert.equal(r('Object.keys(game.sq.active).join()'),'tour');r('game.visited=[0,1,2,3,4];sqCheck()');assert.equal(r('game.sq.done.join()'),'tour');assert.equal(r('game.credits'),1600);

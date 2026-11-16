@@ -1,10 +1,10 @@
 # Space Trader: how it plays
 
-The rules as they work in the current version (**0.24.9**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
+The rules as they work in the current version (**0.24.10**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
 
 ## Goal and ending
 
-- Save **500,000 cr** and clear your debt, then **Buy a moon** (Commander screen or the goal bar). Your score posts once and you keep playing. Buy more moons (each costs 250,000 cr more than the last) for rent, or sell one back for 75%.
+- Save **500,000 cr** and clear your debt, then **Buy a moon** (Commander screen or the goal bar). An eligible score posts once and you keep playing. Assisted runs are unranked. Buy more moons (each costs 250,000 cr more than the last) for rent, or sell one back for 75%.
 - There is no game over. If your ship is destroyed or you are jailed or kidnapped, there is a way back, usually at a cost.
 
 ## Leaderboard and rival race
@@ -22,7 +22,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 ## Feel: sound, number pops, arrival banner
 
 - **Sound** is switched off for now (the first synthesized sounds were not good enough). It is on the to-do list.
-- **Credits** count up or down and the Credits tile glows green or red with a floating "+340 cr" or "−28 cr" for every change. Players who prefer reduced motion get no animation.
+- **Credits** show your available balance immediately. The Credits tile glows green or red with a floating "+340 cr" or "−28 cr" for every change. Players who prefer reduced motion get no animation.
 - **Arrival banner:** when you dock, the Market and System tabs open with a card showing the planet, its kind, tech level and resources, a one-line story hook, and in orange what its colonists need if there is a crisis. Press ✕ to dismiss it; it returns at the next port.
 
 ## Look of the game
@@ -51,8 +51,8 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 - Money is written with the credit sign ₡ (for example 1,000 cr), not "cr".
 - A round **?** button on every screen opens How to play. The newspaper chip appears in the header only when a subscription is about to end (see Help and newspaper chip).
 - Battles, marauder offers and custody open as a centered pop-out over a dimmed screen.
-- Each arrival shows a **Trip report** (fuel, days, deliveries and pay, other costs). The Log lists the last 150 events and can be downloaded as a text file.
-- Bays reserved for jobs count as used. The cargo stat and hold meter show how many are reserved; they free on delivery. Each job is listed in the Cargo hold card with a **Drop job** button: its bays free at once and you only lose that job's pay. Job cards and Accept buttons say how many bays the job holds. You can sell a good at any port that buys it, including where you bought it.
+- Each arrival shows a **Trip report** (fuel, days, deliveries and pay, other net costs or income). The Log lists the last 150 events and can be downloaded as a text file.
+- Bays reserved for jobs count as used. The cargo stat and hold meter show how many are reserved; they free on delivery. Each job is listed in the Cargo hold card with a **Drop job** button: its bays free at once and you only lose that job's pay. Job cards and Accept buttons say how many bays the job holds. You can sell a good at any port that buys it, including where you bought it. Locked buttons support Tab, Enter and Space and explain their shortfall without acting.
 - Every jump takes 1 day (2 on the quiet route) and uses fuel equal to its distance in pc. Orbit rings on the chart are scenery.
 - **Show route** and **Plan route to <port>** (Best runs) draw the route, switch to the right Reach, and show a route banner listing every stop. Jobs are still accepted only at the port that posts them.
 
@@ -71,7 +71,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 - **Moons (0.19.0):** buying one opens a small card with Keep trading and Career summary, no confetti and no ending. Each moon pays 0.2% of its price per day of travel as rent. You cannot buy two moons at the same port. The goal bar lists your moons with a Sell back button. Old saves that were already retired show Keep flying.
 - **Beating a pirate** flashes the screen green, shakes it, bursts sparks and shows a "Pirate down" card with the bounty counting up.
 - **Bulk freight and ship goals:** ships with 20+ bays see one bulk run per port (cargo is 75% of your bays, minimum 16, to a port 16 to 45 pc away). Pay = 400 + bays x pc x 4 (x1.4 for a crisis port). Set any ship as your goal in the Store; progress shows under the moon goal.
-- **Fight report:** every fight ends with a card that stays until you tap Continue: outcome, bounty or loss, hull, where you are docked, and each round. Toasts last 5 to 8 seconds, pause on touch, and tap to dismiss. The Activity log records every volley.
+- **Fight report:** every fight ends with a card that stays until you tap Continue: outcome, bounty or loss, hull, where you are docked, and each round. When a fight can disable your ship, the Fire lasers option previews the loss and recovery. Toasts last 5 to 8 seconds, pause on touch, and tap to dismiss. The Activity log records every volley.
 - **Firing lasers** draws a beam to the pirate, flashes it, and pops the damage number; when the pirate shoots back you see its beam, the damage taken and a screen shake. Reduced-motion players skip these animations.
 - Finishing a job, a courier delivery, a side quest or the First haul pops a **DELIVERED card**: a stamp slams down, small credit chips float up and away, and the reward counts up. Tap it to dismiss; it fades on its own. Reduced-motion players get the card without the animation.
 
@@ -82,8 +82,8 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 - A new game begins with **5 Water in your hold**, already bought, bound for Adahn. A welcome popup tells the story.
 - **First haul** is the quick-win mission: fly to Adahn and sell the Water there. The first Water you sell at Adahn pays a **cash bonus** on top of the sale: Beginner 2,000, Easy 1,750, Normal 1,500, Hard 1,000, Impossible 500 cr. It is enough to buy something right away, like a crew member, an escort, or a warp charge.
 - Beginner, Easy and Normal show the steps on the Market and System tabs; Hard and Impossible show a single line.
-- If you sell the Water somewhere else first, the mission quietly closes. Saves from older versions do not get it.
-- The first-haul steps and the welcome popup explain the loop below. The separate How to play button was removed in 0.15.0.
+- If you sell all the Water somewhere else or lose it, a message names the forfeited bonus and the guide continues. The next step accepts a new Water purchase as a speculative trade. Saves from older versions do not get the first-haul mission.
+- The first-haul steps and the welcome popup explain the loop below. On a phone, Start flying leaves the first flight in the bottom dock, and the same dock opens Market at Adahn. The separate How to play button was removed in 0.15.0.
 
 ## Core loop
 

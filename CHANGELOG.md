@@ -1,6 +1,11 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.8`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.10`.
+
+## 0.24.10
+- **First trade:** The phone dock starts the Adahn flight and opens Market on arrival. Missing the haul names the forfeited bonus. Buying Water can teach speculative trade, and the guide quotes the affordable quantity.
+- **Locked controls:** Tab reaches unavailable actions. Enter, Space and pointer activation explain the shortfall without performing the action.
+- **Trust the readout:** Credits show the actual balance while transaction deltas animate. Pirate choices explain defeat, trip income is labeled as income, refueling shows its minimum cost, and assisted moon purchases say the run is unranked.
 
 ## 0.24.9
 Follow-up to the 0.24.8 code review: the items that had been deferred, now decided and built (research: shared-mind game-design-references.md, 2026-11-16, quotes and clocks).

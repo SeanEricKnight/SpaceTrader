@@ -323,7 +323,7 @@
       "ship": "Bumblebee",
       "start": 250000,
       "days": 120,
-      "credits": 635290,
+      "credits": 633790,
       "tradeProfit": 392254,
       "jobPay": 0,
       "topRoute": [
@@ -344,8 +344,8 @@
         "Food": 22166
       },
       "creditsAt30": 363385,
-      "creditsAt60": 402069,
-      "creditsAt120": 635290
+      "creditsAt60": 400569,
+      "creditsAt120": 633790
     },
     {
       "ship": "Beetle",
@@ -678,7 +678,7 @@
       "ship": "Beetle",
       "start": 250000,
       "days": 120,
-      "credits": 692053,
+      "credits": 690553,
       "tradeProfit": 452723,
       "jobPay": 0,
       "topRoute": [
@@ -701,7 +701,7 @@
       },
       "creditsAt30": 358226,
       "creditsAt60": 511240,
-      "creditsAt120": 692053,
+      "creditsAt120": 690553,
       "seedRun": true
     },
     {
@@ -795,5 +795,5 @@
       "seedRun": true
     }
   ],
-  "buildSha256": "615e00faccf4526fb173deaaf408263029d20f735c9bcbf42589e6b73ccdecaa"
+  "buildSha256": "4dec9e8293ec0b85f3c5a888c8928aece274445d87d43c69fdc997e218bf66f8"
 }
