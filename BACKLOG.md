@@ -40,6 +40,10 @@ Last updated: November 15, 2026 (version 0.23.3).
 
 Built: battle pop-outs, help button, newspaper chip, route banner and cross-Reach route drawing, Trip report, cargo-reserve wording, Activity log, 900 px side-by-side layout. See `reviews/2026-11-15-player-feedback.md`. Open: accept remote jobs from afar (owner decision), to-scale chart option, travel animation.
 
+## Navigation tab length (2026-11-16, recommendations only)
+
+Sean: too much scrolling on Navigation (3,801 px desktop, 5,349 px phone at 0.23.6). Audit and ordered fixes in [reviews/2026-11-16-ui-length-audit.md](reviews/2026-11-16-ui-length-audit.md): delete duplicate route and destination panels, one-row jobs, trimmed destination card, vessel card off this tab, height check. Awaiting Sean's go-ahead.
+
 ## Deferred (not built yet)
 - Seasonal calendar (idea, not built): a year of named seasons (for example 24 days each) that give a gentle, readable rhythm: a seasonal price tilt on a few goods, a port festival day with a small bonus, and a Year N, Season label next to the day. Why: long-term engagement research (Stardew-style seasonal pacing, natural session chunks, anticipation). Risks: it shifts price balance, so the trade simulation, the review checks and the Hard and Impossible tuning would need re-running first. Keep it optional or very mild.
 - Rival tuning: retire-day table (`RIVAL_DAYS`) is a first guess. Needs real playtest pace per difficulty. Online/shared leaderboard needs a server, so it is not built.
