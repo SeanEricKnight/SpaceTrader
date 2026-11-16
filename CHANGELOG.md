@@ -1,6 +1,10 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.0`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.1`.
+
+## 0.25.1
+- **Atlas:** the first-visit toast now reads "New port logged: X · Atlas n/24 · Homecoming pays 75 cr · nearest unseen: Y, N pc" (nearest unvisited port within tank range). Homecoming is the existing payout for new ports; nothing new is paid at the dock.
+- **Star chart:** ports you pinned show a gold ★ before their name and are announced as pinned to screen readers; the legend explains it.
 
 ## 0.25.0
 Six player-reported problems, each researched first (sources and findings: shared-mind `memory/game-design-references.md`, 2026-11-16 entries).

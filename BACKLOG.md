@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 16, 2026 (version 0.25.0). 0.24.13 fixed finder chip wrap and footer difficulty cancel. 0.24.12 moved Market trade rows above legend/history/home panel. 0.24.11 added a post-guide Next move line (playtest item 5); retention effect still untested.
+Last updated: November 16, 2026 (version 0.25.1). 0.25.1 built the Atlas first-visit toast and star chart pin markers. 0.24.13 fixed finder chip wrap and footer difficulty cancel. 0.24.12 moved Market trade rows above legend/history/home panel. 0.24.11 added a post-guide Next move line (playtest item 5); retention effect still untested.
 
 ## Built
 
@@ -75,5 +75,5 @@ Sean: too much scrolling on Navigation. Audit in [reviews/2026-11-16-ui-length-a
 
 ## Open (raised 2026-11-16)
 - Mark pinned ports on the star chart and explain Pin in one line (Pin is now a star; its purpose is still thin).
-- Atlas progress: per-port entry, modest first-visit payoff, next-unvisited suggestion on the arrival card (research gathered, not yet built).
+- Atlas progress: built in 0.25.1 as the first-visit toast (Homecoming payoff, nearest unseen port). Arrival-card version not built. Pinned ports are marked on the star chart (0.25.1).
 - Consider a Hull row on the arrival card when hull is low.

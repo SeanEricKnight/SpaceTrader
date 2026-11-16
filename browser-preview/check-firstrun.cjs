@@ -46,3 +46,12 @@ assert.equal(q('game.difficulty'),'Hard','confirming starts the chosen difficult
 q("$('difficulty').value='Easy';diffPick='Easy';render();$('difficulty').value='Normal';diffPick='';render()");
 assert.equal(q("$('difficulty').value"),'Hard','picking the current difficulty clears the pending pick');
 console.log('PASS footer difficulty: cancel keeps the pick, confirm clears it');}
+// 0.25.1: star chart marks pinned ports; first visit toast names Homecoming pay and the nearest unseen port.
+{const c=context(),q=c.run;q("action('intro-go');if(game.tutorial)game.tutorial.state='skipped'");
+q("game.pins={}");assert.ok(!/class="sc-port pinned/.test(q("starChart()")),'no pinned class without pins');
+q("game.pins[3]='Home'");const h=q("starChart()");assert.ok(/class="sc-port pinned[^"]*"[^>]*data-id="3"/.test(h)&&h.includes(', pinned'),'pinned port is marked and announced on the star chart');
+q("game.visited=[0];game.location=1;toasts=[];rememberMarket()");
+const log=q("JSON.stringify(typeof toastLog!=='undefined'?toastLog:(typeof toasts!=='undefined'?toasts:[]))");
+assert.ok(q("game.visited.includes(1)"),'port logged');
+console.log('PASS 0.25.1: pinned ports on star chart; Atlas toast built without error (toast text checked in source)');
+const html=fs.readFileSync('SpaceTrader-browser.html','utf8');assert.ok(html.includes("Homecoming pays '+money(HOMECOMING_PER_PORT)")&&html.includes('nearest unseen:'),'Atlas toast names Homecoming pay and nearest unseen port');}
