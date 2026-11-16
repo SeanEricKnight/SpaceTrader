@@ -26,6 +26,6 @@ function tradeBot({shipId=1,credits=1000,days=120,contracts=false,seed=57}={}){g
  const total=game.metrics.profit,rank=Object.entries(routes).sort((a,b)=>b[1]-a[1]);return {ship:ship().name,start:credits,days:daily.length,credits:game.credits,tradeProfit:total,jobPay,topRoute:rank[0],topRoutePct:total?+(100*(rank[0]?.[1]||0)/total).toFixed(1):0,routeCount:rank.length,goods,creditsAt30:daily[29],creditsAt60:daily[59],creditsAt120:daily[119]};
 }
 `,c);
-const result=vm.runInContext(`({world:auditWorld(),combat:fightMatrix(),trade:[tradeBot(),tradeBot({contracts:true}),...[1,2,4,5].map(shipId=>tradeBot({shipId,credits:250000}))]})`,c);
+const result=vm.runInContext(`({world:auditWorld(),combat:fightMatrix(),trade:[tradeBot(),tradeBot({contracts:true}),...[1,2,4,5].map(shipId=>tradeBot({shipId,credits:250000})),...[1,5].flatMap(shipId=>[11,23,37,71,89,101,127].map(seed=>({...tradeBot({shipId,credits:250000,seed}),seedRun:true})))]})`,c);
 result.buildSha256=require('node:crypto').createHash('sha256').update(fs.readFileSync(input)).digest('hex');
 const json=JSON.stringify(result,null,2);if(process.argv[3]){fs.writeFileSync(process.argv[3],json+'\n');console.log('Saved simulation results to '+process.argv[3]);}else console.log(json);

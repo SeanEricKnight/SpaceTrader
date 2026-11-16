@@ -374,7 +374,426 @@
       "creditsAt30": 389778,
       "creditsAt60": 439035,
       "creditsAt120": 591139
+    },
+    {
+      "ship": "Gnat",
+      "start": 250000,
+      "days": 120,
+      "credits": 641449,
+      "tradeProfit": 393753,
+      "jobPay": 0,
+      "topRoute": [
+        "4→3 / Robots",
+        49100
+      ],
+      "topRoutePct": 12.5,
+      "routeCount": 78,
+      "goods": {
+        "Medicine": 39052,
+        "Ore": 45422,
+        "Furs": 41675,
+        "Narcotics": 85217,
+        "Games": 11263,
+        "Machines": 43336,
+        "Firearms": 24974,
+        "Water": 1847,
+        "Robots": 86616,
+        "Food": 14351
+      },
+      "creditsAt30": 321823,
+      "creditsAt60": 439121,
+      "creditsAt120": 641449,
+      "seedRun": true
+    },
+    {
+      "ship": "Gnat",
+      "start": 250000,
+      "days": 120,
+      "credits": 630096,
+      "tradeProfit": 382424,
+      "jobPay": 0,
+      "topRoute": [
+        "14→15 / Narcotics",
+        68482
+      ],
+      "topRoutePct": 17.9,
+      "routeCount": 78,
+      "goods": {
+        "Medicine": 35374,
+        "Ore": 53800,
+        "Furs": 36785,
+        "Narcotics": 116532,
+        "Machines": 18752,
+        "Firearms": 60876,
+        "Robots": 29767,
+        "Water": 3069,
+        "Food": 15146,
+        "Games": 12323
+      },
+      "creditsAt30": 341495,
+      "creditsAt60": 413754,
+      "creditsAt120": 630096,
+      "seedRun": true
+    },
+    {
+      "ship": "Gnat",
+      "start": 250000,
+      "days": 120,
+      "credits": 706496,
+      "tradeProfit": 459000,
+      "jobPay": 0,
+      "topRoute": [
+        "14→8 / Narcotics",
+        62054
+      ],
+      "topRoutePct": 13.5,
+      "routeCount": 73,
+      "goods": {
+        "Medicine": 76421,
+        "Ore": 62483,
+        "Furs": 43159,
+        "Firearms": 38815,
+        "Narcotics": 124822,
+        "Machines": 39634,
+        "Water": 2500,
+        "Games": 13683,
+        "Food": 7312,
+        "Robots": 50171
+      },
+      "creditsAt30": 364604,
+      "creditsAt60": 468519,
+      "creditsAt120": 706496,
+      "seedRun": true
+    },
+    {
+      "ship": "Gnat",
+      "start": 250000,
+      "days": 120,
+      "credits": 692121,
+      "tradeProfit": 444505,
+      "jobPay": 0,
+      "topRoute": [
+        "3→2 / Narcotics",
+        103076
+      ],
+      "topRoutePct": 23.2,
+      "routeCount": 85,
+      "goods": {
+        "Medicine": 42112,
+        "Ore": 55734,
+        "Furs": 37697,
+        "Narcotics": 144425,
+        "Robots": 70594,
+        "Games": 10517,
+        "Food": 5993,
+        "Firearms": 48010,
+        "Machines": 23488,
+        "Water": 5935
+      },
+      "creditsAt30": 342318,
+      "creditsAt60": 426589,
+      "creditsAt120": 692121,
+      "seedRun": true
+    },
+    {
+      "ship": "Gnat",
+      "start": 250000,
+      "days": 120,
+      "credits": 531415,
+      "tradeProfit": 283823,
+      "jobPay": 0,
+      "topRoute": [
+        "14→9 / Firearms",
+        25692
+      ],
+      "topRoutePct": 9.1,
+      "routeCount": 81,
+      "goods": {
+        "Medicine": 28277,
+        "Ore": 60978,
+        "Furs": 31594,
+        "Narcotics": 40078,
+        "Machines": 30530,
+        "Games": 15133,
+        "Firearms": 59686,
+        "Water": 4206,
+        "Food": 13341
+      },
+      "creditsAt30": 324847,
+      "creditsAt60": 376768,
+      "creditsAt120": 531415,
+      "seedRun": true
+    },
+    {
+      "ship": "Gnat",
+      "start": 250000,
+      "days": 120,
+      "credits": 589770,
+      "tradeProfit": 342146,
+      "jobPay": 0,
+      "topRoute": [
+        "4→3 / Robots",
+        56408
+      ],
+      "topRoutePct": 16.5,
+      "routeCount": 84,
+      "goods": {
+        "Medicine": 60910,
+        "Ore": 47594,
+        "Furs": 34085,
+        "Narcotics": 61535,
+        "Machines": 23830,
+        "Firearms": 20115,
+        "Robots": 56408,
+        "Food": 28434,
+        "Water": 6289,
+        "Games": 2946
+      },
+      "creditsAt30": 385903,
+      "creditsAt60": 451316,
+      "creditsAt120": 589770,
+      "seedRun": true
+    },
+    {
+      "ship": "Gnat",
+      "start": 250000,
+      "days": 120,
+      "credits": 626491,
+      "tradeProfit": 378851,
+      "jobPay": 0,
+      "topRoute": [
+        "3→10 / Narcotics",
+        50724
+      ],
+      "topRoutePct": 13.4,
+      "routeCount": 75,
+      "goods": {
+        "Medicine": 55391,
+        "Ore": 35957,
+        "Furs": 48047,
+        "Narcotics": 72420,
+        "Machines": 10405,
+        "Food": 23650,
+        "Firearms": 43028,
+        "Games": 6783,
+        "Robots": 81416,
+        "Water": 1754
+      },
+      "creditsAt30": 313489,
+      "creditsAt60": 431013,
+      "creditsAt120": 626491,
+      "seedRun": true
+    },
+    {
+      "ship": "Beetle",
+      "start": 250000,
+      "days": 120,
+      "credits": 825800,
+      "tradeProfit": 586540,
+      "jobPay": 0,
+      "topRoute": [
+        "20→13 / Robots",
+        157815
+      ],
+      "topRoutePct": 26.9,
+      "routeCount": 91,
+      "goods": {
+        "Medicine": 31985,
+        "Ore": 50629,
+        "Furs": 88509,
+        "Narcotics": 101594,
+        "Machines": 65641,
+        "Water": 8292,
+        "Games": 13227,
+        "Robots": 192670,
+        "Firearms": 10620,
+        "Food": 23373
+      },
+      "creditsAt30": 428558,
+      "creditsAt60": 537882,
+      "creditsAt120": 825800,
+      "seedRun": true
+    },
+    {
+      "ship": "Beetle",
+      "start": 250000,
+      "days": 120,
+      "credits": 784479,
+      "tradeProfit": 546959,
+      "jobPay": 0,
+      "topRoute": [
+        "14→15 / Narcotics",
+        124637
+      ],
+      "topRoutePct": 22.8,
+      "routeCount": 86,
+      "goods": {
+        "Medicine": 33825,
+        "Ore": 96756,
+        "Furs": 62121,
+        "Narcotics": 86630,
+        "Machines": 43607,
+        "Games": 27897,
+        "Firearms": 85714,
+        "Water": 2309,
+        "Food": 21464,
+        "Robots": 86636
+      },
+      "creditsAt30": 429251,
+      "creditsAt60": 521482,
+      "creditsAt120": 784479,
+      "seedRun": true
+    },
+    {
+      "ship": "Beetle",
+      "start": 250000,
+      "days": 120,
+      "credits": 820627,
+      "tradeProfit": 583129,
+      "jobPay": 0,
+      "topRoute": [
+        "13→8 / Robots",
+        148641
+      ],
+      "topRoutePct": 25.5,
+      "routeCount": 91,
+      "goods": {
+        "Medicine": 75091,
+        "Ore": 90995,
+        "Furs": 110885,
+        "Firearms": 87951,
+        "Narcotics": -21432,
+        "Machines": 21706,
+        "Games": 22773,
+        "Water": 1290,
+        "Food": 45229,
+        "Robots": 148641
+      },
+      "creditsAt30": 434510,
+      "creditsAt60": 451075,
+      "creditsAt120": 820627,
+      "seedRun": true
+    },
+    {
+      "ship": "Beetle",
+      "start": 250000,
+      "days": 120,
+      "credits": 692053,
+      "tradeProfit": 452723,
+      "jobPay": 0,
+      "topRoute": [
+        "13→20 / Robots",
+        66875
+      ],
+      "topRoutePct": 14.8,
+      "routeCount": 93,
+      "goods": {
+        "Medicine": 52840,
+        "Ore": 66092,
+        "Furs": 92977,
+        "Narcotics": -55416,
+        "Robots": 27294,
+        "Games": 40293,
+        "Food": 7601,
+        "Water": 6230,
+        "Machines": 45485,
+        "Firearms": 169327
+      },
+      "creditsAt30": 358226,
+      "creditsAt60": 511240,
+      "creditsAt120": 692053,
+      "seedRun": true
+    },
+    {
+      "ship": "Beetle",
+      "start": 250000,
+      "days": 120,
+      "credits": 777858,
+      "tradeProfit": 540240,
+      "jobPay": 0,
+      "topRoute": [
+        "20→13 / Robots",
+        87825
+      ],
+      "topRoutePct": 16.3,
+      "routeCount": 97,
+      "goods": {
+        "Medicine": 57575,
+        "Ore": 44100,
+        "Furs": 68522,
+        "Narcotics": -81991,
+        "Machines": 65432,
+        "Games": 20272,
+        "Firearms": 204767,
+        "Water": 10050,
+        "Food": 32968,
+        "Robots": 118545
+      },
+      "creditsAt30": 414606,
+      "creditsAt60": 476227,
+      "creditsAt120": 777858,
+      "seedRun": true
+    },
+    {
+      "ship": "Beetle",
+      "start": 250000,
+      "days": 120,
+      "credits": 912822,
+      "tradeProfit": 675396,
+      "jobPay": 0,
+      "topRoute": [
+        "13→14 / Robots",
+        89039
+      ],
+      "topRoutePct": 13.2,
+      "routeCount": 93,
+      "goods": {
+        "Medicine": 136622,
+        "Ore": 56538,
+        "Furs": 52126,
+        "Narcotics": 50114,
+        "Machines": 62552,
+        "Games": 3796,
+        "Firearms": 14885,
+        "Robots": 212152,
+        "Water": 18582,
+        "Food": 68029
+      },
+      "creditsAt30": 576384,
+      "creditsAt60": 755954,
+      "creditsAt120": 912822,
+      "seedRun": true
+    },
+    {
+      "ship": "Beetle",
+      "start": 250000,
+      "days": 120,
+      "credits": 1016034,
+      "tradeProfit": 778220,
+      "jobPay": 0,
+      "topRoute": [
+        "4→5 / Robots",
+        144253
+      ],
+      "topRoutePct": 18.5,
+      "routeCount": 96,
+      "goods": {
+        "Medicine": 62037,
+        "Ore": 100986,
+        "Furs": 78100,
+        "Narcotics": 140344,
+        "Machines": 15195,
+        "Games": 6404,
+        "Food": 57418,
+        "Water": 13176,
+        "Firearms": 66556,
+        "Robots": 238004
+      },
+      "creditsAt30": 365260,
+      "creditsAt60": 711718,
+      "creditsAt120": 1016034,
+      "seedRun": true
     }
   ],
-  "buildSha256": "7ecb7dd4cae6f2c890b0ede63d3642246eae734221851edc33982d0335c8e564"
+  "buildSha256": "fab648f227d71eca0b24218c5483e3441f0554b649f0d515a489ed3e19051047"
 }

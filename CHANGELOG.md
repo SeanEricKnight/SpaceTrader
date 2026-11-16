@@ -2,6 +2,15 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.24.4
+- **Ship card rebuilt.** Each ship has a role tag (Scout, Starter, Courier, Fighter, Trader, Freighter, Warship, All-rounder, Heavy freighter, Flagship) and a one-line "best for". Stat rows show a bar against the best ship in the galaxy plus a green/red chip against your hull: bays, range, hull, lasers, shields, gear slots, and fuel cost per parsec (so the Termite's 20 cr/pc is visible before you buy).
+- **No more dead Buy button.** If this port's shipyard is too low-tech, the primary button is "Show me where · <yard>, N pc · N jumps" and opens that world on the map. Buy and Rent show only where you can use them, with the reason under them. Price and rent sit in a line at the top. "Make this my ship goal" is on the card.
+- **Store cards** show role, lasers/shields/gear slots. Gear explains what to remove when slots are full.
+- **Beetle vs Gnat check** now averages 8 seeds (single seeds are noise). Beetle averages about 1.5x the Gnat's trade profit. No economy change.
+- **Activity log can be cleared** (Clear log button in the log card, which also clears the click trace) and now keeps the latest 150 events instead of 400, so a bug report stays short.
+- **Messages stay until you tap them.** Event results (cut into a derelict, goals, rank-ups, milestones) are sticky: they show a × and stay until tapped, Esc dismisses the newest, and "Dismiss all" appears when two or more are showing. Routine confirmations (bought, sold, refuelled) last 4.5 to 10 seconds depending on length, and pause while the pointer is over them. All messages now stack at the top (they used to float over the bottom buttons), at most four at once. Everything still goes to the activity log.
+- Research: shared-mind game-design-references.md, 2026-11-16 (ship card, messages).
+
 ## 0.24.3
 - **Job cargo is now obvious.** Job cards say "N bays held · F free after" and the Accept button says "holds N bays". Accepting a job says so in the log and a toast. The Cargo hold card lists each job with its bays and a **Drop job** button that frees them at once (you only lose that job's pay).
 - **Refuel inside the Inspect card** now keeps the card open, updates it, and shows a "+N fuel" toast instead of closing with no feedback.
