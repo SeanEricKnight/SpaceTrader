@@ -739,7 +739,7 @@ const INCIDENTS=[
  {title:'A rival trader’s clearance',tier:2,who:'Rival trader',text:'A rival hauler dumps stock before a customs sweep, cheap and fast.',get choices(){const g=incGood(),c=Math.max(1,Math.round(world().prices[g]*4*.55));return [
   {d:()=>'−'+money(c)+' for 4 units of '+catalog.goods[g].name+', priced below market.',label:()=>'Buy 4 · '+money(c),ok:()=>game.credits>=c&&capacity()-held()>=4,why:()=>game.credits<c?'Needs '+money(c)+'; you have '+money(game.credits)+'.':'Needs 4 free cargo bays.',run(){game.credits-=c;game.cargo[g]+=4;game.paid[g]+=c;say('You bought 4 '+catalog.goods[g].name+' for '+money(c)+'.')}},
   {d:()=>'Free. Nothing changes.',label:()=>'Pass',run(){say('You passed on the clearance.')}}]}},
- {title:'A stowaway',tier:2,who:'Stowaway',text:'Your sensors find a stowaway curled behind the cargo racks, terrified and broke.',choices:[
+ {title:'A stowaway behind the racks',tier:2,who:'Stowaway',text:'Your sensors find a stowaway curled behind the cargo racks, terrified and broke.',choices:[
   {d:()=>'Free. +'+money(incStake(45))+' in fare. Patrol heat +1.',label:()=>'Charge them fare',run(){game.credits+=incStake(45);game.heat=(game.heat||0)+1;say('You charged '+money(incStake(45))+' for the ride. Heat +1.')}},
   {d:()=>'Free. They patch up to '+incHeal(6)+' hull.',label:()=>'Let them work it off',ok:()=>game.hull<ship().hull,why:()=>'Your hull is already full.',run(){const h=Math.min(ship().hull-game.hull,incHeal(6));game.hull+=h;say('The stowaway patched '+h+' hull points.')}}]},
  {title:'A faulty nav beacon',tier:2,who:'Nav beacon',text:'A lane beacon offers a shortcut. Its signature looks a little off.',choices:[

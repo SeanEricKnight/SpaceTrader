@@ -2,6 +2,10 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.4`.
 
+## 0.25.5
+- Two different events were both titled "A stowaway" (the 0.23.6 one and a tier-2 one). The tier-2 one is now "A stowaway behind the racks", so the hand-over lookup by title is unambiguous and players do not see the same title twice.
+- GAMEPLAY.md now describes all 39 events and the three tiers; NEXT_SESSION.md lists what is still not built.
+
 ## 0.25.4
 - **My ports shows 3 ports, the rest under "N more ports"** (stays open across redraws); a one-line pin hint appears only when nothing is pinned (tooltips don't work on touch). Footer text shortened and no longer mentions the removed "iPhone project" name. Measured at 1200 and 400 px wide: 6 ports collapsed 333/390 px vs 548/662 open.
 - **My ports card is shorter** (about 305 px to 164): the help paragraph is now a tooltip on the heading and padding is tighter. **Footer fix:** "Difficulty / new game (now: )" showed no level; it now shows the current difficulty.
