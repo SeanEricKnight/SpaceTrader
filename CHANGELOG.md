@@ -2,6 +2,15 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.24.3
+- **Job cargo is now obvious.** Job cards say "N bays held · F free after" and the Accept button says "holds N bays". Accepting a job says so in the log and a toast. The Cargo hold card lists each job with its bays and a **Drop job** button that frees them at once (you only lose that job's pay).
+- **Refuel inside the Inspect card** now keeps the card open, updates it, and shows a "+N fuel" toast instead of closing with no feedback.
+- **Celebrations are proportional.** Small wins show a short strip at the top; only First haul and Ship goal get a centred card. The spinning yellow rays are gone.
+- **Escort pilots open a profile.** The whole pilot card is tappable; the profile shows ratings and, for pilots for hire, a Hire button (with the reason when it is disabled).
+- **Travel alarm no longer flickers the card underneath.** The warp scene itself no longer shakes (which exposed the event card behind it); its contents still do.
+- **Activity log download now includes diagnostics** (browser, window size, last clicks, errors, travel-scene timing) so timing glitches can be traced without screenshots.
+- `check-layout.cjs` covers each of these. No rules or economy changed. Research: shared-mind game-design-references.md, 2026-11-16.
+
 ## 0.24.2
 - **Travel: toasts no longer cover Continue.** "Arrived at" and "New port logged" toasts created just before the travel scene opened stayed on top of it (seen in Firefox). They are now dropped when the scene opens (the scene shows the same facts); other toasts wait until it closes.
 - **First haul card is clearer.** One reward line, one primary next step ("Open the Market"), two secondary buttons (Take a job, Hire an escort), and one quiet line for warp charges and lasers. No more bullet list with buttons wrapping inside it.

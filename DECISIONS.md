@@ -4,6 +4,21 @@ One entry per decision, newest first. Research method: shared-mind `memory/game-
 
 Entry format: **Date · Decision.** Decided by. Why (research link). Rejected. Status. How it is checked.
 
+## 2026-11-16 · Reserved cargo bays are announced at accept and droppable in the hold card
+Decided by Sean ("10 bays reserved was a surprise"). Why: Elite Dangerous mission cargo (can't be sold, abandon has a penalty; players ask for free-bay counts), Nielsen heuristic 3 (visible emergency exit), Tim Cain on telegraphing consequences. Rejected: auto-unloading, hidden reservation. Status: shipped 0.24.3. Checked: check-layout (hold card rows, Drop job frees bays, Accept text).
+
+## 2026-11-16 · Refuel in the Inspect card keeps the card open
+Decided by Sean ("it closed and dumped me out"). Why: actions should confirm in place (Nielsen heuristic 1, visibility of status). Rejected: closing the card and relying on the map. Status: shipped 0.24.3. Checked: check-layout.
+
+## 2026-11-16 · Celebrations scale with the win; no spinning rays
+Decided by Sean ("splash card is lame"). Why: Yu-kai Chou (not every win gets the same celebration), juice-overload and habituation articles. Rejected: one big card for every reward. Status: shipped 0.24.3. Checked: check-layout (strip height, big card only for First haul/Ship goal).
+
+## 2026-11-16 · Escort pilot cards open a profile with Hire
+Decided by Sean ("pilots for hire don't open a card"). Why: match crew cards, which are already tappable; Hick-Hyman (hire where you read the ratings). Status: shipped 0.24.3. Checked: check-layout.
+
+## 2026-11-16 · Warp scene does not shake as a whole
+Decided from Sean's report of a red flash with the card flickering. Cause: the shake moved the opaque scene and exposed the event card behind it. Status: shipped 0.24.3; not reproduced in headless runs, so confirm in Firefox. Use the new log diagnostics if it recurs.
+
 ## 2026-11-16 · Reward cards give one next step; overlays never cover a main button
 Decided by Sean's report ("this is messy"; toasts covering Continue). Why: shared-mind research log 2026-11-16 (first major win, progressive disclosure, Hick-Hyman). Rejected: keeping the 4-bullet feature list; a delay-only toast fix (toasts made before the scene still sat on top). Status: built in 0.24.2. Checked by: `check-layout.cjs` (First haul card shape; no toast over the travel Continue button).
 

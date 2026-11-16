@@ -52,7 +52,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 - A round **?** button on every screen opens How to play. The newspaper chip appears in the header only when a subscription is about to end (see Help and newspaper chip).
 - Battles, marauder offers and custody open as a centered pop-out over a dimmed screen.
 - Each arrival shows a **Trip report** (fuel, days, deliveries and pay, other costs). The Log lists the last 400 events and can be downloaded as a text file.
-- Bays reserved for jobs count as used. The cargo stat and hold meter show how many are reserved; they free on delivery. You can sell a good at any port that buys it, including where you bought it.
+- Bays reserved for jobs count as used. The cargo stat and hold meter show how many are reserved; they free on delivery. Each job is listed in the Cargo hold card with a **Drop job** button: its bays free at once and you only lose that job's pay. Job cards and Accept buttons say how many bays the job holds. You can sell a good at any port that buys it, including where you bought it.
 - Every jump takes 1 day (2 on the quiet route) and uses fuel equal to its distance in pc. Orbit rings on the chart are scenery.
 - **Show route** and **Plan route to <port>** (Best runs) draw the route, switch to the right Reach, and show a route banner listing every stop. Jobs are still accepted only at the port that posts them.
 
@@ -67,6 +67,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 
 ## Celebrations
 
+- **Proportional rewards (0.24.3):** small wins show a short strip near the top (check mark, title, count-up reward). Only the First haul and a ship goal get a centred card. There are no spinning rays.
 - **Moons (0.19.0):** buying one opens a small card with Keep trading and Career summary, no confetti and no ending. Each moon pays 0.2% of its price per day of travel as rent. You cannot buy two moons at the same port. The goal bar lists your moons with a Sell back button. Old saves that were already retired show Keep flying.
 - **Beating a pirate** flashes the screen green, shakes it, bursts sparks and shows a "Pirate down" card with the bounty counting up.
 - **Bulk freight and ship goals:** ships with 20+ bays see one bulk run per port (cargo is 75% of your bays, minimum 16, to a port 16 to 45 pc away). Pay = 400 + bays x pc x 4 (x1.4 for a crisis port). Set any ship as your goal in the Store; progress shows under the moon goal.
