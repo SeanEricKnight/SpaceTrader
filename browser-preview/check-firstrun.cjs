@@ -18,6 +18,10 @@ assert.ok(t.nodes['guide-bar'].innerHTML.includes('Step 1'),'guide bar shows ste
 g("selectedWorld=game.location;action('guide-skip');message='';render()");
 assert.equal(t.nodes['dock-hint'].hidden,true,'dock hint hides when guide is skipped');
 assert.ok(t.nodes['message'].textContent.includes('500,000'),'goal line returns when guide is off');
+assert.ok(t.nodes['message'].innerHTML.includes('Next move')||g("goalBar()").includes('Next move'),'goal bar names a concrete next move after the guide');
+assert.ok(g("goalBar()").includes('data-action="objective"'),'next move offers a Show button');
+g("game.story.stage=2;game.location=0");assert.ok(g("goalBar()").includes('Brax'),'story stage 2 points to Brax');
+g("game.story.stage=4");
 const branch=context(true),run=branch.run;
 run("action('intro-go'); tab='market'; sell(0,true); render()");
 assert.equal(run('game.tutorial.state'),'skipped','selling starter Water in Acamar forfeits the bonus');

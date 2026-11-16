@@ -1,6 +1,9 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.10`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.11`.
+
+## 0.24.11
+- **A reason to keep flying after the guide.** Once the guide ends, the goal bar under the stats adds one "Next move" line with a Show button: Mara's clinic story while it is open (accept, Baratas, Brax, return to Acamar), otherwise the best affordable trade from the current port with its destination and gross profit. This tests a concrete existing opportunity against the cash-only handoff (playtest item 5). Moon and economy tuning untouched.
 
 ## 0.24.10
 - **First trade:** The phone dock starts the Adahn flight and opens Market on arrival. Missing the haul names the forfeited bonus. Buying Water can teach speculative trade, and the guide quotes the affordable quantity.

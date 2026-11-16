@@ -1,6 +1,9 @@
 # Space Trader: how it plays
 
-The rules as they work in the current version (**0.24.10**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
+The rules as they work in the current version (**0.24.11**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
+
+## After the guide
+When the guide is complete or skipped, the goal bar shows the cash goal plus a "Next move" line: the next chapter of Mara's story if it is open, otherwise the best affordable trade from where you dock (same quote maths as the Market). Show opens the destination on the chart.
 
 ## Goal and ending
 

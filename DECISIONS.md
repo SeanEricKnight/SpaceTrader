@@ -4,6 +4,9 @@ One entry per decision, newest first. Research method: shared-mind `memory/game-
 
 Entry format: **Date · Decision.** Decided by. Why (research link). Rejected. Status. How it is checked.
 
+## 2026-11-16 · Give the post-guide player one concrete next move
+Decided by Claude, delegated by Sean via ChatGPT playtest item 5 (return pull). The guide ended on a cash target only. Added a Next move line (story chapter, else best trade) with a Show button; no new systems. Why: shared-mind game-design-references.md, 2026-11-16 Return pull (competence and autonomy; one playtest, not proof of retention). Rejected: pinning a ship goal automatically (needs player choice), moon or economy changes (wait for natural-campaign pacing). Status: built in 0.24.11. How it is checked: check-firstrun.cjs. Open: confirm in a natural campaign that players follow it.
+
 ## 2026-11-16 · Put the first flight in the phone dock and keep the guide honest
 Decided by Codex, pre-approved by Sean. A 390 px blind launch scrolled to distances without a playable Travel control. A wrong-port sale recorded delivery, and the prior Water exclusion rejected a legitimate speculative purchase. Keep the optional first-haul bonus, report it when forfeited and accept purchased Water as a separate trade decision. Quote the actual buy quantity and distinguish gross profit from fuel. Rejected a forced route and automatic sale. Built in 0.24.10. Checked by first-run and Chrome layout assertions.
 
