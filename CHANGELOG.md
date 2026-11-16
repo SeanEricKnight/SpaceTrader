@@ -1,6 +1,10 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.2`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.3`.
+
+## 0.25.3
+- **Guide "Show me" glow:** the glow stayed on tab buttons after the guide moved on (they are never redrawn), so Market and System both glowed and the real target looked ambiguous. Old glow is now cleared on every render.
+- **Log:** the activity log now records each hint target (step, tab, selector, how many elements glow) and a Guide line in the header, so a stuck hint can be diagnosed from the log alone.
 
 ## 0.25.2
 - Difficulty: intro buttons and Help "Change difficulty" now work (were dead); header chip (Day · ship · level ▾) opens a picker. Free switch before first jump, confirm after.

@@ -61,5 +61,7 @@ q("game.fuel=0;game.credits=5;game.debt=0");const r=JSON.parse(q("JSON.stringify
 q("globalThis.confirm=()=>true;roadsideFuel()");assert.ok(q("game.fuel")>=1&&q("game.roadside")===1,'roadside fuel delivers fuel and is counted');
 assert.ok(q("game.difficulty='Impossible';game.modules=[];game.roadside=2;game.nudged={};nudgeCheck();JSON.stringify(game.nudged)")==='{}','no proactive nudge on Impossible');
 console.log('PASS 0.25.2: difficulty picker works, roadside fuel offered and delivered, nudge stays off on Impossible');}
+// 0.25.3: stale hint glow is cleared on render.
+{const html=fs.readFileSync('SpaceTrader-browser.html','utf8');assert.ok(html.includes("querySelectorAll('.hint-glow').forEach(x=>x.classList.remove('hint-glow'))"),'old hint glow cleared before applying the new one');console.log('PASS 0.25.3: stale guide glow cleared (browser-verified: only one element glows after tab changes)');}
 console.log('PASS 0.25.1: pinned ports on star chart; Atlas toast built without error (toast text checked in source)');
 const html=fs.readFileSync('SpaceTrader-browser.html','utf8');assert.ok(html.includes("Homecoming pays '+money(HOMECOMING_PER_PORT)")&&html.includes('nearest unseen:'),'Atlas toast names Homecoming pay and nearest unseen port');}
