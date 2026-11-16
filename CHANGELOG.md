@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.24.6
+- **Bigger, tappable messages.** Every message card is now at least 44 px tall with 16 px text (it was about 36 px with 14 px). Some messages carry one action: "New port logged" has "View port", which opens the port, then shows a short confirmation. Plain confirmations (bought, sold) have no action.
+- **Accepted jobs say where to deliver.** Accepting any job (contract, rush side job, courier) now shows a message with the destination, deadline, reward, bays held and "Delivers when you dock at X", plus a "Show me where" button that opens the destination on the chart. It stays until tapped. Milestone messages now say "Milestone:" with what you did and an "All milestones" button. The log header showed 0.17.0 because a version constant was stale; it now matches the build.
+- **More travel messages.** The warp scene draws from 24 general lines plus ship-specific, region, long-jump, low-fuel, damaged-hull, full-hold and empty-hold lines. Lines come from a shuffled bag, so none repeats until all are seen. Tone is warm and dry, not jokes.
+
 ## 0.24.5
 - **Locked event options explain themselves.** In events like the distress call, an option you cannot afford (fuel, credits, bays) now shows a "Locked" tag on the button, the shortfall first in amber ("Needs 2 fuel; you have 0."), then the usual description. The old version left the reason as small grey text at the end and dimmed the button almost to invisibility.
 - **Tapping a locked option answers.** It stays focusable (aria-disabled), highlights, and shows a next step matched to what is missing (refuel at your next port, earn credits, free cargo space, or pick another option). Nothing is spent and the card stays open.
