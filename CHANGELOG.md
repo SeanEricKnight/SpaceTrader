@@ -1,6 +1,12 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.3`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.4`.
+
+## 0.25.4
+- **My ports card is shorter** (about 305 px to 164): the help paragraph is now a tooltip on the heading and padding is tighter. **Footer fix:** "Difficulty / new game (now: )" showed no level; it now shows the current difficulty.
+- **Shorter chart headers:** Solar chart and Star chart headers are one row (about 32 px on desktop, down from about 160): the eyebrow line and the repeated region blurb are gone (the blurb is the story button's tooltip), and the buttons sit beside the title.
+- **Arrival card is shorter:** the full card (planet art, blurb, "Colonists need…") shows only the first time you dock at a port. Later visits get a one-line trip report (about 100 px instead of 250), or nothing if there is no trip to report. The Market already shows the port's event, and the log keeps every trip.
+- **Arrival card close button:** the bare ✕ now reads "✕ Close", has a tooltip saying the trip stays in the Activity log, and a clearer screen-reader name. The card is a non-critical summary, so it stays dismissible.
 
 ## 0.25.3
 - **Guide "Show me" glow:** the glow stayed on tab buttons after the guide moved on (they are never redrawn), so Market and System both glowed and the real target looked ambiguous. Old glow is now cleared on every render.

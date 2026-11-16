@@ -63,5 +63,9 @@ assert.ok(q("game.difficulty='Impossible';game.modules=[];game.roadside=2;game.n
 console.log('PASS 0.25.2: difficulty picker works, roadside fuel offered and delivered, nudge stays off on Impossible');}
 // 0.25.3: stale hint glow is cleared on render.
 {const html=fs.readFileSync('SpaceTrader-browser.html','utf8');assert.ok(html.includes("querySelectorAll('.hint-glow').forEach(x=>x.classList.remove('hint-glow'))"),'old hint glow cleared before applying the new one');console.log('PASS 0.25.3: stale guide glow cleared (browser-verified: only one element glows after tab changes)');}
+// 0.25.4: arrival card close button is labelled.
+{const html=fs.readFileSync('SpaceTrader-browser.html','utf8');assert.ok(html.includes('data-action="arrival-close" aria-label="Close arrival summary"')&&html.includes('✕ Close</button>'),'arrival close button has a visible label and accessible name');assert.ok(html.includes('class="arrival compact"')&&html.includes('rp.first'),'repeat visits use the compact arrival card');
+assert.ok(html.includes('class="solar-head compact"')&&!html.includes('Navigation / Star chart'),'chart headers are compact');
+console.log('PASS 0.25.4: arrival card close button labelled; repeat visits compact; chart headers compact');assert.ok(html.includes("$('diff-now').textContent=game.difficulty")&&!html.includes('class="micro muted">Pin any planet'),'footer shows difficulty; My ports help is a tooltip');}
 console.log('PASS 0.25.1: pinned ports on star chart; Atlas toast built without error (toast text checked in source)');
 const html=fs.readFileSync('SpaceTrader-browser.html','utf8');assert.ok(html.includes("Homecoming pays '+money(HOMECOMING_PER_PORT)")&&html.includes('nearest unseen:'),'Atlas toast names Homecoming pay and nearest unseen port');}

@@ -94,3 +94,6 @@ Decided by Sean. The old "-iPhone" project and repo name is invalid. Status: sta
 
 - Upgrade prompt is triggered by an observed bottleneck, one-time, dismissible; passive only on Hard/Impossible (not Easy-only: the need is the same, the help is what scales).
 - Emergency fuel is a paid in-place service (premium + call-out), not a free refill, so it never beats planning; free tow is unchanged.
+
+## 2026-11-16 · 0.25.4 · Secondary panels take less room
+Decision: chart headers one row, arrival card compact on repeat visits, My ports help text as tooltip, footer shows current difficulty. Why: ~57% of viewing time is on the first screen, 74% on two; collapse secondary content, keep critical content visible, drop redundant helper text. Evidence: memory/game-design-references.md (2026-11-16).
