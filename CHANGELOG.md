@@ -2,6 +2,12 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.23.5
+- **Event cards are shorter.** The distress call now leads with the payoff and states the cost in the button ("Help them · 2 fuel", "Pays about 250 cr to 500 cr. Your crew approves."). The story and the exact payout still come after you choose. Basis: shared-mind research log, 2026-11-16.
+- **A random event can no longer repeat back to back.** The same incident (for example the distress call twice in a row) is skipped; the last one is remembered in the save as `lastInc`.
+- **Greyed-out choices say why.** "(not available right now)" is replaced by the real reason: "Needs 2 fuel; you have 1.", "You already carry this job." or "Not enough cargo space for it." A side job you already hold can no longer be taken a second time.
+- Checks run here: events, logic, crew, help, requests (pass). The canvas and Playwright checks could not run in this sandbox.
+
 ## 0.23.4
 - **First run on a phone:** "Start flying" now takes you to the next step. It runs the 💡 Show me hint for you, so the first button you need glows and scrolls into view instead of dropping you at the top of a long page with no clue what to do.
 - **Bottom dock on phones (600 px wide or less):** the tab bar is now fixed to the bottom of the screen above the iPhone home indicator, with an icon over each label and a small gold count badge on Jobs. While the guide is on, a gold **💡 Step N · Show me** button floats above it, always in thumb reach. Corner toasts sit above both.
