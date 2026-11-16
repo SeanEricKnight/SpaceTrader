@@ -1,6 +1,9 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.11`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.12`.
+
+## 0.24.12
+- **Less Market scrolling on phones.** The trade rows now come before the price-tag legend, port history and home-port/warehouse panel. At a fresh dock on 390x844 the first trade row moved from 1,907 px to 1,403 px down the page (desktop 1,644 to 1,293). Nothing was removed.
 
 ## 0.24.11
 - **A reason to keep flying after the guide.** Once the guide ends, the goal bar under the stats adds one "Next move" line with a Show button: Mara's clinic story while it is open (accept, Baratas, Brax, return to Acamar), otherwise the best affordable trade from the current port with its destination and gross profit. This tests a concrete existing opportunity against the cash-only handoff (playtest item 5). Moon and economy tuning untouched.

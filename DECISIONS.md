@@ -4,6 +4,9 @@ One entry per decision, newest first. Research method: shared-mind `memory/game-
 
 Entry format: **Date · Decision.** Decided by. Why (research link). Rejected. Status. How it is checked.
 
+## 2026-11-16 · Market: trade rows first
+Decided by Claude, delegated by Sean ("fix backlog"). Playtest item 3 (Market scrolling on phones). Moved legend, port history and home/warehouse panel below the trade list; nothing hidden (shared-mind rule: do not hide frequent actions, cut height not options). Rejected: collapsing options behind a fold (extra taps). Status: built in 0.24.12; measured in Chrome (before/after above). Open: taps-to-action on a real phone; arrival card still adds about 280 px on first dock.
+
 ## 2026-11-16 · Give the post-guide player one concrete next move
 Decided by Claude, delegated by Sean via ChatGPT playtest item 5 (return pull). The guide ended on a cash target only. Added a Next move line (story chapter, else best trade) with a Show button; no new systems. Why: shared-mind game-design-references.md, 2026-11-16 Return pull (competence and autonomy; one playtest, not proof of retention). Rejected: pinning a ship goal automatically (needs player choice), moon or economy changes (wait for natural-campaign pacing). Status: built in 0.24.11. How it is checked: check-firstrun.cjs. Open: confirm in a natural campaign that players follow it.
 

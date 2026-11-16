@@ -29,3 +29,8 @@ assert.equal(run('guideSt().step'),1,'the guide continues to speculative trading
 run('buy(0,true); render()');
 assert.equal(run('guideSt().step'),2,'newly bought Water advances the trading guide');
 console.log('PASS first run: Start flying runs the hint, dock button tracks the guide, duplicate goal line hidden');
+// Market order (playtest 0.24.10 item 3): trade rows come before home/warehouse panel, price legend and history.
+{const html=fs.readFileSync('SpaceTrader-browser.html','utf8'),m=html.match(/holdMeter\(travelBar\(\)\)\+[\s\S]*?<p class="micro">'\+tipBtn\('prices'\)/)[0];
+const at=k=>m.indexOf(k);
+assert.ok(at("trade-list")>0&&at("trade-list")<at("homePanel()")&&at("trade-list")<at("legend+worldHistory")&&at("tools+")<at("trade-list"),'Market shows trade rows before home panel, legend and history');
+console.log('PASS market order: trade rows before home panel, legend and history');}
