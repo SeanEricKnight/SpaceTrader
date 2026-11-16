@@ -74,6 +74,13 @@ Sean: too much scrolling on Navigation. Audit in [reviews/2026-11-16-ui-length-a
 - Make dimmed (non-event) buttons keyboard-focusable: needs the guide and CSS selectors moved off `[disabled]` first.
 
 ## Open (raised 2026-11-16)
-- Mark pinned ports on the star chart and explain Pin in one line (Pin is now a star; its purpose is still thin).
+- Pinned ports on the star chart: built in 0.25.1 (gold star, legend line). Pin's purpose is still thin.
+- **Open verification items (logged 2026-11-16, Claude; nothing here is built or proven):**
+  1. Natural campaigns: play three full campaigns and measure pacing, upgrades, risk and replay. This is also the only way to learn whether players follow the post-guide Next move (0.24.11), Homecoming, the Atlas toast (0.25.1) and the tiered events.
+  2. Phone Market scrolling: first trade row moved from 1,907 to 1,403 px at 390x844 in 0.24.12 (Chrome-measured). Taps-to-action on a real phone is untested; the arrival card was shortened in 0.25.4 but not re-measured.
+  3. Physical iOS Safari and assistive technology: locks, overlays, dialogs, the star chart and My ports with VoiceOver; only Chrome and Node checks exist.
+  4. Rapid encounter actions: a Node probe found no action that changes credits, travel, cargo or ship while an encounter, marauder offer or incident is pending (only goal setting, import/export and confirmed new game/reset differ). Not done: forcing encounters in Chrome and double-clicking or interrupting choices, and repeat-voyage friction. Rapid Travel clicks execute one jump.
+  5. Footer difficulty cancel was fixed in 0.24.13; 0.25.2 reworked the picker, and `check-firstrun.cjs` still passes, but cancel was not re-tested by hand.
+  6. Atlas arrival-card version and a Hull row on the arrival card remain unbuilt.
 - Atlas progress: built in 0.25.1 as the first-visit toast (Homecoming payoff, nearest unseen port). Arrival-card version not built. Pinned ports are marked on the star chart (0.25.1).
 - Consider a Hull row on the arrival card when hull is low.
