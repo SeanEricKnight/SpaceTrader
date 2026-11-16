@@ -26,18 +26,19 @@ Cause: the right column is 2.8x taller than the chart, so the sticky chart (`.or
 4. Map instructions appear twice (toolbar, three lines; note under the map). Keep one, behind a small "?".
 5. Intro text appears twice at the top (summary line plus a "To reach another Reach..." paragraph).
 
-## Recommended changes, in order
+## Recommended changes, in order (second pass, 2026-11-16)
 
-1. Remove the duplicates above (about 400 px).
-2. Best runs: one row per job (icon, destination, pay, fuel, deadline, Accept); "Show route" on the row's second tap or a small icon; show the top 3, "more" for the rest. Target about 300 px (from 708).
-3. Destination card: name and kind, distance and fuel with the within-range badge, the crisis chip, travel style as a compact 3-way control beside Travel. Move tech, resources, water price, rotation, tilt, pirate note and "Port history" into one labelled fold ("Port details: tech, resources, water 54 cr"). Target about 250 px (from 683). Keep Travel visible without scrolling at 1440x900.
-4. Vessel card: remove from this tab (it is on the Ship tab). Add ship name, hull and cargo as a chip in the stats bar (-250 px).
-5. My ports: one chip row; Distances stays a fold.
-6. Default panel order (most people never use "Move cards"): selected port with Travel, Best runs, Route steps, then the rest.
-7. Phone: put Travel for the selected planet in the sticky bottom bar (thumb zone, above the iOS home indicator, per the digest), keep the first screen to the chart plus one next action.
-8. Add `browser-preview/check-layout.cjs`: fail if the Navigation tab is taller than 1.6 screens at 1440x900 or 3.5 screens at 390x844, and if Travel is not inside the first screen at 1440x900. Budgets are proposals; Sean can change them.
+Revised after a second round of research; changes from the first pass are marked.
 
-Estimated result (not built): side column about 900 px, page about 1,900 px at 1440x900 (about 2.1 screens), about 3,000 px on the phone. Estimates from the numbers above.
+1. Delete the duplicates above (about 400 px).
+2. Jobs: one compact row each, show all up to 5 (CHANGED: no "top 3" cut; choice-overload evidence is weak, the real cost is row height). Highlight only the best pay-per-fuel run; make other Accept buttons secondary (CHANGED, new: one distinct item per list).
+3. One "Trip" panel (CHANGED: merge, not just trim): selected port, distance and fuel with the in-range badge, crisis chip, travel style, route steps, and a single filled Travel button. Port details (tech, resources, water price, rotation, tilt, history) go in one fold whose label states the key fact. Target about 250 px for the card (from 683) and the Route card gone.
+4. Vessel (CHANGED): replace the 250 px card with a small ship thumbnail plus name, hull and cargo chip in the stats bar. Keeps the ship identity Sean wants without the height.
+5. Put signals on the map (new): crisis flame and job-count marker on planets, so fewer panels are needed to scan. Optional phase 2: tap callout on the map with Travel.
+6. Phone (CHANGED): do not add a new sticky bar; the bottom zone already holds the dock, hint pill and toasts. Reuse the existing `#dock-hint` slot: with a planet selected it reads "Travel to Adahn · 9 fuel".
+7. Layout check `browser-preview/check-layout.cjs` (CHANGED budgets): hard rule, Travel is inside the first screen at 1440x900 and reachable without scrolling on 390x844 with a planet selected. Soft cap on total height: 2.2 screens desktop, 4 screens phone. The first pass said 1.6, which contradicted my own 2.1-screen estimate; both caps are judgment and can tighten after the build.
+
+Estimated result (not built): side column about 900 px, page about 1,900 px at 1440x900 (about 2.1 screens), about 3,000 px on the phone (about 3.6 screens).
 
 ## Do not do
 
@@ -46,9 +47,9 @@ Estimated result (not built): side column about 900 px, page about 1,900 px at 1
 
 ## Open decisions for Sean
 
-- Remove the vessel card from Navigation (recommended)?
+- Swap the vessel card for a thumbnail plus chip (recommended)?
 - Keep "Move cards (drag)"? It matters less once the default order is right; keep, low priority.
-- Approve the height budgets in item 8?
+- Approve the first-screen rule and the 2.2 / 4 screen soft caps in item 7?
 
 ## Sources
 
@@ -62,5 +63,6 @@ Estimated result (not built): side column about 900 px, page about 1,900 px at 1
 - https://www.greenmangaming.com/blog/how-slay-the-spire-became-the-gold-standard-for-all-card-battler-games/
 - https://www.gamedeveloper.com/design/understanding-smart-ui-design
 - https://spronck.net/spacetrader/STTips.html (original Space Trader screen shortcuts)
+- Second pass: https://archive-ouverte.unige.ch/unige:76440 (choice overload meta-analysis, mean effect near zero) · https://alistapart.com/1-9-tablet-zones-jpg/ (Hoober thumb grips) · https://www.smashingmagazine.com/2023/05/sticky-menus-ux-guidelines/ · https://www.saasframe.io/patterns/sticky-call-to-action · https://www.renascence.io/behavioral-biases/von-restorff-effect · https://fractalsoftworks.com/tag/intel/ · https://fractalsoftworks.com/2016/11/25/cartography · https://www.gamespot.com/articles/offworld-trading-company-early-access-review/1100-6426402/ · https://www.pcgamer.com/why-i-love-stellaris-slick-interface · https://madegooddesigns.com/?p=5485
 
 Caveat: mostly secondary summaries and forum posts; judgment, not proof.
