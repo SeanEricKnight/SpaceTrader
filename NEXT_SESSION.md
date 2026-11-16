@@ -1,10 +1,12 @@
-# Next session prompt (Space Trader, as of 0.14.3)
+# Next session prompt (Space Trader)
+
+The prompt below is current. The "State as of" sections further down are dated history, newest last. Live status is in shared-mind `CURRENT.md` and `HANDOFF.md`.
 
 Paste this to start the next session:
 
 ---
 
-Continue Space Trader (repo SeanEricKnight/SpaceTrader, clone at /home/claude/SpaceTrader, main deploys docs/ to https://seanericknight.github.io/SpaceTrader/). Read README.md, GAMEPLAY.md, BACKLOG.md and CHANGELOG.md first. Current version is 0.14.2. Rotary Dogfight (/home/claude/canvas-aces) is separate and unchanged.
+Continue Space Trader (repo SeanEricKnight/SpaceTrader, clone at /home/claude/SpaceTrader, main deploys docs/ to https://seanericknight.github.io/SpaceTrader/). Read README.md, GAMEPLAY.md, BACKLOG.md and CHANGELOG.md first. The current version is in `package.json` and the README. Rotary Dogfight (repo SeanEricKnight/rotary-dogfight) is a separate project.
 
 **Research and decisions:** before designing, follow shared-mind `memory/game-research-method.md` (research what successful games do), and record each decision in `DECISIONS.md`.
 

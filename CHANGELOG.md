@@ -1,10 +1,11 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.4`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.5`.
 
 ## 0.25.5
 - Two different events were both titled "A stowaway" (the 0.23.6 one and a tier-2 one). The tier-2 one is now "A stowaway behind the racks", so the hand-over lookup by title is unambiguous and players do not see the same title twice.
 - GAMEPLAY.md now describes all 39 events and the three tiers; NEXT_SESSION.md lists what is still not built.
+- Housekeeping: the in-game `GAME_VERSION` still said 0.25.4 and is now 0.25.5; `SHA256SUMS.txt` was stale after the DECISIONS.md commits and is regenerated; the NEXT_SESSION.md header no longer says 0.14.x or points at the old canvas-aces path.
 
 ## 0.25.4
 - **My ports shows 3 ports, the rest under "N more ports"** (stays open across redraws); a one-line pin hint appears only when nothing is pinned (tooltips don't work on touch). Footer text shortened and no longer mentions the removed "iPhone project" name. Measured at 1200 and 400 px wide: 6 ports collapsed 333/390 px vs 548/662 open.
