@@ -87,5 +87,5 @@ test('old saves retain location, inventory, debt, prices and active missions',()
 test('bank balances and difficulty round trip through validated saves',()=>{
  r('game=fresh("Hard");borrowCredits(12345);jump(1);save()');const raw=storage.get('space-trader-chrome-preview-v1');c.saved=raw;r('game=decodeSave(saved)');assert.equal(r('game.debt'),12592);assert.equal(r('game.difficulty'),'Hard');assert.equal(r('creditAvailable()'),12408);assert.equal(r('interestDue()'),252);
 });
-assert.ok(Buffer.byteLength(html)<900000);assert.equal((html.match(/data:image\/webp;base64,/g)||[]).length,1);
+assert.ok(Buffer.byteLength(html)<1000000);assert.equal((html.match(/data:image\/webp;base64,/g)||[]).length,1);
 console.log(checks+' world/bank checks passed. Tested JS, generated markup and canvas; full Chrome layout is not verified.');

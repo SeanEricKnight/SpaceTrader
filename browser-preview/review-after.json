@@ -295,9 +295,9 @@
       "ship": "Firefly",
       "start": 250000,
       "days": 120,
-      "credits": 588652,
+      "credits": 589777,
       "tradeProfit": 342267,
-      "jobPay": 0,
+      "jobPay": 1125,
       "topRoute": [
         "23→17 / Firearms",
         48054
@@ -317,15 +317,15 @@
       },
       "creditsAt30": 350319,
       "creditsAt60": 403001,
-      "creditsAt120": 588652
+      "creditsAt120": 589777
     },
     {
       "ship": "Bumblebee",
       "start": 250000,
       "days": 120,
-      "credits": 633790,
+      "credits": 634915,
       "tradeProfit": 392254,
-      "jobPay": 0,
+      "jobPay": 1125,
       "topRoute": [
         "8→2 / Firearms",
         48440
@@ -345,7 +345,7 @@
       },
       "creditsAt30": 363385,
       "creditsAt60": 400569,
-      "creditsAt120": 633790
+      "creditsAt120": 634915
     },
     {
       "ship": "Beetle",
@@ -469,9 +469,9 @@
       "ship": "Gnat",
       "start": 250000,
       "days": 120,
-      "credits": 692121,
+      "credits": 692271,
       "tradeProfit": 444505,
-      "jobPay": 0,
+      "jobPay": 150,
       "topRoute": [
         "3→2 / Narcotics",
         103076
@@ -491,8 +491,8 @@
         "Water": 5935
       },
       "creditsAt30": 342318,
-      "creditsAt60": 426589,
-      "creditsAt120": 692121,
+      "creditsAt60": 426739,
+      "creditsAt120": 692271,
       "seedRun": true
     },
     {
@@ -558,9 +558,9 @@
       "ship": "Gnat",
       "start": 250000,
       "days": 120,
-      "credits": 626491,
+      "credits": 626716,
       "tradeProfit": 378851,
-      "jobPay": 0,
+      "jobPay": 225,
       "topRoute": [
         "3→10 / Narcotics",
         50724
@@ -579,9 +579,9 @@
         "Robots": 81416,
         "Water": 1754
       },
-      "creditsAt30": 313489,
-      "creditsAt60": 431013,
-      "creditsAt120": 626491,
+      "creditsAt30": 313639,
+      "creditsAt60": 431238,
+      "creditsAt120": 626716,
       "seedRun": true
     },
     {
@@ -768,9 +768,9 @@
       "ship": "Beetle",
       "start": 250000,
       "days": 120,
-      "credits": 1016034,
+      "credits": 1016109,
       "tradeProfit": 778220,
-      "jobPay": 0,
+      "jobPay": 75,
       "topRoute": [
         "4→5 / Robots",
         144253
@@ -790,10 +790,10 @@
         "Robots": 238004
       },
       "creditsAt30": 365260,
-      "creditsAt60": 711718,
-      "creditsAt120": 1016034,
+      "creditsAt60": 711793,
+      "creditsAt120": 1016109,
       "seedRun": true
     }
   ],
-  "buildSha256": "39012f009bc7d2139c0785df54ee29613c69c22fa09b8c711c53b310b30e78f5"
+  "buildSha256": "d0dfecd9df6acc29151198c404b3aac6630e0a8c8e08495b0ce38e6a281f6c0e"
 }

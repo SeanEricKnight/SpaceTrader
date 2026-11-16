@@ -1,6 +1,6 @@
 # Space Trader: how it plays
 
-The rules as they work in the current version (**0.24.13**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
+The rules as they work in the current version (**0.25.0**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
 
 ## After the guide
 When the guide is complete or skipped, the goal bar shows the cash goal plus a "Next move" line: the next chapter of Mara's story if it is open, otherwise the best affordable trade from where you dock (same quote maths as the Market). Show opens the destination on the chart.
@@ -232,3 +232,6 @@ Start a new game and pick a Vow beside Difficulty. Peaceful: lasers cannot be up
 
 ## Market saturation (0.23.1)
 Selling lowers that port's price by about 1.2% per unit (floor -30%), recovering about 12% of the gap each travel day. A Quiet ride takes two days, so it recovers twice and restocks ports by two. Crises still apply on top. Buying is limited by port stock instead of price. Reason: before this, selling 15 units paid the same per unit as selling 1, so one good route could be looped forever. Idea from Sid Meier's Colonization, where selling floods the market and prices slowly recover.
+
+## Hull, home and events (0.25.0)
+Hull under 60% turns amber and under 30% red, with the repair cost and a pirate warning on the port card. Your home port pays a Homecoming: after 3+ days away, 75 cr per new port charted since your last visit and up to 10 hull patched free. Interruptions come from 39 events in three tiers (about 10 and 28 jumps unlock tiers 2 and 3; Hard and Impossible unlock them sooner, Beginner and Easy later). Higher tiers risk more and pay more; the success chance on gambles shows on the button.

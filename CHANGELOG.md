@@ -1,6 +1,18 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.13`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.0`.
+
+## 0.25.0
+Six player-reported problems, each researched first (sources and findings: shared-mind `memory/game-design-references.md`, 2026-11-16 entries).
+- **The X now closes dialogs on phones.** Dimmed buttons hidden under a dialog were catching the tap. The 0.24.10 aria-disabled change already removes that; this release adds a phone-width regression test (`browser-preview/check-modal-click.py`) and keeps the lock explanation for dimmed buttons.
+- **Bounty payoff is visible.** Dialogs sit above everything else on screen, so the toast, sparks and cheer were hidden behind the fight report. The payoff (count-up of the reward, sparks, vibration, reduced-motion safe) now lives inside the dialog.
+- **Star chart rebuilt.** The old "to scale" chart showed nothing you could act on. It now shows all 24 ports as tappable markers placed to scale, a ring for how far your tank reaches, the fuel cost to each port, your position, and `?` for ports you have not visited. Tap a port to plan the trip.
+- **Difficulty is visible.** A picker on the intro screen and in Help, plus a "now:" label in the footer, so you never have to ask where it is.
+- **Hull warnings.** Hull at or under 60% turns the stat amber, under 30% red; a note on the port card gives the full-repair cost and warns about pirates; one sticky toast when it drops a level.
+- **Homecoming.** After 3 or more days away, arriving at your home port pays 75 cr for each new port you charted since your last visit and the dock crew patches up to 10 hull free. Home is now a reason to return, not just 20% off.
+- **Port card buttons.** One primary action (Travel, or Go there for me, or Refuel, whichever is the next step), secondary actions grouped below, warp as a quiet dashed button, Pin shrunk to a star beside the name with a tooltip.
+- **24 new interruption events (39 total) in three tiers.** Tier 1 from the start, tier 2 after about 10 jumps, tier 3 after about 28. Stakes, damage and rewards scale with tier and difficulty; success odds fall as you go (floor 25%). Beginner and Easy never reach tier 3 in a normal run; Hard and Impossible get there sooner. Two chains: help a failing reactor ship and the pilot pays you back later; investigate a ghost signal and it returns stronger.
+- Tests: star chart and incident checks updated; file size guard raised to 1,000,000 bytes (the game is about 0.9 MB).
 
 ## 0.24.13
 - **Find a planet:** the Show and Sort chips are now two fixed rows, so Sort, its three options and By Reach stay together on one line (measured from 388 px panels up) instead of By Reach dropping alone to a new line.

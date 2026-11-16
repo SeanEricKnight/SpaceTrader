@@ -2,12 +2,13 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 16, 2026 (version 0.24.13). 0.24.13 fixed finder chip wrap and footer difficulty cancel. 0.24.12 moved Market trade rows above legend/history/home panel. 0.24.11 added a post-guide Next move line (playtest item 5); retention effect still untested.
+Last updated: November 16, 2026 (version 0.25.0). 0.24.13 fixed finder chip wrap and footer difficulty cancel. 0.24.12 moved Market trade rows above legend/history/home panel. 0.24.11 added a post-guide Next move line (playtest item 5); retention effect still untested.
 
 ## Built
 
 | Idea | Version | Notes |
 | --- | --- | --- |
+| Hull warnings, home-port Homecoming, 24 tiered events, port-card button cleanup, star chart redesign, difficulty picker, bounty payoff, dialog X fix | 0.25.0 | Researched 2026-11-16; see CHANGELOG. |
 | Test button for unlimited money | 0.6.2 | Footer "Test tools" opens the cheat console. |
 | Market screen without sideways scrolling | 0.7.0 | Compact rows; tap a row to trade. |
 | Smaller chart with a travel column beside it (desktop) | 0.16.1 | 1180 px and wider; phones stay stacked. |
@@ -71,3 +72,8 @@ Sean: too much scrolling on Navigation. Audit in [reviews/2026-11-16-ui-length-a
 - Draw equipment (lasers etc.) on the ship image itself.
 - Create the 24 character portraits (see PORTRAITS.md); optionally bake into the HTML.
 - Make dimmed (non-event) buttons keyboard-focusable: needs the guide and CSS selectors moved off `[disabled]` first.
+
+## Open (raised 2026-11-16)
+- Mark pinned ports on the star chart and explain Pin in one line (Pin is now a star; its purpose is still thin).
+- Atlas progress: per-port entry, modest first-visit payoff, next-unvisited suggestion on the arrival card (research gathered, not yet built).
+- Consider a Hull row on the arrival card when hull is low.
