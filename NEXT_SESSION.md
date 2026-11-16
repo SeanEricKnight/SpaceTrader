@@ -59,3 +59,10 @@ Open: ask the player what the cut-off "After where it says goal…" note said; d
 ## State as of 2026-11-16 (0.25.4)
 
 Events: 39 in `INCIDENTS` (tiers 1 to 3), drawn from a shuffled bag (`pickIncident`, saved as `incBag`), with chains through `game.incFlags` (ghost signal, reactor payback). Append new events so old saved offer ids stay valid; keep titles unique (`incByTitle` finds the first match). `check-incidents.cjs` runs every choice. Not built (checked 2026-11-16): landing-port news events, a rare chance tier (tiers follow progression only), events that react to cargo held or reputation, recurring named characters beyond the two chains. Sean should play a few Excitement trips and say which events feel good or bad.
+
+## Prompt for the next session: state-reactive events (written 2026-11-16)
+Start: read shared-mind AGENTS.md and memory/standing-instructions.md, then the "Reusable rules" digest and the 2026-11-16 "event variety, redone properly (71 sources)" entry in memory/game-design-references.md, and this repo's DECISIONS.md top entry. Sources: shared-mind memory/research/event-variety-2026-11-16.md.
+Task: build state-reactive travel events in SpaceTrader-browser.html (sync docs/ with scripts/sync-pages.cjs). Event text and options change with cargo, reputation, crew and fuel (same title, different situation); then a small rare tier of memorable events. Keep the shuffled bag, tiers and when() gates; do not touch landing news or recurring characters. Rules: certain costs and payoff size up front, story after the click; greyed options show the reason on the button; no back-to-back repeats.
+Check: extend browser-preview/check-incidents.cjs to run every choice under each state variant; run scripts/run-checks.cjs; playtest 10 trips if a browser is available.
+Finish: bump version, CHANGELOG/GAMEPLAY/BACKLOG/NEXT_SESSION, SHA256SUMS, DECISIONS.md entry (mark approved), research-log line if anything new, push with git -c push.negotiate=true push origin HEAD:main.
+Open question to ask Sean first: which button was greyed in the saved-choice complaint?
