@@ -1,6 +1,10 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.12`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.24.13`.
+
+## 0.24.13
+- **Find a planet:** the Show and Sort chips are now two fixed rows, so Sort, its three options and By Reach stay together on one line (measured from 388 px panels up) instead of By Reach dropping alone to a new line.
+- **New game footer:** cancelling "Start new game" no longer snaps the Difficulty menu back to the current game. Your pick stays until you start the game or choose the current difficulty again. `check-firstrun.cjs` covers it and fails on 0.24.12 code.
 
 ## 0.24.12
 - **Less Market scrolling on phones.** The trade rows now come before the price-tag legend, port history and home-port/warehouse panel. At a fresh dock on 390x844 the first trade row moved from 1,907 px to 1,403 px down the page (desktop 1,644 to 1,293). Nothing was removed.

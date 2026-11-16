@@ -34,3 +34,15 @@ console.log('PASS first run: Start flying runs the hint, dock button tracks the 
 const at=k=>m.indexOf(k);
 assert.ok(at("trade-list")>0&&at("trade-list")<at("homePanel()")&&at("trade-list")<at("legend+worldHistory")&&at("tools+")<at("trade-list"),'Market shows trade rows before home panel, legend and history');
 console.log('PASS market order: trade rows before home panel, legend and history');}
+// Footer difficulty: cancelling "Start new game" must keep the player's pick (playtest 0.24.10 item 5).
+{const c=context(),q=c.run;q("action('intro-go')");
+q("$('difficulty').value='Hard';diffPick='Hard';confirm=()=>false;action('newdifficulty')");
+assert.equal(q("$('difficulty').value"),'Hard','cancelling a new game keeps the chosen difficulty');
+assert.equal(q('game.difficulty'),'Normal','cancel leaves the current game alone');
+q("render()");assert.equal(q("$('difficulty').value"),'Hard','a later render keeps the pending pick');
+assert.ok(q("$('difficulty-info').textContent").includes('Click Start new game'),'info still says what Start will do');
+q("confirm=()=>true;action('newdifficulty')");
+assert.equal(q('game.difficulty'),'Hard','confirming starts the chosen difficulty');assert.equal(q("diffPick"),'','pending pick clears after a new game');
+q("$('difficulty').value='Easy';diffPick='Easy';render();$('difficulty').value='Normal';diffPick='';render()");
+assert.equal(q("$('difficulty').value"),'Hard','picking the current difficulty clears the pending pick');
+console.log('PASS footer difficulty: cancel keeps the pick, confirm clears it');}

@@ -4,6 +4,9 @@ One entry per decision, newest first. Research method: shared-mind `memory/game-
 
 Entry format: **Date · Decision.** Decided by. Why (research link). Rejected. Status. How it is checked.
 
+## 2026-11-16 · Footer difficulty keeps the pending pick; finder chips in two rows
+Decided by Claude, delegated by Sean ("do that"; chip wrap seen in his screenshot). Every render reset the footer select to the current game, so cancel lost the pick. Added a pending pick cleared on confirm or when it equals the current game. Chips: Show row and Sort row (a flat wrapping row put By Reach alone on line 2 at common widths). Status: built in 0.24.13; Chrome-measured chip rows 388 to 1440 px. Open: live-encounter interruption audit (only rapid Travel clicks probed: one jump executes).
+
 ## 2026-11-16 · Market: trade rows first
 Decided by Claude, delegated by Sean ("fix backlog"). Playtest item 3 (Market scrolling on phones). Moved legend, port history and home/warehouse panel below the trade list; nothing hidden (shared-mind rule: do not hide frequent actions, cut height not options). Rejected: collapsing options behind a fold (extra taps). Status: built in 0.24.12; measured in Chrome (before/after above). Open: taps-to-action on a real phone; arrival card still adds about 280 px on first dock.
 
