@@ -1,6 +1,12 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.25.5`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.0`.
+
+## 0.26.0
+- **State-reactive events.** Seven existing events now read and play differently with what you carry, who flies with you and where you stand. Extra options are added after the base ones and each states cost and payoff up front: a mechanic can cut the derelict or seal the fuel line for free; carrying Medicine adds "Give them 1 Medicine" to the distress call (paid 400 to 700 cr); banned goods make the patrol's scanner linger and add a 50 cr courtesy fee; Trusted standing in the Reach adds "Show your pass" to the patrol and the toll buoy; fuel at 2 or less lets the convoy sell you 2 fuel at double price; two free bays let the crippled trader hand over 2 crates. Greyed options still show their reason on the button.
+- **Rare tier.** Three memorable events (a silent lighthouse, a liner at full burn, an escape pod) that are never in the shuffled bag. From tier 2 on, each pick has an 8% chance of drawing one you have not seen; each shows at most once per game (`game.rareSeen`) and never back to back. The liner pays 3x the local price for up to 3 units of your most valuable legal cargo and never takes banned goods; the lighthouse pays and adds +1 standing in the Reach.
+- Not built, as decided: landing-port news and recurring characters.
+- Checks: `check-incidents.cjs` now runs every choice under 11 player-state variants (banned cargo, Medicine, full hold, low and empty fuel, Trusted standing, mechanic, no crew, no cash, patrol heat, tier 3), asserts each variant option appears only in its state and stays after the base options, and covers the rare tier (none at tier 1, once each, never in a saved bag, liner arithmetic). Two mutations (rare chance 0, pass gate off) were each caught. Headless 10-trip run: no errors. A real-browser playtest was not possible here (Playwright missing).
 
 ## 0.25.5
 - Two different events were both titled "A stowaway" (the 0.23.6 one and a tier-2 one). The tier-2 one is now "A stowaway behind the racks", so the hand-over lookup by title is unambiguous and players do not see the same title twice.

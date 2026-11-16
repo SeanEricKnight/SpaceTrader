@@ -2,12 +2,13 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 16, 2026 (version 0.25.5). 0.25.5 renamed a duplicate event title and refreshed the event docs. 0.25.4 labelled the arrival card close button. 0.25.3 fixed stale guide glows on tab buttons and added hint tracing to the log. 0.25.2 fixed the dead difficulty buttons, travel-line reading time and the stray Dismiss all, and added roadside fuel and a one-time upgrade nudge. 0.25.1 built the Atlas first-visit toast and star chart pin markers. 0.24.13 fixed finder chip wrap and footer difficulty cancel. 0.24.12 moved Market trade rows above legend/history/home panel. 0.24.11 added a post-guide Next move line (playtest item 5); retention effect still untested.
+Last updated: November 16, 2026 (version 0.26.0). 0.26.0 added state-reactive events and a rare tier. 0.25.5 renamed a duplicate event title and refreshed the event docs. 0.25.4 labelled the arrival card close button. 0.25.3 fixed stale guide glows on tab buttons and added hint tracing to the log. 0.25.2 fixed the dead difficulty buttons, travel-line reading time and the stray Dismiss all, and added roadside fuel and a one-time upgrade nudge. 0.25.1 built the Atlas first-visit toast and star chart pin markers. 0.24.13 fixed finder chip wrap and footer difficulty cancel. 0.24.12 moved Market trade rows above legend/history/home panel. 0.24.11 added a post-guide Next move line (playtest item 5); retention effect still untested.
 
 ## Built
 
 | Idea | Version | Notes |
 | --- | --- | --- |
+| State-reactive events (7 events react to cargo, crew, standing, fuel) and a rare tier of 3 | 0.26.0 | Researched 2026-11-16 (71 sources); see DECISIONS. Landing news and recurring characters not built. |
 | Hull warnings, home-port Homecoming, 24 tiered events, port-card button cleanup, star chart redesign, difficulty picker, bounty payoff, dialog X fix | 0.25.0 | Researched 2026-11-16; see CHANGELOG. |
 | Test button for unlimited money | 0.6.2 | Footer "Test tools" opens the cheat console. |
 | Market screen without sideways scrolling | 0.7.0 | Compact rows; tap a row to trade. |

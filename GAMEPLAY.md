@@ -1,6 +1,6 @@
 # Space Trader: how it plays
 
-The rules as they work in the current version (**0.25.5**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
+The rules as they work in the current version (**0.26.0**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
 
 ## After the guide
 When the guide is complete or skipped, the goal bar shows the cash goal plus a "Next move" line: the next chapter of Mara's story if it is open, otherwise the best affordable trade from where you dock (same quote maths as the Market). Show opens the destination on the chart.
@@ -108,7 +108,7 @@ Chosen on the destination card before you jump:
 
 - **Quiet ride:** +1 day, half the pirate risk, nothing unusual happens. Loan interest and ship rental are charged for both days.
 - **Steady:** normal pirate risk.
-- **Excitement:** normal pirate risk plus about a 55% chance of an incident on the way. There are 39 kinds, in three tiers: tier 1 from the start, tier 2 after about 10 jumps, tier 3 after about 28 (Beginner and Easy rarely reach tier 3). Early kinds include a derelict, a distress call, a trader convoy, a stowaway, a fuel leak, a toll buoy, a prospector selling cheap cargo, a debris field and a customs drone; later tiers add gambles with higher stakes and two chains (a ghost signal that returns, a reactor ship whose pilot pays you back). Events come from a shuffled bag: each one shows once before any repeats, and none comes twice in a row. Some only appear when they fit (crew events need crew, the customs drone needs patrol heat, the fuel leak needs fuel). Every choice says its cost and payoff; the story and exact payout come after you choose. Greyed-out choices say why. You choose how to respond.
+- **Excitement:** normal pirate risk plus about a 55% chance of an incident on the way. There are 39 kinds in the shuffled bag (three tiers) plus 3 rare ones: tier 1 from the start, tier 2 after about 10 jumps, tier 3 after about 28 (Beginner and Easy rarely reach tier 3). Early kinds include a derelict, a distress call, a trader convoy, a stowaway, a fuel leak, a toll buoy, a prospector selling cheap cargo, a debris field and a customs drone; later tiers add gambles with higher stakes and two chains (a ghost signal that returns, a reactor ship whose pilot pays you back). Events come from a shuffled bag: each one shows once before any repeats, and none comes twice in a row. Some only appear when they fit (crew events need crew, the customs drone needs patrol heat, the fuel leak needs fuel). Every choice says its cost and payoff; the story and exact payout come after you choose. Greyed-out choices say why. Seven events change with your state: a mechanic in the crew, Medicine or banned goods in the hold, Trusted standing in the Reach, low fuel and free bays add options or change the text (for example the patrol offers "Show your pass" when you are Trusted). Rare events (a silent lighthouse, a liner that pays triple for your best legal cargo, an escape pod) come from tier 2 on at about 8% per event, once each per game. You choose how to respond.
 
 ## Events and the News
 
