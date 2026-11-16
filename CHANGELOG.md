@@ -2,6 +2,11 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.8.2`.
 
+## 0.24.5
+- **Locked event options explain themselves.** In events like the distress call, an option you cannot afford (fuel, credits, bays) now shows a "Locked" tag on the button, the shortfall first in amber ("Needs 2 fuel; you have 0."), then the usual description. The old version left the reason as small grey text at the end and dimmed the button almost to invisibility.
+- **Tapping a locked option answers.** It stays focusable (aria-disabled), highlights, and shows a next step matched to what is missing (refuel at your next port, earn credits, free cargo space, or pick another option). Nothing is spent and the card stays open.
+- Research: shared-mind game-design-references.md, 2026-11-16 (53 sources). Decision logged in DECISIONS.md. `check-incidents.cjs` covers the reason, the tag, focusability, the tap and the no-state-change rule. Other disabled controls elsewhere in the game have not been audited yet.
+
 ## 0.24.4
 - **Ship card rebuilt.** Each ship has a role tag (Scout, Starter, Courier, Fighter, Trader, Freighter, Warship, All-rounder, Heavy freighter, Flagship) and a one-line "best for". Stat rows show a bar against the best ship in the galaxy plus a green/red chip against your hull: bays, range, hull, lasers, shields, gear slots, and fuel cost per parsec (so the Termite's 20 cr/pc is visible before you buy).
 - **No more dead Buy button.** If this port's shipyard is too low-tech, the primary button is "Show me where · <yard>, N pc · N jumps" and opens that world on the map. Buy and Rent show only where you can use them, with the reason under them. Price and rent sit in a line at the top. "Make this my ship goal" is on the card.

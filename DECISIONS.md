@@ -4,6 +4,9 @@ One entry per decision, newest first. Research method: shared-mind `memory/game-
 
 Entry format: **Date · Decision.** Decided by. Why (research link). Rejected. Status. How it is checked.
 
+## 2026-11-16 · Locked event options show the reason on the option and answer a tap
+Decided by Sean's report ("I couldn't easily figure out that I needed fuel"; asked for research, then a fix), after 53 sources. Why: loved games (Fallout New Vegas, Disco Elysium, the Dialogue Tree docs) print the requirement inside the option; NN/g, GOV.UK and Primer say a disabled control must explain why and stay reachable; hover tooltips do not exist on phones. Details: shared-mind `memory/game-design-references.md`, entry "locked choices". Rejected: hiding locked options (players never learn them, FTL blue-option spreadsheets), hover tooltips (no hover on touch), error-on-submit only (suits forms, not a one-tap choice). Contrary evidence: GOV.UK and USWDS prefer not disabling at all; many sources are forum opinion. Status: built in 0.24.5 for event choice cards. Open: audit other disabled controls. Checked: check-incidents.
+
 ## 2026-11-16 · Artwork direction (OPEN, awaiting Sean)
 Proposal in [ART_DIRECTION.md](ART_DIRECTION.md): crew portraits first with per-person accent colors, then ships with a design language per shipyard and silhouette tests. Why: Endless Sky and Starsector art guides, TF2/Overwatch readability, Nittono 2012 (see shared-mind research log). Rejected so far: cute baby-schema faces (tone mismatch). Status: open; no art built. Check: grayscale ship silhouette sheet, 48 px crew row.
 ## 2026-11-16 · Event messages are sticky and stack at the top; routine confirmations time out

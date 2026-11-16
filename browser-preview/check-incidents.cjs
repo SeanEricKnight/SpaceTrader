@@ -22,7 +22,13 @@ for(let i=0;i<N;i++){
 }
 // Greyed-out choices explain themselves.
 prep();r('game.fuel=1;game.offer={kind:"incident",id:INCIDENTS.findIndex(x=>x.title==="A debris field")}');assert.ok(/Needs 1 fuel/.test(r('incidentPanel()'))===false,'1 fuel is enough for the detour');
-r('game.fuel=0');assert.ok(/Unavailable: Needs 1 fuel; you have 0\./.test(r('incidentPanel()')),'reason shown');
+r('game.fuel=0');{const h=r('incidentPanel()');assert.ok(/<b class="lock-why">Needs 1 fuel; you have 0\.<\/b>/.test(h),'reason shown in amber, before the description');assert.ok(/class="locked"[^>]*aria-disabled="true"/.test(h)&&!/\bdisabled(?!=)/.test(h.replace(/aria-disabled/g,'')),'locked option stays focusable (aria-disabled, no disabled attribute)');assert.ok(h.includes('lock-tag'),'Locked tag sits on the button itself');assert.ok(!h.includes('lock-next'),'next step only after a tap');}
+// Tapping a locked option explains instead of doing nothing, and changes no state.
+{const before=r('JSON.stringify([game.fuel,game.credits,game.hull])'),k=r('curNode(game.offer).choices.findIndex(c=>c.ok&&!c.ok(game.offer))');r('action("incident-'+k+'")');assert.ok(r('!!game.offer'),'card stays open');assert.equal(r('JSON.stringify([game.fuel,game.credits,game.hull])'),before,'tap on locked option changes nothing');const h=r('incidentPanel()');assert.ok(/class="locked tapped"/.test(h)&&/Next step: refuel at your next port/.test(h),'tap shows the next step');}
+// Distress call at 0 fuel: Help is locked with the reason, the free options stay open.
+prep();r('game.fuel=0;game.offer={kind:"incident",id:INCIDENTS.findIndex(x=>x.title==="A distress call")}');{const h=r('incidentPanel()');assert.ok(h.includes('Needs 2 fuel; you have 0.')&&(h.match(/class="locked/g)||[]).length===1,'only the fuel option is locked');}
+// Gated cr/bay options get the right next step.
+assert.ok(/earn credits/.test(r('lockNext("Needs 40 cr; you have 5 cr.")'))&&/refuel/.test(r('lockNext("Needs 2 fuel; you have 0.")'))&&/free up cargo/.test(r('lockNext("Needs 3 free bays")')),'next step matches the missing resource');
 // Shuffle bag: all 15 appear before any repeat; never back to back; garbage bag is repaired.
 prep();const seen=[];for(let k=0;k<15;k++)seen.push(r('pickIncident()'));assert.equal(new Set(seen).size,15,'first 15 picks are all different');
 let prev=seen[14];for(let k=0;k<200;k++){const id=r('pickIncident()');assert.notEqual(id,prev,'no back-to-back repeat');prev=id}
