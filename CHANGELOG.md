@@ -1,6 +1,9 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.0`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.1`.
+
+## 0.26.1
+- **Fix: the X on a milestone (or any action) toast opened the All milestones screen.** The whole toast ran its action on tap, including the X. The X now only dismisses; tapping the rest of the toast still runs the action. Added a layout check for it (needs Playwright, which was not installed here); the logic was verified with a stubbed DOM (X: dismissed, no action; body: dismissed and action).
 
 ## 0.26.0
 - **State-reactive events.** Seven existing events now read and play differently with what you carry, who flies with you and where you stand. Extra options are added after the base ones and each states cost and payoff up front: a mechanic can cut the derelict or seal the fuel line for free; carrying Medicine adds "Give them 1 Medicine" to the distress call (paid 400 to 700 cr); banned goods make the patrol's scanner linger and add a 50 cr courtesy fee; Trusted standing in the Reach adds "Show your pass" to the patrol and the toll buoy; fuel at 2 or less lets the convoy sell you 2 fuel at double price; two free bays let the crippled trader hand over 2 crates. Greyed options still show their reason on the button.
