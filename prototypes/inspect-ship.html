@@ -132,6 +132,15 @@ function makeDrawing(parent,interactive){
 }
 const groups=makeDrawing($('drawing'),true);
 makeDrawing($('entry-scene'),false);
+if(params.get('task')==='spatial'){
+ const probe=$('entry-scene');
+ probe.querySelectorAll('.tag').forEach(tag=>tag.remove());
+ probe.setAttribute('role','img');
+ probe.setAttribute('aria-label','Unlabelled assembled Firefly');
+ probe.style.cssText='display:block;width:100%;height:100svh';
+ document.body.replaceChildren(probe);
+ return;
+}
 for(const [i,p]of parts.entries()){
  const li=document.createElement('li'),button=document.createElement('button');button.type='button';button.dataset.part=p.id;button.id='part-'+p.id;button.setAttribute('aria-pressed',String(i===0));button.setAttribute('aria-controls','part-detail');button.innerHTML='<span class="part-number">'+(i+1)+'</span><span>'+p.label+'</span><span class="part-value">'+p.value+'</span>';button.addEventListener('click',()=>selectPart(i,'list'));li.append(button);$('part-list').append(li);
 }
