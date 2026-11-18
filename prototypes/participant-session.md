@@ -16,7 +16,7 @@ Close the inspection and hide the overview. Ask the following without feedback. 
 5. A fitted shield reduces each hit by five, with a minimum of one. What gets through on a three-point hit? (One.)
 6. Would moving the illustrated crew quarters change a combat outcome? Why? (No; placement is illustrative.)
 
-Optional spatial probe after the six answers: show the same assembled image cropped to remove labels and number tags; ask the participant to point out the engine exhausts. Use the same masked image for everyone. Record separately; skip for everyone if the masked stimulus is unavailable.
+Spatial probe after the six answers: open [the unlabelled ship](inspect-ship.html?task=spatial). Ask “Point to the engine exhausts.” Score left/aft thruster outlets as correct. Record separately from the six-point score. Both conditions use the identical assembled drawing.
 
 Ask “How enjoyable was inspection?” (1–7) and “Did anything feel uncomfortable?” Record separately. Give a two-minute unrelated sorting task. Then make the overview available for one minute, saying only “You may use this time however you like.” Record whether they reopen inspection without prompting. Ask what they were trying to do only afterward. Do not count facilitator-requested reopening. Optional crossover for preference follows all measures.
 
