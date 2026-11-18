@@ -1,6 +1,10 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.1`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.2`.
+
+## 0.26.2
+- **Smaller cards for iPhone.** The "Milestone: …" notice bar no longer appears (it repeated the gold milestone toast; the milestone is still logged in Activity). The first-arrival card on a phone (under 560 px) drops the flavor sentence, shrinks the planet art to 44 px and tightens spacing and text; the Close button keeps a 44 px tap target. Measured in Chrome at 390 px wide: notice bar 45 px to 0, arrival card 345 px to 151 px.
+- Playwright (playwright-core) now runs against the system Chrome here, so check-layout runs for real, including the toast-X test from 0.26.1.
 
 ## 0.26.1
 - **Fix: the X on a milestone (or any action) toast opened the All milestones screen.** The whole toast ran its action on tap, including the X. The X now only dismisses; tapping the rest of the toast still runs the action. Added a layout check for it (needs Playwright, which was not installed here); the logic was verified with a stubbed DOM (X: dismissed, no action; body: dismissed and action).
