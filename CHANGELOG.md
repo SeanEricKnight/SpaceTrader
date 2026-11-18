@@ -1,6 +1,12 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.4`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.5`.
+
+## 0.26.5
+- **Every long phone tab is shorter (phones under 560 px only; desktop unchanged).** Measured in Chrome at 390 px wide, page height before to after: News 6,633 to 3,323 px; Store 5,076 to 3,601; Crew 3,116 to 2,601; Commander 3,517 to 2,769; Market 3,511 to 2,896; Solar chart 3,487 to 3,050; Jobs 2,853 to 2,813.
+- What changed on phones: news people cards show name, role and button only (2 per row) and the setting primer keeps just its first paragraph; Store ship cards are smaller with the role line and "Set as my ship goal" button hidden (the goal button is still reachable from the ship's detail); Outfit cards sit 2 per row with 2-line descriptions; Crew cards are tighter; Commander hides its explanatory captions and shows milestones 2 per row; Market hides the legend and coach line; the travel-style picker's explanatory text is hidden.
+- Tried and reverted: hiding the job icon broke the job-row grid and made Jobs taller.
+- Still tall by design: the Solar chart (578 px) and the News bulletins.
 
 ## 0.26.4
 - **Less scrolling on iPhone (phones under 560 px wide only; desktop unchanged).** Best runs shows the top 2 jobs, without its caption, and the Accept/Show route buttons sit on one row. My ports shows 1 port with "N more" below. The destination card, Welcome home panel, trade rows and First haul card have tighter padding; the Homecoming paragraph is hidden; the First haul step list is hidden while the guide bar already shows the same step; "Move cards (drag)" is hidden. Measured in Chrome at 390 px wide: Navigation tab 3,020 px to 2,751 px (3.58 to 3.26 screens), Market tab 3,511 px to about 3,240 px.
