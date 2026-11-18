@@ -2,6 +2,9 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.8`.
 
+## 0.26.9
+- **Solar chart fits one desktop screen.** On windows 1400 px and wider the tab is three columns: chart, selected port and best runs, then My ports and distances. Page height at 1507 px wide dropped from about 2,013 px to about 1,605 px. The arrival card and First haul card are now single-line strips, the goal and guide bars are tighter, and goal captions are hidden. No gameplay change.
+
 ## 0.26.8
 - Fix: 0.26.7 hid the ship stats line (lasers, shields, gear slots) on Store cards, which a check requires. It is visible again, and so is the role line. 0.26.7 was pushed with that one check failing; this release has all checks passing.
 
