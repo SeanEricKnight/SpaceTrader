@@ -1,6 +1,11 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.3`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.4`.
+
+## 0.26.4
+- **Less scrolling on iPhone (phones under 560 px wide only; desktop unchanged).** Best runs shows the top 2 jobs, without its caption, and the Accept/Show route buttons sit on one row. My ports shows 1 port with "N more" below. The destination card, Welcome home panel, trade rows and First haul card have tighter padding; the Homecoming paragraph is hidden; the First haul step list is hidden while the guide bar already shows the same step; "Move cards (drag)" is hidden. Measured in Chrome at 390 px wide: Navigation tab 3,020 px to 2,751 px (3.58 to 3.26 screens), Market tab 3,511 px to about 3,240 px.
+- check-layout now caps the phone Navigation tab at 3.4 screens (was 4) and asserts the compact card counts.
+- Not changed: the Solar chart itself (578 px), Store (5,000 px) and News (6,600 px) tabs, which are browse pages; say if you want those cut too.
 
 ## 0.26.3
 - **Fix: buttons that say they scroll somewhere (Show route, Show on chart, Travel to the arrival card) could leave you where you were on iPhone.** They fired one smooth `scrollIntoView` right after the redraw, and Safari can drop that when the layout shifts. The page now checks 0.7 s later and, if the target is not at the top of the screen, jumps there directly. Reproduced the failure in a phone-sized Chrome by disabling smooth scroll; the new check-layout test fails without the fix and passes with it. Not tested on a real iPhone, so please report any button that still misses.

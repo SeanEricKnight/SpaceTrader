@@ -7,7 +7,7 @@ const gameUrl=pathToFileURL(path.resolve('SpaceTrader-browser.html')).href;
 let chromium;try{({chromium}=require('playwright-core'))}catch{console.log('SKIP: playwright-core not installed');process.exit(0)}
 const exe=process.env.CHROME_PATH||['/usr/bin/google-chrome','/usr/bin/chromium','/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'].find(p=>fs.existsSync(p));
 if(!exe){console.log('SKIP: no Chrome found (set CHROME_PATH)');process.exit(0)}
-const CAPS={desktop:2.2,phone:4};
+const CAPS={desktop:2.2,phone:3.4};
 (async()=>{
  const browser=await chromium.launch({executablePath:exe,args:['--no-sandbox']});
  for(const [name,w,h] of [['desktop',1440,900],['phone',390,844]]){
@@ -27,6 +27,7 @@ const CAPS={desktop:2.2,phone:4};
   assert.ok(m.docH/m.vh<=CAPS[name],name+' Navigation tab is '+(m.docH/m.vh).toFixed(2)+' screens, cap '+CAPS[name]);
   if(name==='desktop')assert.ok(m.travelBottom!==null&&m.travelBottom<=m.vh,'Travel is inside the first screen on desktop (bottom '+m.travelBottom+' of '+m.vh+')');
   const sig=await page.evaluate(()=>{const dh=document.getElementById('dock-hint'),r=dh.getBoundingClientRect(),vis=!dh.hidden&&getComputedStyle(dh).display!=='none';return{vis,text:dh.textContent,inView:vis&&r.top>=0&&r.bottom<=innerHeight,action:dh.dataset.action}});
+  if(name==='phone'){const pc=await page.evaluate(()=>{const vis=q=>[...document.querySelectorAll(q)].filter(e=>e.offsetParent).length;return {runs:vis('.best-runs li.run'),ports:vis('.my-ports>ul>li'),arrange:vis('[data-action="arrange"]')}});assert.ok(pc.runs<=2&&pc.ports<=1&&pc.arrange===0,'phone cards stay compact: '+JSON.stringify(pc));}
   if(name==='phone'){assert.ok(sig.inView&&/^🚀 Travel to .+ · \d+ fuel$/.test(sig.text)&&sig.action==='jump','phone: Travel is in the bottom pill without scrolling: '+JSON.stringify(sig));
    const loc=await page.evaluate(()=>{const f=game.location;await0=0;return game.location});await page.click('#dock-hint');const moved=await page.evaluate(()=>game.location!==0||inFlight());assert.ok(moved,'phone: tapping the pill starts the trip')}
   else assert.equal(sig.vis,false,'desktop: the bottom Travel pill stays hidden (Travel is in the map bar)');
