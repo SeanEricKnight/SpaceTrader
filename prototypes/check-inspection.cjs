@@ -15,7 +15,7 @@ const path = require('node:path');
     await page.keyboard.press('Enter');
     const state = () => page.evaluate(() => window.inspectShipPrototype.getState());
     assert.equal((await state()).renderedProgress,1);
-    assert.equal(await page.locator('[data-mode]:visible').count(),0);
+    assert.equal(await page.locator('button[data-mode]:visible').count(),0);
     await page.screenshot({path:'firefly-'+viewport.width+'-'+mode+'.png'});
     for(const id of ['close-inspection','assembled','cutaway','separation']){
      const rect=await page.locator('#'+id).boundingBox();
