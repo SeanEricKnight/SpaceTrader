@@ -2,6 +2,9 @@
 
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.8`.
 
+## 0.26.10
+- Removed the "Some stops are in another Reach: tap a stop to switch the chart" line under the route banner. "Stops on this route" is now a compact card: heading and fuel line on one row, stops side by side without wrapping. No gameplay change.
+
 ## 0.26.9
 - **Solar chart fits one desktop screen.** On windows 1400 px and wider the tab is three columns: chart, selected port and best runs, then My ports and distances. Page height at 1507 px wide dropped from about 2,013 px to about 1,605 px. The arrival card and First haul card are now single-line strips, the goal and guide bars are tighter, and goal captions are hidden. No gameplay change.
 

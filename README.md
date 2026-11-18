@@ -2,7 +2,7 @@
 
 A browser game of interstellar trading, inspired by the classic Palm OS *Space Trader*. Buy low, sell high, dodge pirates and customs, and save **500,000 credits** to buy your own moon. No game over: lose a fight and you lose cargo, not the run.
 
-**Version 0.26.9** · single HTML file · plays in a desktop or phone browser (Chrome tested most; Firefox lightly)
+**Version 0.26.10** · single HTML file · plays in a desktop or phone browser (Chrome tested most; Firefox lightly)
 
 ## Play
 
