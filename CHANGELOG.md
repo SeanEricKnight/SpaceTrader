@@ -1,11 +1,14 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.7`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.8`.
+
+## 0.26.8
+- Fix: 0.26.7 hid the ship stats line (lasers, shields, gear slots) on Store cards, which a check requires. It is visible again, and so is the role line. 0.26.7 was pushed with that one check failing; this release has all checks passing.
 
 ## 0.26.7
 - **Less scrolling on desktop too (reported on Firefox desktop).** The compact cards from 0.26.4 to 0.26.5 were limited to phones under 560 px, so a desktop window still showed the big arrival card. The compact arrival card now applies at every width. The other compact rules (best runs 2 rows, my ports 1 row, trimmed destination and trade cards, hidden captions) now apply at every width as well.
 - **Wide screens (1100 px and up):** Market is two columns (cargo, carrying, jobs and options on the left; the trade list, port history and warehouse on the right); Commander is two columns; News people cards, milestones and outfit cards go 4 per row, news stories 3 per row, ship cards fill the width. Desktop page heights at 1625 px wide, before to after: Market 2,673 to 1,994 px; Store 2,473 to 2,181; Commander 2,585 to 1,759; News 3,284 to 2,233; Crew 1,724 to 1,666; Solar chart 2,030 to 1,939.
-- Known: hidden text (news bios, ship role lines, captions) is also hidden on desktop now.
+- Known: hidden text (news bios, captions) is also hidden on desktop now.
 
 ## 0.26.5
 - **Every long phone tab is shorter (phones under 560 px only; desktop unchanged).** Measured in Chrome at 390 px wide, page height before to after: News 6,633 to 3,323 px; Store 5,076 to 3,601; Crew 3,116 to 2,601; Commander 3,517 to 2,769; Market 3,511 to 2,896; Solar chart 3,487 to 3,050; Jobs 2,853 to 2,813.
