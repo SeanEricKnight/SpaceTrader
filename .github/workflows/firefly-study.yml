@@ -1,0 +1,24 @@
+name: Isolated Firefly browser check
+on:
+  pull_request:
+    paths:
+      - 'prototypes/**'
+      - '.github/workflows/firefly-study.yml'
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exercise Firefly in Chromium
+        run: |
+          npm install --prefix "$RUNNER_TEMP/firefly" playwright@1.56.1 --no-audit --no-fund
+          NODE_PATH="$RUNNER_TEMP/firefly/node_modules" node prototypes/check-inspection.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: firefly-layout
+          path: firefly-*.png
