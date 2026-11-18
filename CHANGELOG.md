@@ -1,6 +1,9 @@
 # Browser updates — November 14, 2026
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.2`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.3`.
+
+## 0.26.3
+- **Fix: buttons that say they scroll somewhere (Show route, Show on chart, Travel to the arrival card) could leave you where you were on iPhone.** They fired one smooth `scrollIntoView` right after the redraw, and Safari can drop that when the layout shifts. The page now checks 0.7 s later and, if the target is not at the top of the screen, jumps there directly. Reproduced the failure in a phone-sized Chrome by disabling smooth scroll; the new check-layout test fails without the fix and passes with it. Not tested on a real iPhone, so please report any button that still misses.
 
 ## 0.26.2
 - **Smaller cards for iPhone.** The "Milestone: …" notice bar no longer appears (it repeated the gold milestone toast; the milestone is still logged in Activity). The first-arrival card on a phone (under 560 px) drops the flavor sentence, shrinks the planet art to 44 px and tightens spacing and text; the Close button keeps a 44 px tap target. Measured in Chrome at 390 px wide: notice bar 45 px to 0, arrival card 345 px to 151 px.
