@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Inspect ship · Space Trader</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#e9eef3;background:#080f16;font-synthesis:none;--muted:#a3b5c5;--line:#2c4050;--mint:#a3ead9;--amber:#f0bd78}
+*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{min-height:44px;border:1px solid #45616e;border-radius:8px;color:inherit;background:#152531;padding:9px 15px;cursor:pointer;font-weight:600}button:hover{border-color:#a3ead9;background:#1d3540}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #f0bd78;outline-offset:3px}button[aria-pressed="true"]{color:#101e25;background:#a3ead9;border-color:#a3ead9}.primary{background:#a3ead9;color:#101e25;border-color:#a3ead9}.quiet{background:transparent;font-weight:500}button.primary:hover{background:#c4f5e9}h1,h2,h3,p{margin:0}h1{font-size:clamp(32px,5vw,54px);font-weight:550;letter-spacing:-.05em;line-height:1.08}h2{font-weight:550;letter-spacing:-.035em;font-size:30px}.eyebrow{color:#a3ead9;font-size:11px;font-weight:650;letter-spacing:.18em;text-transform:uppercase}.muted{color:var(--muted)}.page{width:min(1180px,100% - 48px);margin:auto}header{padding:27px 0 23px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.brand{font-size:16px;font-weight:650;letter-spacing:.06em}.brand span{color:#a3ead9;margin-right:8px}.edition{font-size:12px;color:var(--muted)}.welcome{padding:45px 0 50px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.welcome-copy>p:not(.eyebrow){font-size:16px;line-height:1.6;margin:20px 0;color:#b4c4d0;max-width:48ch}.welcome .eyebrow{margin-bottom:15px}.welcome .ship-name{margin-top:12px;color:var(--amber);font-size:15px}.intro-controls{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.entry-preview{position:relative;min-height:285px;border:1px solid var(--line);background:radial-gradient(ellipse at 50% 40%,#233a43 0,transparent 68%),#101d27;border-radius:18px;overflow:hidden}.entry-preview svg{width:100%;height:270px;display:block}.entry-caption{position:absolute;bottom:18px;left:20px;font-size:12px;color:#b1c8d3;letter-spacing:.1em}.specs{display:flex;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;margin-bottom:28px}.specs div{padding:0 30px;border-right:1px solid var(--line)}.specs div:first-child{padding-left:0}.specs div:last-child{border:0}.specs dt{font-size:12px;color:var(--muted);margin-bottom:5px}.specs dd{font-size:22px;margin:0;font-variant-numeric:tabular-nums}.proto-note{font-size:13px;line-height:1.6;color:#9aafbf;max-width:92ch}.mode-controls{display:flex;gap:6px}.mode-controls button{font-size:13px}.tools{padding:24px 0 45px;display:flex;justify-content:space-between;align-items:flex-start;gap:25px}.tools summary{cursor:pointer;color:#a3b5c5;font-size:13px;padding:8px 0}.tools details p{max-width:65ch;line-height:1.6;font-size:13px;color:#a3b5c5;margin:8px 0 12px}.tools button{font-size:12px}.scroll-track{height:calc(100svh + 440px);position:relative}.scroll-track[hidden],#overview[hidden]{display:none}.inspection{position:sticky;top:0;min-height:100svh;display:flex;align-items:center;padding:16px 0}.console{width:100%;background:linear-gradient(140deg,#14232e,#0c1720);border:1px solid #354d5b;border-radius:18px;overflow:hidden;box-shadow:0 22px 80px #0005}.console-head{padding:19px 24px 17px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}.console-head .eyebrow{font-size:10px;margin-bottom:6px}.console-title{display:flex;align-items:baseline;gap:12px}.console-title span{color:#afc2ce;font-size:13px}.close-button{font-size:13px}.console-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px}.viewport{position:relative;min-width:0;background-image:linear-gradient(#37515d14 1px,transparent 1px),linear-gradient(90deg,#37515d14 1px,transparent 1px);background-size:32px 32px;border-right:1px solid var(--line)}.scene{display:block;width:100%;height:auto;aspect-ratio:900/540;overflow:visible}.scene .piece{cursor:pointer;outline:none}.scene .piece polygon,.scene .piece path,.scene .piece ellipse{stroke-linejoin:round}.scene .piece.dim{opacity:.28}.scene .piece.is-selected .part-top{stroke:#fff3d8;stroke-width:2.4}.scene .tag circle{fill:#0b1721;stroke:#b8d9d9;stroke-width:1.5}.scene .tag text{fill:#f5f6ef;font-family:system-ui,sans-serif;font-size:15px;font-weight:700;text-anchor:middle;dominant-baseline:central}.scene .piece.is-selected .tag circle{fill:#e9bc78;stroke:#fff3d8}.scene .piece.is-selected .tag text{fill:#101a20}.scene-guide{position:absolute;left:20px;top:16px;display:flex;align-items:center;gap:8px;font-size:11px;color:#b8cbd4;letter-spacing:.04em}.scene-guide .dot{width:5px;height:5px;background:#a3ead9;border-radius:50%}.scene-footer{position:absolute;left:20px;bottom:13px;right:20px;display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#a9bdc9}.detail-panel{padding:20px;display:flex;flex-direction:column;gap:13px}.detail-panel .eyebrow{font-size:10px;color:#a8bbc7}.part-list{list-style:none;padding:0;margin:0;display:grid;gap:5px}.part-list button{width:100%;text-align:left;display:flex;gap:10px;align-items:center;min-height:44px;padding:8px 10px;background:transparent;border-color:transparent;font-size:13px;font-weight:500}.part-list button:hover{background:#1c303b}.part-list button[aria-pressed="true"]{background:#20363d;border-color:#547c7f;color:#e9eef3}.part-number{width:23px;height:23px;display:grid;place-items:center;flex:0 0 23px;border-radius:50%;border:1px solid #5d7c85;color:#c6dce2;font-size:11px;font-weight:700}.part-value{margin-left:auto;color:#a3b5c5;font-size:11px;white-space:nowrap}.detail-copy{border-top:1px solid var(--line);padding-top:15px;min-height:113px}.detail-copy h3{font-size:16px;margin-bottom:8px;color:#f0bd78;font-weight:600}.detail-copy p{font-size:13px;line-height:1.55;color:#bdcbd5}.all-facts{padding:17px 24px 18px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:9px 25px}.all-facts p{font-size:12px;line-height:1.5;color:#b4c6d2}.all-facts b{font-weight:600;color:#e1e9ef}.controls-bar{border-top:1px solid var(--line);padding:15px 24px 16px;display:grid;grid-template-columns:auto minmax(120px,1fr) auto;align-items:center;gap:20px}.endpoint-buttons{display:flex;gap:6px}.endpoint-buttons button{font-size:12px}.range-control{display:flex;align-items:center;gap:12px}.range-control label{font-size:12px;color:#b4c6d2}.range-control input{width:100%;min-height:44px;margin:0;accent-color:#a3ead9;cursor:pointer}.range-control output{font-size:12px;width:34px;color:#d5e6e7;font-variant-numeric:tabular-nums}.scroll-hint{font-size:11px;line-height:1.5;color:#a3b5c5;max-width:145px}.motion-note{padding:0 24px 14px;font-size:12px;color:#e5c48d}.motion-note:empty{display:none}.console-modes{padding:0 24px 15px;display:flex;gap:10px;align-items:center;color:#91acbb;font-size:11px}.console-modes .mode-controls button{min-height:36px;padding:6px 11px;font-size:11px}.backdrop-label{font-size:11px;fill:#667f8d;letter-spacing:4px;font-family:system-ui,sans-serif}.orientation{font-size:10px;fill:#9bb3c0;font-family:system-ui,sans-serif}.noscript{padding:20px;border:1px solid #b98752;margin:20px 0;color:#eed0a4;font-size:14px;line-height:1.6}footer{color:#708b9b;font-size:11px;line-height:1.5;padding:20px 0 30px}body[data-study="true"] .mode-controls,body[data-study="true"] .console-modes{display:none}
+@media(min-width:1500px){.page{width:min(1360px,100% - 80px)}.console-grid{grid-template-columns:minmax(0,1fr) 320px}}
+@media(max-width:760px){.page{width:calc(100% - 28px)}header{padding:18px 0}.welcome{padding:28px 0;grid-template-columns:1fr;gap:24px}.welcome-copy>p:not(.eyebrow){font-size:14px;margin:15px 0}.entry-preview{min-height:220px;grid-row:2}.entry-preview svg{height:230px}.specs{padding:16px 0;flex-wrap:wrap;gap:15px}.specs div{padding:0 16px}.specs dd{font-size:20px}.specs div:first-child{padding-left:0}.specs div:last-child{display:none}.tools{flex-direction:column;gap:10px}.inspection{padding:7px 0;align-items:flex-start}.console{border-radius:12px}.console-head{padding:12px 13px;gap:5px}.console-head .eyebrow{font-size:9px;margin-bottom:3px}h2{font-size:23px}.console-title{gap:8px}.console-title span{font-size:11px}.close-button{padding:7px 10px;font-size:12px;min-height:44px}.console-grid{grid-template-columns:1fr}.viewport{border-right:0;border-bottom:1px solid var(--line)}.scene{aspect-ratio:900/510;max-height:35svh}.scene-guide{left:12px;top:9px;font-size:9px}.scene-footer{left:12px;right:12px;bottom:8px;font-size:9px}.detail-panel{padding:10px 12px;display:block}.detail-panel>.eyebrow{display:none}.part-list{grid-template-columns:repeat(3,1fr);gap:3px}.part-list button{min-height:44px;padding:5px;gap:5px;font-size:10px;letter-spacing:-.01em}.part-number{width:19px;height:19px;flex-basis:19px;font-size:10px}.part-value{display:none}.detail-copy{padding-top:8px;margin-top:7px;min-height:60px}.detail-copy h3{font-size:13px;margin-bottom:4px}.detail-copy p{font-size:11px;line-height:1.45}.all-facts{padding:10px 12px;grid-template-columns:repeat(2,1fr);gap:5px 14px}.all-facts p{font-size:10px;line-height:1.45}.controls-bar{padding:8px 12px;grid-template-columns:1fr;gap:4px}.endpoint-buttons{justify-content:space-between}.endpoint-buttons button{font-size:11px;padding:7px 12px;min-height:44px}.range-control{gap:8px}.range-control label{font-size:11px}.range-control input{min-height:35px}.scroll-hint{font-size:10px;max-width:none}.console-modes{padding:3px 12px 9px;font-size:10px}.console-modes .mode-controls button{min-height:44px}.motion-note{padding:0 12px 8px;font-size:10px}.scroll-track{height:calc(100svh + 340px)}footer{font-size:10px}}
+@media(max-width:380px){.part-list button{font-size:9px;gap:3px}.part-number{width:16px;height:16px;flex-basis:16px}.console-title span{display:none}.all-facts{gap:4px 9px}.all-facts p{font-size:9px}.scene{max-height:29svh}}
+@media(max-height:730px) and (max-width:760px){.scene{max-height:25svh}.console-modes{padding-bottom:5px}.detail-copy{min-height:49px}.all-facts{padding-top:7px;padding-bottom:7px}.console-head{padding-top:8px;padding-bottom:8px}.console-head .eyebrow{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+/* Keep phone controls readable; the selected-part description carries the
+   same facts as the desktop summary, without repeating that summary below it. */
+@media(max-width:760px){
+ .edition,.console-title span,.scene-guide,.scene-footer{font-size:12px}
+ .scene{max-height:25svh}
+ .part-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 8px}
+ .part-list button{font-size:14px;gap:7px;min-height:44px;padding:5px}
+ .part-number{width:21px;height:21px;flex-basis:21px;font-size:12px}
+ .detail-copy{min-height:100px;padding-top:9px}
+ .detail-copy h3{font-size:15px}.detail-copy p{font-size:14px;line-height:1.45}
+ .all-facts{display:none}
+ .endpoint-buttons button,.range-control label{font-size:14px}
+ .range-control input{min-height:44px}
+ .scroll-hint,.console-modes,.console-modes .mode-controls button,.motion-note{font-size:13px}
+ .console-modes .mode-controls button{min-height:44px}
+ .scroll-track{height:calc(100svh + 440px)}
+}
+</style>
+</head>
+<body>
+<main class="page">
+<section id="overview" aria-labelledby="page-title">
+<header><div class="brand"><span aria-hidden="true">✦</span>SPACE TRADER</div><span class="edition">Ship inspection · concept</span></header>
+<div class="welcome">
+<div class="welcome-copy"><p class="eyebrow">A closer look at your ship</p><h1 id="page-title">Every part<br>has a purpose.</h1><p class="ship-name">Firefly · Courier</p><p>Look beneath the hull. Find the engines, follow the cargo space, and see how the systems fit together.</p><div class="intro-controls"><button id="open-inspection" class="primary" type="button">Inspect Firefly <span aria-hidden="true">↗</span></button><div class="mode-controls" aria-label="View style"><button type="button" data-mode="static" aria-pressed="true">Static</button><button type="button" data-mode="animated" aria-pressed="false">Motion</button></div></div></div>
+<div class="entry-preview" aria-hidden="true"><svg id="entry-scene" viewBox="0 0 900 540"></svg><span class="entry-caption">F I R E F L Y &nbsp; / &nbsp; 0 2</span></div>
+</div>
+<dl class="specs"><div><dt>Cargo capacity</dt><dd>20 bays</dd></div><div><dt>Jump range</dt><dd>17 pc</dd></div><div><dt>Hull strength</dt><dd>100</dd></div><div><dt>Equipment</dt><dd>1 gear slot</dd></div></dl>
+<p class="proto-note">A concept cutaway of the Firefly, using its base specifications from Space Trader. Part shapes and positions are illustrative. This example has an energy shield fitted and 12 of its 20 cargo bays in use.</p>
+<div class="tools"><details><summary>About this prototype</summary><p>Both views use the same ship, facts, labels, controls and assembled/cutaway positions. Static changes positions immediately. Motion follows the separation control or the page scroll. Your device’s reduced-motion setting uses the static view.</p><p>The example is separate from your game. It reads no saves and makes no changes to them. Visit records stay in this tab and are cleared when it reloads.</p><button id="download-log" type="button" class="quiet">Download visit log</button></details></div>
+<noscript><p class="noscript">Inspection needs JavaScript for its controls. The Firefly has 20 cargo bays, 17 pc jump range, 100 hull strength, one laser mount, one shield slot and one gear slot. In this example 12 bays are in use, leaving 8 free. The fitted energy shield reduces each enemy hit by 5 damage, to a minimum of 1. Crew quarters are an illustrative location; room positions have no gameplay effect.</p></noscript>
+</section>
+<section id="scroll-track" class="scroll-track" aria-label="Ship inspection" hidden>
+<div class="inspection" id="inspection">
+<div class="console">
+<div class="console-head"><div><p class="eyebrow">Ship inspection</p><div class="console-title"><h2 id="inspection-title" tabindex="-1">Firefly</h2><span>Courier / concept cutaway</span></div></div><button id="close-inspection" type="button" class="quiet close-button">Close inspection <span aria-hidden="true">×</span></button></div>
+<div class="console-grid"><div class="viewport"><div class="scene-guide"><span class="dot" aria-hidden="true"></span><span id="view-state">Cutaway</span></div><svg id="ship-scene" class="scene" viewBox="0 0 900 540" role="img" aria-labelledby="scene-title scene-desc"><title id="scene-title">Firefly ship concept cutaway</title><desc id="scene-desc">Six numbered parts: 1 hull, 2 engines, 3 lasers, 4 shields, 5 cargo bays, 6 crew quarters. Choose a numbered part in the list to read about it. Part positions are illustrative.</desc><g id="drawing" aria-hidden="true"></g></svg><div class="scene-footer"><span>Fixed view · illustrative positions</span><span>FIREFLY / 02</span></div></div>
+<aside class="detail-panel" aria-label="Ship parts"><p class="eyebrow">Six systems · select a part</p><ol class="part-list" id="part-list"></ol><div class="detail-copy" id="part-detail" aria-live="polite"><h3>1 · Hull</h3><p>The ship’s protective structure. Base hull strength: 100. Repair damage from the Ship tab.</p></div></aside></div>
+<div class="all-facts" aria-label="Ship specifications and example state">
+<p><b>1 · Hull:</b> 100 base strength. Repair in Ship.</p><p><b>2 · Engines:</b> 17 pc base jump range.</p><p><b>3 · Lasers:</b> 1 linked mount.</p><p><b>4 · Shields:</b> 1 slot. Example shield fitted: −5 damage per enemy hit, minimum 1.</p><p><b>5 · Cargo bays:</b> 12 used / 20 total · <b>8 free.</b></p><p><b>6 · Crew quarters:</b> illustrative area. Room placement has no gameplay effect.</p>
+</div>
+<div class="controls-bar"><div class="endpoint-buttons"><button id="assembled" type="button">Assembled</button><button id="cutaway" type="button">Cutaway</button></div><div class="range-control"><label for="separation">Separation</label><input id="separation" type="range" min="0" max="100" value="100" step="1" aria-describedby="scroll-hint"><output id="separation-value" for="separation">100%</output></div><p id="scroll-hint" class="scroll-hint">Scroll up to assemble.<br>Scroll down to separate.</p></div>
+<p id="motion-note" class="motion-note" role="status"></p>
+<div class="console-modes"><span>View style</span><div class="mode-controls" aria-label="View style"><button type="button" data-mode="static" aria-pressed="true">Static</button><button type="button" data-mode="animated" aria-pressed="false">Motion</button></div></div>
+</div></div></section>
+<footer id="footer">Space Trader · isolated inspection prototype · no purchase or repair actions</footer>
+</main>
+<script>
+'use strict';
+(()=>{
+const ns='http://www.w3.org/2000/svg';
+const $=id=>document.getElementById(id);
+const params=new URLSearchParams(location.search);
+const motionPreference=matchMedia('(prefers-reduced-motion: reduce)');
+const study=params.get('study')==='1';
+document.body.dataset.study=String(study);
+let mode=params.get('mode')==='animated'?'animated':'static';
+let opened=false,raw=1,selected=0,drawn=null,scrollFrame=0,ignoreScrollUntil=0,lastScrollBucket=-1;
+const log=[],started=performance.now();
+const event=(action,detail={})=>log.push({elapsedMs:Math.round(performance.now()-started),action,...detail});
+const parts=[
+ {id:'hull',label:'Hull',value:'100 strength',shift:[-32,-128],color:'#ce9160',detail:'The ship’s protective structure. Base hull strength: 100. Repair damage from the Ship tab.'},
+ {id:'engines',label:'Engines',value:'17 pc range',shift:[-131,42],color:'#77b8c1',detail:'Propulsion gives the Firefly a base jump range of 17 pc. Refuel from the Ship tab before setting out.'},
+ {id:'lasers',label:'Lasers',value:'1 mount',shift:[132,42],color:'#d99583',detail:'One linked laser mount. Laser tier affects damage; upgrade lasers in the Store. The mount location shown here is illustrative.'},
+ {id:'shields',label:'Shields',value:'1 slot',shift:[-50,-10],color:'#93cebd',detail:'One shield slot. In this example an energy shield is fitted: each enemy hit is reduced by 5 damage, to a minimum of 1.'},
+ {id:'cargo',label:'Cargo bays',value:'8 free',shift:[12,115],color:'#d5b96f',detail:'20 base cargo bays. This example uses 12, leaving 8 free. Cargo and accepted freight share this capacity.'},
+ {id:'crew',label:'Crew quarters',value:'Illustrative',shift:[97,-59],color:'#aaa2d1',detail:'An illustrative place for the crew to live aboard. Space Trader gives crew roles, stories and loyalty; it does not simulate room placement.'}
+];
+function el(type,attrs={},parent){const node=document.createElementNS(ns,type);for(const [k,v]of Object.entries(attrs))node.setAttribute(k,v);if(parent)parent.append(node);return node}
+const point=(x,y,z=0)=>[450+x+y*.64,306-x*.33+y*.43-z];
+const poly=(pts,attrs,parent)=>el('polygon',{points:pts.map(p=>point(...p).join(',')).join(' '),...attrs},parent);
+function prism(x,y,w,d,h,top,left,right,parent,z=0){
+ poly([[x,y+d,z],[x+w,y+d,z],[x+w,y+d,z+h],[x,y+d,z+h]],{fill:left,stroke:'#15252d','stroke-width':1.3},parent);
+ poly([[x+w,y,z],[x+w,y+d,z],[x+w,y+d,z+h],[x+w,y,z+h]],{fill:right,stroke:'#15252d','stroke-width':1.3},parent);
+ return poly([[x,y,z+h],[x+w,y,z+h],[x+w,y+d,z+h],[x,y+d,z+h]],{fill:top,stroke:'#b8d3d066','stroke-width':1.3,class:'part-top'},parent)
+}
+function line(a,b,attrs,parent){const p=point(...a),q=point(...b);el('line',{x1:p[0],y1:p[1],x2:q[0],y2:q[1],stroke:'#bccfce55','stroke-width':1,...attrs},parent)}
+function tag(g,n,xyz){const [x,y]=point(...xyz);const t=el('g',{class:'tag'},g);el('circle',{cx:x,cy:y,r:14},t);const text=el('text',{x,y:y+.1},t);text.textContent=n}
+function drawPart(g,i){
+ if(i===0){
+ const shape=[[-177,-62,45],[65,-83,45],[176,-40,45],[208,0,45],[176,40,45],[65,83,45],[-177,62,45],[-206,0,45]];
+ const underside=shape.map(p=>[p[0],p[1],p[2]-15]);
+ poly(underside,{fill:'#5a4840',stroke:'#10222c','stroke-width':2},g);
+ for(let j=0;j<shape.length;j++)poly([shape[j],shape[(j+1)%shape.length],underside[(j+1)%shape.length],underside[j]],{fill:j<4?'#5b514b':'#795f4c',stroke:'#172933','stroke-width':1},g);
+ poly(shape,{fill:'#bc8b63',stroke:'#e6bb88','stroke-width':1.5,class:'part-top'},g);
+ poly([[-140,-46,47],[53,-61,47],[125,-29,47],[139,0,47],[125,29,47],[53,61,47],[-140,46,47],[-159,0,47]],{fill:'#35515c',stroke:'#f0c18799','stroke-width':2},g);
+ poly([[73,-37,49],[132,-20,49],[153,0,49],[132,20,49],[73,37,49],[91,0,49]],{fill:'#91c8ca',stroke:'#193940','stroke-width':2},g);
+ for(let n=0;n<5;n++)line([-123+n*31,-38,49],[-123+n*31,38,49],{stroke:'#8fa9ac66'},g);
+ line([-153,0,49],[66,0,49],{stroke:'#debd8b','stroke-width':3},g);
+ line([-152,-53,49],[42,-68,49],{stroke:'#ebbe85','stroke-width':3},g);
+ line([-152,53,49],[42,68,49],{stroke:'#ebbe85','stroke-width':3},g);
+ tag(g,1,[-115,-30,65]);
+ }else if(i===1){
+ for(const y of[-61,20]){prism(-217,y,75,40,30,'#6d9da7','#335765','#2c4756',g);prism(-230,y+4,15,32,23,'#2b5660','#183a44','#183039',g);line([-228,y+8,17],[-228,y+29,17],{stroke:'#a3ead9','stroke-width':5},g);for(let n=0;n<4;n++)line([-202+n*12,y+5,32],[-202+n*12,y+35,32],{stroke:'#c3dfdd88','stroke-width':2},g)}
+ prism(-170,-22,38,44,15,'#63919c','#375863','#2c4650',g);tag(g,2,[-180,0,60]);
+ }else if(i===2){
+ prism(78,45,78,20,20,'#a77d74','#6e4b49','#493c41',g);prism(142,48,61,14,13,'#d6aca1','#67474a','#5c4245',g,4);prism(83,41,29,28,9,'#b4b7b2','#62777d','#4d626b',g,20);tag(g,3,[127,54,53]);
+ }else if(i===3){
+ prism(-65,-19,72,38,18,'#77a99c','#365f5b','#2d494b',g);prism(-49,-12,40,24,16,'#b1ded0','#5c9285','#477568',g,18);
+ for(let n=0;n<4;n++)line([-43+n*8,-12,36],[-43+n*8,12,36],{stroke:'#233f3b','stroke-width':3},g);
+ const [cx,cy]=point(-29,0,20);el('ellipse',{cx,cy,rx:64,ry:33,fill:'none',stroke:'#94dbc5','stroke-dasharray':'4 5','stroke-width':1.5,opacity:.65,transform:'rotate(-12 '+cx+' '+cy+')'},g);tag(g,4,[-30,0,64]);
+ }else if(i===4){
+ prism(-100,-54,145,108,7,'#6c7063','#434e4c','#303e40',g);
+ for(let ix=0;ix<4;ix++)for(let iy=0;iy<2;iy++){const x=-94+ix*34,y=-47+iy*48;prism(x,y,28,39,22,ix<3?'#c6ad6c':'#46575b',ix<3?'#776e4b':'#2b3c43',ix<3?'#5b5945':'#24363c',g,7);line([x+14,y+2,30],[x+14,y+37,30],{stroke:ix<3?'#e8cf8d99':'#80989d66','stroke-width':2},g)}
+ tag(g,5,[-30,3,66]);
+ }else if(i===5){
+ prism(60,-43,78,77,16,'#8a82a9','#514d6d','#403f5b',g);prism(69,-33,21,48,8,'#c8c4da','#79768e','#606379',g,16);prism(106,-33,21,48,8,'#c8c4da','#79768e','#606379',g,16);prism(90,20,17,9,14,'#858c9f','#4b5b6e','#3d4b60',g,16);tag(g,6,[100,-4,58]);
+ }
+}
+function makeDrawing(parent,interactive){
+ const base=el('g',{opacity:'.5'},parent);
+ poly([[-210,0,-12],[-177,-62,-12],[65,-83,-12],[208,0,-12],[65,83,-12],[-177,62,-12]],{fill:'#122936',stroke:'#496577','stroke-dasharray':'5 5','stroke-width':1.3},base);
+ const groups=[];
+ // Draw the cover last so the assembled view is the same complete exterior in both conditions.
+ for(const i of[1,4,5,3,2,0]){const g=el('g',{class:'piece','data-part':parts[i].id},parent);drawPart(g,i);if(interactive)g.addEventListener('click',()=>selectPart(i,'diagram'));groups[i]=g}
+ return groups;
+}
+const groups=makeDrawing($('drawing'),true);
+makeDrawing($('entry-scene'),false);
+for(const [i,p]of parts.entries()){
+ const li=document.createElement('li'),button=document.createElement('button');button.type='button';button.dataset.part=p.id;button.id='part-'+p.id;button.setAttribute('aria-pressed',String(i===0));button.setAttribute('aria-controls','part-detail');button.innerHTML='<span class="part-number">'+(i+1)+'</span><span>'+p.label+'</span><span class="part-value">'+p.value+'</span>';button.addEventListener('click',()=>selectPart(i,'list'));li.append(button);$('part-list').append(li);
+}
+function selectPart(i,source){selected=i;for(const [j,p]of parts.entries()){$('part-'+p.id).setAttribute('aria-pressed',String(i===j));groups[j].classList.toggle('is-selected',i===j);groups[j].classList.toggle('dim',false)}$('part-detail').replaceChildren();const h=document.createElement('h3'),p=document.createElement('p');h.textContent=(i+1)+' · '+parts[i].label;p.textContent=parts[i].detail;$('part-detail').append(h,p);if(source)event('select-part',{part:parts[i].id,source})}
+function effectiveMotion(){return mode==='animated'&&!motionPreference.matches}
+function render(){const fraction=effectiveMotion()?raw:(raw<.5?0:1);if(fraction!==drawn){for(const [i,g]of groups.entries()){const [x,y]=parts[i].shift;g.setAttribute('transform','translate('+(x*fraction).toFixed(2)+','+(y*fraction).toFixed(2)+')')}drawn=fraction}
+ $('separation').value=Math.round(raw*100);$('separation-value').value=Math.round(raw*100)+'%';$('separation').setAttribute('aria-valuetext',Math.round(raw*100)+' percent; '+(fraction===0?'assembled':fraction===1?'cutaway':'separating'));
+ $('view-state').textContent=fraction===0?'Assembled':fraction===1?'Cutaway':'Separating';
+ $('assembled').setAttribute('aria-pressed',String(raw===0));$('cutaway').setAttribute('aria-pressed',String(raw===1));
+ for(const button of document.querySelectorAll('[data-mode]'))button.setAttribute('aria-pressed',String(button.dataset.mode===mode));
+ $('motion-note').textContent=motionPreference.matches?'Reduced motion is on. Parts change position immediately.':'';
+ document.body.dataset.mode=mode;document.body.dataset.effectiveMotion=String(effectiveMotion());
+}
+function travel(){const track=$('scroll-track');return Math.max(1,track.offsetHeight-$('inspection').offsetHeight)}
+function syncScroll(){if(!opened)return;ignoreScrollUntil=performance.now()+100;window.scrollTo({top:$('scroll-track').offsetTop+raw*travel(),behavior:'instant'})}
+function setProgress(v,source,synchronize=true){raw=Math.max(0,Math.min(1,v));render();if(synchronize)syncScroll();if(source)event('separation',{value:Math.round(raw*100),source,effective:drawn})}
+function setMode(value,source){mode=value==='animated'?'animated':'static';drawn=null;render();if(source)event('mode',{mode,effectiveMotion:effectiveMotion()})}
+function open(){opened=true;$('overview').hidden=true;$('scroll-track').hidden=false;$('footer').hidden=true;drawn=null;raw=1;lastScrollBucket=-1;render();syncScroll();$('inspection-title').focus({preventScroll:true});event('open-inspection',{mode,effectiveMotion:effectiveMotion()})}
+function close(){opened=false;$('scroll-track').hidden=true;$('overview').hidden=false;$('footer').hidden=false;window.scrollTo({top:0,behavior:'instant'});$('open-inspection').focus({preventScroll:true});event('close-inspection',{mode})}
+for(const button of document.querySelectorAll('[data-mode]'))button.addEventListener('click',()=>setMode(button.dataset.mode,'control'));
+for(const [id,fraction]of[['assembled',0],['cutaway',1]])$(id).addEventListener('click',()=>setProgress(fraction,'endpoint'));
+$('separation').addEventListener('input',e=>setProgress(Number(e.target.value)/100,null));
+$('separation').addEventListener('change',e=>event('separation',{value:Number(e.target.value),source:'range',effective:drawn}));
+$('open-inspection').addEventListener('click',open);$('close-inspection').addEventListener('click',close);
+addEventListener('keydown',e=>{if(e.key==='Escape'&&opened){e.preventDefault();close()}});
+addEventListener('scroll',()=>{if(!opened||performance.now()<ignoreScrollUntil)return;if(scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;const next=Math.max(0,Math.min(1,(scrollY-$('scroll-track').offsetTop)/travel()));setProgress(next,null,false);const bucket=Math.round(next*10);if(bucket!==lastScrollBucket){lastScrollBucket=bucket;event('separation',{value:Math.round(raw*100),source:'scroll',effective:drawn})}})},{passive:true});
+let resizeFrame=0;addEventListener('resize',()=>{if(resizeFrame)cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{resizeFrame=0;if(opened)syncScroll()})});
+motionPreference.addEventListener('change',()=>{drawn=null;render();event('motion-preference',{reduced:motionPreference.matches})});
+$('download-log').addEventListener('click',()=>{const record={prototype:'Space Trader Inspect ship',schema:1,condition:mode,study,reducedMotion:motionPreference.matches,viewport:{width:innerWidth,height:innerHeight},example:{hull:'Firefly',cargoUsed:12,cargoCapacity:20,energyShieldFitted:true},events:log};const blob=new Blob([JSON.stringify(record,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='space-trader-inspect-visit.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+// Read-only observation for manual validation; no game state or persistent storage is accessed.
+window.inspectShipPrototype={getState:()=>({mode,study,opened,progress:raw,renderedProgress:drawn,selectedPart:parts[selected].id,reducedMotion:motionPreference.matches}),getLog:()=>JSON.parse(JSON.stringify(log))};
+selectPart(0);render();event('ready',{mode,study,reducedMotion:motionPreference.matches});
+})();
+</script>
+</body>
+</html>
