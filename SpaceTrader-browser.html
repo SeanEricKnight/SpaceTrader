@@ -1585,7 +1585,7 @@ function resolve(action){if(!game.encounter)return;const E=game.encounter;E.roun
  if(held){
   fightReport('You survived, but were captured',['The marauders took your cargo and credits. Your run continues in captivity.',hull+' Close this report to see your options.'],rr,0,'View captivity options');
  }else{
-  fightReport('You survived and docked at '+world().name,['Pirates took your cargo and 10% of your credits.',hull+' You can keep flying. Repair at this port before your next jump.'],rr,0,'Back to '+world().name);
+  fightReport('You survived and docked at '+world().name,['Pirates took your cargo and 10% of your credits.',hull,'Click Continue to return to port. You can keep playing the same run. Repair before your next jump.'],rr);
  }}}
 function acceptJob(){if(!active()||game.job)return;const choices=game.worlds.map((w,id)=>id).filter(id=>id!==game.location&&distance(id)<=ship().range);const target=choices[rng(choices.length)];game.job={to:target,reward:200+distance(target)*25,due:game.day+5};say('Courier job accepted: '+game.worlds[target].name+' by day '+game.job.due+'.');jobToast({title:'Courier job',to:target,due:game.job.due,reward:game.job.reward,cargo:0})}
 function tradeShip(id){if(shipRestriction(id))return;const next=catalog.ships[id],cost=shipCost(id);if(game.credits<cost)return;game.credits-=cost;game.ship=id;game.fuel=next.range;game.hull=next.hull;if(!next.weapons)game.laser=0;say('Traded ships. You now fly a '+next.name+'.');if(game.shipGoal===id){game.shipGoal=null;try{cheer('Ship goal reached',next.name+' is yours',0,true)}catch{}}}
