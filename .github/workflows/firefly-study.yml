@@ -9,13 +9,13 @@ permissions:
 jobs:
   inspect:
     runs-on: ubuntu-24.04
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - name: Exercise Firefly in Chromium
         run: |
           npm install --prefix "$RUNNER_TEMP/firefly" playwright@1.56.1 --no-audit --no-fund
-          "$RUNNER_TEMP/firefly/node_modules/.bin/playwright" install chromium --with-deps
           NODE_PATH="$RUNNER_TEMP/firefly/node_modules" node prototypes/check-inspection.cjs
       - uses: actions/upload-artifact@v4
         if: always()
