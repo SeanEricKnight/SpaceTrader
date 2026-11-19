@@ -72,6 +72,31 @@ const { chromium } = require('playwright');
       await preview(0);assert.match(await dialog.innerText(),/Free 2 cargo bays/);
       assert.equal(await dialog.locator('[data-action="fit-confirm"]').isDisabled(),true);
       await closeFit();
+      await page.evaluate(()=>{closeInfo();game=fresh();game.tutorial=null;game.jumps=4;game.credits=150000;game.worlds[game.location].tech=7;game.fuel=4;tab='store';render()});
+      await page.locator('[data-action="ship-options"][data-id="4"]').click();
+      await dialog.locator('[data-action="keep-hull"]').click();
+      assert.ok(await page.evaluate(()=>game.ship===4&&game.garage.length===1&&game.garage[0].fuel===4&&game.hangarMilestone));
+      await page.evaluate(()=>{closeInfo();game=decodeSave(JSON.stringify(game));tab='ship';render()});
+      const parkedId=await page.evaluate(()=>game.garage[0].ship);
+      await page.locator('[data-action="switch-hull"][data-id="'+parkedId+'"]').click();
+      assert.equal(await page.evaluate(()=>game.fuel),4);
+      await page.evaluate(()=>{closeInfo();tab='jobs';game.location=6;render()});
+      await page.locator('#screen [data-action="shore-visit"]').click();
+      await dialog.locator('[data-action="shore-choice"][data-id="0"]').click();
+      assert.equal(await page.evaluate(()=>game.shoreJob.id),0);
+      await dialog.locator('[data-action="shore-route"]').click();
+      assert.equal(await page.evaluate(()=>selectedWorld),1);
+      assert.ok(await page.evaluate(()=>{
+        const credits=game.credits;game.location=1;settleShore();settleShore();
+        if(game.credits!==credits+600||game.shoreJob||!game.shoreDone.includes(0))return false;
+        for(let i=0;i<4;i++)for(let k=0;k<2;k++){
+          game.shoreDone=[];game.location=shoreStories()[i].port;takeShore(2*i+k);closeInfo();
+          game=decodeSave(JSON.stringify(game));const p=shoreStories()[i].paths[k],before=game.credits;
+          game.location=p[1];settleShore();if(game.credits!==before+p[2])return false;
+        }
+        game.shoreDone=[];game.location=6;takeShore(0);game.day=game.shoreJob.due+1;game.location=1;
+        const before=game.credits;settleShore();return !game.shoreJob&&game.credits===before;
+      }));
       await page.close();
     }
   } finally {await browser.close()}
