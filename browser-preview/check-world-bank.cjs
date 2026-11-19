@@ -50,7 +50,7 @@ test('ship finance respects technology, cargo, equipment and docking restriction
  }
 });
 test('bank input event quotes a valid amount; transaction handlers apply it',()=>{
- r('action("bank")');nodes['bank-amount'].value='5000';events.input[0]({target:{id:'bank-amount'}});assert.equal(nodes['bank-borrow-button'].disabled,false);assert.match(nodes['borrow-preview'].innerHTML,/75 cr/);
+ r('action("bank")');nodes['bank-amount'].value='5000';events.input.forEach(listener=>listener({target:{id:'bank-amount'}}));assert.equal(nodes['bank-borrow-button'].disabled,false);assert.match(nodes['borrow-preview'].innerHTML,/75 cr/);
  r('action("bank-borrow")');assert.equal(r('game.debt'),5000);document.getElementById('repay-amount').value='1234';r('action("bank-repay")');assert.equal(r('game.debt'),3766);assert.equal(r('game.credits'),4766);
  r('action("bank-repay-all")');assert.equal(r('game.debt'),0);assert.equal(r('game.credits'),1000);
  nodes['bank-amount'].value='-50';r('previewBorrow();action("bank-borrow")');assert.equal(r('game.debt'),0);assert.match(nodes['bank-status'].textContent,/No transaction/);
