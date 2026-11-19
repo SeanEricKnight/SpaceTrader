@@ -1,0 +1,19 @@
+name: Browser gameplay checks
+on:
+  pull_request:
+    paths:
+      - SpaceTrader-browser.html
+      - browser-preview/check-pirate-lanes.cjs
+      - .github/workflows/pirate-lanes.yml
+permissions:
+  contents: read
+jobs:
+  gameplay:
+    runs-on: ubuntu-24.04
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install --no-audit --no-fund
+      - run: npm install --prefix "$RUNNER_TEMP/qa" playwright@1.56.1 --no-audit --no-fund
+      - run: NODE_PATH="$RUNNER_TEMP/qa/node_modules" node browser-preview/check-pirate-lanes.cjs
+      - run: npm test
