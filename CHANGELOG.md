@@ -1,5 +1,9 @@
 # Browser updates — November 14, 2026
 
+## Browser update · 2026-11-19
+
+Added fitted-equipment previews, a second-ship ownership milestone, port hangars and four optional two-ending planetside commissions. Existing saves begin with their current hull. Previously traded ships were sold and are not added to the hangar.
+
 This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.8`.
 
 ## 0.26.10
