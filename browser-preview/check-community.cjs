@@ -26,9 +26,14 @@ test('navigation improves escape but respects its probability cap',()=>{r('game.
 test('shield reduces actual incoming damage instead of cosmetic stats',()=>{r('game.ship=2;game.hull=100;game.encounter={hull:50}');const seed=Array.from({length:10000},(_,i)=>i).find(i=>Math.floor(((Math.imul(i,1664525)+1013904223)>>>0)/4294967296*100)>=r("escapeOdds()"));r('game.seed='+seed+';resolve("flee")');const baseDamage=100-r('game.hull');r('game.hull=100;game.modules=["shield"];game.encounter={hull:50};game.seed='+seed+';resolve("flee")');assert.equal(100-r('game.hull'),baseDamage-5)});
 test('dumping illegal cargo frees the hold and records its loss',()=>{r('game.cargo[5]=4;game.paid[5]=4000;action("dump",5)');assert.equal(r('game.cargo[5]'),0);assert.equal(r('game.paid[5]'),0);assert.equal(r('game.metrics.profit'),-4000)});
 
+function changeSaveFile(text){
+ const target={id:'save-file',files:[{size:text.length,text:async()=>text}],value:'x',hasAttribute:()=>false};
+ for(const listener of events.change)listener({target});
+}
+
 (async()=>{
- reset();const raw=r('JSON.stringify({...game,credits:4321})');events.change[0]({target:{id:'save-file',files:[{size:raw.length,text:async()=>raw}],value:'x'}});await new Promise(setImmediate);assert.equal(r('game.credits'),4321);checks++;
- const before=r('game.credits');events.change[0]({target:{id:'save-file',files:[{size:3,text:async()=>'{no'}],value:'x'}});await new Promise(setImmediate);assert.equal(r('game.credits'),before);checks++;
+ reset();const raw=r('JSON.stringify({...game,credits:4321})');changeSaveFile(raw);await new Promise(setImmediate);assert.equal(r('game.credits'),4321);checks++;
+ const before=r('game.credits');changeSaveFile('{no');await new Promise(setImmediate);assert.equal(r('game.credits'),before);checks++;
  console.log('PASS file-import validation and confirm-before-replacement path');
  console.log(checks+' community-integration checks passed. Core JS/native canvas were exercised; full Chrome layout remains unverified.');
 })().catch(e=>{console.error(e);process.exit(1)});
