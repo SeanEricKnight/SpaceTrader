@@ -37,7 +37,42 @@ const { chromium } = require('playwright');
         game.pirateReport={day:game.day,port:2,edition:0};test.push(pirateBulletin().includes(game.worlds[2].name));
         game.day+=5;test.push(pirateBulletin()==='');return test;
       });
-      assert.ok(results.every(Boolean));await page.close();
+      assert.ok(results.every(Boolean));
+      // Exercise the normal store entry points on a fitted, three-mount hull.
+      await page.evaluate(()=>{game.ship=6;game.laser=1;game.modules=[];game.credits=100000;game.worlds[game.location].tech=7;game.hull=100;game.encounter=null;game.offer=null;game.custody=null;tab='store';render()});
+      const preview=id=>page.locator('#screen [data-action="fit-preview"][data-id="'+id+'"]').click();
+      const dialog=page.locator('#info-dialog');
+      const confirmFit=()=>dialog.locator('[data-action="fit-confirm"]').click();
+      const closeFit=()=>dialog.locator('#info-body [data-action="info-close"]').click();
+      await preview(8);
+      assert.equal(await dialog.locator('.tile-1').count(),3);
+      const art=await dialog.locator('.tile-1').first().evaluate(async el=>{
+        const url=getComputedStyle(el).backgroundImage.slice(5,-2);
+        const image=new Image();image.src=url;await image.decode();return image.naturalWidth;
+      });
+      assert.equal(art,224);
+      await closeFit();
+      assert.equal(await page.evaluate(()=>game.laser),1);
+      await preview(8);await confirmFit();
+      assert.equal(await page.evaluate(()=>game.laser),2);
+      assert.equal(await dialog.locator('.fit-receipt').count(),1);
+      await closeFit();await preview(3);await confirmFit();await closeFit();
+      assert.ok(await page.evaluate(()=>game.modules.includes('tank')));
+      await page.evaluate(()=>{game.encounter=makeEncounter();render()});
+      const mine=page.locator('#encounter .cs-ship').first();
+      assert.equal(await mine.locator('.tile-1').count(),3);
+      assert.equal(await mine.locator('.tile-3').count(),1);
+      await page.evaluate(()=>{game.encounter=null;render()});
+      await preview(3);await confirmFit();await closeFit();
+      assert.ok(await page.evaluate(()=>!game.modules.includes('tank')));
+      await preview(9);await confirmFit();await closeFit();
+      assert.equal(await page.evaluate(()=>game.laser),1);
+      await preview(0);await confirmFit();await closeFit();
+      await page.evaluate(()=>{game.cargo[0]=catalog.ships[game.ship].bays+2;render()});
+      await preview(0);assert.match(await dialog.innerText(),/Free 2 cargo bays/);
+      assert.equal(await dialog.locator('[data-action="fit-confirm"]').isDisabled(),true);
+      await closeFit();
+      await page.close();
     }
   } finally {await browser.close()}
 })().catch(error=>{console.error(error);process.exitCode=1});
