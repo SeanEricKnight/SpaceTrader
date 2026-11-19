@@ -39,7 +39,7 @@ const { chromium } = require('playwright');
       });
       assert.ok(results.every(Boolean));
       // Exercise the normal store entry points on a fitted, three-mount hull.
-      await page.evaluate(()=>{game.ship=6;game.laser=1;game.modules=[];game.credits=100000;game.worlds[game.location].tech=7;game.hull=100;game.encounter=null;game.offer=null;game.custody=null;tab='store';render()});
+      await page.evaluate(()=>{closeInfo();game.ship=6;game.laser=1;game.modules=[];game.credits=100000;game.worlds[game.location].tech=7;game.hull=100;game.encounter=null;game.offer=null;game.custody=null;tab='store';render()});
       const preview=id=>page.locator('#screen [data-action="fit-preview"][data-id="'+id+'"]').click();
       const dialog=page.locator('#info-dialog');
       const confirmFit=()=>dialog.locator('[data-action="fit-confirm"]').click();
