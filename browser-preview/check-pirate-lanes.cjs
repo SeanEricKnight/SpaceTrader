@@ -110,7 +110,7 @@ const { chromium } = require('playwright');
       const marker=page.locator('.sc-port[data-id="1"] .sighting-mark');
       assert.match(await marker.getAttribute('title'),/1 day ago/);
       await page.locator('.sc-port[data-id="1"]').click();
-      await dialog.locator('[data-action="sighting-news"]').click();
+      await page.locator('.trip-panel [data-action="sighting-news"]').click();
       assert.match(await dialog.innerText(),/Customs patrol reported/);
       await page.evaluate(()=>{closeInfo();game.day=11;render()});
       assert.equal(await marker.count(),0);
@@ -137,6 +137,24 @@ const { chromium } = require('playwright');
       const expected=await page.evaluate(()=>game.credits+game.contracts[0].reward-Math.ceil(game.contracts[0].reward*.12));
       await page.locator('[data-action="freight-lighter"]').click();
       assert.equal(await page.evaluate(()=>game.credits),expected);
+      await page.evaluate(()=>{
+        closeInfo();game=fresh();game.tutorial=null;game.guide=null;game.peace=true;game.location=0;selectedWorld=1;sector=0;tab='galaxy';chartMode='orbit';render();window.scrollTo(0,0);
+      });
+      assert.equal(await page.locator('nav [data-tab]').count(),3);
+      assert.equal(await page.locator('.trip-panel').count(),1);
+      assert.equal(await page.locator('.route-banner,.objective-strip').count(),0);
+      const travel=width>=900?page.locator('.trip-panel [data-action="jump"]'):page.locator('#dock-hint[data-action="jump"]');
+      const rect=await travel.boundingBox();
+      assert.ok(rect&&rect.y>=0&&rect.y+rect.height<=850,'Travel is visible in the first viewport');
+      await travel.click();
+      assert.equal(await page.evaluate(()=>game.location),1);
+      await page.locator('nav [data-tab="market"]').click();
+      assert.ok((await page.locator('.trade-list').boundingBox()).y<850,'Market starts in the first viewport');
+      assert.equal(await page.locator('.port-extras').evaluate(e=>e.open),false);
+      await page.locator('nav [data-action="port-menu"]').click();
+      assert.equal(await dialog.locator('[data-tab="news"]').count(),1);
+      await dialog.locator('[data-tab="jobs"]').click();
+      assert.equal(await page.evaluate(()=>tab),'jobs');
       await page.close();
     }
   } finally {await browser.close()}

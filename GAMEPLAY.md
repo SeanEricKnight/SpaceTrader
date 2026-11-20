@@ -1,5 +1,7 @@
 # Space Trader: how it plays
 
+The three main views are **Market**, **Chart**, and **Shipyard**. **More** opens Jobs & stories, The Reach News, Crew & escorts, and Commander & goals. Chart shows one selected destination with the next travel action. Open Port details, Flight options, or the port finder as needed. Market shows the goods first, with the warehouse and port history under the cargo and services fold. Shipyard opens the current ship and dock services, with a link to outfitting and ship purchases.
+
 The rules as they work in the current version (**0.26.10**). Update this file with every change that touches gameplay. Details by version are in [CHANGELOG.md](CHANGELOG.md).
 
 ## After the guide

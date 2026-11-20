@@ -30,9 +30,9 @@ run('buy(0,true); render()');
 assert.equal(run('guideSt().step'),2,'newly bought Water advances the trading guide');
 console.log('PASS first run: Start flying runs the hint, dock button tracks the guide, duplicate goal line hidden');
 // Market order (playtest 0.24.10 item 3): trade rows come before home/warehouse panel, price legend and history.
-{const html=fs.readFileSync('SpaceTrader-browser.html','utf8'),m=html.match(/holdMeter\(travelBar\(\)\)\+[\s\S]*?<p class="micro">'\+tipBtn\('prices'\)/)[0];
+{const html=fs.readFileSync('SpaceTrader-browser.html','utf8'),m=html.slice(html.indexOf('function market(){'),html.indexOf('function jobHeading('));
 const at=k=>m.indexOf(k);
-assert.ok(at("trade-list")>0&&at("trade-list")<at("homePanel()")&&at("trade-list")<at("legend+worldHistory")&&at("tools+")<at("trade-list"),'Market shows trade rows before home panel, legend and history');
+assert.ok(at("trade-list")>0&&at("trade-list")<at("homePanel()")&&at("trade-list")<at("port-extras")&&at("tools+")<at("trade-list"),'Market shows trade rows before home panel, legend and history');
 console.log('PASS market order: trade rows before home panel, legend and history');}
 // Footer difficulty: cancelling "Start new game" must keep the player's pick (playtest 0.24.10 item 5).
 {const c=context(),q=c.run;q("action('intro-go')");
@@ -64,7 +64,7 @@ console.log('PASS 0.25.2: difficulty picker works, roadside fuel offered and del
 // 0.25.3: stale hint glow is cleared on render.
 {const html=fs.readFileSync('SpaceTrader-browser.html','utf8');assert.ok(html.includes("querySelectorAll('.hint-glow').forEach(x=>x.classList.remove('hint-glow'))"),'old hint glow cleared before applying the new one');console.log('PASS 0.25.3: stale guide glow cleared (browser-verified: only one element glows after tab changes)');}
 // 0.25.4: arrival card close button is labelled.
-{const html=fs.readFileSync('SpaceTrader-browser.html','utf8');assert.ok(html.includes('data-action="arrival-close" aria-label="Close arrival summary"')&&html.includes('✕ Close</button>'),'arrival close button has a visible label and accessible name');assert.ok(html.includes('class="arrival compact"')&&html.includes('rp.first'),'repeat visits use the compact arrival card');
+{const html=fs.readFileSync('SpaceTrader-browser.html','utf8');assert.ok(html.includes('data-action="arrival-close" aria-label="Close arrival summary"')&&html.includes('✕ Close</button>'),'arrival close button has a visible label and accessible name');assert.ok(html.includes('class="arrival compact"')&&html.includes('Dismiss arrival receipt'),'arrivals use the compact receipt');
 assert.ok(html.includes('class="solar-head compact"')&&!html.includes('Navigation / Star chart'),'chart headers are compact');
 console.log('PASS 0.25.4: arrival card close button labelled; repeat visits compact; chart headers compact');assert.ok(html.includes("$('diff-now').textContent=game.difficulty")&&!html.includes('class="micro muted">Pin any planet'),'footer shows difficulty; My ports help is a tooltip');assert.ok(html.includes('class="more-ports"')&&!html.includes('iPhone project'),'My ports caps at 3; footer has no iPhone name');}
 console.log('PASS 0.25.1: pinned ports on star chart; Atlas toast built without error (toast text checked in source)');
