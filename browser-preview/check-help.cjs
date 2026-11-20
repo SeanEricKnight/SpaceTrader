@@ -60,7 +60,7 @@ r('game.cargo[2]=3;game.paid[2]=30;render()');assert.equal(r('game.guide.step'),
 r('game.guide.profit=true;render()');assert.equal(r('game.guide.step'),3);ok('a profitable sale moves the guide to step 4');
 r('tab="jobs";action("hint")');assert.ok(r('hintSel').includes('job-row'));ok('step 4 points at Accept on the Jobs tab');
 r('game.contracts.push({kind:"courier",to:5,due:99,reward:100,cargo:0,title:"t"});render()');assert.equal(r('game.guide.step'),4);ok('taking a job moves the guide to step 5');
-r('game.completed.push("x");game.metrics.deliveries++;render()');assert.equal(r('game.guide.off'),true);assert.ok(nodes["guide-bar"].innerHTML.includes('Next goal'));ok('finishing a job ends the guide and shows the next cash goal');
+r('game.completed.push("x");game.metrics.deliveries++;render()');assert.equal(r('game.guide.off'),true);assert.ok(!nodes["guide-bar"].innerHTML.includes('Next goal'));r('tab="commander";render()');assert.ok(nodes["guide-bar"].innerHTML.includes('Next goal'));ok('finishing a job ends the guide and Commander holds the next cash goal');
 r('game=fresh("Normal");render();action("guide-skip")');assert.equal(r('game.guide.off'),true);assert.ok(!nodes["guide-bar"].innerHTML.includes('Step '));ok('Skip guide hides it');
 r('game=fresh("Normal");game.tutorial.state="done";game.guide=null;game.credits=2100;render();game.credits=5200;render()');assert.ok(true);ok('goal ladder runs without error');
 r('game=fresh("Normal");game.tutorial=null;game.guide=null;render()');assert.ok(!nodes["guide-bar"].innerHTML.includes('Step '));ok('saves with no first-haul tutorial get no guide');
@@ -72,7 +72,7 @@ const avgHull=d=>r('game=fresh("'+d+'");(()=>{let a=0;for(let i=0;i<300;i++)a+=m
 // returning players and career record (0.22.1)
 r('game=fresh("Normal");game.tutorial=null;game.guide=null;game.day=40;recap=true;render()');assert.ok(nodes["guide-bar"].innerHTML.includes('Welcome back, Captain')&&nodes["guide-bar"].innerHTML.includes('recap-ok'));ok('a returning player gets a welcome-back recap');
 r('action("recap-ok")');assert.ok(!nodes["guide-bar"].innerHTML.includes('Welcome back'));ok('the recap goes away on Continue');
-assert.ok(nodes["guide-bar"].innerHTML.includes('Atlas 1/24')||nodes["guide-bar"].innerHTML.includes('Atlas '));ok('Atlas progress shows under the stats');
+r('tab="commander";render()');assert.ok(nodes["guide-bar"].innerHTML.includes('Atlas 1/24')||nodes["guide-bar"].innerHTML.includes('Atlas '));ok('Atlas progress is visible in Commander');
 r('game.cargo[1]=3;game.paid[1]=0;action("sellall",1);tab="commander";render()');assert.ok(nodes.screen.innerHTML.includes('BEST SALE')&&nodes.screen.innerHTML.includes('BEST STREAK'));ok('Commander shows best sale and best streak');
 // vows (0.23.0)
 r('game=fresh("Normal");game.vow="lean";game.modules=["cargo"]');assert.equal(r('capacity()'),15);ok('Lean hold caps the hold at 15 bays');

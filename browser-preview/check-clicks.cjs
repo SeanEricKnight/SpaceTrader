@@ -25,9 +25,9 @@ if(!exe){console.log('SKIP: no Chrome found (set CHROME_PATH)');process.exit(0)}
  await page.click('.map-selection [data-action="jump"]');s=await st();assert.equal(s.loc,0,'chart Travel button works');
  // Desktop layout: the map and the travel column sit side by side. Best runs can accept a job directly.
  await page.evaluate(()=>{game.encounter=null;tab='galaxy';render()});
- const g=await page.evaluate(()=>{window.scrollTo(0,0);const a=document.querySelector('.orbital-stage').getBoundingClientRect(),b=document.querySelector('.side-column').getBoundingClientRect();return{sameRow:Math.abs(a.top-b.top)<40,beside:b.left>=a.right-1}});
+ const g=await page.evaluate(()=>{window.scrollTo(0,0);const a=document.querySelector('.orbital-stage').getBoundingClientRect(),b=document.querySelector('.trip-panel').getBoundingClientRect();return{sameRow:Math.abs(a.top-b.top)<40,beside:b.left>=a.right-1}});
  assert.deepEqual(g,{sameRow:true,beside:true},'map and travel column are side by side at 1400px');
- const nC=await page.evaluate(()=>game.contracts.length);await page.click('.best-runs [data-action="contract"]:not([disabled])');
+ const nC=await page.evaluate(()=>game.contracts.length);await page.click('.chart-extras > summary');await page.click('.best-runs [data-action="contract"]:not([disabled])');
  assert.equal(await page.evaluate(()=>game.contracts.length),nC+1,'Accept on a Best runs row takes the job');
  // Crew ability button carries a string id through the click handler.
  await page.evaluate(()=>{game.crew=[{id:'wren',loyalty:50,jumps:0,beat:0}];game.encounter=makeEncounter();render()});
