@@ -4,6 +4,10 @@ One entry per decision, newest first. Research method: shared-mind `memory/game-
 
 Entry format: **Date · Decision.** Decided by. Why (research link). Rejected. Status. How it is checked.
 
+## 2026-11-20 · Return to the basics at port
+
+Sean approved consolidating the everyday loop around Market, Chart, and Shipyard, drawing on Pieter Spronck’s retrospective discussion of excess screen switching. Put route and travel information in one Trip panel. Show the market rows ahead of optional port information. Keep a compact arrival receipt and put goals in Commander. More opens Jobs & stories, News, Crew, and Commander. Existing jobs and saves follow the same rules. Verify in Chromium by selecting and flying a route with a visible action and opening a secondary view. [Research log](https://github.com/SeanEricKnight/shared-mind/blob/main/memory/game-design-references.md) · [Spronck’s retrospective](https://www.eurosis.org/cms/files/proceedings_full/GAMEON2001BOOK.pdf)
+
 ### 2026-11-19 · First haul, piracy and optional adventures
 
 Sean's playtest exposed a chart target that moved under the pointer and too much unrelated information before the first delivery. The hover style removed the transform that centered each port. Position the target independently of button feedback. During the first haul, show the destination, payout and available action. Keep difficulty settings, the full checklist and retirement details available on request.

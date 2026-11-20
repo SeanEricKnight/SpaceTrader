@@ -1983,7 +1983,7 @@ function urgentFreight(){
 function arrivalBanner(){
  if(!arrivalOpen||game.retired||game.encounter||game.custody||game.offer)return '';
  const trip=arrivalReport;
- if(!trip||trip.to!==game.location)return '';
+ if(!trip||trip.to!==game.location||trip.day0>=game.day)return '';
  const paid=trip.jobs.reduce((sum,job)=>sum+job.v,0);
  const receipt='Docked at '+esc(world().name)+(paid?' · Delivered +'+money(paid):trip.warp?' · Warp complete':' · '+trip.fuel+' fuel used');
  return '<section class="arrival compact"><div><strong>'+receipt+'</strong><details><summary>Trip details</summary>'+tripReport()+'</details></div><button data-action="arrival-close" aria-label="Close arrival summary" title="Dismiss arrival receipt">✕ Close</button></section>';
