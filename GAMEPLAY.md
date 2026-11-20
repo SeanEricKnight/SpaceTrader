@@ -73,7 +73,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 - **Proportional rewards (0.24.3):** small wins show a short strip near the top (check mark, title, count-up reward). Only the First haul and a ship goal get a centred card. There are no spinning rays.
 - **Moons (0.19.0):** buying one opens a small card with Keep trading and Career summary, no confetti and no ending. Each moon pays 0.2% of its price per day of travel as rent. You cannot buy two moons at the same port. The goal bar lists your moons with a Sell back button. Old saves that were already retired show Keep flying.
 - **Beating a pirate** flashes the screen green, shakes it, bursts sparks and shows a "Pirate down" card with the bounty counting up.
-- **Bulk freight and ship goals:** ships with 20+ bays see one bulk run per port (cargo is 75% of your bays, minimum 16, to a port 16 to 45 pc away). Pay = 400 + bays x pc x 4 (x1.4 for a crisis port). Set any ship as your goal in the Store; progress shows under the moon goal.
+- **Bulk freight and ship goals.** A hold with at least 20 bays unlocks reachable bulk routes. A contract reserves 75% of the hold, with a minimum of 16 bays. Pay includes a 500 cr handling fee, 22 cr per bay, 2 cr per bay per routed parsec, and fuel valued at the departure ports. Crisis demand adds 40%, up to the 20,000 cr contract ceiling. The deadline allows two days per planned jump plus four days of slack. Set a ship goal in Store and track it under the moon goal.
 - **Fight report:** every fight ends with a card that stays until you tap Continue: outcome, bounty or loss, hull, where you are docked, and each round. When a fight can disable your ship, the Fire lasers option previews the loss and recovery. Toasts last 5 to 8 seconds, pause on touch, and tap to dismiss. The Activity log records every volley.
 - **Firing lasers** draws a beam to the pirate, flashes it, and pops the damage number; when the pirate shoots back you see its beam, the damage taken and a screen shake. Reduced-motion players skip these animations.
 - Finishing a job, a courier delivery, a side quest or the First haul pops a **DELIVERED card**: a stamp slams down, small credit chips float up and away, and the reward counts up. Tap it to dismiss; it fades on its own. Reduced-motion players get the card without the animation.
@@ -241,3 +241,11 @@ Hull under 60% turns amber and under 30% red, with the repair cost and a pirate 
 After your first jump, check **Jobs → Planetside notices** or select a port on the chart. Baratas, Aldea, Campor and Deneva have original visits. Each notice gives a reason to land and a sample destination, fare and time allowance. Visit while safely docked, choose one of two commissions, or return to your ship. One shore commission can run alongside your regular jobs. The deadline starts on acceptance. Dock at the destination by the due day for the ending and payment. A late arrival closes the story without a fine.
 
 In the Store, preview equipment on your actual hull before confirming. Three laser tiers and an auxiliary tank have exterior artwork. Internal equipment shows its effect. Removing a laser tier recovers one quarter of its purchase price. Removing cargo capacity requires enough room for the cargo and jobs you carry.
+
+## Outer Reach freight, crew and sightings
+
+The Cicada carries 85 bays with a defensive laser. The Goliath carries 120 bays with a short jump range and no weapons. Both are available at high-tech shipyards. Some new bulk jobs hit a crane closure at delivery. In Jobs, hire a lighter at a 12% deduction to finish at once, or take a nearby berth for 82% of the original pay and three extra days.
+
+Each of the six crew members has two additional chapters after 34 and 48 jumps together. The earlier decision changes the closing scene.
+
+The Reach News publishes free reports of pirate approaches and customs patrol checks. Use **Show on chart** to find the port on the Star chart. Select a marked port to read the report. Sightings fade over four days and expire on day five. Each one records a past encounter.

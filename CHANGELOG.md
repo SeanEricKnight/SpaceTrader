@@ -1,5 +1,9 @@
 # Browser updates — November 14, 2026
 
+## Browser update · 2026-11-20
+
+Added two large freighters with original artwork, route-based bulk quotes, delivery disruptions, two more chapters per crewmate, and dated pirate and customs sightings linked from The Reach News to the Star chart.
+
 ## Browser update · 2026-11-19
 
 Added fitted-equipment previews, a second-ship ownership milestone, port hangars and four optional two-ending planetside commissions. Existing saves begin with their current hull. Previously traded ships were sold and are not added to the hangar.
