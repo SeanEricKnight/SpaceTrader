@@ -97,6 +97,46 @@ const { chromium } = require('playwright');
         game.shoreDone=[];game.location=6;takeShore(0);game.day=game.shoreJob.due+1;game.location=1;
         const before=game.credits;settleShore();return !game.shoreJob&&game.credits===before;
       }));
+      await page.evaluate(()=>{
+        closeInfo();game=fresh();game.tutorial=null;game.credits=600000;game.worlds[0].tech=7;
+        game.location=0;game.cargo=game.cargo.map(()=>0);tab='store';render();
+      });
+      await page.locator('[data-action="ship-options"][data-id="11"]').click();
+      await dialog.locator('[data-action="keep-hull"]').click();
+      assert.ok(await page.evaluate(()=>ship().name==='Goliath'&&capacity()===120&&decodeSave(JSON.stringify(game)).ship===11));
+      await page.evaluate(()=>{closeInfo();game.day=6;recordSighting('police',1);game.day=7;recordSighting('pirate',2);tab='news';render()});
+      await page.locator('#screen [data-action="sighting-chart"][data-id="1"]').click();
+      assert.equal(await page.evaluate(()=>chartMode), 'star');
+      const marker=page.locator('.sc-port[data-id="1"] .sighting-mark');
+      assert.match(await marker.getAttribute('title'),/1 day ago/);
+      await page.locator('.sc-port[data-id="1"]').click();
+      await dialog.locator('[data-action="sighting-news"]').click();
+      assert.match(await dialog.innerText(),/Customs patrol reported/);
+      await page.evaluate(()=>{closeInfo();game.day=11;render()});
+      assert.equal(await marker.count(),0);
+      assert.equal(await page.locator('.sc-port[data-id="2"] .sighting-mark').count(),1);
+      assert.ok(await page.evaluate(()=>{
+        game.crew=[{id:'wren',beat:2,jumps:33,loyalty:60}];game.pendingBeat=null;
+        payCrew();applyBeat(0);const m=game.crew[0];if(!crewChapter(m).text.includes('paper lifeboat'))return false;
+        m.jumps=47;payCrew();applyBeat(0);return m.beat===4;
+      }));
+      await page.evaluate(()=>{
+        game.crew=[];game.credits=100000;game.contracts=[];game.takenOffers=[];
+        const job=bulkOffer()[0];job.rerouteEligible=true;
+        game.contracts=[job];game.location=job.to;dock();tab='jobs';render();
+      });
+      await page.locator('[data-action="freight-divert"]').click();
+      assert.ok(await page.evaluate(()=>{
+        const job=decodeSave(JSON.stringify(game)).contracts[0];if(job.disruption||job.rerouteEligible||job.to===game.location)return false;
+        const before=game.credits;game.location=job.to;dock();dock();return game.credits-before===job.reward&&game.contracts.length===0;
+      }));
+      await page.evaluate(()=>{
+        game.takenOffers=[];const job=bulkOffer()[0];job.rerouteEligible=true;
+        game.contracts=[job];game.location=job.to;dock();tab='jobs';render();
+      });
+      const expected=await page.evaluate(()=>game.credits+game.contracts[0].reward-Math.ceil(game.contracts[0].reward*.12));
+      await page.locator('[data-action="freight-lighter"]').click();
+      assert.equal(await page.evaluate(()=>game.credits),expected);
       await page.close();
     }
   } finally {await browser.close()}
