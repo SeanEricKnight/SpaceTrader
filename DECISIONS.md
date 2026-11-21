@@ -4,6 +4,10 @@ One entry per decision, newest first. Research method: shared-mind `memory/game-
 
 Entry format: **Date · Decision.** Decided by. Why (research link). Rejected. Status. How it is checked.
 
+## 2026-11-21 · Keep the chart and travel on one screen
+
+Sean requested a shorter Solar chart and a page that needs no scrolling. Keep the map and Trip panel together, fit the planets to the shorter viewport, and open chart tools, trip options, and the arrival receipt on demand. Keep distances, fuel, deadlines, and pirate risk visible for the selected port. Shrinking all labels and controls would reduce readability and make planet selection harder. Implemented in 0.26.11. Check the default Solar and Star views at desktop and phone sizes with `check-layout.cjs`. The layout follows the navigation patterns already reviewed in the [Endless Sky manual](https://github.com/endless-sky/endless-sky/wiki/PlayersManual) and [Elite Dangerous manual](https://hosting.zaonce.net/elite/website/assets/ELITE-DANGEROUS-GAME-MANUAL.pdf).
+
 ## 2026-11-20 · Return to the basics at port
 
 Sean approved consolidating the everyday loop around Market, Chart, and Shipyard, drawing on Pieter Spronck’s retrospective discussion of excess screen switching. Put route and travel information in one Trip panel. Show the market rows ahead of optional port information. Keep a compact arrival receipt and put goals in Commander. More opens Jobs & stories, News, Crew, and Commander. Existing jobs and saves follow the same rules. Verify in Chromium by selecting and flying a route with a visible action and opening a secondary view. [Research log](https://github.com/SeanEricKnight/shared-mind/blob/main/memory/game-design-references.md) · [Spronck’s retrospective](https://www.eurosis.org/cms/files/proceedings_full/GAMEON2001BOOK.pdf)
