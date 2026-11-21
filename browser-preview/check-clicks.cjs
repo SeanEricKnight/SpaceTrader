@@ -11,8 +11,8 @@ if(!exe){console.log('SKIP: no Chrome found (set CHROME_PATH)');process.exit(0)}
  await page.click('[data-action="info-close"]');
  const st=()=>page.evaluate(()=>({loc:game.location,day:game.day,fuel:game.fuel,credits:game.credits,tab}));
  assert.equal((await st()).day,1);
- // Fresh Normal start: the first-haul card's Travel button must move the ship.
- await page.click('.tutorial-card [data-action="jump"]');
+ // Fresh Normal start: the Chart's Travel button must move the ship.
+ await page.click('.trip-panel [data-action="jump"]');
  let s=await st();assert.equal(s.loc,1,'Travel to Adahn moved the ship');assert.equal(s.day,2);
  // Sell the Water by real clicks in the Market.
  await page.click('nav [data-tab="market"]');await page.click('.trade-row[data-good="0"] summary');
@@ -27,7 +27,7 @@ if(!exe){console.log('SKIP: no Chrome found (set CHROME_PATH)');process.exit(0)}
  await page.evaluate(()=>{game.encounter=null;tab='galaxy';render()});
  const g=await page.evaluate(()=>{window.scrollTo(0,0);const a=document.querySelector('.orbital-stage').getBoundingClientRect(),b=document.querySelector('.trip-panel').getBoundingClientRect();return{sameRow:Math.abs(a.top-b.top)<40,beside:b.left>=a.right-1}});
  assert.deepEqual(g,{sameRow:true,beside:true},'map and travel column are side by side at 1400px');
- const nC=await page.evaluate(()=>game.contracts.length);await page.click('.chart-extras > summary');await page.click('.best-runs [data-action="contract"]:not([disabled])');
+ const nC=await page.evaluate(()=>game.contracts.length);await page.click('[data-action="chart-tools"]');await page.click('.best-runs [data-action="contract"]:not([disabled])');
  assert.equal(await page.evaluate(()=>game.contracts.length),nC+1,'Accept on a Best runs row takes the job');
  // Crew ability button carries a string id through the click handler.
  await page.evaluate(()=>{game.crew=[{id:'wren',loyalty:50,jumps:0,beat:0}];game.encounter=makeEncounter();render()});

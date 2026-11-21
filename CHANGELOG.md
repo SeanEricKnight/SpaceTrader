@@ -8,7 +8,10 @@ Added two large freighters with original artwork, route-based bulk quotes, deliv
 
 Added fitted-equipment previews, a second-ship ownership milestone, port hangars and four optional two-ending planetside commissions. Existing saves begin with their current hull. Previously traded ships were sold and are not added to the hangar.
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.8`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.11`.
+
+## 0.26.11
+- Reduced the Solar chart viewport and put chart help, the port finder, and route details in dialogs. The normal Chart view keeps the map, destination, and Travel action together. The Star chart uses the same Trip panel.
 
 ## 0.26.10
 - Removed the "Some stops are in another Reach: tap a stop to switch the chart" line under the route banner. "Stops on this route" is now a compact card: heading and fuel line on one row, stops side by side without wrapping. No gameplay change.

@@ -94,6 +94,14 @@
       {
         "name": "Wasp",
         "buyable": true
+      },
+      {
+        "name": "Cicada",
+        "buyable": true
+      },
+      {
+        "name": "Goliath",
+        "buyable": true
       }
     ]
   },
@@ -795,5 +803,5 @@
       "seedRun": true
     }
   ],
-  "buildSha256": "c231da72f90735e734a08708f5c7aaf873751764914cb755dc2922e0f4cb5a4b"
+  "buildSha256": "fea5d44e1ced68c273d36f0f6c571d2fa06b7102b347e52498523de5470cd8c2"
 }

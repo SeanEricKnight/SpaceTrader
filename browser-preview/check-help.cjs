@@ -51,7 +51,7 @@ r('action("chart-mode",0)');assert.ok(!nodes.screen.innerHTML.includes('Star cha
 // guided walkthrough, hints and flow (0.22.0)
 r('game=fresh("Normal");tab="galaxy";render()');let gb=nodes["guide-bar"].innerHTML;assert.ok(gb.includes('Step 1 of 5')&&gb.includes('data-action="hint"')&&gb.includes('Travel'));ok('guide bar shows step 1 with a Show me button');
 r('action("hint")');assert.ok(r('hintSel').includes('jump'));ok('Show me away from the buyer points at Travel');
-r('action("select",0)');assert.ok(r('hintSel').includes('jump')&&r('hintFollow'));ok('the glow follows you to the next step after an action');
+r('action("select",0)');assert.equal(r('selectedWorld'),0);assert.equal(r('hintFollow'),true);r('action("hint")');assert.equal(r('selectedWorld'),r('game.tutorial.to'));assert.match(r('hintSel'),/trip-panel.*jump/);ok('Show me reselects the delivery port and lights its Travel button');
 r('game.location=game.tutorial.to;tab="galaxy";action("hint")');assert.ok(r('hintSel').includes('data-tab="market"'));ok('at the buyer it points at the Market tab');
 r('tab="market";action("hint")');assert.ok(r('hintSel').includes('sellall'));ok('on the Market it points at the Water sell button');
 r('game.tutorial.state="done";render()');assert.equal(r('game.guide.step'),1);assert.ok(nodes["guide-bar"].innerHTML.includes('Step 2 of 5'));ok('guide moves to step 2 after the Water is delivered');

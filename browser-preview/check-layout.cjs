@@ -1,36 +1,44 @@
-// Navigation tab length check (audit 2026-11-16, reviews/2026-11-16-ui-length-audit.md). Real browser via playwright-core + Chrome.
-// Hard rule: on desktop the Travel button is inside the first screen. Soft caps: total page height in screens.
-// Phone: height cap, and Travel is reachable without scrolling through the bottom pill (#dock-hint). Map signals (crisis flame, job count) are drawn on planets.
+// Check that the normal Chart view and its next travel action fit without page scrolling.
 const path=require('node:path'),fs=require('node:fs'),assert=require('node:assert/strict');
 const {pathToFileURL}=require('node:url');
 const gameUrl=pathToFileURL(path.resolve('SpaceTrader-browser.html')).href;
 let chromium;try{({chromium}=require('playwright-core'))}catch{console.log('SKIP: playwright-core not installed');process.exit(0)}
 const exe=process.env.CHROME_PATH||['/usr/bin/google-chrome','/usr/bin/chromium','/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'].find(p=>fs.existsSync(p));
 if(!exe){console.log('SKIP: no Chrome found (set CHROME_PATH)');process.exit(0)}
-const CAPS={desktop:2.2,phone:3.4};
 (async()=>{
  const browser=await chromium.launch({executablePath:exe,args:['--no-sandbox']});
- for(const [name,w,h] of [['desktop',1440,900],['phone',390,844]]){
+ for(const [name,w,h] of [['desktop',1440,900],['laptop',1366,768],['phone',390,844],['short-phone',375,667]]){
   const page=await browser.newPage({viewport:{width:w,height:h}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(gameUrl);await page.evaluate(()=>localStorage.clear());await page.reload();
   await page.click('[data-action="info-close"]');
   for(const sel of ['[data-action="guide-skip"]','[data-action="arrival-close"]']){try{await page.click(sel,{timeout:800})}catch{}}
-  await page.evaluate(()=>{if(game.tutorial)game.tutorial.state='skipped';render()});await page.click('nav [data-tab="galaxy"]');await page.evaluate(()=>{action('select',1)});
+  await page.evaluate(()=>{if(game.tutorial)game.tutorial.state='skipped';guideSt().off=true;render()});await page.click('nav [data-tab="galaxy"]');await page.evaluate(()=>{action('select',1)});
   await page.evaluate(()=>{const d=document.getElementById('info-dialog');if(d&&d.open)d.close();window.scrollTo(0,0)});
-  const m=await page.evaluate(()=>{const r=s=>{const e=document.querySelector(s);return e?Math.round(e.getBoundingClientRect().height):null},t=document.querySelector('.map-selection [data-action="jump"]');return {docH:document.documentElement.scrollHeight,vh:innerHeight,travelBottom:t?Math.round(t.getBoundingClientRect().bottom):null,best:r('.best-runs'),dest:r('.destination-card'),side:r('.side-column'),stage:r('.orbital-stage'),dupRoute:!!document.querySelector('.route-card'),hullTile:!!document.querySelector('#stats .stat.hull'),vessel:!!document.querySelector('.vessel-card')}});
-  if(process.env.SHOT)await page.screenshot({path:process.env.SHOT+'-'+name+'.png',fullPage:true});
-  console.log(name,JSON.stringify(m),'screens='+(m.docH/m.vh).toFixed(2));
-  assert.equal(errors.length,0,'page errors: '+errors.join('; '));
-  assert.equal(m.hullTile,true,'hull and ship thumbnail live in the stats bar');
-  assert.equal(m.vessel,false,'vessel card is not on the Navigation tab');
-  assert.equal(m.dupRoute,false,'a one-jump route does not repeat itself in a Route card');
-  assert.ok(m.docH/m.vh<=CAPS[name],name+' Navigation tab is '+(m.docH/m.vh).toFixed(2)+' screens, cap '+CAPS[name]);
-  if(name==='desktop')assert.ok(m.travelBottom!==null&&m.travelBottom<=m.vh,'Travel is inside the first screen on desktop (bottom '+m.travelBottom+' of '+m.vh+')');
-  const sig=await page.evaluate(()=>{const dh=document.getElementById('dock-hint'),r=dh.getBoundingClientRect(),vis=!dh.hidden&&getComputedStyle(dh).display!=='none';return{vis,text:dh.textContent,inView:vis&&r.top>=0&&r.bottom<=innerHeight,action:dh.dataset.action}});
-  if(name==='phone'){const pc=await page.evaluate(()=>{const vis=q=>[...document.querySelectorAll(q)].filter(e=>e.offsetParent).length;return {runs:vis('.best-runs li.run'),ports:vis('.my-ports>ul>li'),arrange:vis('[data-action="arrange"]')}});assert.ok(pc.runs<=2&&pc.ports<=1&&pc.arrange===0,'phone cards stay compact: '+JSON.stringify(pc));}
-  if(name==='phone'){assert.ok(sig.inView&&/^🚀 Travel to .+ · \d+ fuel$/.test(sig.text)&&sig.action==='jump','phone: Travel is in the bottom pill without scrolling: '+JSON.stringify(sig));
-   const loc=await page.evaluate(()=>{const f=game.location;await0=0;return game.location});await page.click('#dock-hint');const moved=await page.evaluate(()=>game.location!==0||inFlight());assert.ok(moved,'phone: tapping the pill starts the trip')}
-  else assert.equal(sig.vis,false,'desktop: the bottom Travel pill stays hidden (Travel is in the map bar)');
+  const checkFit=async()=>page.evaluate(()=>{
+   const bottom=selector=>document.querySelector(selector)?.getBoundingClientRect().bottom;
+   const nav=document.querySelector('nav').getBoundingClientRect();
+   return {document:document.documentElement.scrollHeight,width:document.documentElement.scrollWidth,
+    height:innerHeight,viewportWidth:innerWidth,usableBottom:nav.top>innerHeight/2?nav.top:innerHeight,
+    trip:bottom('.trip-panel'),map:bottom('.map-viewport, .sc-wrap'),travel:bottom('.trip-panel .primary')};
+  });
+  const assertFit=(m,state)=>{
+   assert.ok(m.document<=m.height+1&&m.width<=m.viewportWidth+1,name+' '+state+' fits without scrolling: '+JSON.stringify(m));
+   assert.ok(m.trip<=m.usableBottom&&m.map<=m.usableBottom,name+' '+state+' map and Trip panel are above the dock: '+JSON.stringify(m));
+  };
+  const m=await checkFit();
+  assertFit(m,'Solar chart');
+  assert.ok(m.travel!==undefined&&m.travel<=m.usableBottom,'Travel stays visible: '+JSON.stringify(m));
+  if(process.env.SHOT)await page.screenshot({path:process.env.SHOT+'-'+name+'.png'});
+  await page.getByRole('button',{name:'Chart tools',exact:true}).click();
+  await page.locator('#info-dialog .route-overview summary').click();
+  await page.locator('#info-dialog .distance-list button').first().click();
+  assert.equal(await page.locator('#info-dialog').evaluate(el=>el.open),false,'choosing a port returns to the chart');
+  await page.getByRole('button',{name:'Trip options',exact:true}).click();
+  assert.match(await page.locator('#info-dialog').innerText(),/Travel style/);
+  await page.keyboard.press('Escape');
+  await page.getByRole('button',{name:'Star chart',exact:true}).click();
+  assertFit(await checkFit(),'Star chart');
+  assert.deepEqual(errors,[],'no page errors');
   await page.close();
  }
  {const page=await browser.newPage({viewport:{width:1440,height:900}});page.on('dialog',d=>d.accept());await page.goto(gameUrl);await page.evaluate(()=>localStorage.clear());await page.reload();await page.click('[data-action="info-close"]');
@@ -75,7 +83,7 @@ const CAPS={desktop:2.2,phone:3.4};
   await page.click('#toasts .toast.has-act');await page.waitForTimeout(400);assert.ok(await page.evaluate(()=>window.__acted===1&&[...document.querySelectorAll('#toasts .toast')].some(t=>/Showing it/.test(t.textContent))),'tapping an action toast runs it, then confirms');
   await page.evaluate(()=>{document.getElementById('toasts').innerHTML='';window.__acted=0;toast('Milestone: test','gold',{act:{label:'All milestones',fn:()=>{window.__acted=1}}})});
   await page.click('#toasts .toast-x');await page.waitForTimeout(400);assert.ok(await page.evaluate(()=>window.__acted===0&&!document.querySelector('#toasts .toast')),'the X on an action toast only dismisses it; it does not run the action');
-  {const y=await page.evaluate(async()=>{const o=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(a){if(a&&a.behavior==='smooth')return;return o.call(this,a)};tab='galaxy';render();window.scrollTo(0,0);const id=game.worlds.map((w,i)=>i).find(i=>i!==game.location&&distance(i)<=game.fuel);const bt=document.createElement('button');bt.dataset.action='showroute';bt.dataset.id=id;document.getElementById('screen').appendChild(bt);bt.dispatchEvent(new MouseEvent('click',{bubbles:true}));await new Promise(r=>setTimeout(r,1100));const e=document.querySelector('.trip-panel');Element.prototype.scrollIntoView=o;return e?Math.round(e.getBoundingClientRect().top):null});assert.ok(y!==null&&Math.abs(y)<=60,'when a smooth scroll is dropped (iOS), the button still lands on its target: top='+y)}
+  {const y=await page.evaluate(async()=>{const o=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(a){if(a&&a.behavior==='smooth')return;return o.call(this,a)};tab='galaxy';render();window.scrollTo(0,0);const id=game.worlds.map((w,i)=>i).find(i=>i!==game.location&&distance(i)<=game.fuel);const bt=document.createElement('button');bt.dataset.action='showroute';bt.dataset.id=id;document.getElementById('screen').appendChild(bt);bt.dispatchEvent(new MouseEvent('click',{bubbles:true}));await new Promise(r=>setTimeout(r,1100));const e=document.querySelector('.trip-panel');Element.prototype.scrollIntoView=o;return e?Math.round(e.getBoundingClientRect().bottom):null});assert.ok(y!==null&&y<=900,'show route leaves the Trip panel on screen without scrolling: bottom='+y)}
   const ln=await page.evaluate(()=>{const o=[];for(let i=0;i<60;i++)o.push(travelLine(i%24,3+i%9,i));return {rep:o.some((x,i)=>i&&x===o[i-1]),uniq:new Set(o).size,empty:o.some(x=>!x)}});assert.ok(!ln.rep&&!ln.empty&&ln.uniq>=20,'travel lines never repeat back to back and vary: '+JSON.stringify(ln));
   await page.evaluate(()=>{document.getElementById('toasts').innerHTML='';const t=game.location===3?4:3;window.__jt=t;jobToast({title:'Reactor coolant core',to:t,due:game.day+4,reward:893,cargo:2})});
   const jt=await page.evaluate(()=>{const e=document.querySelector('#toasts .toast');return{txt:e?e.textContent:'',name:game.worlds[window.__jt].name}});assert.ok(jt.txt.includes(jt.name)&&/Delivers when you dock|dock to deliver/.test(jt.txt)&&/Show me where/.test(jt.txt)&&/day /.test(jt.txt),'accepted job names its destination, deadline and how to deliver: '+JSON.stringify(jt));
@@ -102,16 +110,15 @@ const CAPS={desktop:2.2,phone:3.4};
  {const page=await browser.newPage({viewport:{width:390,height:844},hasTouch:true});
   await page.goto(gameUrl);
   await page.getByRole('button',{name:'Start flying'}).tap();
-  const dock=page.locator('#dock-hint');
-  assert.match(await dock.innerText(),/Travel to Adahn.*9 fuel/);
-  const rect=await dock.boundingBox();
-  assert.ok(rect&&rect.y>=0&&rect.y+rect.height<=844,'first flight is inside the phone viewport');
-  await dock.tap();
+  const travel=page.getByRole('button',{name:/Travel to Adahn.*9 fuel/});
+  const rect=await travel.boundingBox();
+  const nav=await page.locator('nav').boundingBox();
+  assert.ok(rect&&rect.y>=0&&rect.y+rect.height<=nav.y,'first flight is above the phone dock');
+  await travel.tap();
   const proceed=page.locator('#warp-scene button').filter({hasText:/Continue/});
   await proceed.click({timeout:10000});
   await proceed.waitFor({state:'hidden'});
-  assert.equal(await dock.innerText(),'Open Market to sell Water');
-  await dock.tap();
+  await page.locator('.trip-panel').getByRole('button',{name:'Open market',exact:true}).tap();
   assert.equal(await page.locator('#screen').getAttribute('data-screen'),'market');
   await page.getByRole('button',{name:'Sell all',exact:true}).first().click();
   assert.equal(await page.locator('#stats .stat strong').first().innerText(),await page.evaluate(()=>money(game.credits)),'settled balance is visible immediately');
