@@ -12,11 +12,9 @@ When the guide is complete or skipped, the goal bar shows the cash goal plus a "
 - Save **500,000 cr** and clear your debt, then **Buy a moon** (Commander screen or the goal bar). An eligible score posts once and you keep playing. Assisted runs are unranked. Buy more moons (each costs 250,000 cr more than the last) for rent, or sell one back for 75%.
 - There is no game over. If your ship is destroyed or you are jailed or kidnapped, there is a way back, usually at a cost.
 
-## Leaderboard and rival race
-- **Leaderboard:** every honest retirement posts a score to a top-10 list in this browser (Commander tab and retire screen). Score = max(100, 1500 − 6 × days) + difficulty bonus (Beginner 0, Easy 100, Normal 250, Hard 450, Impossible 700) + 300 for beating a rival. Runs that used cheats are not ranked. It is local only; there is no online board.
-- **Race a rival AI (optional):** tick the box beside Start new game. A rival (Marta Voss, Kade Orrin or Ilse Tarn) races you to 500,000 cr. The strip under your goal bar shows their cash and last-seen port.
-- **How the rival works:** it is a scripted pace, not a live trader. It never touches your markets, jobs or pirates. It retires on a fixed day: Beginner about 130, Easy 115, Normal 100, Hard 90, Impossible 80, times 0.92 (Kade), 1.0 (Ilse) or 1.08 (Marta). Harder difficulties have faster rivals.
-- **Prize:** retire on or before their day (a tie goes to you) to win the Gold Seal Deed and +300 score. If they retire first you get a notice, no prize, and your finish still ranks.
+## Leaderboard
+- **Leaderboard:** every honest retirement posts a score to a top-10 list in this browser (Commander tab and retire screen). Score = max(100, 1500 − 6 × days) + difficulty bonus (Beginner 0, Easy 100, Normal 250, Hard 450, Impossible 700). Runs that used cheats are not ranked. It is local only; there is no online board.
+- The optional rival race was removed in 0.26.12 (Sean: no persistent rivals). Old saves with a rival load without it.
 
 ## Dock services
 
@@ -83,7 +81,7 @@ The old Dock services bar is gone (0.15.0). Its shortcuts to News, Shipyard, Job
 ## Starting out
 
 - **Save:** the game autosaves after every action. The 💾 Save button in the footer (and the "Your game" section of Help) opens the three manual slots and Export.
-- **Reset:** the ↺ Reset button in the footer (and in Help, set apart at the bottom) starts a fresh run on your current difficulty (rival race kept if you had one). It asks first, offers to export your save, and Commander's Restore can undo it. Vow and difficulty changes still go through "New game / difficulty".
+- **Reset:** the ↺ Reset button in the footer (and in Help, set apart at the bottom) starts a fresh run on your current difficulty. It asks first, offers to export your save, and Commander's Restore can undo it. Vow and difficulty changes still go through "New game / difficulty".
 - A new game begins with **5 Water in your hold**, already bought, bound for Adahn. A welcome popup tells the story.
 - **First haul** is the quick-win mission: fly to Adahn and sell the Water there. The first Water you sell at Adahn pays a **cash bonus** on top of the sale: Beginner 2,000, Easy 1,750, Normal 1,500, Hard 1,000, Impossible 500 cr. It is enough to buy something right away, like a crew member, an escort, or a warp charge.
 - Beginner, Easy and Normal show the steps on the Market and System tabs; Hard and Impossible show a single line.

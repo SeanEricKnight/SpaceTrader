@@ -2,7 +2,7 @@
 
 One place for every idea Sean has raised, with status. Update this file whenever an idea is built, changed, or deferred. Details and open questions live in [DESIGN_IDEAS.md](DESIGN_IDEAS.md); what shipped lives in [CHANGELOG.md](CHANGELOG.md).
 
-Last updated: November 21, 2026 (version 0.26.11). 0.26.11 fits the map and Trip panel in one Chart view and opens secondary information in dialogs. 0.26.10 removed the tap-a-stop line and compacted Stops on this route. 0.26.9 fit the Solar chart tab into one desktop screen. 0.26.7 cut scrolling on desktop. 0.26.5 shortened every long phone tab. 0.26.4 compacted phone cards. 0.26.3 made scroll-to-target buttons reliable on iPhone. 0.26.2 shrank the arrival card and removed the milestone notice bar for phones. 0.26.1 fixed the toast X opening All milestones. 0.26.0 added state-reactive events and a rare tier. 0.25.5 renamed a duplicate event title and refreshed the event docs. 0.25.4 labelled the arrival card close button. 0.25.3 fixed stale guide glows on tab buttons and added hint tracing to the log. 0.25.2 fixed the dead difficulty buttons, travel-line reading time and the stray Dismiss all, and added roadside fuel and a one-time upgrade nudge. 0.25.1 built the Atlas first-visit toast and star chart pin markers. 0.24.13 fixed finder chip wrap and footer difficulty cancel. 0.24.12 moved Market trade rows above legend/history/home panel. 0.24.11 added a post-guide Next move line (playtest item 5); retention effect still untested.
+Last updated: November 23, 2026 (version 0.26.12). 0.26.12 removed the rival race. 0.26.11 fits the map and Trip panel in one Chart view and opens secondary information in dialogs. 0.26.10 removed the tap-a-stop line and compacted Stops on this route. 0.26.9 fit the Solar chart tab into one desktop screen. 0.26.7 cut scrolling on desktop. 0.26.5 shortened every long phone tab. 0.26.4 compacted phone cards. 0.26.3 made scroll-to-target buttons reliable on iPhone. 0.26.2 shrank the arrival card and removed the milestone notice bar for phones. 0.26.1 fixed the toast X opening All milestones. 0.26.0 added state-reactive events and a rare tier. 0.25.5 renamed a duplicate event title and refreshed the event docs. 0.25.4 labelled the arrival card close button. 0.25.3 fixed stale guide glows on tab buttons and added hint tracing to the log. 0.25.2 fixed the dead difficulty buttons, travel-line reading time and the stray Dismiss all, and added roadside fuel and a one-time upgrade nudge. 0.25.1 built the Atlas first-visit toast and star chart pin markers. 0.24.13 fixed finder chip wrap and footer difficulty cancel. 0.24.12 moved Market trade rows above legend/history/home panel. 0.24.11 added a post-guide Next move line (playtest item 5); retention effect still untested.
 
 ## Built
 
@@ -36,7 +36,7 @@ Last updated: November 21, 2026 (version 0.26.11). 0.26.11 fits the map and Trip
 | Route suggestion for out-of-range ports | 0.8.2 | Cheapest hops within range. |
 | Livelier market (icons, price gauge, EVENT tag) | 0.8.0 | Gauge hidden on Hard and Impossible. |
 
-| Leaderboard + race a rival AI to retire | 0.16.0 | Opt-in rival at new game; local leaderboard; Gold Seal Deed prize. Rival is a pacing model, not a live trader. |
+| Leaderboard | 0.16.0 | Local top-10 of retired careers. The opt-in rival race was removed in 0.26.12. |
 
 ## Player feedback 2026-11-15 (0.16.3)
 
@@ -48,7 +48,7 @@ Sean: too much scrolling on Navigation. Audit in [reviews/2026-11-16-ui-length-a
 
 ## Deferred (not built yet)
 - Seasonal calendar (idea, not built): a year of named seasons (for example 24 days each) that give a gentle, readable rhythm: a seasonal price tilt on a few goods, a port festival day with a small bonus, and a Year N, Season label next to the day. Why: long-term engagement research (Stardew-style seasonal pacing, natural session chunks, anticipation). Risks: it shifts price balance, so the trade simulation, the review checks and the Hard and Impossible tuning would need re-running first. Keep it optional or very mild.
-- Rival tuning: retire-day table (`RIVAL_DAYS`) is a first guess. Needs real playtest pace per difficulty. Online/shared leaderboard needs a server, so it is not built.
+- Online/shared leaderboard needs a server, so it is not built.
 - Sound: redo the sound effects (the first synthesized set was rejected). Code is in place behind `SOUND_ENABLED=false`; needs better sounds or real audio files, then a Sound toggle in dock services.
 - Mid-flight art: a police cutter and a marauder ship picture (both use the pirate ship for now); show customs inspections in flight (they happen after docking today).
 - Cutaway scene cards (owner idea, Nov 15, 2026): short scene cards for key moments (pirate intercept, customs scan, arrival, big delivery), later as small AI-generated clips. The CSS jump scene (`jumpScene`) is the placeholder: it already switches for pirates, marauders, customs (police) and incidents. Needs: side-view ship art (the shipyard art is an angled 3/4 view, rotated in the scene for now), real pirate/police/marauder ships, and a clip format that stays small in a single HTML file (short looping WebM/WebP, loaded on demand).

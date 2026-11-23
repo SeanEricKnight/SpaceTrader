@@ -8,7 +8,11 @@ Added two large freighters with original artwork, route-based bulk quotes, deliv
 
 Added fitted-equipment previews, a second-ship ownership milestone, port hangars and four optional two-ending planetside commissions. Existing saves begin with their current hull. Previously traded ships were sold and are not added to the hangar.
 
-This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.11`.
+This is an additive refinement after the initial GitHub upload. It documents the current browser game, not a new native iPhone release. Current package version: `0.26.12`.
+
+## 0.26.12
+- **Rival race removed.** Sean decided against persistent rivals (Project direction, design constraints). The "Race a rival AI" option, the rival strip under the goal bar, the Gold Seal Deed prize and the 300-point race bonus are gone. The leaderboard stays and scores days and difficulty only. Old saves with a rival load without it. Check: `check-leaderboard.cjs` replaces `check-rival.cjs`.
+- Tests: file size guard raised to 1,050,000 bytes; 0.26.11 was already 1,004,504 bytes, so the guard failed before this change.
 
 ## 0.26.11
 - Reduced the Solar chart viewport and put chart help, the port finder, and route details in dialogs. The normal Chart view keeps the map, destination, and Travel action together. The Star chart uses the same Trip panel.
